@@ -147,6 +147,30 @@ window.selectAirportFromPopup = function(iata) {
   selectAirport(iata);
 };
 
+// Determina si un aeropuerto está visible en el nivel de zoom actual
+function isAirportCurrentlyVisible(ap) {
+  const currentZoom = map.getZoom();
+  let maxTierAllowed = 1;
+  if (currentZoom >= 6) {
+    maxTierAllowed = 3; // Mostrar todos los 3.250+ aeropuertos
+  } else if (currentZoom >= 4) {
+    maxTierAllowed = 2; // Mostrar hubs y aeropuertos medianos
+  } else {
+    maxTierAllowed = 1; // Vista global: solo hubs principales
+  }
+
+  const isTierVisible = ap.tier <= maxTierAllowed || ap.isTop50;
+
+  if (selectedAirportIata) {
+    const isSelected = ap.iata === selectedAirportIata;
+    const activeDestinations = adjacencyList[selectedAirportIata] || new Set();
+    const isDestination = activeDestinations.has(ap.iata);
+    return isSelected || isDestination || isTierVisible;
+  }
+
+  return isTierVisible;
+}
+
 // 3. Renderizado y Jerarquía por Nivel de Detalle (LOD) de Aeropuertos
 const isHoverDevice = window.matchMedia('(hover: hover)').matches;
 
@@ -171,6 +195,11 @@ AIRPORTS.forEach(airport => {
 
     // Evento click del marcador
     marker.on('click', (e) => {
+      // Si el aeropuerto NO es visible en el zoom actual, se ignora el toque y se trata como área vacía
+      if (!isAirportCurrentlyVisible(airport)) {
+        return;
+      }
+
       L.DomEvent.stopPropagation(e); // Evita que el click se propague al mapa de fondo
       if (marker.closeTooltip) marker.closeTooltip();
       if (window.innerWidth < 768) {
