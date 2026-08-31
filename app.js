@@ -271,18 +271,33 @@ function selectAirport(iata, flyToSelected = true) {
       polylinesData.push(gcPoints.map(p => [p[0], p[1] - 360]));
     }
 
+    // Calcular punto medio geodésico para situar el popup centrado sobre la curvatura
+    const midIdx = Math.floor(gcPoints.length / 2);
+    let midLat = gcPoints[midIdx][0];
+    let midLng = gcPoints[midIdx][1];
+    while (midLng > 180) midLng -= 360;
+    while (midLng < -180) midLng += 360;
+
+    const routeBounds = L.latLngBounds([
+      [airport.lat, airport.lng],
+      [destAirport.lat, destAirport.lng],
+      [midLat, midLng]
+    ]);
+
+    const visibleList = [];
+
     polylinesData.forEach(points => {
-      // 1. Crear la línea visible (delgada y estética)
+      // 1. Crear la línea visible
       const visiblePolyline = L.polyline(points, {
         color: '#facc15', // Amarillo 400
         weight: 2,
         opacity: 0.7,
         lineCap: 'round',
         lineJoin: 'round',
-        interactive: false // Evitamos eventos de ratón en la línea delgada para que no interfiera
+        interactive: false
       });
 
-      // 2. Crear una línea invisible y mucho más gruesa para capturar clics fácilmente (zona táctil de 22px de ancho)
+      // 2. Crear una línea invisible y mucho más gruesa para capturar clics (zona táctil)
       const touchTargetPolyline = L.polyline(points, {
         color: 'transparent',
         weight: 22,
@@ -290,70 +305,41 @@ function selectAirport(iata, flyToSelected = true) {
         interactive: true
       });
 
-    // Efecto de brillo/grosor al pasar el cursor sobre la zona táctil
-    touchTargetPolyline.on('mouseover', () => {
-      visiblePolyline.setStyle({ color: '#38bdf8', weight: 4, opacity: 1 });
-      touchTargetPolyline.bindTooltip(`<b>${airport.city} (${airport.iata}) → ${destAirport.city} (${destAirport.iata})</b>`, {
-        sticky: true,
-        className: 'bg-slate-900 text-white border-slate-700 rounded-lg p-2 text-xs font-semibold'
-      }).openTooltip();
+      // Efecto hover sobre la ruta
+      touchTargetPolyline.on('mouseover', () => {
+        if (selectedDestIata !== destAirport.iata) {
+          visiblePolyline.setStyle({ color: '#38bdf8', weight: 3.5, opacity: 0.95 });
+        }
+        touchTargetPolyline.bindTooltip(`<b>${airport.city} (${airport.iata}) → ${destAirport.city} (${destAirport.iata})</b>`, {
+          sticky: true,
+          className: 'bg-slate-900 text-white border-slate-700 rounded-lg p-2 text-xs font-semibold'
+        }).openTooltip();
+      });
+
+      touchTargetPolyline.on('mouseout', () => {
+        if (selectedDestIata !== destAirport.iata) {
+          const isAnotherSelected = selectedDestIata !== null;
+          visiblePolyline.setStyle({ color: '#facc15', weight: 2, opacity: isAnotherSelected ? 0.25 : 0.7 });
+        }
+      });
+
+      // Al hacer clic en la línea del mapa -> selecciona y abre la información de la ruta
+      touchTargetPolyline.on('click', (e) => {
+        L.DomEvent.stopPropagation(e);
+        showRouteDetails(airport, destAirport, e.latlng);
+      });
+
+      visibleList.push(visiblePolyline);
+      activeRouteLayer.addLayer(visiblePolyline);
+      activeRouteLayer.addLayer(touchTargetPolyline);
     });
 
-    touchTargetPolyline.on('mouseout', () => {
-      visiblePolyline.setStyle({ color: '#facc15', weight: 2, opacity: 0.65 });
-    });
-
-    // Si el usuario hace clic en la zona táctil, muestra un popup con información de la ruta
-    touchTargetPolyline.on('click', (e) => {
-      L.DomEvent.stopPropagation(e);
-      
-      const distance = Math.round(getDistance(airport.lat, airport.lng, destAirport.lat, destAirport.lng));
-      const hours = Math.floor(distance / 800);
-      const minutes = Math.round(((distance % 800) / 800) * 60);
-      const timeStr = hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
-      const searchQuery = encodeURIComponent(`${airport.city} (${airport.iata}) to ${destAirport.city} (${destAirport.iata})`);
-
-      const popupContent = `
-        <div class="p-1 font-sans text-slate-100">
-          <div class="text-xs uppercase tracking-wider text-cyan-400 font-bold mb-1">Información de Ruta</div>
-          <div class="flex items-center gap-2 font-bold text-sm mb-2">
-            <span>${airport.city}</span>
-            <span class="text-slate-400 font-normal">➔</span>
-            <span>${destAirport.city}</span>
-          </div>
-          <div class="space-y-1 text-xs text-slate-300 border-t border-slate-700/60 pt-2 mb-3">
-            <div class="flex justify-between gap-4">
-              <span class="text-slate-400">Distancia:</span>
-              <span class="font-semibold text-white">${distance.toLocaleString()} km</span>
-            </div>
-            <div class="flex justify-between gap-4">
-              <span class="text-slate-400">Tiempo de Vuelo:</span>
-              <span class="font-semibold text-white">~ ${timeStr}</span>
-            </div>
-          </div>
-          <a href="https://www.google.com/search?q=${searchQuery}" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="block w-full text-center text-xs bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-1.5 px-3 rounded-lg transition duration-150 shadow-md">
-             Buscar vuelos
-          </a>
-        </div>
-      `;
-
-      L.popup({
-        maxWidth: 250,
-        closeButton: true,
-        autoPan: true
-      })
-      .setLatLng(e.latlng)
-      .setContent(popupContent)
-      .openOn(map);
-    });
-
-    // Añadimos ambas polilíneas a la capa de rutas activas
-    activeRouteLayer.addLayer(visiblePolyline);
-    activeRouteLayer.addLayer(touchTargetPolyline);
-    });
+    currentRouteMap[destIata] = {
+      visiblePolylines: visibleList,
+      destAirport: destAirport,
+      midpoint: [midLat, midLng],
+      bounds: routeBounds
+    };
   });
 
   // E. Actualizar el Panel Lateral
@@ -371,9 +357,107 @@ function selectAirport(iata, flyToSelected = true) {
   }
 }
 
+// Variables de estado de ruta seleccionada
+let selectedDestIata = null;
+let currentRouteMap = {}; // destIata -> { visiblePolylines, destAirport, midpoint, bounds }
+
+/**
+ * Selecciona una ruta específica, la resalta en el mapa y abre la tarjeta con su información.
+ */
+function showRouteDetails(originAp, destAp, atLatLng = null) {
+  selectedDestIata = destAp.iata;
+
+  // 1. Resaltar la polilínea de la ruta seleccionada y atenuar todas las demás
+  Object.keys(currentRouteMap).forEach(dIata => {
+    const rInfo = currentRouteMap[dIata];
+    const isThisRoute = (dIata === destAp.iata);
+    rInfo.visiblePolylines.forEach(poly => {
+      if (isThisRoute) {
+        poly.setStyle({ color: '#38bdf8', weight: 4.5, opacity: 1 });
+        poly.bringToFront();
+      } else {
+        poly.setStyle({ color: '#facc15', weight: 1.5, opacity: 0.25 });
+      }
+    });
+  });
+
+  // 2. Resaltar el elemento correspondiente en la lista del panel lateral
+  document.querySelectorAll('.dest-item').forEach(el => {
+    if (el.dataset.iata === destAp.iata) {
+      el.classList.add('bg-cyan-950/60', 'border-cyan-400');
+      el.classList.remove('border-transparent');
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } else {
+      el.classList.remove('bg-cyan-950/60', 'border-cyan-400');
+      el.classList.add('border-transparent');
+    }
+  });
+
+  // 3. Calcular datos de la ruta
+  const distance = Math.round(getDistance(originAp.lat, originAp.lng, destAp.lat, destAp.lng));
+  const hours = Math.floor(distance / 800);
+  const minutes = Math.round(((distance % 800) / 800) * 60);
+  const timeStr = hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
+  const searchQuery = encodeURIComponent(`${originAp.city} (${originAp.iata}) to ${destAp.city} (${destAp.iata})`);
+
+  const popupContent = `
+    <div class="p-1 font-sans text-slate-100 min-w-[200px]">
+      <div class="text-xs uppercase tracking-wider text-cyan-400 font-bold mb-1">Información de Ruta</div>
+      <div class="flex items-center gap-2 font-bold text-sm mb-2 text-white">
+        <span>${originAp.city}</span>
+        <span class="text-slate-400 font-normal">➔</span>
+        <span>${destAp.city}</span>
+      </div>
+      <div class="space-y-1 text-xs text-slate-300 border-t border-slate-700/60 pt-2 mb-3">
+        <div class="flex justify-between gap-4">
+          <span class="text-slate-400">Distancia:</span>
+          <span class="font-semibold text-white">${distance.toLocaleString()} km</span>
+        </div>
+        <div class="flex justify-between gap-4">
+          <span class="text-slate-400">Tiempo de Vuelo:</span>
+          <span class="font-semibold text-white">~ ${timeStr}</span>
+        </div>
+      </div>
+      <a href="https://www.google.com/search?q=${searchQuery}" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="block w-full text-center text-xs bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-1.5 px-3 rounded-lg transition duration-150 shadow-md">
+         Buscar vuelos
+      </a>
+    </div>
+  `;
+
+  // Ubicación donde mostrar el popup (clic exacto o punto medio geodésico de la ruta)
+  const routeInfo = currentRouteMap[destAp.iata];
+  const targetLatLng = atLatLng || (routeInfo ? routeInfo.midpoint : [destAp.lat, destAp.lng]);
+
+  L.popup({
+    maxWidth: 260,
+    closeButton: true,
+    autoPan: true
+  })
+  .setLatLng(targetLatLng)
+  .setContent(popupContent)
+  .openOn(map);
+
+  // 4. Ajustar el mapa para englobar ambos aeropuertos suavemente
+  if (routeInfo && !atLatLng) {
+    const leftPad = (window.innerWidth >= 768) ? 380 : 50;
+    map.fitBounds(routeInfo.bounds, {
+      paddingTopLeft: [leftPad, 50],
+      paddingBottomRight: [50, 50],
+      maxZoom: 6,
+      animate: true,
+      duration: 1.2
+    });
+  }
+}
+
 // 6. Limpieza de Selección
 function clearSelection() {
   selectedAirportIata = null;
+  selectedDestIata = null;
+  currentRouteMap = {};
   activeRouteLayer.clearLayers();
   
   // Restaurar visibilidad y estilos según nivel de zoom
@@ -418,7 +502,8 @@ function updateSidebar(airport, destinationsIata) {
 
   sortedDestinations.forEach(dest => {
     const item = document.createElement('div');
-    item.className = 'p-4 hover:bg-slate-800/60 cursor-pointer transition flex items-center justify-between group';
+    item.className = 'dest-item p-4 hover:bg-slate-800/60 cursor-pointer transition flex items-center justify-between group border-l-4 border-transparent';
+    item.dataset.iata = dest.iata;
     item.innerHTML = `
       <div>
         <h4 class="font-semibold text-sm group-hover:text-cyan-400 transition flex items-center gap-1.5">
@@ -430,12 +515,9 @@ function updateSidebar(airport, destinationsIata) {
       <span class="text-xs font-mono font-bold ${dest.isTop50 ? 'bg-red-500/15 text-red-300 border-red-500/30' : 'bg-slate-800 text-slate-400 group-hover:bg-cyan-500/20 group-hover:text-cyan-400 border-slate-700/60 group-hover:border-cyan-500/30'} border px-2 py-1 rounded transition">${dest.iata}</span>
     `;
 
-    // Clic en un destino de la lista del panel lateral
+    // Clic en un destino de la lista del panel lateral -> Selecciona y muestra la información de la ruta
     item.addEventListener('click', () => {
-      selectAirport(dest.iata);
-      if (window.innerWidth < 768) {
-        closeSidebar();
-      }
+      showRouteDetails(airport, dest);
     });
 
     destListEl.appendChild(item);
