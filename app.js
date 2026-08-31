@@ -54,8 +54,8 @@ const markerStyles = {
   },
   top50: {
     radius: 6.5,
-    fillColor: '#f97316', // Orange 500 (Vibrante para los Top 50 Hubs)
-    color: '#fed7aa',     // Orange 200 (Borde luminoso)
+    fillColor: '#ef4444', // Red 500 (Rojo vibrante para los Top 50 Hubs)
+    color: '#fecaca',     // Red 200 (Borde luminoso)
     weight: 2,
     opacity: 1,
     fillOpacity: 0.95
@@ -98,7 +98,7 @@ AIRPORTS.forEach(airport => {
     
     // Tooltip con distintivo especial para los Top 50 Hubs
     const tooltipHtml = airport.isTop50
-      ? `<b>${airport.city} (${airport.iata})</b> <span class="bg-orange-500/20 text-orange-400 border border-orange-500/40 text-[10px] font-bold px-1.5 py-0.5 rounded ml-1">⭐ TOP 50</span><br><span class="text-xs text-slate-300">${airport.name}</span>`
+      ? `<b>${airport.city} (${airport.iata})</b> <span class="bg-red-500/20 text-red-400 border border-red-500/40 text-[10px] font-bold px-1.5 py-0.5 rounded ml-1">⭐ TOP 50</span><br><span class="text-xs text-slate-300">${airport.name}</span>`
       : `<b>${airport.city} (${airport.iata})</b><br><span class="text-xs text-slate-300">${airport.name}</span>`;
 
     marker.bindTooltip(tooltipHtml, {
@@ -423,11 +423,11 @@ function updateSidebar(airport, destinationsIata) {
       <div>
         <h4 class="font-semibold text-sm group-hover:text-cyan-400 transition flex items-center gap-1.5">
           ${dest.city}
-          ${dest.isTop50 ? '<span class="bg-orange-500/20 text-orange-400 border border-orange-500/40 text-[9px] font-bold px-1.5 py-0.5 rounded leading-none">TOP 50</span>' : ''}
+          ${dest.isTop50 ? '<span class="bg-red-500/20 text-red-400 border border-red-500/40 text-[9px] font-bold px-1.5 py-0.5 rounded leading-none">TOP 50</span>' : ''}
         </h4>
         <p class="text-xs text-slate-400 mt-0.5">${dest.name} (${dest.country})</p>
       </div>
-      <span class="text-xs font-mono font-bold ${dest.isTop50 ? 'bg-orange-500/15 text-orange-300 border-orange-500/30' : 'bg-slate-800 text-slate-400 group-hover:bg-cyan-500/20 group-hover:text-cyan-400 border-slate-700/60 group-hover:border-cyan-500/30'} border px-2 py-1 rounded transition">${dest.iata}</span>
+      <span class="text-xs font-mono font-bold ${dest.isTop50 ? 'bg-red-500/15 text-red-300 border-red-500/30' : 'bg-slate-800 text-slate-400 group-hover:bg-cyan-500/20 group-hover:text-cyan-400 border-slate-700/60 group-hover:border-cyan-500/30'} border px-2 py-1 rounded transition">${dest.iata}</span>
     `;
 
     // Clic en un destino de la lista del panel lateral
@@ -491,10 +491,10 @@ function renderSearchResults(matches) {
     item.innerHTML = `
       <div class="truncate mr-2">
         <span class="font-bold text-white">${ap.city}</span>
-        ${ap.isTop50 ? '<span class="bg-orange-500/20 text-orange-400 border border-orange-500/40 text-[9px] font-bold px-1.5 py-0.5 rounded ml-1.5">TOP 50</span>' : ''}
+        ${ap.isTop50 ? '<span class="bg-red-500/20 text-red-400 border border-red-500/40 text-[9px] font-bold px-1.5 py-0.5 rounded ml-1.5">TOP 50</span>' : ''}
         <span class="text-xs text-slate-400 block truncate">${ap.name} (${ap.country})</span>
       </div>
-      <span class="text-xs font-mono font-bold ${ap.isTop50 ? 'bg-orange-500/20 text-orange-300 border-orange-500/40' : 'bg-slate-900/40 text-cyan-400 border-cyan-500/20'} border px-1.5 py-0.5 rounded shrink-0">${ap.iata}</span>
+      <span class="text-xs font-mono font-bold ${ap.isTop50 ? 'bg-red-500/20 text-red-300 border-red-500/40' : 'bg-slate-900/40 text-cyan-400 border-cyan-500/20'} border px-1.5 py-0.5 rounded shrink-0">${ap.iata}</span>
     `;
 
     item.addEventListener('click', () => {
