@@ -18,9 +18,6 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_D
   maxZoom: 16
 }).addTo(map);
 
-// Ajustar los límites del mapa para que no se repita infinitamente en horizontal
-map.setMaxBounds([[-85, -180], [85, 180]]);
-
 // 2. Procesamiento de Datos de Conexiones
 // Crearemos un mapa de adyacencia (lista de conexiones) bidireccional
 const adjacencyList = {};
@@ -39,7 +36,7 @@ ROUTES.forEach(([from, to]) => {
 });
 
 // Guardar referencias globales de marcadores y líneas de rutas activas
-const markers = {};          // IATA -> L.circleMarker
+const markers = {};          // IATA -> Array of L.circleMarker (para soporte multi-mundo)
 let activeRouteLayer = L.featureGroup().addTo(map);
 let selectedAirportIata = null;
 
@@ -79,104 +76,92 @@ const markerStyles = {
   }
 };
 
-// 3. Renderizado de Aeropuertos en el Mapa
+// 3. Renderizado de Aeropuertos en el Mapa (Con soporte de copias continuas para el Océano Pacífico)
 AIRPORTS.forEach(airport => {
-  const marker = L.circleMarker([airport.lat, airport.lng], markerStyles.default);
-  
-  // Tooltip emergente rápido al pasar el ratón (hover)
-  marker.bindTooltip(`<b>${airport.city} (${airport.iata})</b><br><span class="text-xs text-slate-300">${airport.name}</span>`, {
-    direction: 'top',
-    offset: [0, -5],
-    opacity: 0.9,
-    className: 'bg-slate-900 text-white border-slate-700 rounded-lg shadow-md p-2 text-xs font-sans font-medium'
-  });
+  markers[airport.iata] = [];
+  [-360, 0, 360].forEach(offset => {
+    const marker = L.circleMarker([airport.lat, airport.lng + offset], markerStyles.default);
+    
+    // Tooltip emergente rápido al pasar el ratón (hover)
+    marker.bindTooltip(`<b>${airport.city} (${airport.iata})</b><br><span class="text-xs text-slate-300">${airport.name}</span>`, {
+      direction: 'top',
+      offset: [0, -5],
+      opacity: 0.9,
+      className: 'bg-slate-900 text-white border-slate-700 rounded-lg shadow-md p-2 text-xs font-sans font-medium'
+    });
 
-  // Evento click del marcador
-  marker.on('click', (e) => {
-    L.DomEvent.stopPropagation(e); // Evita que el click se propague al mapa de fondo
-    selectAirport(airport.iata);
-  });
+    // Evento click del marcador
+    marker.on('click', (e) => {
+      L.DomEvent.stopPropagation(e); // Evita que el click se propague al mapa de fondo
+      selectAirport(airport.iata);
+    });
 
-  markers[airport.iata] = marker;
-  marker.addTo(map);
+    markers[airport.iata].push(marker);
+    marker.addTo(map);
+  });
 });
 
 // Ajustar el zoom inicial para englobar todos los aeropuertos
 resetMapView();
 
-// 4. Algoritmo de Trazado de Rutas Estilo FlightConnections (Curvas Suaves con Cruce de Antimeridiano)
+// 4. Algoritmo de Trazado de Rutas Ortodrómicas Reales (Great Circle 3D como Flightradar24)
 /**
- * Genera trayectorias de vuelo visualmente impecables.
- * Si la ruta cruza el Océano Pacífico (longitud > 180°), divide la curva suavemente en dos tramos:
- * - Tramo 1: Sale del origen y llega al borde este/oeste (+180° / -180°).
- * - Tramo 2: Entra por el borde opuesto en la misma latitud y conecta suavemente con el destino.
+ * Calcula la trayectoria geodésica real (círculo máximo / Great Circle) en una esfera 3D.
+ * Sigue con exactitud física la curvatura de la Tierra:
+ * - Rutas transatlánticas/transpolares (ej. Dubai -> EE.UU.) se elevan hacia el Ártico/Groenlandia.
+ * - Rutas transpacíficas (ej. Santiago -> Oceanía) cruzan el Pacífico Sur de forma continua e ininterrumpida.
  */
-function getFlightPathSegments(p0, p1) {
-  const diffLng = p1.lng - p0.lng;
+function getGreatCirclePoints(p0, p1) {
+  const toRad = deg => (deg * Math.PI) / 180;
+  const toDeg = rad => (rad * 180) / Math.PI;
 
-  // 1. Caso estándar: No cruza el antimeridiano (|diffLng| <= 180)
-  if (Math.abs(diffLng) <= 180) {
-    return [generateBezierPoints(p0, p1)];
+  const lat1 = toRad(p0.lat);
+  const lon1 = toRad(p0.lng);
+  const lat2 = toRad(p1.lat);
+  const lon2 = toRad(p1.lng);
+
+  // Vectores unitarios 3D
+  const v1 = [Math.cos(lat1) * Math.cos(lon1), Math.cos(lat1) * Math.sin(lon1), Math.sin(lat1)];
+  const v2 = [Math.cos(lat2) * Math.cos(lon2), Math.cos(lat2) * Math.sin(lon2), Math.sin(lat2)];
+
+  // Distancia angular ortodrómica
+  const dot = v1[0] * v2[0] + v1[1] * v2[1] + v1[2] * v2[2];
+  const d = Math.acos(Math.min(Math.max(dot, -1), 1));
+
+  if (d < 1e-6) {
+    return [[p0.lat, p0.lng], [p1.lat, p1.lng]];
   }
 
-  // 2. Caso transpacífico: Cruza el antimeridiano (|diffLng| > 180)
-  if (p0.lng > p1.lng) {
-    // Vuelo hacia el ESTE (ej: Auckland 174° -> Houston -95°)
-    const span1 = 180 - p0.lng;
-    const span2 = p1.lng - (-180);
-    const totalSpan = span1 + span2;
-    const f = span1 / totalSpan;
-
-    const midLat = p0.lat + f * (p1.lat - p0.lat);
-    const ptExit = { lat: midLat, lng: 180 };
-    const ptEntry = { lat: midLat, lng: -180 };
-
-    const seg1 = generateBezierPoints(p0, ptExit, 0.05);
-    const seg2 = generateBezierPoints(ptEntry, p1, 0.05);
-
-    return [seg1, seg2];
-  } else {
-    // Vuelo hacia el OESTE (ej: Santiago -70° -> Melbourne 144° / Auckland 174°)
-    const span1 = p0.lng - (-180);
-    const span2 = 180 - p1.lng;
-    const totalSpan = span1 + span2;
-    const f = span1 / totalSpan;
-
-    const midLat = p0.lat + f * (p1.lat - p0.lat);
-    const ptExit = { lat: midLat, lng: -180 };
-    const ptEntry = { lat: midLat, lng: 180 };
-
-    const seg1 = generateBezierPoints(p0, ptExit, 0.05);
-    const seg2 = generateBezierPoints(ptEntry, p1, 0.05);
-
-    return [seg1, seg2];
-  }
-}
-
-/**
- * Genera puntos a lo largo de una curva Bézier cuadrática natural
- */
-function generateBezierPoints(pStart, pEnd, curvature = 0.12) {
-  const dx = pEnd.lng - pStart.lng;
-  const dy = pEnd.lat - pStart.lat;
-
-  // Punto medio
-  const midLat = (pStart.lat + pEnd.lat) / 2;
-  const midLng = (pStart.lng + pEnd.lng) / 2;
-
-  // Orientación de la curvatura
-  const factor = (midLat < -20) ? -curvature * 0.5 : curvature;
-
-  const ctrlLat = midLat + dx * factor;
-  const ctrlLng = midLng - dy * factor;
-
+  const sinD = Math.sin(d);
+  const numSteps = Math.max(35, Math.round(d * 32));
   const points = [];
-  const steps = 30;
-  for (let i = 0; i <= steps; i++) {
-    const t = i / steps;
-    const lat = (1 - t) * (1 - t) * pStart.lat + 2 * (1 - t) * t * ctrlLat + t * t * pEnd.lat;
-    const lng = (1 - t) * (1 - t) * pStart.lng + 2 * (1 - t) * t * ctrlLng + t * t * pEnd.lng;
-    points.push([lat, lng]);
+
+  let prevRawLon = p0.lng;
+  let continuousLon = p0.lng;
+
+  for (let i = 0; i <= numSteps; i++) {
+    const f = i / numSteps;
+    const A = Math.sin((1 - f) * d) / sinD;
+    const B = Math.sin(f * d) / sinD;
+
+    const x = A * v1[0] + B * v2[0];
+    const y = A * v1[1] + B * v2[1];
+    const z = A * v1[2] + B * v2[2];
+
+    const lat = toDeg(Math.atan2(z, Math.sqrt(x * x + y * y)));
+    const rawLon = toDeg(Math.atan2(y, x));
+
+    if (i === 0) {
+      continuousLon = p0.lng;
+    } else {
+      let dLon = rawLon - prevRawLon;
+      while (dLon > 180) dLon -= 360;
+      while (dLon < -180) dLon += 360;
+      continuousLon += dLon;
+    }
+
+    prevRawLon = rawLon;
+    points.push([lat, continuousLon]);
   }
 
   return points;
@@ -197,16 +182,18 @@ function selectAirport(iata, flyToSelected = true) {
   
   // C. Actualizar estilos de los marcadores del mapa
   AIRPORTS.forEach(ap => {
-    const marker = markers[ap.iata];
-    if (ap.iata === iata) {
-      marker.setStyle(markerStyles.selected);
-      marker.bringToFront();
-    } else if (destinationsIata.includes(ap.iata)) {
-      marker.setStyle(markerStyles.destination);
-      marker.bringToFront();
-    } else {
-      marker.setStyle(markerStyles.dimmed);
-    }
+    const markerList = markers[ap.iata] || [];
+    markerList.forEach(marker => {
+      if (ap.iata === iata) {
+        marker.setStyle(markerStyles.selected);
+        marker.bringToFront();
+      } else if (destinationsIata.includes(ap.iata)) {
+        marker.setStyle(markerStyles.destination);
+        marker.bringToFront();
+      } else {
+        marker.setStyle(markerStyles.dimmed);
+      }
+    });
   });
 
   // D. Dibujar rutas curvas hacia destinos
@@ -214,26 +201,38 @@ function selectAirport(iata, flyToSelected = true) {
     const destAirport = AIRPORTS.find(a => a.iata === destIata);
     if (!destAirport) return;
 
-    // Calcular segmentos de ruta con curvatura armónica
-    const routeSegments = getFlightPathSegments(airport, destAirport);
+    // Calcular puntos de la trayectoria ortodrómica real continua
+    const gcPoints = getGreatCirclePoints(airport, destAirport);
 
-    // 1. Crear la línea visible (delgada y estética)
-    const visiblePolyline = L.polyline(routeSegments, {
-      color: '#facc15', // Amarillo 400
-      weight: 2,
-      opacity: 0.65,
-      lineCap: 'round',
-      lineJoin: 'round',
-      interactive: false // Evitamos eventos de ratón en la línea delgada para que no interfiera
-    });
+    // Creamos las polilíneas continuas (incluyendo la versión duplicada para el otro lado del mundo si cruza el antimeridiano)
+    const polylinesData = [gcPoints];
+    
+    const hasUnderflow = gcPoints.some(p => p[1] < -180);
+    const hasOverflow = gcPoints.some(p => p[1] > 180);
+    if (hasUnderflow) {
+      polylinesData.push(gcPoints.map(p => [p[0], p[1] + 360]));
+    } else if (hasOverflow) {
+      polylinesData.push(gcPoints.map(p => [p[0], p[1] - 360]));
+    }
 
-    // 2. Crear una línea invisible y mucho más gruesa para capturar clics fácilmente (zona táctil de 22px de ancho)
-    const touchTargetPolyline = L.polyline(routeSegments, {
-      color: 'transparent',
-      weight: 22,
-      opacity: 0,
-      interactive: true
-    });
+    polylinesData.forEach(points => {
+      // 1. Crear la línea visible (delgada y estética)
+      const visiblePolyline = L.polyline(points, {
+        color: '#facc15', // Amarillo 400
+        weight: 2,
+        opacity: 0.7,
+        lineCap: 'round',
+        lineJoin: 'round',
+        interactive: false // Evitamos eventos de ratón en la línea delgada para que no interfiera
+      });
+
+      // 2. Crear una línea invisible y mucho más gruesa para capturar clics fácilmente (zona táctil de 22px de ancho)
+      const touchTargetPolyline = L.polyline(points, {
+        color: 'transparent',
+        weight: 22,
+        opacity: 0,
+        interactive: true
+      });
 
     // Efecto de brillo/grosor al pasar el cursor sobre la zona táctil
     touchTargetPolyline.on('mouseover', () => {
@@ -297,6 +296,7 @@ function selectAirport(iata, flyToSelected = true) {
     // Añadimos ambas polilíneas a la capa de rutas activas
     activeRouteLayer.addLayer(visiblePolyline);
     activeRouteLayer.addLayer(touchTargetPolyline);
+    });
   });
 
   // E. Actualizar el Panel Lateral
