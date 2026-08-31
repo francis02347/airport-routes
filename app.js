@@ -12,8 +12,8 @@ const map = L.map('map', {
 // Añadimos el control de zoom en la esquina superior derecha
 L.control.zoom({ position: 'topright' }).addTo(map);
 
-// Capa de mapa oscuro (CartoDB Positron Dark)
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+// Capa de mapa oscuro (CartoDB Positron Dark sin marcas de agua)
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
   subdomains: 'abcd',
   maxZoom: 20
@@ -105,55 +105,93 @@ AIRPORTS.forEach(airport => {
 // Ajustar el zoom inicial para englobar todos los aeropuertos
 resetMapView();
 
-// 4. Algoritmo de Trazado de Rutas Curvas (Curvas de Bezier)
+// 4. Algoritmo de Trazado de Rutas Ortodrómicas (Great Circle con División de Antimeridiano)
 /**
- * Calcula puntos intermedios entre dos coordenadas para formar una curva suave (curvatura geodésica simulada).
- * Controla también el cruce del antimeridiano (línea de cambio de fecha) de forma limpia.
+ * Calcula la trayectoria geodésica real (círculo máximo / Great Circle) en una esfera 3D.
+ * Si la ruta cruza el antimeridiano (meridiano 180° en el Pacífico), divide la línea de forma limpia
+ * en dos segmentos para que llegue exactamente a los marcadores sin salirse del mapa.
  */
-function getCurvePoints(latlngStart, latlngEnd) {
-  const points = [];
-  const p0 = { lat: latlngStart.lat, lng: latlngStart.lng };
-  
-  // Tratamiento del cruce del antimeridiano (Pacific Crossing)
-  let lngEnd = latlngEnd.lng;
-  if (Math.abs(lngEnd - p0.lng) > 180) {
-    if (lngEnd > p0.lng) {
-      lngEnd -= 360;
-    } else {
-      lngEnd += 360;
+function getGreatCircleSegments(latlngStart, latlngEnd) {
+  const toRad = deg => (deg * Math.PI) / 180;
+  const toDeg = rad => (rad * 180) / Math.PI;
+
+  const lat1 = toRad(latlngStart.lat);
+  const lon1 = toRad(latlngStart.lng);
+  const lat2 = toRad(latlngEnd.lat);
+  const lon2 = toRad(latlngEnd.lng);
+
+  // Vectores unitarios 3D
+  const v1 = [Math.cos(lat1) * Math.cos(lon1), Math.cos(lat1) * Math.sin(lon1), Math.sin(lat1)];
+  const v2 = [Math.cos(lat2) * Math.cos(lon2), Math.cos(lat2) * Math.sin(lon2), Math.sin(lat2)];
+
+  // Distancia angular ortodrómica
+  const dot = v1[0] * v2[0] + v1[1] * v2[1] + v1[2] * v2[2];
+  const d = Math.acos(Math.min(Math.max(dot, -1), 1));
+
+  if (d < 1e-6) {
+    return [[[latlngStart.lat, latlngStart.lng], [latlngEnd.lat, latlngEnd.lng]]];
+  }
+
+  const sinD = Math.sin(d);
+  const numSteps = Math.max(25, Math.round(d * 24));
+  const rawPoints = [];
+
+  for (let i = 0; i <= numSteps; i++) {
+    const f = i / numSteps;
+    const A = Math.sin((1 - f) * d) / sinD;
+    const B = Math.sin(f * d) / sinD;
+
+    const x = A * v1[0] + B * v2[0];
+    const y = A * v1[1] + B * v2[1];
+    const z = A * v1[2] + B * v2[2];
+
+    const lat = toDeg(Math.atan2(z, Math.sqrt(x * x + y * y)));
+    const lon = toDeg(Math.atan2(y, x));
+
+    rawPoints.push({ lat, lng: lon });
+  }
+
+  // Dividir en segmentos cuando la longitud salta el meridiano 180° (|delta| > 180)
+  const segments = [];
+  let currentSegment = [];
+
+  for (let i = 0; i < rawPoints.length; i++) {
+    const pt = rawPoints[i];
+
+    if (currentSegment.length > 0) {
+      const prev = currentSegment[currentSegment.length - 1];
+      const diff = pt.lng - prev.lng;
+
+      if (Math.abs(diff) > 180) {
+        // Cruce del meridiano 180: interpolar la latitud exacta de cruce en el borde
+        let prevBoundLng, nextBoundLng;
+        if (diff < 0) {
+          prevBoundLng = 180;
+          nextBoundLng = -180;
+        } else {
+          prevBoundLng = -180;
+          nextBoundLng = 180;
+        }
+
+        const totalDiff = diff < 0 ? (pt.lng + 360 - prev.lng) : (pt.lng - (prev.lng + 360));
+        const frac = totalDiff !== 0 ? Math.abs((prevBoundLng - prev.lng) / totalDiff) : 0.5;
+        const crossLat = prev.lat + (pt.lat - prev.lat) * frac;
+
+        currentSegment.push({ lat: crossLat, lng: prevBoundLng });
+        segments.push(currentSegment.map(p => [p.lat, p.lng]));
+
+        currentSegment = [{ lat: crossLat, lng: nextBoundLng }];
+      }
     }
+
+    currentSegment.push(pt);
   }
-  const p1 = { lat: latlngEnd.lat, lng: lngEnd };
 
-  const dx = p1.lng - p0.lng;
-  const dy = p1.lat - p0.lat;
-  
-  // Factor de curvatura (0.15 da una curva suave y elegante)
-  const f = 0.15;
-  
-  // Punto medio
-  const m = {
-    lat: (p0.lat + p1.lat) / 2,
-    lng: (p0.lng + p1.lng) / 2
-  };
-
-  // Punto de control de la curva Bézier cuadrática (desviación perpendicular)
-  const c = {
-    lat: m.lat + dx * f,
-    lng: m.lng - dy * f
-  };
-
-  // Generamos los segmentos de la curva
-  const steps = 32;
-  for (let i = 0; i <= steps; i++) {
-    const t = i / steps;
-    // Ecuación de Bezier Cuadrática: B(t) = (1-t)²*P0 + 2*(1-t)*t*C + t²*P1
-    const lat = (1 - t) * (1 - t) * p0.lat + 2 * (1 - t) * t * c.lat + t * t * p1.lat;
-    const lng = (1 - t) * (1 - t) * p0.lng + 2 * (1 - t) * t * c.lng + t * t * p1.lng;
-    points.push([lat, lng]);
+  if (currentSegment.length > 0) {
+    segments.push(currentSegment.map(p => [p.lat, p.lng]));
   }
-  
-  return points;
+
+  return segments;
 }
 
 // 5. Lógica de Selección y Filtrado de Rutas
@@ -188,11 +226,11 @@ function selectAirport(iata, flyToSelected = true) {
     const destAirport = AIRPORTS.find(a => a.iata === destIata);
     if (!destAirport) return;
 
-    // Calcular puntos de la curva
-    const curvePoints = getCurvePoints(airport, destAirport);
+    // Calcular segmentos geodésicos reales
+    const routeSegments = getGreatCircleSegments(airport, destAirport);
 
     // 1. Crear la línea visible (delgada y estética)
-    const visiblePolyline = L.polyline(curvePoints, {
+    const visiblePolyline = L.polyline(routeSegments, {
       color: '#facc15', // Amarillo 400
       weight: 2,
       opacity: 0.65,
@@ -202,7 +240,7 @@ function selectAirport(iata, flyToSelected = true) {
     });
 
     // 2. Crear una línea invisible y mucho más gruesa para capturar clics fácilmente (zona táctil de 22px de ancho)
-    const touchTargetPolyline = L.polyline(curvePoints, {
+    const touchTargetPolyline = L.polyline(routeSegments, {
       color: 'transparent',
       weight: 22,
       opacity: 0,
