@@ -213,10 +213,48 @@ function selectAirport(iata, flyToSelected = true) {
       polyline.setStyle({ color: '#facc15', weight: 2, opacity: 0.65 });
     });
 
-    // Si el usuario hace clic en la línea, vuela al aeropuerto de destino
+    // Si el usuario hace clic en la línea, muestra un popup con información de la ruta
     polyline.on('click', (e) => {
       L.DomEvent.stopPropagation(e);
-      selectAirport(destIata);
+      
+      const distance = Math.round(getDistance(airport.lat, airport.lng, destAirport.lat, destAirport.lng));
+      const hours = Math.floor(distance / 800);
+      const minutes = Math.round(((distance % 800) / 800) * 60);
+      const timeStr = hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
+
+      const popupContent = `
+        <div class="p-1 font-sans text-slate-100">
+          <div class="text-xs uppercase tracking-wider text-cyan-400 font-bold mb-1">Información de Ruta</div>
+          <div class="flex items-center gap-2 font-bold text-sm mb-2">
+            <span>${airport.city}</span>
+            <span class="text-slate-400 font-normal">➔</span>
+            <span>${destAirport.city}</span>
+          </div>
+          <div class="space-y-1 text-xs text-slate-300 border-t border-slate-700/60 pt-2 mb-3">
+            <div class="flex justify-between gap-4">
+              <span class="text-slate-400">Distancia:</span>
+              <span class="font-semibold text-white">${distance.toLocaleString()} km</span>
+            </div>
+            <div class="flex justify-between gap-4">
+              <span class="text-slate-400">Tiempo de Vuelo:</span>
+              <span class="font-semibold text-white">~ ${timeStr}</span>
+            </div>
+          </div>
+          <button class="w-full text-center text-xs bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-1.5 px-3 rounded-lg transition duration-150" 
+            onclick="selectAirport('${destAirport.iata}')">
+            Ver destinos desde ${destAirport.city}
+          </button>
+        </div>
+      `;
+
+      L.popup({
+        maxWidth: 250,
+        closeButton: true,
+        autoPan: true
+      })
+      .setLatLng(e.latlng)
+      .setContent(popupContent)
+      .openOn(map);
     });
 
     activeRouteLayer.addLayer(polyline);
@@ -422,3 +460,25 @@ document.getElementById('toggle-sidebar-btn').addEventListener('click', openSide
 if (window.innerWidth < 768) {
   closeSidebar();
 }
+
+// 11. Funciones Matemáticas de Utilidad (Haversine para Distancias)
+function getDistance(lat1, lon1, lat2, lon2) {
+  const R = 6371; // Radio de la Tierra en km
+  const dLat = deg2rad(lat2 - lat1);
+  const dLon = deg2rad(lon2 - lon1);
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+    Math.sin(dLon / 2) * Math.sin(dLon / 2)
+  ;
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  const d = R * c; // Distancia en km
+  return d;
+}
+
+function deg2rad(deg) {
+  return deg * (Math.PI / 180);
+}
+
+// Hacer selectAirport accesible globalmente para el onclick del popup de Leaflet
+window.selectAirport = selectAirport;
