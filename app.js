@@ -14,10 +14,13 @@ const map = L.map('map', {
 // Añadimos el control de zoom en la esquina superior derecha
 L.control.zoom({ position: 'topright' }).addTo(map);
 
-// Capa de mapa oscuro (ESRI World Dark Gray Base - 100% gratuita y sin marcas de agua)
+// Capa de mapa oscuro en Alta Definición (ESRI World Dark Gray con soporte Retina HD)
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
   attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
-  maxZoom: 16
+  maxZoom: 16,
+  maxNativeZoom: 16,
+  detectRetina: true, // ¡Activa resolución nativa HD / Retina para pantallas móviles OLED y de alta densidad!
+  keepBuffer: 4
 }).addTo(map);
 
 // 2. Procesamiento de Datos de Conexiones
