@@ -6,7 +6,9 @@ const map = L.map('map', {
   zoom: 2,
   minZoom: 2,
   maxZoom: 10,
-  zoomControl: false // Ocultamos el control por defecto para una interfaz más limpia
+  zoomControl: false, // Ocultamos el control por defecto para una interfaz más limpia
+  worldCopyJump: true,
+  preferCanvas: true // Renderizado por GPU ultra-fluido (Canvas) para 0 lag con cientos de aeropuertos
 });
 
 // Añadimos el control de zoom en la esquina superior derecha
