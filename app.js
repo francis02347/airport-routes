@@ -98,6 +98,49 @@ const markerStyles = {
   }
 };
 
+// Función emergente para celulares: Muestra ficha previa y botón 'Mostrar rutas'
+function showAirportMobilePreview(airport, latlng) {
+  const destCount = (adjacencyList[airport.iata] || []).size || 0;
+  const top50Badge = airport.isTop50 
+    ? '<span class="bg-red-500/20 text-red-400 border border-red-500/40 text-[10px] font-bold px-1.5 py-0.5 rounded ml-1">⭐ TOP 50</span>' 
+    : '';
+
+  const popupContent = `
+    <div class="p-1 font-sans text-slate-100 min-w-[210px]">
+      <div class="flex items-center justify-between gap-2 mb-1">
+        <span class="font-bold text-sm text-white">${airport.city} (${airport.iata})</span>
+        ${top50Badge}
+      </div>
+      <div class="text-xs text-slate-400 mb-2 leading-tight">${airport.name} (${airport.country})</div>
+      <div class="text-xs text-cyan-400 font-semibold mb-3 flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+        <span>${destCount} ${destCount === 1 ? 'destino directo' : 'destinos directos'}</span>
+      </div>
+      <button onclick="window.selectAirportFromPopup('${airport.iata}')" 
+              class="w-full text-center text-xs bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 text-white font-bold py-2 px-3 rounded-lg transition duration-150 shadow-md flex items-center justify-center gap-1.5 cursor-pointer">
+        <svg class="w-3.5 h-3.5 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+        Mostrar rutas
+      </button>
+    </div>
+  `;
+
+  L.popup({
+    maxWidth: 260,
+    closeButton: true,
+    autoPan: true,
+    offset: [0, -8]
+  })
+  .setLatLng(latlng)
+  .setContent(popupContent)
+  .openOn(map);
+}
+
+// Hook global para activar la selección desde el botón del popup
+window.selectAirportFromPopup = function(iata) {
+  map.closePopup();
+  selectAirport(iata);
+};
+
 // 3. Renderizado y Jerarquía por Nivel de Detalle (LOD) de Aeropuertos
 AIRPORTS.forEach(airport => {
   markers[airport.iata] = [];
@@ -119,7 +162,11 @@ AIRPORTS.forEach(airport => {
     // Evento click del marcador
     marker.on('click', (e) => {
       L.DomEvent.stopPropagation(e); // Evita que el click se propague al mapa de fondo
-      selectAirport(airport.iata);
+      if (window.innerWidth < 768) {
+        showAirportMobilePreview(airport, e.latlng);
+      } else {
+        selectAirport(airport.iata);
+      }
     });
 
     markers[airport.iata].push(marker);
