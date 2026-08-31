@@ -191,30 +191,39 @@ function selectAirport(iata, flyToSelected = true) {
     // Calcular puntos de la curva
     const curvePoints = getCurvePoints(airport, destAirport);
 
-    // Crear la línea y añadirla al mapa
-    const polyline = L.polyline(curvePoints, {
+    // 1. Crear la línea visible (delgada y estética)
+    const visiblePolyline = L.polyline(curvePoints, {
       color: '#facc15', // Amarillo 400
       weight: 2,
       opacity: 0.65,
       lineCap: 'round',
-      lineJoin: 'round'
+      lineJoin: 'round',
+      interactive: false // Evitamos eventos de ratón en la línea delgada para que no interfiera
     });
 
-    // Efecto de brillo/grosor al pasar el cursor sobre la línea de ruta
-    polyline.on('mouseover', () => {
-      polyline.setStyle({ color: '#38bdf8', weight: 4, opacity: 1 });
-      polyline.bindTooltip(`<b>${airport.city} (${airport.iata}) → ${destAirport.city} (${destAirport.iata})</b>`, {
+    // 2. Crear una línea invisible y mucho más gruesa para capturar clics fácilmente (zona táctil de 22px de ancho)
+    const touchTargetPolyline = L.polyline(curvePoints, {
+      color: 'transparent',
+      weight: 22,
+      opacity: 0,
+      interactive: true
+    });
+
+    // Efecto de brillo/grosor al pasar el cursor sobre la zona táctil
+    touchTargetPolyline.on('mouseover', () => {
+      visiblePolyline.setStyle({ color: '#38bdf8', weight: 4, opacity: 1 });
+      touchTargetPolyline.bindTooltip(`<b>${airport.city} (${airport.iata}) → ${destAirport.city} (${destAirport.iata})</b>`, {
         sticky: true,
         className: 'bg-slate-900 text-white border-slate-700 rounded-lg p-2 text-xs font-semibold'
       }).openTooltip();
     });
 
-    polyline.on('mouseout', () => {
-      polyline.setStyle({ color: '#facc15', weight: 2, opacity: 0.65 });
+    touchTargetPolyline.on('mouseout', () => {
+      visiblePolyline.setStyle({ color: '#facc15', weight: 2, opacity: 0.65 });
     });
 
-    // Si el usuario hace clic en la línea, muestra un popup con información de la ruta
-    polyline.on('click', (e) => {
+    // Si el usuario hace clic en la zona táctil, muestra un popup con información de la ruta
+    touchTargetPolyline.on('click', (e) => {
       L.DomEvent.stopPropagation(e);
       
       const distance = Math.round(getDistance(airport.lat, airport.lng, destAirport.lat, destAirport.lng));
@@ -230,7 +239,7 @@ function selectAirport(iata, flyToSelected = true) {
             <span class="text-slate-400 font-normal">➔</span>
             <span>${destAirport.city}</span>
           </div>
-          <div class="space-y-1 text-xs text-slate-300 border-t border-slate-700/60 pt-2 mb-3">
+          <div class="space-y-1 text-xs text-slate-300 border-t border-slate-700/60 pt-2">
             <div class="flex justify-between gap-4">
               <span class="text-slate-400">Distancia:</span>
               <span class="font-semibold text-white">${distance.toLocaleString()} km</span>
@@ -240,10 +249,6 @@ function selectAirport(iata, flyToSelected = true) {
               <span class="font-semibold text-white">~ ${timeStr}</span>
             </div>
           </div>
-          <button class="w-full text-center text-xs bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-1.5 px-3 rounded-lg transition duration-150" 
-            onclick="selectAirport('${destAirport.iata}')">
-            Ver destinos desde ${destAirport.city}
-          </button>
         </div>
       `;
 
@@ -257,7 +262,9 @@ function selectAirport(iata, flyToSelected = true) {
       .openOn(map);
     });
 
-    activeRouteLayer.addLayer(polyline);
+    // Añadimos ambas polilíneas a la capa de rutas activas
+    activeRouteLayer.addLayer(visiblePolyline);
+    activeRouteLayer.addLayer(touchTargetPolyline);
   });
 
   // E. Actualizar el Panel Lateral
