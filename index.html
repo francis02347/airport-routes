@@ -47,20 +47,43 @@
     .leaflet-popup-content-wrapper {
       background: #0f172a !important; /* slate-900 */
       color: #f1f5f9 !important; /* slate-100 */
-      border: 1px solid rgba(71, 85, 105, 0.4);
-      border-radius: 12px !important;
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5) !important;
+      border: 1px solid rgba(71, 85, 105, 0.5);
+      border-radius: 14px !important;
+      box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.6) !important;
+      padding: 4px !important;
     }
     .leaflet-popup-tip {
       background: #0f172a !important; /* slate-900 */
-      border: 1px solid rgba(71, 85, 105, 0.4);
+      border: 1px solid rgba(71, 85, 105, 0.5);
     }
+
+    /* Botón 'X' de cierre ultra-sensible y optimizado para pantallas táctiles */
     .leaflet-popup-close-button {
-      color: #94a3b8 !important; /* slate-400 */
-      padding: 8px 8px 0 0 !important;
+      color: #cbd5e1 !important; /* slate-300 */
+      top: 8px !important;
+      right: 8px !important;
+      width: 36px !important;
+      height: 36px !important;
+      padding: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 22px !important;
+      font-weight: bold !important;
+      border-radius: 8px !important;
+      background: rgba(30, 41, 59, 0.8) !important;
+      border: 1px solid rgba(71, 85, 105, 0.4) !important;
+      transition: all 0.15s ease-in-out !important;
+      cursor: pointer !important;
+      touch-action: manipulation !important;
+      z-index: 100 !important;
     }
-    .leaflet-popup-close-button:hover {
+    .leaflet-popup-close-button:hover,
+    .leaflet-popup-close-button:active {
       color: #ffffff !important;
+      background: rgba(51, 65, 85, 1) !important;
+      border-color: rgba(148, 163, 184, 0.7) !important;
+      transform: scale(1.08);
     }
   </style>
 </head>
@@ -188,7 +211,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="data.js?v=30"></script>
-  <script src="app.js?v=30"></script>
+  <script src="data.js?v=31"></script>
+  <script src="app.js?v=31"></script>
 </body>
 </html>

@@ -112,7 +112,7 @@ function showAirportMobilePreview(airport, latlng) {
     : '';
 
   const popupContent = `
-    <div class="p-1 font-sans text-slate-100 min-w-[210px]">
+    <div class="p-1 pr-8 font-sans text-slate-100 min-w-[215px]">
       <div class="flex items-center justify-between gap-2 mb-1">
         <span class="font-bold text-sm text-white">${airport.city} (${airport.iata})</span>
         ${top50Badge}
@@ -503,7 +503,7 @@ function showRouteDetails(originAp, destAp, atLatLng = null) {
   const searchQuery = encodeURIComponent(`${originAp.city} (${originAp.iata}) to ${destAp.city} (${destAp.iata})`);
 
   const popupContent = `
-    <div class="p-1 font-sans text-slate-100 min-w-[200px]">
+    <div class="p-1 pr-8 font-sans text-slate-100 min-w-[210px]">
       <div class="text-xs uppercase tracking-wider text-cyan-400 font-bold mb-1">Información de Ruta</div>
       <div class="flex items-center gap-2 font-bold text-sm mb-2 text-white">
         <span>${originAp.city}</span>
