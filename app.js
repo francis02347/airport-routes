@@ -45,15 +45,23 @@ let selectedAirportIata = null;
 // Estilos de marcadores
 const markerStyles = {
   default: {
-    radius: 5,
+    radius: 4.5,
     fillColor: '#22d3ee', // Cyan 400
     color: '#0891b2',     // Cyan 600
     weight: 1.5,
     opacity: 0.85,
     fillOpacity: 0.85
   },
+  top50: {
+    radius: 6.5,
+    fillColor: '#f97316', // Orange 500 (Vibrante para los Top 50 Hubs)
+    color: '#fed7aa',     // Orange 200 (Borde luminoso)
+    weight: 2,
+    opacity: 1,
+    fillOpacity: 0.95
+  },
   dimmed: {
-    radius: 4,
+    radius: 3.5,
     fillColor: '#475569', // Slate 600
     color: '#334155',     // Slate 700
     weight: 1,
@@ -86,13 +94,17 @@ const markerStyles = {
 AIRPORTS.forEach(airport => {
   markers[airport.iata] = [];
   [-360, 0, 360].forEach(offset => {
-    const marker = L.circleMarker([airport.lat, airport.lng + offset], markerStyles.default);
+    const marker = L.circleMarker([airport.lat, airport.lng + offset], airport.isTop50 ? markerStyles.top50 : markerStyles.default);
     
-    // Tooltip emergente rápido al pasar el ratón (hover)
-    marker.bindTooltip(`<b>${airport.city} (${airport.iata})</b><br><span class="text-xs text-slate-300">${airport.name}</span>`, {
+    // Tooltip con distintivo especial para los Top 50 Hubs
+    const tooltipHtml = airport.isTop50
+      ? `<b>${airport.city} (${airport.iata})</b> <span class="bg-orange-500/20 text-orange-400 border border-orange-500/40 text-[10px] font-bold px-1.5 py-0.5 rounded ml-1">⭐ TOP 50</span><br><span class="text-xs text-slate-300">${airport.name}</span>`
+      : `<b>${airport.city} (${airport.iata})</b><br><span class="text-xs text-slate-300">${airport.name}</span>`;
+
+    marker.bindTooltip(tooltipHtml, {
       direction: 'top',
       offset: [0, -5],
-      opacity: 0.9,
+      opacity: 0.95,
       className: 'bg-slate-900 text-white border-slate-700 rounded-lg shadow-md p-2 text-xs font-sans font-medium'
     });
 
@@ -125,7 +137,7 @@ function updateMarkerStylesAndVisibility() {
     const markerList = markers[ap.iata] || [];
     const isSelected = ap.iata === selectedAirportIata;
     const isDestination = activeDestinations && activeDestinations.has(ap.iata);
-    const isTierVisible = ap.tier <= maxTierAllowed;
+    const isTierVisible = ap.tier <= maxTierAllowed || ap.isTop50;
 
     markerList.forEach(marker => {
       if (selectedAirportIata) {
@@ -142,7 +154,10 @@ function updateMarkerStylesAndVisibility() {
           marker.setStyle(markerStyles.hidden);
         }
       } else {
-        if (isTierVisible) {
+        if (ap.isTop50) {
+          marker.setStyle(markerStyles.top50);
+          marker.bringToFront();
+        } else if (isTierVisible) {
           marker.setStyle(markerStyles.default);
         } else {
           marker.setStyle(markerStyles.hidden);
@@ -405,10 +420,13 @@ function updateSidebar(airport, destinationsIata) {
     item.className = 'p-4 hover:bg-slate-800/60 cursor-pointer transition flex items-center justify-between group';
     item.innerHTML = `
       <div>
-        <h4 class="font-semibold text-sm group-hover:text-cyan-400 transition">${dest.city}</h4>
+        <h4 class="font-semibold text-sm group-hover:text-cyan-400 transition flex items-center gap-1.5">
+          ${dest.city}
+          ${dest.isTop50 ? '<span class="bg-orange-500/20 text-orange-400 border border-orange-500/40 text-[9px] font-bold px-1.5 py-0.5 rounded leading-none">TOP 50</span>' : ''}
+        </h4>
         <p class="text-xs text-slate-400 mt-0.5">${dest.name} (${dest.country})</p>
       </div>
-      <span class="text-xs font-mono font-bold bg-slate-800 text-slate-400 group-hover:bg-cyan-500/20 group-hover:text-cyan-400 border border-slate-700/60 group-hover:border-cyan-500/30 px-2 py-1 rounded transition">${dest.iata}</span>
+      <span class="text-xs font-mono font-bold ${dest.isTop50 ? 'bg-orange-500/15 text-orange-300 border-orange-500/30' : 'bg-slate-800 text-slate-400 group-hover:bg-cyan-500/20 group-hover:text-cyan-400 border-slate-700/60 group-hover:border-cyan-500/30'} border px-2 py-1 rounded transition">${dest.iata}</span>
     `;
 
     // Clic en un destino de la lista del panel lateral
@@ -439,13 +457,18 @@ searchInput.addEventListener('input', (e) => {
 
   clearSearchBtn.classList.remove('hidden');
 
-  // Filtrado de aeropuertos
+  // Filtrado de aeropuertos (ordenando con prioridad a Top 50 y coincidencias exactas)
   const matches = AIRPORTS.filter(ap => 
     ap.iata.toLowerCase().includes(query) ||
     ap.city.toLowerCase().includes(query) ||
     ap.country.toLowerCase().includes(query) ||
     ap.name.toLowerCase().includes(query)
-  );
+  ).sort((a, b) => {
+    // Si uno es Top 50 y el otro no, priorizar en la búsqueda
+    if (a.isTop50 && !b.isTop50) return -1;
+    if (!a.isTop50 && b.isTop50) return 1;
+    return a.city.localeCompare(b.city);
+  });
 
   renderSearchResults(matches);
 });
@@ -467,9 +490,10 @@ function renderSearchResults(matches) {
     item.innerHTML = `
       <div class="truncate mr-2">
         <span class="font-bold text-white">${ap.city}</span>
+        ${ap.isTop50 ? '<span class="bg-orange-500/20 text-orange-400 border border-orange-500/40 text-[9px] font-bold px-1.5 py-0.5 rounded ml-1.5">TOP 50</span>' : ''}
         <span class="text-xs text-slate-400 block truncate">${ap.name} (${ap.country})</span>
       </div>
-      <span class="text-xs font-mono font-bold bg-slate-900/40 text-cyan-400 border border-cyan-500/20 px-1.5 py-0.5 rounded shrink-0">${ap.iata}</span>
+      <span class="text-xs font-mono font-bold ${ap.isTop50 ? 'bg-orange-500/20 text-orange-300 border-orange-500/40' : 'bg-slate-900/40 text-cyan-400 border-cyan-500/20'} border px-1.5 py-0.5 rounded shrink-0">${ap.iata}</span>
     `;
 
     item.addEventListener('click', () => {

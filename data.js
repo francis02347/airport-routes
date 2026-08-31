@@ -1,4 +1,4 @@
-// Dataset mundial completo de aeropuertos y rutas comerciales (OpenFlights + Curated Global Network)
+// Dataset mundial completo de aeropuertos y rutas comerciales con Top 50 Hubs destacados
 
 const AIRPORTS = [
   {
@@ -8,7 +8,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 24.4499,
     "lng": 44.1212,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AAL",
@@ -17,7 +18,8 @@ const AIRPORTS = [
     "country": "Denmark",
     "lat": 57.0928,
     "lng": 9.8492,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AAR",
@@ -26,7 +28,8 @@ const AIRPORTS = [
     "country": "Denmark",
     "lat": 56.3,
     "lng": 10.619,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JEG",
@@ -35,7 +38,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 68.7218,
     "lng": -52.7847,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ABD",
@@ -44,7 +48,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 30.3711,
     "lng": 48.2283,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ABA",
@@ -53,7 +58,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 53.74,
     "lng": 91.385,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YXX",
@@ -62,7 +68,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.0253,
     "lng": -122.361,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ABR",
@@ -71,7 +78,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 45.4491,
     "lng": -98.4218,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ABZ",
@@ -80,7 +88,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 57.2019,
     "lng": -2.1978,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "AHB",
@@ -89,7 +98,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 18.2404,
     "lng": 42.6566,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ABJ",
@@ -98,7 +108,8 @@ const AIRPORTS = [
     "country": "Cote d'Ivoire",
     "lat": 5.2614,
     "lng": -3.9263,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ABI",
@@ -107,7 +118,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.4113,
     "lng": -99.6819,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MTV",
@@ -116,7 +128,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -13.666,
     "lng": 167.712,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AUH",
@@ -125,7 +138,8 @@ const AIRPORTS = [
     "country": "United Arab Emirates",
     "lat": 24.433,
     "lng": 54.6511,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "AZI",
@@ -134,7 +148,8 @@ const AIRPORTS = [
     "country": "United Arab Emirates",
     "lat": 24.4283,
     "lng": 54.4581,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ABS",
@@ -143,7 +158,8 @@ const AIRPORTS = [
     "country": "Egypt",
     "lat": 22.376,
     "lng": 31.6117,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ABV",
@@ -152,7 +168,8 @@ const AIRPORTS = [
     "country": "Nigeria",
     "lat": 9.0068,
     "lng": 7.2632,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ACA",
@@ -161,7 +178,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 16.7571,
     "lng": -99.754,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ACC",
@@ -170,7 +188,8 @@ const AIRPORTS = [
     "country": "Ghana",
     "lat": 5.6052,
     "lng": -0.1668,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ADK",
@@ -179,7 +198,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 51.878,
     "lng": -176.646,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ADA",
@@ -188,7 +208,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 36.9822,
     "lng": 35.2804,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ADD",
@@ -197,7 +218,8 @@ const AIRPORTS = [
     "country": "Ethiopia",
     "lat": 8.9779,
     "lng": 38.7993,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ADL",
@@ -206,7 +228,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -34.945,
     "lng": 138.531,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ADE",
@@ -215,7 +238,8 @@ const AIRPORTS = [
     "country": "Yemen",
     "lat": 12.8295,
     "lng": 45.0288,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ADF",
@@ -224,7 +248,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 37.7314,
     "lng": 38.4689,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AZR",
@@ -233,7 +258,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 27.8376,
     "lng": -0.1864,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AGA",
@@ -242,7 +268,8 @@ const AIRPORTS = [
     "country": "Morocco",
     "lat": 30.325,
     "lng": -9.4131,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GUM",
@@ -251,7 +278,8 @@ const AIRPORTS = [
     "country": "Guam",
     "lat": 13.4834,
     "lng": 144.796,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "IXA",
@@ -260,7 +288,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 23.887,
     "lng": 91.2404,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AGX",
@@ -269,7 +298,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 10.8237,
     "lng": 72.176,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AGF",
@@ -278,7 +308,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 44.1747,
     "lng": 0.5906,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AGR",
@@ -287,7 +318,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 27.1558,
     "lng": 77.9609,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AJI",
@@ -296,7 +328,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 39.6545,
     "lng": 43.026,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BQN",
@@ -305,7 +338,8 @@ const AIRPORTS = [
     "country": "Puerto Rico",
     "lat": 18.4949,
     "lng": -67.1294,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AGU",
@@ -314,7 +348,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 21.7056,
     "lng": -102.318,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AHE",
@@ -323,7 +358,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -14.4281,
     "lng": -146.257,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AMD",
@@ -332,7 +368,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 23.0772,
     "lng": 72.6347,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "AWZ",
@@ -341,7 +378,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 31.3374,
     "lng": 48.762,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AIT",
@@ -350,7 +388,8 @@ const AIRPORTS = [
     "country": "Cook Islands",
     "lat": -18.8309,
     "lng": -159.764,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AJL",
@@ -359,7 +398,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 23.8406,
     "lng": 92.6197,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AJA",
@@ -368,7 +408,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 41.9236,
     "lng": 8.8029,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "AKK",
@@ -377,7 +418,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 56.9387,
     "lng": -154.183,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AXT",
@@ -386,7 +428,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 39.6156,
     "lng": 140.219,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CAK",
@@ -395,7 +438,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.9161,
     "lng": -81.4422,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AKU",
@@ -404,7 +448,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 41.2625,
     "lng": 80.2917,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SCO",
@@ -413,7 +458,8 @@ const AIRPORTS = [
     "country": "Kazakhstan",
     "lat": 43.8601,
     "lng": 51.092,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AKX",
@@ -422,7 +468,8 @@ const AIRPORTS = [
     "country": "Kazakhstan",
     "lat": 50.2458,
     "lng": 57.2067,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AKV",
@@ -431,7 +478,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 60.8186,
     "lng": -78.1486,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AEY",
@@ -440,7 +488,8 @@ const AIRPORTS = [
     "country": "Iceland",
     "lat": 65.66,
     "lng": -18.0727,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KQA",
@@ -449,7 +498,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 54.1338,
     "lng": -165.7789,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AAN",
@@ -458,7 +508,8 @@ const AIRPORTS = [
     "country": "United Arab Emirates",
     "lat": 24.2617,
     "lng": 55.6092,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LAQ",
@@ -467,7 +518,8 @@ const AIRPORTS = [
     "country": "Libya",
     "lat": 32.7887,
     "lng": 21.9643,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AAY",
@@ -476,7 +528,8 @@ const AIRPORTS = [
     "country": "Yemen",
     "lat": 16.1917,
     "lng": 52.175,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AHU",
@@ -485,7 +538,8 @@ const AIRPORTS = [
     "country": "Morocco",
     "lat": 35.1771,
     "lng": -3.8395,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AJF",
@@ -494,7 +548,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 29.7851,
     "lng": 40.1,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ULH",
@@ -503,7 +558,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 26.48,
     "lng": 38.1289,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HOF",
@@ -512,7 +568,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 25.2853,
     "lng": 49.4852,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AUK",
@@ -521,7 +578,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 62.68,
     "lng": -164.6599,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ALS",
@@ -530,7 +588,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.4349,
     "lng": -105.867,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GZP",
@@ -539,7 +598,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 36.2992,
     "lng": 32.3006,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ABY",
@@ -548,7 +608,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 31.5355,
     "lng": -84.1945,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ALB",
@@ -557,7 +618,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.7483,
     "lng": -73.8017,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ALH",
@@ -566,7 +628,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -34.9433,
     "lng": 117.809,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ABQ",
@@ -575,7 +638,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.0402,
     "lng": -106.609,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ABX",
@@ -584,7 +648,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -36.0678,
     "lng": 146.958,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ACI",
@@ -593,7 +658,8 @@ const AIRPORTS = [
     "country": "Guernsey",
     "lat": 49.7061,
     "lng": -2.2147,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AES",
@@ -602,7 +668,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 62.5625,
     "lng": 6.1197,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AEX",
@@ -611,7 +678,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 31.3274,
     "lng": -92.5498,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HBE",
@@ -620,7 +688,8 @@ const AIRPORTS = [
     "country": "Egypt",
     "lat": 30.9177,
     "lng": 29.6964,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "AXD",
@@ -629,7 +698,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 40.8559,
     "lng": 25.9563,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AHO",
@@ -638,7 +708,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 40.6321,
     "lng": 8.2908,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ALG",
@@ -647,7 +718,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 36.691,
     "lng": 3.2154,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ALC",
@@ -656,7 +728,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 38.2822,
     "lng": -0.5582,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ASP",
@@ -665,7 +738,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -23.8067,
     "lng": 133.902,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BIM",
@@ -674,7 +748,8 @@ const AIRPORTS = [
     "country": "Bahamas",
     "lat": 25.6999,
     "lng": -79.2647,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IXD",
@@ -683,7 +758,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 25.4401,
     "lng": 81.7339,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AET",
@@ -692,7 +768,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 66.5518,
     "lng": -152.622,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ABE",
@@ -701,7 +778,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.6521,
     "lng": -75.4408,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AIA",
@@ -710,7 +788,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.0532,
     "lng": -102.804,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LLU",
@@ -719,7 +798,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 60.4644,
     "lng": -45.5692,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ALA",
@@ -728,7 +808,8 @@ const AIRPORTS = [
     "country": "Kazakhstan",
     "lat": 43.3521,
     "lng": 77.0405,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MEU",
@@ -737,7 +818,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -0.8898,
     "lng": -52.6022,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LEI",
@@ -746,7 +828,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 36.8439,
     "lng": -2.3701,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "IUE",
@@ -755,7 +838,8 @@ const AIRPORTS = [
     "country": "Niue",
     "lat": -19.079,
     "lng": -169.9256,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AOR",
@@ -764,7 +848,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 6.1897,
     "lng": 100.398,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "APN",
@@ -773,7 +858,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 45.0781,
     "lng": -83.5603,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ALF",
@@ -782,7 +868,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 69.9761,
     "lng": 23.3717,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AFL",
@@ -791,7 +878,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -9.8664,
     "lng": -56.105,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LTI",
@@ -800,7 +888,8 @@ const AIRPORTS = [
     "country": "Mongolia",
     "lat": 46.3764,
     "lng": 96.2211,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ATM",
@@ -809,7 +898,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -3.2539,
     "lng": -52.254,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AAT",
@@ -818,7 +908,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 47.7499,
     "lng": 88.0858,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ACH",
@@ -827,7 +918,8 @@ const AIRPORTS = [
     "country": "Switzerland",
     "lat": 47.485,
     "lng": 9.5608,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AOO",
@@ -836,7 +928,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.2964,
     "lng": -78.32,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ASJ",
@@ -845,7 +938,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 28.4306,
     "lng": 129.713,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AMA",
@@ -854,7 +948,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.2194,
     "lng": -101.706,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ABM",
@@ -863,7 +958,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -10.9508,
     "lng": 142.459,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ABL",
@@ -872,7 +968,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 67.1063,
     "lng": -157.857,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AMQ",
@@ -881,7 +978,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -3.7103,
     "lng": 128.089,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ASV",
@@ -890,7 +988,8 @@ const AIRPORTS = [
     "country": "Kenya",
     "lat": -2.6451,
     "lng": 37.2531,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ULB",
@@ -899,7 +998,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -16.3297,
     "lng": 168.3011,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SID",
@@ -908,7 +1008,8 @@ const AIRPORTS = [
     "country": "Cape Verde",
     "lat": 16.7414,
     "lng": -22.9494,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AMM",
@@ -917,7 +1018,8 @@ const AIRPORTS = [
     "country": "Jordan",
     "lat": 31.7226,
     "lng": 35.9932,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ATQ",
@@ -926,7 +1028,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 31.7096,
     "lng": 74.7973,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AMS",
@@ -935,7 +1038,8 @@ const AIRPORTS = [
     "country": "Netherlands",
     "lat": 52.3086,
     "lng": 4.7639,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "DYR",
@@ -944,7 +1048,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 64.7349,
     "lng": 177.741,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YAA",
@@ -953,7 +1058,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 52.4525,
     "lng": -125.303,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AKP",
@@ -962,7 +1068,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 68.1336,
     "lng": -151.743,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AAQ",
@@ -971,7 +1078,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 45.0021,
     "lng": 37.3473,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ANC",
@@ -980,7 +1088,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 61.1744,
     "lng": -149.996,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "AOI",
@@ -989,7 +1098,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 43.6163,
     "lng": 13.3623,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ANS",
@@ -998,7 +1108,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -13.7064,
     "lng": -73.3504,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AZN",
@@ -1007,7 +1118,8 @@ const AIRPORTS = [
     "country": "Uzbekistan",
     "lat": 40.7277,
     "lng": 72.294,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ANX",
@@ -1016,7 +1128,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 69.2925,
     "lng": 16.1442,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AUY",
@@ -1025,7 +1138,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -20.2492,
     "lng": 169.771,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CRK",
@@ -1034,7 +1148,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 15.186,
     "lng": 120.56,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VLY",
@@ -1043,7 +1158,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 53.2481,
     "lng": -4.5353,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YAX",
@@ -1052,7 +1168,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 53.8492,
     "lng": -89.5794,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AGN",
@@ -1061,7 +1178,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 57.5036,
     "lng": -134.585,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ANG",
@@ -1070,7 +1188,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 45.7292,
     "lng": 0.2215,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ANI",
@@ -1079,7 +1198,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 61.5816,
     "lng": -159.543,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AWD",
@@ -1088,7 +1208,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -19.2346,
     "lng": 169.6009,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ESB",
@@ -1097,7 +1218,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 40.1281,
     "lng": 32.9951,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "AAE",
@@ -1106,7 +1228,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 36.8222,
     "lng": 7.8092,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AQG",
@@ -1115,7 +1238,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 30.5822,
     "lng": 117.05,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AOG",
@@ -1124,7 +1248,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 41.1053,
     "lng": 122.854,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AVA",
@@ -1133,7 +1258,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 26.2606,
     "lng": 105.8733,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ATA",
@@ -1142,7 +1268,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -9.3474,
     "lng": -77.5984,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ANM",
@@ -1151,7 +1278,8 @@ const AIRPORTS = [
     "country": "Madagascar",
     "lat": -14.9994,
     "lng": 50.3202,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AYT",
@@ -1160,7 +1288,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 36.8987,
     "lng": 30.8005,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TNR",
@@ -1169,7 +1298,8 @@ const AIRPORTS = [
     "country": "Madagascar",
     "lat": -18.7969,
     "lng": 47.4788,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ANU",
@@ -1178,7 +1308,8 @@ const AIRPORTS = [
     "country": "Antigua and Barbuda",
     "lat": 17.1367,
     "lng": -61.7927,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ANF",
@@ -1187,7 +1318,8 @@ const AIRPORTS = [
     "country": "Chile",
     "lat": -23.4445,
     "lng": -70.4451,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "DIE",
@@ -1196,7 +1328,8 @@ const AIRPORTS = [
     "country": "Madagascar",
     "lat": -12.3494,
     "lng": 49.2917,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ANR",
@@ -1205,7 +1338,8 @@ const AIRPORTS = [
     "country": "Belgium",
     "lat": 51.1894,
     "lng": 4.4603,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ANV",
@@ -1214,7 +1348,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 62.6467,
     "lng": -160.191,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AOJ",
@@ -1223,7 +1358,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 40.7347,
     "lng": 140.691,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KVK",
@@ -1232,7 +1368,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 67.4633,
     "lng": 33.5883,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ATW",
@@ -1241,7 +1378,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.2581,
     "lng": -88.5191,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AQJ",
@@ -1250,7 +1388,8 @@ const AIRPORTS = [
     "country": "Jordan",
     "lat": 29.6116,
     "lng": 35.0181,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AJU",
@@ -1259,7 +1398,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -10.984,
     "lng": -37.0703,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ARU",
@@ -1268,7 +1408,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -21.1413,
     "lng": -50.4247,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ARW",
@@ -1277,7 +1418,8 @@ const AIRPORTS = [
     "country": "Romania",
     "lat": 46.1766,
     "lng": 21.262,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AUX",
@@ -1286,7 +1428,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -7.2279,
     "lng": -48.2405,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RAE",
@@ -1295,7 +1438,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 30.9066,
     "lng": 41.1382,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ACR",
@@ -1304,7 +1448,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": -0.5833,
     "lng": -72.4083,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AQA",
@@ -1313,7 +1458,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -21.812,
     "lng": -48.133,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AUC",
@@ -1322,7 +1468,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 7.0689,
     "lng": -70.7369,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AAX",
@@ -1331,7 +1478,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -19.5632,
     "lng": -46.9604,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AMH",
@@ -1340,7 +1488,8 @@ const AIRPORTS = [
     "country": "Ethiopia",
     "lat": 6.0394,
     "lng": 37.5905,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ACV",
@@ -1349,7 +1498,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.9781,
     "lng": -124.109,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YAB",
@@ -1358,7 +1508,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 73.0059,
     "lng": -85.0325,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ARC",
@@ -1367,7 +1518,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 68.1147,
     "lng": -145.579,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ADU",
@@ -1376,7 +1528,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 38.3257,
     "lng": 48.4244,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AQP",
@@ -1385,7 +1538,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -16.3411,
     "lng": -71.5831,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PUG",
@@ -1394,7 +1548,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -32.5069,
     "lng": 137.717,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ARI",
@@ -1403,7 +1558,8 @@ const AIRPORTS = [
     "country": "Chile",
     "lat": -18.3485,
     "lng": -70.3387,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ARH",
@@ -1412,7 +1568,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 64.6003,
     "lng": 40.7167,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AXM",
@@ -1421,7 +1578,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 4.4528,
     "lng": -75.7664,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ARM",
@@ -1430,7 +1588,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -30.5281,
     "lng": 151.617,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ACE",
@@ -1439,7 +1598,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 28.9455,
     "lng": -13.6052,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ATC",
@@ -1448,7 +1608,8 @@ const AIRPORTS = [
     "country": "Bahamas",
     "lat": 24.6294,
     "lng": -75.6738,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RUA",
@@ -1457,7 +1618,8 @@ const AIRPORTS = [
     "country": "Uganda",
     "lat": 3.05,
     "lng": 30.917,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ARK",
@@ -1466,7 +1628,8 @@ const AIRPORTS = [
     "country": "Tanzania",
     "lat": -3.3678,
     "lng": 36.6333,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AXR",
@@ -1475,7 +1638,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -15.2483,
     "lng": -146.617,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AJR",
@@ -1484,7 +1648,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 65.5903,
     "lng": 19.2819,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YIE",
@@ -1493,7 +1658,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 47.3106,
     "lng": 119.9117,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ABB",
@@ -1502,7 +1668,8 @@ const AIRPORTS = [
     "country": "Nigeria",
     "lat": 6.2042,
     "lng": 6.6653,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AKJ",
@@ -1511,7 +1678,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 43.6708,
     "lng": 142.447,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AVL",
@@ -1520,7 +1688,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.4362,
     "lng": -82.5418,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ASB",
@@ -1529,7 +1698,8 @@ const AIRPORTS = [
     "country": "Turkmenistan",
     "lat": 37.9868,
     "lng": 58.361,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ASM",
@@ -1538,7 +1708,8 @@ const AIRPORTS = [
     "country": "Eritrea",
     "lat": 15.2919,
     "lng": 38.9107,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ASO",
@@ -1547,7 +1718,8 @@ const AIRPORTS = [
     "country": "Ethiopia",
     "lat": 10.0185,
     "lng": 34.5863,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ASE",
@@ -1556,7 +1728,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.2232,
     "lng": -106.869,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ASF",
@@ -1565,7 +1738,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 46.2833,
     "lng": 48.0063,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JTY",
@@ -1574,7 +1748,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 36.5799,
     "lng": 26.3758,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ASU",
@@ -1583,7 +1758,8 @@ const AIRPORTS = [
     "country": "Paraguay",
     "lat": -25.24,
     "lng": -57.52,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ASW",
@@ -1592,7 +1768,8 @@ const AIRPORTS = [
     "country": "Egypt",
     "lat": 23.9644,
     "lng": 32.82,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ATZ",
@@ -1601,7 +1778,8 @@ const AIRPORTS = [
     "country": "Egypt",
     "lat": 27.0465,
     "lng": 31.012,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AXK",
@@ -1610,7 +1788,8 @@ const AIRPORTS = [
     "country": "Yemen",
     "lat": 14.5513,
     "lng": 46.8262,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AHN",
@@ -1619,7 +1798,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.9486,
     "lng": -83.3263,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ATH",
@@ -1628,7 +1808,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 37.9364,
     "lng": 23.9445,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "AIU",
@@ -1637,7 +1818,8 @@ const AIRPORTS = [
     "country": "Cook Islands",
     "lat": -19.9678,
     "lng": -158.119,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AKB",
@@ -1646,7 +1828,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 52.2203,
     "lng": -174.206,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ATL",
@@ -1655,7 +1838,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.6367,
     "lng": -84.4281,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "ACY",
@@ -1664,7 +1848,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.4576,
     "lng": -74.5772,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ATD",
@@ -1673,7 +1858,8 @@ const AIRPORTS = [
     "country": "Solomon Islands",
     "lat": -8.8733,
     "lng": 161.011,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ATK",
@@ -1682,7 +1868,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 70.4673,
     "lng": -157.436,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YAT",
@@ -1691,7 +1878,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 52.9275,
     "lng": -82.4319,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GUW",
@@ -1700,7 +1888,8 @@ const AIRPORTS = [
     "country": "Kazakhstan",
     "lat": 47.1219,
     "lng": 51.8214,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AKL",
@@ -1709,7 +1898,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -37.0081,
     "lng": 174.792,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "AGB",
@@ -1718,7 +1908,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 48.4253,
     "lng": 10.9317,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AUG",
@@ -1727,7 +1918,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.3206,
     "lng": -69.7973,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YPJ",
@@ -1736,7 +1928,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 59.2967,
     "lng": -69.5997,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IXU",
@@ -1745,7 +1938,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 19.8627,
     "lng": 75.3981,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AUR",
@@ -1754,7 +1948,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 44.8914,
     "lng": 2.4219,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AUU",
@@ -1763,7 +1958,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -13.3541,
     "lng": 141.7207,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AUS",
@@ -1772,7 +1968,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 30.1945,
     "lng": -97.6699,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "AVV",
@@ -1781,7 +1978,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -38.0394,
     "lng": 144.469,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RAR",
@@ -1790,7 +1988,8 @@ const AIRPORTS = [
     "country": "Cook Islands",
     "lat": -21.2027,
     "lng": -159.806,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AVN",
@@ -1799,7 +1998,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 43.9073,
     "lng": 4.9018,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OVD",
@@ -1808,7 +2008,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 43.5636,
     "lng": -6.0346,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AXU",
@@ -1817,7 +2018,8 @@ const AIRPORTS = [
     "country": "Ethiopia",
     "lat": 14.1468,
     "lng": 38.7728,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AYP",
@@ -1826,7 +2028,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -13.1548,
     "lng": -74.2044,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TRI",
@@ -1835,7 +2038,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 36.4752,
     "lng": -82.4074,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ROR",
@@ -1844,7 +2048,8 @@ const AIRPORTS = [
     "country": "Palau",
     "lat": 7.3673,
     "lng": 134.5442,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BXB",
@@ -1853,7 +2058,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -2.5322,
     "lng": 133.439,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BCD",
@@ -1862,7 +2068,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 10.7764,
     "lng": 123.015,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BJZ",
@@ -1871,7 +2078,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 38.8913,
     "lng": -6.8213,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NYU",
@@ -1880,7 +2088,8 @@ const AIRPORTS = [
     "country": "Burma",
     "lat": 21.1788,
     "lng": 94.9302,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BGW",
@@ -1889,7 +2098,8 @@ const AIRPORTS = [
     "country": "Iraq",
     "lat": 33.2625,
     "lng": 44.2346,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "IXB",
@@ -1898,7 +2108,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 26.6812,
     "lng": 88.3286,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YBG",
@@ -1907,7 +2118,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 48.3306,
     "lng": -70.9964,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BJR",
@@ -1916,7 +2128,8 @@ const AIRPORTS = [
     "country": "Ethiopia",
     "lat": 11.6081,
     "lng": 37.3216,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BHV",
@@ -1925,7 +2138,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 29.3481,
     "lng": 71.718,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BHI",
@@ -1934,7 +2148,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -38.725,
     "lng": -62.1693,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BSC",
@@ -1943,7 +2158,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 6.2029,
     "lng": -77.3947,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BAH",
@@ -1952,7 +2168,8 @@ const AIRPORTS = [
     "country": "Bahrain",
     "lat": 26.2708,
     "lng": 50.6336,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BAY",
@@ -1961,7 +2178,8 @@ const AIRPORTS = [
     "country": "Romania",
     "lat": 47.6584,
     "lng": 23.47,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YBC",
@@ -1970,7 +2188,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.1325,
     "lng": -68.2044,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AEB",
@@ -1979,7 +2198,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 23.7206,
     "lng": 106.96,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NBS",
@@ -1988,7 +2208,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 42.0669,
     "lng": 127.6022,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BKM",
@@ -1997,7 +2218,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 3.974,
     "lng": 115.618,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YBK",
@@ -2006,7 +2228,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 64.2989,
     "lng": -96.0778,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BFL",
@@ -2015,7 +2238,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.4336,
     "lng": -119.057,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KSH",
@@ -2024,7 +2248,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 34.3459,
     "lng": 47.1581,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GYD",
@@ -2033,7 +2258,8 @@ const AIRPORTS = [
     "country": "Azerbaijan",
     "lat": 40.4675,
     "lng": 50.0467,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "EDO",
@@ -2042,7 +2268,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 39.5546,
     "lng": 27.0138,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BPN",
@@ -2051,7 +2278,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -1.2683,
     "lng": 116.894,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BNK",
@@ -2060,7 +2288,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -28.8339,
     "lng": 153.562,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BBA",
@@ -2069,7 +2298,8 @@ const AIRPORTS = [
     "country": "Chile",
     "lat": -45.9161,
     "lng": -71.6895,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BWI",
@@ -2078,7 +2308,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.1754,
     "lng": -76.6683,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BXR",
@@ -2087,7 +2318,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 29.0842,
     "lng": 58.45,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BKO",
@@ -2096,7 +2328,8 @@ const AIRPORTS = [
     "country": "Mali",
     "lat": 12.5335,
     "lng": -7.9499,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BTJ",
@@ -2105,7 +2338,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": 5.5229,
     "lng": 95.4206,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BND",
@@ -2114,7 +2348,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 27.2183,
     "lng": 56.3778,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TKG",
@@ -2123,7 +2358,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -5.2406,
     "lng": 105.1756,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BDH",
@@ -2132,7 +2368,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 26.532,
     "lng": 54.8248,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MRX",
@@ -2141,7 +2378,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 30.5562,
     "lng": 49.1519,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BWN",
@@ -2150,7 +2388,8 @@ const AIRPORTS = [
     "country": "Brunei",
     "lat": 4.9442,
     "lng": 114.928,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BDO",
@@ -2159,7 +2398,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -6.9006,
     "lng": 107.576,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BLR",
@@ -2168,7 +2408,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 13.1979,
     "lng": 77.7063,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BPX",
@@ -2177,7 +2418,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 30.5536,
     "lng": 97.1083,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BKK",
@@ -2186,7 +2428,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 13.6811,
     "lng": 100.747,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "DMK",
@@ -2195,7 +2438,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 13.9126,
     "lng": 100.607,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BGR",
@@ -2204,7 +2448,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.8074,
     "lng": -68.8281,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BGF",
@@ -2213,7 +2458,8 @@ const AIRPORTS = [
     "country": "Central African Republic",
     "lat": 4.3985,
     "lng": 18.5188,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BNX",
@@ -2222,7 +2468,8 @@ const AIRPORTS = [
     "country": "Bosnia and Herzegovina",
     "lat": 44.9414,
     "lng": 17.2975,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BDJ",
@@ -2231,7 +2478,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -3.4424,
     "lng": 114.763,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BJL",
@@ -2240,7 +2488,8 @@ const AIRPORTS = [
     "country": "Gambia",
     "lat": 13.338,
     "lng": -16.6522,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BSD",
@@ -2249,7 +2498,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 25.0533,
     "lng": 99.1683,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BAV",
@@ -2258,7 +2508,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 40.56,
     "lng": 109.997,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BHB",
@@ -2267,7 +2518,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.45,
     "lng": -68.3615,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BCI",
@@ -2276,7 +2528,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -23.5653,
     "lng": 145.307,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BCN",
@@ -2285,7 +2538,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 41.2971,
     "lng": 2.0785,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "BLA",
@@ -2294,7 +2548,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 10.1111,
     "lng": -64.6922,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BAZ",
@@ -2303,7 +2558,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -0.9813,
     "lng": -62.9196,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BDU",
@@ -2312,7 +2568,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 69.0558,
     "lng": 18.5404,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BRI",
@@ -2321,7 +2578,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 41.1389,
     "lng": 16.7606,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BNS",
@@ -2330,7 +2588,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 8.615,
     "lng": -70.2142,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BBN",
@@ -2339,7 +2598,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 3.7339,
     "lng": 115.479,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BZL",
@@ -2348,7 +2608,8 @@ const AIRPORTS = [
     "country": "Bangladesh",
     "lat": 22.801,
     "lng": 90.3012,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BAX",
@@ -2357,7 +2618,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 53.3638,
     "lng": 83.5385,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HYA",
@@ -2366,7 +2628,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.6693,
     "lng": -70.2804,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BDQ",
@@ -2375,7 +2638,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 22.3362,
     "lng": 73.2263,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BRM",
@@ -2384,7 +2648,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 10.0427,
     "lng": -69.3586,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BRR",
@@ -2393,7 +2658,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 57.0228,
     "lng": -7.4431,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EJA",
@@ -2402,7 +2668,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 7.0243,
     "lng": -73.8068,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BAQ",
@@ -2411,7 +2678,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 10.8896,
     "lng": -74.7808,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BRA",
@@ -2420,7 +2688,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -12.0789,
     "lng": -45.009,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BRW",
@@ -2429,7 +2698,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 71.2854,
     "lng": -156.766,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BTI",
@@ -2438,7 +2708,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 70.134,
     "lng": -143.582,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BSO",
@@ -2447,7 +2718,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 20.4513,
     "lng": 121.98,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BSR",
@@ -2456,7 +2728,8 @@ const AIRPORTS = [
     "country": "Iraq",
     "lat": 30.5491,
     "lng": 47.6621,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SKB",
@@ -2465,7 +2738,8 @@ const AIRPORTS = [
     "country": "Saint Kitts and Nevis",
     "lat": 17.3112,
     "lng": -62.7187,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BIA",
@@ -2474,7 +2748,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 42.5527,
     "lng": 9.4837,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BSG",
@@ -2483,7 +2758,8 @@ const AIRPORTS = [
     "country": "Equatorial Guinea",
     "lat": 1.9055,
     "lng": 9.8057,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SUK",
@@ -2492,7 +2768,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 67.792,
     "lng": 130.394,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BTH",
@@ -2501,7 +2778,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": 1.121,
     "lng": 104.119,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BHS",
@@ -2510,7 +2788,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -33.4094,
     "lng": 149.652,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZBF",
@@ -2519,7 +2798,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 47.6297,
     "lng": -65.7389,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BAL",
@@ -2528,7 +2808,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 37.929,
     "lng": 41.1166,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BLJ",
@@ -2537,7 +2818,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 35.7521,
     "lng": 6.3086,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BTR",
@@ -2546,7 +2828,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 30.5332,
     "lng": -91.1496,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BJF",
@@ -2555,7 +2838,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 70.6005,
     "lng": 29.6914,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BTC",
@@ -2564,7 +2848,8 @@ const AIRPORTS = [
     "country": "Sri Lanka",
     "lat": 7.7058,
     "lng": 81.6788,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BUS",
@@ -2573,7 +2858,8 @@ const AIRPORTS = [
     "country": "Georgia",
     "lat": 41.6103,
     "lng": 41.5997,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BUW",
@@ -2582,7 +2868,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -5.4869,
     "lng": 122.569,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JTC",
@@ -2591,7 +2878,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -22.1669,
     "lng": -49.0503,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BYN",
@@ -2600,7 +2888,8 @@ const AIRPORTS = [
     "country": "Mongolia",
     "lat": 46.1633,
     "lng": 100.704,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RLK",
@@ -2609,7 +2898,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 40.926,
     "lng": 107.7428,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "XBE",
@@ -2618,7 +2908,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 53.9656,
     "lng": -91.0272,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BPT",
@@ -2627,7 +2918,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 29.9508,
     "lng": -94.0207,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BVA",
@@ -2636,7 +2928,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 49.4544,
     "lng": 2.1128,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "WBQ",
@@ -2645,7 +2938,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 66.3622,
     "lng": -147.407,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BKW",
@@ -2654,7 +2948,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.7873,
     "lng": -81.1242,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BEU",
@@ -2663,7 +2958,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -24.3461,
     "lng": 139.46,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BHY",
@@ -2672,7 +2968,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 21.5394,
     "lng": 109.294,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NAY",
@@ -2681,7 +2978,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 39.7828,
     "lng": 116.388,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PEK",
@@ -2690,7 +2988,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 40.0801,
     "lng": 116.585,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "BEW",
@@ -2699,7 +2998,8 @@ const AIRPORTS = [
     "country": "Mozambique",
     "lat": -19.7964,
     "lng": 34.9076,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BEY",
@@ -2708,7 +3008,8 @@ const AIRPORTS = [
     "country": "Lebanon",
     "lat": 33.8209,
     "lng": 35.4884,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BJA",
@@ -2717,7 +3018,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 36.712,
     "lng": 5.0699,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BEL",
@@ -2726,7 +3028,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -1.3793,
     "lng": -48.4763,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BFS",
@@ -2735,7 +3038,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 54.6575,
     "lng": -6.2158,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BHD",
@@ -2744,7 +3048,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 54.6181,
     "lng": -5.8725,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "IXG",
@@ -2753,7 +3058,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 15.8593,
     "lng": 74.6183,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EGO",
@@ -2762,7 +3068,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 50.6438,
     "lng": 36.5901,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BEG",
@@ -2771,7 +3078,8 @@ const AIRPORTS = [
     "country": "Serbia",
     "lat": 44.8184,
     "lng": 20.3091,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BZE",
@@ -2780,7 +3088,8 @@ const AIRPORTS = [
     "country": "Belize",
     "lat": 17.5391,
     "lng": -88.3082,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "QBC",
@@ -2789,7 +3098,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 52.3875,
     "lng": -126.596,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BLV",
@@ -2798,7 +3108,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.5452,
     "lng": -89.8352,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BLI",
@@ -2807,7 +3118,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 48.7928,
     "lng": -122.538,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CNF",
@@ -2816,7 +3128,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -19.6244,
     "lng": -43.9719,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PLU",
@@ -2825,7 +3138,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -19.8512,
     "lng": -43.9506,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "EYK",
@@ -2834,7 +3148,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 63.6869,
     "lng": 66.6986,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BJI",
@@ -2843,7 +3158,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 47.5094,
     "lng": -94.9337,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BEB",
@@ -2852,7 +3168,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 57.4811,
     "lng": -7.3628,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BEN",
@@ -2861,7 +3178,8 @@ const AIRPORTS = [
     "country": "Libya",
     "lat": 32.0968,
     "lng": 20.2695,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BKS",
@@ -2870,7 +3188,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -3.8637,
     "lng": 102.339,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BNC",
@@ -2879,7 +3198,8 @@ const AIRPORTS = [
     "country": "Congo (Kinshasa)",
     "lat": 0.575,
     "lng": 29.4739,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BNI",
@@ -2888,7 +3208,8 @@ const AIRPORTS = [
     "country": "Nigeria",
     "lat": 6.317,
     "lng": 5.5995,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "XNA",
@@ -2897,7 +3218,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 36.2819,
     "lng": -94.3068,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BBO",
@@ -2906,7 +3228,8 @@ const AIRPORTS = [
     "country": "Somalia",
     "lat": 10.3892,
     "lng": 44.9411,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BGY",
@@ -2915,7 +3238,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 45.6739,
     "lng": 9.7042,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BGO",
@@ -2924,7 +3248,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 60.2934,
     "lng": 5.2181,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "EGC",
@@ -2933,7 +3258,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 44.8253,
     "lng": 0.5186,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BVG",
@@ -2942,7 +3268,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 70.8714,
     "lng": 29.0342,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SXF",
@@ -2951,7 +3278,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 52.38,
     "lng": 13.5225,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TXL",
@@ -2960,7 +3288,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 52.5597,
     "lng": 13.2877,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BDA",
@@ -2969,7 +3298,8 @@ const AIRPORTS = [
     "country": "Bermuda",
     "lat": 32.364,
     "lng": -64.6787,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BRN",
@@ -2978,7 +3308,8 @@ const AIRPORTS = [
     "country": "Switzerland",
     "lat": 46.9141,
     "lng": 7.4971,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "OGZ",
@@ -2987,7 +3318,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 43.2051,
     "lng": 44.6066,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BET",
@@ -2996,7 +3328,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 60.7798,
     "lng": -161.838,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BTT",
@@ -3005,7 +3338,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 66.9139,
     "lng": -151.529,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BZR",
@@ -3014,7 +3348,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 43.3235,
     "lng": 3.3539,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BWA",
@@ -3023,7 +3358,8 @@ const AIRPORTS = [
     "country": "Nepal",
     "lat": 27.5057,
     "lng": 83.4163,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BHR",
@@ -3032,7 +3368,8 @@ const AIRPORTS = [
     "country": "Nepal",
     "lat": 27.6781,
     "lng": 84.4294,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BHU",
@@ -3041,7 +3378,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 21.7522,
     "lng": 72.1852,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BHO",
@@ -3050,7 +3388,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 23.2875,
     "lng": 77.3374,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BBI",
@@ -3059,7 +3398,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 20.2444,
     "lng": 85.8178,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BHJ",
@@ -3068,7 +3408,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 23.2878,
     "lng": 69.6702,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BIK",
@@ -3077,7 +3418,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -1.19,
     "lng": 136.108,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BIQ",
@@ -3086,7 +3428,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 43.4683,
     "lng": -1.5311,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YTL",
@@ -3095,7 +3438,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 53.8178,
     "lng": -89.8969,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BFJ",
@@ -3104,7 +3448,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 27.2671,
     "lng": 105.4721,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BIO",
@@ -3113,7 +3458,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 43.3011,
     "lng": -2.9106,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BIL",
@@ -3122,7 +3468,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 45.8077,
     "lng": -108.543,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BLL",
@@ -3131,7 +3478,8 @@ const AIRPORTS = [
     "country": "Denmark",
     "lat": 55.7403,
     "lng": 9.1518,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BMU",
@@ -3140,7 +3488,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -8.5396,
     "lng": 118.687,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BGM",
@@ -3149,7 +3498,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.2087,
     "lng": -75.9798,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BGG",
@@ -3158,7 +3508,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 38.8593,
     "lng": 40.596,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BTU",
@@ -3167,7 +3518,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 3.1239,
     "lng": 113.02,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BIR",
@@ -3176,7 +3528,8 @@ const AIRPORTS = [
     "country": "Nepal",
     "lat": 26.4815,
     "lng": 87.264,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BVI",
@@ -3185,7 +3538,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -25.8975,
     "lng": 139.348,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "XBJ",
@@ -3194,7 +3548,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 32.8981,
     "lng": 59.2661,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BHM",
@@ -3203,7 +3558,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.5629,
     "lng": -86.7535,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BHX",
@@ -3212,7 +3568,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 52.4539,
     "lng": -1.748,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BHH",
@@ -3221,7 +3578,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 19.9844,
     "lng": 42.6209,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FRU",
@@ -3230,7 +3588,8 @@ const AIRPORTS = [
     "country": "Kyrgyzstan",
     "lat": 43.0613,
     "lng": 74.4776,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BSK",
@@ -3239,7 +3598,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 34.7933,
     "lng": 5.7382,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BIS",
@@ -3248,7 +3608,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 46.7727,
     "lng": -100.746,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "OXB",
@@ -3257,7 +3618,8 @@ const AIRPORTS = [
     "country": "Guinea-Bissau",
     "lat": 11.8948,
     "lng": -15.6537,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BKQ",
@@ -3266,7 +3628,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -24.4278,
     "lng": 145.429,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BLK",
@@ -3275,7 +3638,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 53.7717,
     "lng": -3.0286,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BQS",
@@ -3284,7 +3648,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 50.4254,
     "lng": 127.412,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BLZ",
@@ -3293,7 +3658,8 @@ const AIRPORTS = [
     "country": "Malawi",
     "lat": -15.6791,
     "lng": 34.974,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BFN",
@@ -3302,7 +3668,8 @@ const AIRPORTS = [
     "country": "South Africa",
     "lat": -29.0927,
     "lng": 26.3024,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BMI",
@@ -3311,7 +3678,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.4771,
     "lng": -88.9159,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BVB",
@@ -3320,7 +3688,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": 2.8414,
     "lng": -60.6922,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BVC",
@@ -3329,7 +3698,8 @@ const AIRPORTS = [
     "country": "Cape Verde",
     "lat": 16.1365,
     "lng": -22.8889,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BOY",
@@ -3338,7 +3708,8 @@ const AIRPORTS = [
     "country": "Burkina Faso",
     "lat": 11.1601,
     "lng": -4.331,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BOC",
@@ -3347,7 +3718,8 @@ const AIRPORTS = [
     "country": "Panama",
     "lat": 9.3408,
     "lng": -82.2508,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ODO",
@@ -3356,7 +3728,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 57.8661,
     "lng": 114.243,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BOO",
@@ -3365,7 +3738,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 67.2692,
     "lng": 14.3653,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BJV",
@@ -3374,7 +3748,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 37.2506,
     "lng": 27.6643,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BNB",
@@ -3383,7 +3758,8 @@ const AIRPORTS = [
     "country": "Congo (Kinshasa)",
     "lat": -0.217,
     "lng": 20.85,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BOG",
@@ -3392,7 +3768,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 4.7016,
     "lng": -74.1469,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BYO",
@@ -3401,7 +3778,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -21.2473,
     "lng": -56.4525,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BOI",
@@ -3410,7 +3788,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.5644,
     "lng": -116.223,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BJB",
@@ -3419,7 +3798,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 37.493,
     "lng": 57.3082,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BPL",
@@ -3428,7 +3808,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 44.895,
     "lng": 82.3,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BLQ",
@@ -3437,7 +3818,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 44.5354,
     "lng": 11.2887,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BZO",
@@ -3446,7 +3828,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 46.4602,
     "lng": 11.3264,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LAZ",
@@ -3455,7 +3838,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -13.2621,
     "lng": -43.4081,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YVB",
@@ -3464,7 +3848,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 48.0711,
     "lng": -65.4603,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TGP",
@@ -3473,7 +3858,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 61.5897,
     "lng": 89.994,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BOB",
@@ -3482,7 +3868,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -16.4444,
     "lng": -151.751,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BOD",
@@ -3491,7 +3878,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 44.8283,
     "lng": -0.7156,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BMW",
@@ -3500,7 +3888,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 21.375,
     "lng": 0.9239,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BLE",
@@ -3509,7 +3898,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 60.422,
     "lng": 15.5152,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BSA",
@@ -3518,7 +3908,8 @@ const AIRPORTS = [
     "country": "Somalia",
     "lat": 11.2753,
     "lng": 49.1494,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BOS",
@@ -3527,7 +3918,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.3643,
     "lng": -71.0052,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "BQL",
@@ -3536,7 +3928,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -22.9133,
     "lng": 139.9,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BOJ",
@@ -3545,7 +3938,8 @@ const AIRPORTS = [
     "country": "Bulgaria",
     "lat": 42.5696,
     "lng": 27.5152,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BOH",
@@ -3554,7 +3948,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 50.78,
     "lng": -1.8425,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BZN",
@@ -3563,7 +3958,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 45.7775,
     "lng": -111.153,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BWK",
@@ -3572,7 +3968,8 @@ const AIRPORTS = [
     "country": "Croatia",
     "lat": 43.2857,
     "lng": 16.6797,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BFD",
@@ -3581,7 +3978,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.8031,
     "lng": -78.6401,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BRD",
@@ -3590,7 +3988,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 46.3983,
     "lng": -94.1381,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YBR",
@@ -3599,7 +3998,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.91,
     "lng": -99.9519,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BKG",
@@ -3608,7 +4008,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 36.5321,
     "lng": -93.2005,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BSB",
@@ -3617,7 +4018,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -15.8692,
     "lng": -47.9208,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BTS",
@@ -3626,7 +4028,8 @@ const AIRPORTS = [
     "country": "Slovakia",
     "lat": 48.1702,
     "lng": 17.2127,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BTK",
@@ -3635,7 +4038,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 56.3706,
     "lng": 101.698,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BZV",
@@ -3644,7 +4048,8 @@ const AIRPORTS = [
     "country": "Congo (Brazzaville)",
     "lat": -4.2517,
     "lng": 15.253,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BRE",
@@ -3653,7 +4058,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 53.0475,
     "lng": 8.7867,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BES",
@@ -3662,7 +4068,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 48.4479,
     "lng": -4.4185,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BVS",
@@ -3671,7 +4078,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -1.6365,
     "lng": -50.4436,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KTS",
@@ -3680,7 +4088,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 65.3313,
     "lng": -166.466,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BGI",
@@ -3689,7 +4098,8 @@ const AIRPORTS = [
     "country": "Barbados",
     "lat": 13.0746,
     "lng": -59.4925,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BDS",
@@ -3698,7 +4108,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 40.6576,
     "lng": 17.947,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BNE",
@@ -3707,7 +4118,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -27.3842,
     "lng": 153.117,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BRS",
@@ -3716,7 +4128,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 51.3827,
     "lng": -2.7191,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BVE",
@@ -3725,7 +4138,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 45.0397,
     "lng": 1.4856,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BRQ",
@@ -3734,7 +4148,8 @@ const AIRPORTS = [
     "country": "Czech Republic",
     "lat": 49.1513,
     "lng": 16.6944,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BHQ",
@@ -3743,7 +4158,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -32.0014,
     "lng": 141.472,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BNN",
@@ -3752,7 +4168,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 65.4611,
     "lng": 12.2175,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BME",
@@ -3761,7 +4178,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -17.9447,
     "lng": 122.232,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YVM",
@@ -3770,7 +4188,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 67.5458,
     "lng": -64.0314,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BRO",
@@ -3779,7 +4198,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 25.9068,
     "lng": -97.4259,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BQK",
@@ -3788,7 +4208,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 31.2588,
     "lng": -81.4665,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BRU",
@@ -3797,7 +4218,8 @@ const AIRPORTS = [
     "country": "Belgium",
     "lat": 50.9014,
     "lng": 4.4844,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BQB",
@@ -3806,7 +4228,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -33.6884,
     "lng": 115.4016,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BGA",
@@ -3815,7 +4238,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 7.1265,
     "lng": -73.1848,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OTP",
@@ -3824,7 +4248,8 @@ const AIRPORTS = [
     "country": "Romania",
     "lat": 44.5711,
     "lng": 26.085,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BKC",
@@ -3833,7 +4258,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 65.9816,
     "lng": -161.149,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BUD",
@@ -3842,7 +4268,8 @@ const AIRPORTS = [
     "country": "Hungary",
     "lat": 47.4298,
     "lng": 19.2611,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BUN",
@@ -3851,7 +4278,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 3.8196,
     "lng": -76.9898,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AEP",
@@ -3860,7 +4288,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -34.5592,
     "lng": -58.4156,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "EZE",
@@ -3869,7 +4298,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -34.8222,
     "lng": -58.5358,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BUF",
@@ -3878,7 +4308,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.9405,
     "lng": -78.7322,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "UUA",
@@ -3887,7 +4318,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 54.64,
     "lng": 52.8017,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BJM",
@@ -3896,7 +4328,8 @@ const AIRPORTS = [
     "country": "Burundi",
     "lat": -3.324,
     "lng": 29.3185,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BUA",
@@ -3905,7 +4338,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -5.4223,
     "lng": 154.673,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BKY",
@@ -3914,7 +4348,8 @@ const AIRPORTS = [
     "country": "Congo (Kinshasa)",
     "lat": -2.309,
     "lng": 28.8088,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BHK",
@@ -3923,7 +4358,8 @@ const AIRPORTS = [
     "country": "Uzbekistan",
     "lat": 39.775,
     "lng": 64.4833,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BKZ",
@@ -3932,7 +4368,8 @@ const AIRPORTS = [
     "country": "Tanzania",
     "lat": -1.332,
     "lng": 31.8212,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BUQ",
@@ -3941,7 +4378,8 @@ const AIRPORTS = [
     "country": "Zimbabwe",
     "lat": -20.0174,
     "lng": 28.6179,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BUL",
@@ -3950,7 +4388,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -7.2163,
     "lng": 146.6495,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BDB",
@@ -3959,7 +4398,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -24.9039,
     "lng": 152.319,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BUX",
@@ -3968,7 +4408,8 @@ const AIRPORTS = [
     "country": "Congo (Kinshasa)",
     "lat": 1.5657,
     "lng": 30.2208,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BMV",
@@ -3977,7 +4418,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 12.6683,
     "lng": 108.12,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BUR",
@@ -3986,7 +4428,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 34.2007,
     "lng": -118.359,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RGS",
@@ -3995,7 +4438,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 42.3576,
     "lng": -3.6208,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BFV",
@@ -4004,7 +4448,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 15.2295,
     "lng": 103.253,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BUC",
@@ -4013,7 +4458,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -17.7486,
     "lng": 139.534,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BRL",
@@ -4022,7 +4468,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.7832,
     "lng": -91.1255,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BTV",
@@ -4031,7 +4478,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.4719,
     "lng": -73.1533,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BWT",
@@ -4040,7 +4488,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -40.9989,
     "lng": 145.731,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PUS",
@@ -4049,7 +4498,8 @@ const AIRPORTS = [
     "country": "South Korea",
     "lat": 35.1795,
     "lng": 128.938,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "AGS",
@@ -4058,7 +4508,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.3699,
     "lng": -81.9645,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BUZ",
@@ -4067,7 +4518,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 28.9448,
     "lng": 50.8346,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "USU",
@@ -4076,7 +4528,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 12.1215,
     "lng": 120.1,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BTM",
@@ -4085,7 +4538,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 45.9548,
     "lng": -112.497,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BXU",
@@ -4094,7 +4548,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 8.9515,
     "lng": 125.4788,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BZG",
@@ -4103,7 +4558,8 @@ const AIRPORTS = [
     "country": "Poland",
     "lat": 53.0968,
     "lng": 17.9777,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CBH",
@@ -4112,7 +4568,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 31.6457,
     "lng": -2.2699,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CAH",
@@ -4121,7 +4578,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 9.1777,
     "lng": 105.1778,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CAB",
@@ -4130,7 +4588,8 @@ const AIRPORTS = [
     "country": "Angola",
     "lat": -5.597,
     "lng": 12.1884,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CFB",
@@ -4139,7 +4598,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -22.9217,
     "lng": -42.0743,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CFC",
@@ -4148,7 +4608,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -26.7884,
     "lng": -50.9398,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OAL",
@@ -4157,7 +4618,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -11.496,
     "lng": -61.4508,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CFR",
@@ -4166,7 +4628,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 49.1733,
     "lng": -0.45,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CGY",
@@ -4175,7 +4638,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 8.6122,
     "lng": 124.4565,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CAG",
@@ -4184,7 +4648,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 39.2515,
     "lng": 9.0543,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CNS",
@@ -4193,7 +4658,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -16.8858,
     "lng": 145.755,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CAI",
@@ -4202,7 +4668,8 @@ const AIRPORTS = [
     "country": "Egypt",
     "lat": 30.1219,
     "lng": 31.4056,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CJA",
@@ -4211,7 +4678,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -7.1392,
     "lng": -78.4894,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CBQ",
@@ -4220,7 +4688,8 @@ const AIRPORTS = [
     "country": "Nigeria",
     "lat": 4.976,
     "lng": 8.3472,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CJC",
@@ -4229,7 +4698,8 @@ const AIRPORTS = [
     "country": "Chile",
     "lat": -22.4982,
     "lng": -68.9036,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CYP",
@@ -4238,7 +4708,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 12.0727,
     "lng": 124.545,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CLV",
@@ -4247,7 +4718,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -17.7253,
     "lng": -48.6075,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YYC",
@@ -4256,7 +4728,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 51.1139,
     "lng": -114.02,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CLO",
@@ -4265,7 +4738,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 3.5432,
     "lng": -76.3816,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CCJ",
@@ -4274,7 +4748,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 11.1368,
     "lng": 75.9553,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CLY",
@@ -4283,7 +4758,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 42.5244,
     "lng": 8.7931,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CMW",
@@ -4292,7 +4768,8 @@ const AIRPORTS = [
     "country": "Cuba",
     "lat": 21.4203,
     "lng": -77.8475,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YCB",
@@ -4301,7 +4778,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 69.1081,
     "lng": -105.138,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CGM",
@@ -4310,7 +4788,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 9.2535,
     "lng": 124.707,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YBL",
@@ -4319,7 +4798,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.9508,
     "lng": -125.271,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CAL",
@@ -4328,7 +4808,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 55.4372,
     "lng": -5.6864,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CPE",
@@ -4337,7 +4818,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 19.8168,
     "lng": -90.5003,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CPV",
@@ -4346,7 +4828,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -7.2699,
     "lng": -35.8964,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VCP",
@@ -4355,7 +4838,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -23.0074,
     "lng": -47.1345,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CGR",
@@ -4364,7 +4848,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -20.4687,
     "lng": -54.6725,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CAW",
@@ -4373,7 +4858,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -21.6983,
     "lng": -41.3017,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VCA",
@@ -4382,7 +4868,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 10.0851,
     "lng": 105.712,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CAJ",
@@ -4391,7 +4878,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 6.232,
     "lng": -62.8544,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CKZ",
@@ -4400,7 +4888,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 40.1377,
     "lng": 26.4268,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CBR",
@@ -4409,7 +4898,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -35.3069,
     "lng": 149.195,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CUN",
@@ -4418,7 +4908,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 21.0365,
     "lng": -86.8771,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CAP",
@@ -4427,7 +4918,8 @@ const AIRPORTS = [
     "country": "Haiti",
     "lat": 19.733,
     "lng": -72.1947,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CSK",
@@ -4436,7 +4928,8 @@ const AIRPORTS = [
     "country": "Senegal",
     "lat": 12.3953,
     "lng": -16.748,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YTE",
@@ -4445,7 +4938,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 64.23,
     "lng": -76.5267,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CGI",
@@ -4454,7 +4948,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.2253,
     "lng": -89.5708,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LUR",
@@ -4463,7 +4958,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 68.8751,
     "lng": -166.11,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CPT",
@@ -4472,7 +4968,8 @@ const AIRPORTS = [
     "country": "South Africa",
     "lat": -33.9648,
     "lng": 18.6017,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CCS",
@@ -4481,7 +4978,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 10.6012,
     "lng": -66.9912,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CCF",
@@ -4490,7 +4988,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 43.216,
     "lng": 2.3063,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CWL",
@@ -4499,7 +4998,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 51.3967,
     "lng": -3.3433,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "APO",
@@ -4508,7 +5008,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 7.812,
     "lng": -76.7164,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CLD",
@@ -4517,7 +5018,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.1283,
     "lng": -117.28,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CNM",
@@ -4526,7 +5028,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.3375,
     "lng": -104.263,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CTG",
@@ -4535,7 +5038,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 10.4424,
     "lng": -75.513,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CMN",
@@ -4544,7 +5048,8 @@ const AIRPORTS = [
     "country": "Morocco",
     "lat": 33.3675,
     "lng": -7.59,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CAC",
@@ -4553,7 +5058,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -25.0003,
     "lng": -53.5008,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CPR",
@@ -4562,7 +5068,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.908,
     "lng": -106.464,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YCG",
@@ -4571,7 +5078,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.2964,
     "lng": -117.632,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DCM",
@@ -4580,7 +5088,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 43.5563,
     "lng": 2.2892,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SLU",
@@ -4589,7 +5098,8 @@ const AIRPORTS = [
     "country": "Saint Lucia",
     "lat": 14.0202,
     "lng": -60.9929,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MHC",
@@ -4598,7 +5108,8 @@ const AIRPORTS = [
     "country": "Chile",
     "lat": -42.3404,
     "lng": -73.7157,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TBI",
@@ -4607,7 +5118,8 @@ const AIRPORTS = [
     "country": "Bahamas",
     "lat": 24.3153,
     "lng": -75.4523,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YAC",
@@ -4616,7 +5128,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 51.7272,
     "lng": -91.8244,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CTC",
@@ -4625,7 +5138,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -28.5956,
     "lng": -65.7517,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CTA",
@@ -4634,7 +5148,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 37.4668,
     "lng": 15.0664,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CRM",
@@ -4643,7 +5158,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 12.5024,
     "lng": 124.636,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MPH",
@@ -4652,7 +5168,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 11.9245,
     "lng": 121.954,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CBT",
@@ -4661,7 +5178,8 @@ const AIRPORTS = [
     "country": "Angola",
     "lat": -12.4792,
     "lng": 13.4869,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CYZ",
@@ -4670,7 +5188,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 16.9299,
     "lng": 121.753,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CXJ",
@@ -4679,7 +5198,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -29.1971,
     "lng": -51.1875,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CAY",
@@ -4688,7 +5208,8 @@ const AIRPORTS = [
     "country": "French Guiana",
     "lat": 4.8198,
     "lng": -52.3604,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CYB",
@@ -4697,7 +5218,8 @@ const AIRPORTS = [
     "country": "Cayman Islands",
     "lat": 19.687,
     "lng": -79.8828,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CYO",
@@ -4706,7 +5228,8 @@ const AIRPORTS = [
     "country": "Cuba",
     "lat": 21.6165,
     "lng": -81.546,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CEB",
@@ -4715,7 +5238,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 10.3075,
     "lng": 123.979,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CDC",
@@ -4724,7 +5248,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.701,
     "lng": -113.099,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CID",
@@ -4733,7 +5258,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.8847,
     "lng": -91.7108,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CED",
@@ -4742,7 +5268,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -32.1306,
     "lng": 133.71,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CEM",
@@ -4751,7 +5278,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 65.5738,
     "lng": -144.783,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CDR",
@@ -4760,7 +5288,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.8376,
     "lng": -103.095,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZBR",
@@ -4769,7 +5298,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 25.4433,
     "lng": 60.3821,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CIK",
@@ -4778,7 +5308,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 66.645,
     "lng": -143.74,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "XCR",
@@ -4787,7 +5318,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 48.7733,
     "lng": 4.2061,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CMI",
@@ -4796,7 +5328,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.0392,
     "lng": -88.2781,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IXC",
@@ -4805,7 +5338,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 30.6735,
     "lng": 76.7885,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BDP",
@@ -4814,7 +5348,8 @@ const AIRPORTS = [
     "country": "Nepal",
     "lat": 26.5708,
     "lng": 88.0796,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CSX",
@@ -4823,7 +5358,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 28.1892,
     "lng": 113.22,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CGQ",
@@ -4832,7 +5368,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 43.9962,
     "lng": 125.685,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CGD",
@@ -4841,7 +5378,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 28.9189,
     "lng": 111.64,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CHX",
@@ -4850,7 +5388,8 @@ const AIRPORTS = [
     "country": "Panama",
     "lat": 9.459,
     "lng": -82.5151,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CIH",
@@ -4859,7 +5398,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 36.2475,
     "lng": 113.126,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CZX",
@@ -4868,7 +5408,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 31.9197,
     "lng": 119.779,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CHQ",
@@ -4877,7 +5418,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 35.5317,
     "lng": 24.1497,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CHG",
@@ -4886,7 +5428,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 41.5381,
     "lng": 120.435,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "XAP",
@@ -4895,7 +5438,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -27.1342,
     "lng": -52.6566,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CRL",
@@ -4904,7 +5448,8 @@ const AIRPORTS = [
     "country": "Belgium",
     "lat": 50.4592,
     "lng": 4.4538,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CHS",
@@ -4913,7 +5458,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.8986,
     "lng": -80.0405,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CRW",
@@ -4922,7 +5468,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.3731,
     "lng": -81.5932,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NEV",
@@ -4931,7 +5478,8 @@ const AIRPORTS = [
     "country": "Saint Kitts and Nevis",
     "lat": 17.2057,
     "lng": -62.5899,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CTL",
@@ -4940,7 +5488,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -26.4133,
     "lng": 146.262,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YCL",
@@ -4949,7 +5498,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 47.9908,
     "lng": -66.3303,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CLT",
@@ -4958,7 +5508,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.214,
     "lng": -80.9431,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "CHO",
@@ -4967,7 +5518,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.1386,
     "lng": -78.4529,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YYG",
@@ -4976,7 +5528,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 46.29,
     "lng": -63.1211,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CHA",
@@ -4985,7 +5538,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.0353,
     "lng": -85.2038,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CSY",
@@ -4994,7 +5548,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 56.0903,
     "lng": 47.3473,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CYF",
@@ -5003,7 +5558,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 60.1492,
     "lng": -164.286,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CJU",
@@ -5012,7 +5568,8 @@ const AIRPORTS = [
     "country": "South Korea",
     "lat": 33.5113,
     "lng": 126.493,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CEK",
@@ -5021,7 +5578,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 55.3058,
     "lng": 61.5033,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CTU",
@@ -5030,7 +5588,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 30.5785,
     "lng": 103.947,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CEE",
@@ -5039,7 +5598,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 59.2736,
     "lng": 38.0158,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CYX",
@@ -5048,7 +5608,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 68.7406,
     "lng": 161.338,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YCS",
@@ -5057,7 +5618,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 63.3469,
     "lng": -90.7311,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CTM",
@@ -5066,7 +5628,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 18.5047,
     "lng": -88.3268,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VAK",
@@ -5075,7 +5638,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 61.5409,
     "lng": -165.6005,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YHR",
@@ -5084,7 +5648,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 50.4689,
     "lng": -59.6367,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CYS",
@@ -5093,7 +5658,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.1557,
     "lng": -104.812,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CNX",
@@ -5102,7 +5668,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 18.7668,
     "lng": 98.9626,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CEI",
@@ -5111,7 +5678,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 19.9523,
     "lng": 99.8829,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YMT",
@@ -5120,7 +5688,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.7719,
     "lng": -74.5281,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MDW",
@@ -5129,7 +5698,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.786,
     "lng": -87.7524,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ORD",
@@ -5138,7 +5708,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.9786,
     "lng": -87.9048,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "CIX",
@@ -5147,7 +5718,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -6.7875,
     "lng": -79.8281,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CIC",
@@ -5156,7 +5728,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.7954,
     "lng": -121.858,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CIF",
@@ -5165,7 +5738,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 42.235,
     "lng": 118.908,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CUU",
@@ -5174,7 +5748,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 28.7029,
     "lng": -105.965,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CIT",
@@ -5183,7 +5758,8 @@ const AIRPORTS = [
     "country": "Kazakhstan",
     "lat": 42.3642,
     "lng": 69.4789,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VPY",
@@ -5192,7 +5768,8 @@ const AIRPORTS = [
     "country": "Mozambique",
     "lat": -19.1513,
     "lng": 33.429,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JKH",
@@ -5201,7 +5778,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 38.3432,
     "lng": 26.1406,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CIP",
@@ -5210,7 +5788,8 @@ const AIRPORTS = [
     "country": "Zambia",
     "lat": -13.5583,
     "lng": 32.5872,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YKU",
@@ -5219,7 +5798,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 53.8056,
     "lng": -78.9169,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KIV",
@@ -5228,7 +5808,8 @@ const AIRPORTS = [
     "country": "Moldova",
     "lat": 46.9277,
     "lng": 28.931,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "HTA",
@@ -5237,7 +5818,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 52.0263,
     "lng": 113.306,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CJL",
@@ -5246,7 +5828,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 35.8866,
     "lng": 71.8006,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CGP",
@@ -5255,7 +5838,8 @@ const AIRPORTS = [
     "country": "Bangladesh",
     "lat": 22.2496,
     "lng": 91.8133,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JUH",
@@ -5264,7 +5848,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 30.7403,
     "lng": 117.6856,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "COQ",
@@ -5273,7 +5858,8 @@ const AIRPORTS = [
     "country": "Mongolia",
     "lat": 48.1357,
     "lng": 114.646,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CHY",
@@ -5282,7 +5868,8 @@ const AIRPORTS = [
     "country": "Solomon Islands",
     "lat": -6.7119,
     "lng": 156.3961,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CKH",
@@ -5291,7 +5878,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 70.6231,
     "lng": 147.902,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CJJ",
@@ -5300,7 +5888,8 @@ const AIRPORTS = [
     "country": "South Korea",
     "lat": 36.717,
     "lng": 127.4987,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CKG",
@@ -5309,7 +5898,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 29.7192,
     "lng": 106.642,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CHC",
@@ -5318,7 +5908,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -43.4894,
     "lng": 172.532,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "XCH",
@@ -5327,7 +5918,8 @@ const AIRPORTS = [
     "country": "Christmas Island",
     "lat": -10.4506,
     "lng": 105.69,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VCL",
@@ -5336,7 +5928,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 15.4033,
     "lng": 108.706,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CHU",
@@ -5345,7 +5938,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 61.5791,
     "lng": -159.216,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CJM",
@@ -5354,7 +5948,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 10.7112,
     "lng": 99.3617,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YYQ",
@@ -5363,7 +5958,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 58.7392,
     "lng": -94.065,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ZUM",
@@ -5372,7 +5968,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 53.5619,
     "lng": -64.1064,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TKK",
@@ -5381,7 +5978,8 @@ const AIRPORTS = [
     "country": "Micronesia",
     "lat": 7.4619,
     "lng": 151.843,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ICI",
@@ -5390,7 +5988,8 @@ const AIRPORTS = [
     "country": "Fiji",
     "lat": -17.7433,
     "lng": -179.342,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CVG",
@@ -5399,7 +5998,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.0488,
     "lng": -84.6678,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "LUK",
@@ -5408,7 +6008,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.1033,
     "lng": -84.4186,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IRC",
@@ -5417,7 +6018,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 65.8305,
     "lng": -144.076,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CME",
@@ -5426,7 +6028,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 18.6537,
     "lng": -91.799,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CJS",
@@ -5435,7 +6038,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 31.6361,
     "lng": -106.429,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CEN",
@@ -5444,7 +6048,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 27.3926,
     "lng": -109.833,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CVM",
@@ -5453,7 +6058,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 23.7033,
     "lng": -98.9565,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AGT",
@@ -5462,7 +6068,8 @@ const AIRPORTS = [
     "country": "Paraguay",
     "lat": -25.4545,
     "lng": -54.8427,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CKB",
@@ -5471,7 +6078,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.2966,
     "lng": -80.2281,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CFE",
@@ -5480,7 +6088,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 45.7867,
     "lng": 3.1692,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CLE",
@@ -5489,7 +6098,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.4117,
     "lng": -81.8498,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CNJ",
@@ -5498,7 +6108,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -20.6686,
     "lng": 140.504,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CLJ",
@@ -5507,7 +6118,8 @@ const AIRPORTS = [
     "country": "Romania",
     "lat": 46.7852,
     "lng": 23.6862,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YCY",
@@ -5516,7 +6128,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 70.4861,
     "lng": -68.5167,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CIZ",
@@ -5525,7 +6138,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -4.1341,
     "lng": -63.1326,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CIJ",
@@ -5534,7 +6148,8 @@ const AIRPORTS = [
     "country": "Bolivia",
     "lat": -11.0404,
     "lng": -68.783,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OCC",
@@ -5543,7 +6158,8 @@ const AIRPORTS = [
     "country": "Ecuador",
     "lat": -0.4629,
     "lng": -76.9868,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CBB",
@@ -5552,7 +6168,8 @@ const AIRPORTS = [
     "country": "Bolivia",
     "lat": -17.4211,
     "lng": -66.1771,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GDT",
@@ -5561,7 +6178,8 @@ const AIRPORTS = [
     "country": "Turks and Caicos Islands",
     "lat": 21.4445,
     "lng": -71.1423,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZSA",
@@ -5570,7 +6188,8 @@ const AIRPORTS = [
     "country": "Bahamas",
     "lat": 24.0633,
     "lng": -74.524,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CCK",
@@ -5579,7 +6198,8 @@ const AIRPORTS = [
     "country": "Cocos (Keeling) Islands",
     "lat": -12.1883,
     "lng": 96.8339,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "COD",
@@ -5588,7 +6208,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.5202,
     "lng": -109.024,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CUQ",
@@ -5597,7 +6218,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -13.7611,
     "lng": 143.1133,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CFS",
@@ -5606,7 +6228,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -30.3206,
     "lng": 153.116,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CJB",
@@ -5615,7 +6238,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 11.03,
     "lng": 77.0434,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CDB",
@@ -5624,7 +6248,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 55.2061,
     "lng": -162.725,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CLQ",
@@ -5633,7 +6258,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 19.277,
     "lng": -103.577,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CLL",
@@ -5642,7 +6268,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 30.5886,
     "lng": -96.3638,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CGN",
@@ -5651,7 +6278,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 50.8659,
     "lng": 7.1427,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CMB",
@@ -5660,7 +6288,8 @@ const AIRPORTS = [
     "country": "Sri Lanka",
     "lat": 7.1808,
     "lng": 79.8841,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CRI",
@@ -5669,7 +6298,8 @@ const AIRPORTS = [
     "country": "Bahamas",
     "lat": 22.7456,
     "lng": -74.1824,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "COS",
@@ -5678,7 +6308,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.8058,
     "lng": -104.701,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CAE",
@@ -5687,7 +6318,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.9388,
     "lng": -81.1195,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "COU",
@@ -5696,7 +6328,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.8181,
     "lng": -92.2196,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CMH",
@@ -5705,7 +6338,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.998,
     "lng": -82.8919,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CSG",
@@ -5714,7 +6348,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.5163,
     "lng": -84.9389,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LCK",
@@ -5723,7 +6358,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.8138,
     "lng": -82.9278,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GTR",
@@ -5732,7 +6368,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.4503,
     "lng": -88.5914,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CIY",
@@ -5741,7 +6378,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 36.9946,
     "lng": 14.6072,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CRD",
@@ -5750,7 +6388,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -45.7853,
     "lng": -67.4655,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YQQ",
@@ -5759,7 +6398,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.7108,
     "lng": -124.887,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CKY",
@@ -5768,7 +6408,8 @@ const AIRPORTS = [
     "country": "Guinea",
     "lat": 9.5769,
     "lng": -13.612,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CDJ",
@@ -5777,7 +6418,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -8.3483,
     "lng": -49.3015,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CCP",
@@ -5786,7 +6428,8 @@ const AIRPORTS = [
     "country": "Chile",
     "lat": -36.7727,
     "lng": -73.0631,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NOC",
@@ -5795,7 +6438,8 @@ const AIRPORTS = [
     "country": "Ireland",
     "lat": 53.9103,
     "lng": -8.8185,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VCS",
@@ -5804,7 +6448,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 8.7318,
     "lng": 106.633,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CND",
@@ -5813,7 +6458,8 @@ const AIRPORTS = [
     "country": "Romania",
     "lat": 44.3622,
     "lng": 28.4883,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CZL",
@@ -5822,7 +6468,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 36.276,
     "lng": 6.6204,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CPD",
@@ -5831,7 +6478,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -29.04,
     "lng": 134.721,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OOL",
@@ -5840,7 +6488,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -28.1644,
     "lng": 153.505,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CPH",
@@ -5849,7 +6498,8 @@ const AIRPORTS = [
     "country": "Denmark",
     "lat": 55.6179,
     "lng": 12.656,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "CPO",
@@ -5858,7 +6508,8 @@ const AIRPORTS = [
     "country": "Chile",
     "lat": -27.2612,
     "lng": -70.7792,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YCO",
@@ -5867,7 +6518,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 67.8167,
     "lng": -115.144,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YZS",
@@ -5876,7 +6528,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 64.1933,
     "lng": -83.3594,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "COR",
@@ -5885,7 +6538,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -31.3236,
     "lng": -64.208,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CDV",
@@ -5894,7 +6548,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 60.4918,
     "lng": -145.478,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ORK",
@@ -5903,7 +6558,8 @@ const AIRPORTS = [
     "country": "Ireland",
     "lat": 51.8413,
     "lng": -8.4911,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CZE",
@@ -5912,7 +6568,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 11.4149,
     "lng": -69.6809,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CZU",
@@ -5921,7 +6578,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 9.3327,
     "lng": -75.2856,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CRP",
@@ -5930,7 +6588,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 27.7704,
     "lng": -97.5012,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CEZ",
@@ -5939,7 +6598,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.303,
     "lng": -108.628,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CMG",
@@ -5948,7 +6608,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -19.0119,
     "lng": -57.6714,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CVU",
@@ -5957,7 +6618,8 @@ const AIRPORTS = [
     "country": "Portugal",
     "lat": 39.6715,
     "lng": -31.1136,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CBO",
@@ -5966,7 +6628,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 7.1652,
     "lng": 124.21,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "COO",
@@ -5975,7 +6638,8 @@ const AIRPORTS = [
     "country": "Benin",
     "lat": 6.3572,
     "lng": 2.3844,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CXB",
@@ -5984,7 +6648,8 @@ const AIRPORTS = [
     "country": "Bangladesh",
     "lat": 21.4522,
     "lng": 91.9639,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CZM",
@@ -5993,7 +6658,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 20.5224,
     "lng": -86.9256,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CCV",
@@ -6002,7 +6668,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -16.265,
     "lng": 167.924,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CRA",
@@ -6011,7 +6678,8 @@ const AIRPORTS = [
     "country": "Romania",
     "lat": 44.3181,
     "lng": 23.8886,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YXC",
@@ -6020,7 +6688,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.6108,
     "lng": -115.782,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CEC",
@@ -6029,7 +6698,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.7802,
     "lng": -124.237,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CCM",
@@ -6038,7 +6708,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -28.7244,
     "lng": -49.4214,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CZS",
@@ -6047,7 +6718,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -7.5999,
     "lng": -72.7695,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CUC",
@@ -6056,7 +6728,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 7.9276,
     "lng": -72.5115,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CUE",
@@ -6065,7 +6738,8 @@ const AIRPORTS = [
     "country": "Ecuador",
     "lat": -2.8895,
     "lng": -78.9844,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CGB",
@@ -6074,7 +6748,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -15.6529,
     "lng": -56.1167,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CPX",
@@ -6083,7 +6758,8 @@ const AIRPORTS = [
     "country": "Puerto Rico",
     "lat": 18.3133,
     "lng": -65.3043,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CUL",
@@ -6092,7 +6768,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 24.7645,
     "lng": -107.475,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CUM",
@@ -6101,7 +6778,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 10.4503,
     "lng": -64.1305,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CCC",
@@ -6110,7 +6788,8 @@ const AIRPORTS = [
     "country": "Cuba",
     "lat": 22.461,
     "lng": -78.3284,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CUF",
@@ -6119,7 +6798,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 44.547,
     "lng": 7.6232,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CMA",
@@ -6128,7 +6808,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -28.03,
     "lng": 145.622,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CWB",
@@ -6137,7 +6818,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -25.5285,
     "lng": -49.1758,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "CUZ",
@@ -6146,7 +6828,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -13.5357,
     "lng": -71.9388,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JNX",
@@ -6155,7 +6838,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 37.0811,
     "lng": 25.3681,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DRV",
@@ -6164,7 +6848,8 @@ const AIRPORTS = [
     "country": "Maldives",
     "lat": 5.1561,
     "lng": 73.1302,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DKR",
@@ -6173,7 +6858,8 @@ const AIRPORTS = [
     "country": "Senegal",
     "lat": 14.7397,
     "lng": -17.4902,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "VIL",
@@ -6182,7 +6868,8 @@ const AIRPORTS = [
     "country": "Western Sahara",
     "lat": 23.7183,
     "lng": -15.932,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DLM",
@@ -6191,7 +6878,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 36.7131,
     "lng": 28.7925,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DLZ",
@@ -6200,7 +6888,8 @@ const AIRPORTS = [
     "country": "Mongolia",
     "lat": 43.5917,
     "lng": 104.43,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DLI",
@@ -6209,7 +6898,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 11.75,
     "lng": 108.367,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DBA",
@@ -6218,7 +6908,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 28.8783,
     "lng": 64.3998,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DLU",
@@ -6227,7 +6918,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 25.6494,
     "lng": 100.319,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "DLC",
@@ -6236,7 +6928,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 38.9657,
     "lng": 121.539,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DAL",
@@ -6245,7 +6938,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.8471,
     "lng": -96.8518,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DFW",
@@ -6254,7 +6948,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.8968,
     "lng": -97.038,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "DMM",
@@ -6263,7 +6958,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 26.4712,
     "lng": 49.7979,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DAD",
@@ -6272,7 +6968,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 16.0439,
     "lng": 108.199,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DDG",
@@ -6281,7 +6978,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 40.0247,
     "lng": 124.286,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DCY",
@@ -6290,7 +6988,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 29.3231,
     "lng": 100.0533,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DQA",
@@ -6299,7 +6998,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 46.7464,
     "lng": 125.1406,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DAR",
@@ -6308,7 +7008,8 @@ const AIRPORTS = [
     "country": "Tanzania",
     "lat": -6.8781,
     "lng": 39.2026,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DAU",
@@ -6317,7 +7018,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -9.0868,
     "lng": 143.208,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DRW",
@@ -6326,7 +7028,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -12.4147,
     "lng": 130.877,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SRY",
@@ -6335,7 +7038,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 36.6358,
     "lng": 53.1936,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "DAT",
@@ -6344,7 +7048,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 40.0603,
     "lng": 113.482,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "DVO",
@@ -6353,7 +7058,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 7.1255,
     "lng": 125.646,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "DAV",
@@ -6362,7 +7068,8 @@ const AIRPORTS = [
     "country": "Panama",
     "lat": 8.391,
     "lng": -82.435,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TVY",
@@ -6371,7 +7078,8 @@ const AIRPORTS = [
     "country": "Burma",
     "lat": 14.1039,
     "lng": 98.2036,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YDQ",
@@ -6380,7 +7088,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 55.7423,
     "lng": -120.183,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DYG",
@@ -6389,7 +7098,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 29.1028,
     "lng": 110.443,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "DAY",
@@ -6398,7 +7108,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.9024,
     "lng": -84.2194,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DAB",
@@ -6407,7 +7118,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 29.1799,
     "lng": -81.0581,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DAX",
@@ -6416,7 +7128,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 31.1302,
     "lng": 107.4295,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LGI",
@@ -6425,7 +7138,8 @@ const AIRPORTS = [
     "country": "Bahamas",
     "lat": 23.179,
     "lng": -75.0936,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SCC",
@@ -6434,7 +7148,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 70.1947,
     "lng": -148.465,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DOL",
@@ -6443,7 +7158,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 49.3653,
     "lng": 0.1543,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DEB",
@@ -6452,7 +7168,8 @@ const AIRPORTS = [
     "country": "Hungary",
     "lat": 47.4889,
     "lng": 21.6153,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DEC",
@@ -6461,7 +7178,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.8346,
     "lng": -88.8657,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YDF",
@@ -6470,7 +7188,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.2108,
     "lng": -57.3914,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YVZ",
@@ -6479,7 +7198,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 52.6558,
     "lng": -94.0614,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DRG",
@@ -6488,7 +7208,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 66.0696,
     "lng": -162.766,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DED",
@@ -6497,7 +7218,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 30.1897,
     "lng": 78.1803,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BJX",
@@ -6506,7 +7228,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 20.9935,
     "lng": -101.481,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "DEL",
@@ -6515,7 +7238,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 28.5665,
     "lng": 77.1031,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "YWJ",
@@ -6524,7 +7248,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 65.2111,
     "lng": -123.436,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DNZ",
@@ -6533,7 +7258,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 37.7856,
     "lng": 29.7013,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DPS",
@@ -6542,7 +7268,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -8.7482,
     "lng": 115.167,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DEN",
@@ -6551,7 +7278,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.8617,
     "lng": -104.673,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "DEA",
@@ -6560,7 +7288,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 29.961,
     "lng": 70.4859,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DSK",
@@ -6569,7 +7298,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 31.9094,
     "lng": 70.8966,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DCN",
@@ -6578,7 +7308,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -17.5814,
     "lng": 123.828,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DSM",
@@ -6587,7 +7318,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.534,
     "lng": -93.6631,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DTW",
@@ -6596,7 +7328,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.2124,
     "lng": -83.3534,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DPO",
@@ -6605,7 +7338,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -41.1697,
     "lng": 146.43,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DEF",
@@ -6614,7 +7348,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 32.4344,
     "lng": 48.3976,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DAC",
@@ -6623,7 +7358,8 @@ const AIRPORTS = [
     "country": "Bangladesh",
     "lat": 23.8433,
     "lng": 90.3978,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DHI",
@@ -6632,7 +7368,8 @@ const AIRPORTS = [
     "country": "Nepal",
     "lat": 28.7533,
     "lng": 80.5819,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DIK",
@@ -6641,7 +7378,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 46.7974,
     "lng": -102.802,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DIN",
@@ -6650,7 +7388,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 21.3975,
     "lng": 103.008,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DIJ",
@@ -6659,7 +7398,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 47.2689,
     "lng": 5.09,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DIL",
@@ -6668,7 +7408,8 @@ const AIRPORTS = [
     "country": "East Timor",
     "lat": -8.5464,
     "lng": 125.526,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DLG",
@@ -6677,7 +7418,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 59.0447,
     "lng": -158.505,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DLY",
@@ -6686,7 +7428,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -18.7694,
     "lng": 169.001,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DMU",
@@ -6695,7 +7438,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 25.8839,
     "lng": 93.7711,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DNR",
@@ -6704,7 +7448,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 48.5877,
     "lng": -2.08,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DPL",
@@ -6713,7 +7458,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 8.602,
     "lng": 123.3419,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DIR",
@@ -6722,7 +7468,8 @@ const AIRPORTS = [
     "country": "Ethiopia",
     "lat": 9.6247,
     "lng": 41.8542,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DIU",
@@ -6731,7 +7478,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 20.7131,
     "lng": 70.9211,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DIY",
@@ -6740,7 +7488,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 37.8939,
     "lng": 40.201,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "DJG",
@@ -6749,7 +7498,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 24.2928,
     "lng": 9.4524,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DJE",
@@ -6758,7 +7508,8 @@ const AIRPORTS = [
     "country": "Tunisia",
     "lat": 33.875,
     "lng": 10.7755,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "JIB",
@@ -6767,7 +7518,8 @@ const AIRPORTS = [
     "country": "Djibouti",
     "lat": 11.5473,
     "lng": 43.1595,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "DNK",
@@ -6776,7 +7528,8 @@ const AIRPORTS = [
     "country": "Ukraine",
     "lat": 48.3572,
     "lng": 35.1006,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "DOB",
@@ -6785,7 +7538,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -5.7722,
     "lng": 134.212,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DDC",
@@ -6794,7 +7548,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.7634,
     "lng": -99.9656,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DOH",
@@ -6803,7 +7558,8 @@ const AIRPORTS = [
     "country": "Qatar",
     "lat": 25.2731,
     "lng": 51.6081,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "DLE",
@@ -6812,7 +7568,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 47.0427,
     "lng": 5.4351,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DOM",
@@ -6821,7 +7578,8 @@ const AIRPORTS = [
     "country": "Dominica",
     "lat": 15.547,
     "lng": -61.3,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "DSA",
@@ -6830,7 +7588,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 53.4805,
     "lng": -1.0107,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "DOK",
@@ -6839,7 +7598,8 @@ const AIRPORTS = [
     "country": "Ukraine",
     "lat": 48.0736,
     "lng": 37.7397,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VDH",
@@ -6848,7 +7608,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 17.515,
     "lng": 106.5906,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CFN",
@@ -6857,7 +7618,8 @@ const AIRPORTS = [
     "country": "Ireland",
     "lat": 55.0442,
     "lng": -8.341,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DSN",
@@ -6866,7 +7628,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 39.49,
     "lng": 109.8614,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "DOY",
@@ -6875,7 +7638,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 37.5086,
     "lng": 118.788,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "DMD",
@@ -6884,7 +7648,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -17.9403,
     "lng": 138.822,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DTM",
@@ -6893,7 +7658,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 51.5183,
     "lng": 7.6122,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DHN",
@@ -6902,7 +7668,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 31.3213,
     "lng": -85.4496,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DLA",
@@ -6911,7 +7678,8 @@ const AIRPORTS = [
     "country": "Cameroon",
     "lat": 4.0061,
     "lng": 9.7195,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DOU",
@@ -6920,7 +7688,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -22.2019,
     "lng": -54.9266,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DRS",
@@ -6929,7 +7698,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 51.1328,
     "lng": 13.7672,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YHD",
@@ -6938,7 +7708,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.8317,
     "lng": -92.7442,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DUJ",
@@ -6947,7 +7718,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.1783,
     "lng": -78.8987,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DWC",
@@ -6956,7 +7728,8 @@ const AIRPORTS = [
     "country": "United Arab Emirates",
     "lat": 24.8964,
     "lng": 55.1614,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DXB",
@@ -6965,7 +7738,8 @@ const AIRPORTS = [
     "country": "United Arab Emirates",
     "lat": 25.2528,
     "lng": 55.3644,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "DBO",
@@ -6974,7 +7748,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -32.2167,
     "lng": 148.575,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DUB",
@@ -6983,7 +7758,8 @@ const AIRPORTS = [
     "country": "Ireland",
     "lat": 53.4213,
     "lng": -6.2701,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "DBV",
@@ -6992,7 +7768,8 @@ const AIRPORTS = [
     "country": "Croatia",
     "lat": 42.5614,
     "lng": 18.2682,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DBQ",
@@ -7001,7 +7778,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.402,
     "lng": -90.7095,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DUS",
@@ -7010,7 +7788,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 51.2895,
     "lng": 6.7668,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DLH",
@@ -7019,7 +7798,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 46.8421,
     "lng": -92.1936,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DGT",
@@ -7028,7 +7808,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 9.3337,
     "lng": 123.3,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DND",
@@ -7037,7 +7818,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 56.4525,
     "lng": -3.0258,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DUD",
@@ -7046,7 +7828,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -45.9281,
     "lng": 170.198,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DNH",
@@ -7055,7 +7838,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 40.1611,
     "lng": 94.8092,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "DGO",
@@ -7064,7 +7848,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 24.1242,
     "lng": -104.528,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DRO",
@@ -7073,7 +7858,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.1515,
     "lng": -107.754,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DUR",
@@ -7082,7 +7868,8 @@ const AIRPORTS = [
     "country": "South Africa",
     "lat": -29.6144,
     "lng": 31.1197,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "DYU",
@@ -7091,7 +7878,8 @@ const AIRPORTS = [
     "country": "Tajikistan",
     "lat": 38.5433,
     "lng": 68.825,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DZA",
@@ -7100,7 +7888,8 @@ const AIRPORTS = [
     "country": "Mayotte",
     "lat": -12.8047,
     "lng": 45.2811,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "DMB",
@@ -7109,7 +7898,8 @@ const AIRPORTS = [
     "country": "Kazakhstan",
     "lat": 42.8536,
     "lng": 71.3036,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ELS",
@@ -7118,7 +7908,8 @@ const AIRPORTS = [
     "country": "South Africa",
     "lat": -33.0356,
     "lng": 27.8259,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EMA",
@@ -7127,7 +7918,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 52.8311,
     "lng": -1.3281,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "IPC",
@@ -7136,7 +7928,8 @@ const AIRPORTS = [
     "country": "Chile",
     "lat": -27.1648,
     "lng": -109.422,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZEM",
@@ -7145,7 +7938,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 52.2264,
     "lng": -78.5225,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ESD",
@@ -7154,7 +7948,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 48.7082,
     "lng": -122.91,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EAU",
@@ -7163,7 +7958,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.8658,
     "lng": -91.4843,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CFK",
@@ -7172,7 +7968,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 36.2127,
     "lng": 1.3318,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EOI",
@@ -7181,7 +7978,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 59.1906,
     "lng": -2.7722,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EDI",
@@ -7190,7 +7988,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 55.95,
     "lng": -3.3725,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YEG",
@@ -7199,7 +7998,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 53.3097,
     "lng": -113.58,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "EEK",
@@ -7208,7 +8008,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 60.2137,
     "lng": -162.0439,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EGX",
@@ -7217,7 +8018,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 58.1855,
     "lng": -157.375,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EGS",
@@ -7226,7 +8028,8 @@ const AIRPORTS = [
     "country": "Iceland",
     "lat": 65.2833,
     "lng": -14.4014,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EIN",
@@ -7235,7 +8038,8 @@ const AIRPORTS = [
     "country": "Netherlands",
     "lat": 51.4501,
     "lng": 5.3745,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ERN",
@@ -7244,7 +8048,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -6.6395,
     "lng": -69.8798,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EUN",
@@ -7253,7 +8058,8 @@ const AIRPORTS = [
     "country": "Western Sahara",
     "lat": 27.1517,
     "lng": -13.2192,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NDR",
@@ -7262,7 +8068,8 @@ const AIRPORTS = [
     "country": "Morocco",
     "lat": 34.9888,
     "lng": -3.0282,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "EBH",
@@ -7271,7 +8078,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 33.7217,
     "lng": 1.0925,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FTE",
@@ -7280,7 +8088,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -50.2803,
     "lng": -72.0531,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ELD",
@@ -7289,7 +8098,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.221,
     "lng": -92.8133,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ELF",
@@ -7298,7 +8108,8 @@ const AIRPORTS = [
     "country": "Sudan",
     "lat": 13.6149,
     "lng": 25.3246,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ELG",
@@ -7307,7 +8118,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 30.5713,
     "lng": 2.8596,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ELP",
@@ -7316,7 +8128,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 31.8072,
     "lng": -106.378,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VIG",
@@ -7325,7 +8138,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 8.6241,
     "lng": -71.6727,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ABT",
@@ -7334,7 +8148,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 20.2961,
     "lng": 41.6343,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ETH",
@@ -7343,7 +8158,8 @@ const AIRPORTS = [
     "country": "Israel",
     "lat": 29.5613,
     "lng": 34.9601,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EZS",
@@ -7352,7 +8168,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 38.6069,
     "lng": 39.2914,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ELC",
@@ -7361,7 +8178,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -12.0194,
     "lng": 135.571,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EDL",
@@ -7370,7 +8188,8 @@ const AIRPORTS = [
     "country": "Kenya",
     "lat": 0.4045,
     "lng": 35.2389,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ELV",
@@ -7379,7 +8198,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 58.1952,
     "lng": -136.347,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ELI",
@@ -7388,7 +8208,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 64.6147,
     "lng": -162.272,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ESL",
@@ -7397,7 +8218,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 46.3739,
     "lng": 44.3309,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EKO",
@@ -7406,7 +8228,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.8249,
     "lng": -115.792,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ELM",
@@ -7415,7 +8238,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.1599,
     "lng": -76.8916,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "EMD",
@@ -7424,7 +8248,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -23.5675,
     "lng": 148.179,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EMK",
@@ -7433,7 +8258,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 62.7861,
     "lng": -164.491,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ENE",
@@ -7442,7 +8268,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -8.8493,
     "lng": 121.661,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NBE",
@@ -7451,7 +8278,8 @@ const AIRPORTS = [
     "country": "Tunisia",
     "lat": 36.0758,
     "lng": 10.4386,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ENH",
@@ -7460,7 +8288,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 30.3203,
     "lng": 109.485,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EBB",
@@ -7469,7 +8298,8 @@ const AIRPORTS = [
     "country": "Uganda",
     "lat": 0.0424,
     "lng": 32.4435,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ENU",
@@ -7478,7 +8308,8 @@ const AIRPORTS = [
     "country": "Nigeria",
     "lat": 6.4743,
     "lng": 7.562,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "QFG",
@@ -7487,7 +8318,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 60.6197,
     "lng": -45.9141,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EBL",
@@ -7496,7 +8328,8 @@ const AIRPORTS = [
     "country": "Iraq",
     "lat": 36.2376,
     "lng": 43.9632,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ERM",
@@ -7505,7 +8338,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -27.6619,
     "lng": -52.2683,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ERL",
@@ -7514,7 +8348,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 43.4225,
     "lng": 112.0967,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ERF",
@@ -7523,7 +8358,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 50.9798,
     "lng": 10.9581,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ERI",
@@ -7532,7 +8368,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.0831,
     "lng": -80.1739,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ERC",
@@ -7541,7 +8378,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 39.7102,
     "lng": 39.527,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ERZ",
@@ -7550,7 +8388,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 39.9565,
     "lng": 41.1702,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EBJ",
@@ -7559,7 +8398,8 @@ const AIRPORTS = [
     "country": "Denmark",
     "lat": 55.5259,
     "lng": 8.5534,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ESC",
@@ -7568,7 +8408,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 45.7227,
     "lng": -87.0937,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IFN",
@@ -7577,7 +8418,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 32.7508,
     "lng": 51.8613,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YEK",
@@ -7586,7 +8428,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 61.0942,
     "lng": -94.0708,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AOE",
@@ -7595,7 +8438,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 39.8099,
     "lng": 30.5194,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ESM",
@@ -7604,7 +8448,8 @@ const AIRPORTS = [
     "country": "Ecuador",
     "lat": 0.9785,
     "lng": -79.6266,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EPR",
@@ -7613,7 +8458,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -33.6844,
     "lng": 121.823,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EQS",
@@ -7622,7 +8468,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -42.908,
     "lng": -71.1395,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ESU",
@@ -7631,7 +8478,8 @@ const AIRPORTS = [
     "country": "Morocco",
     "lat": 31.3975,
     "lng": -9.6817,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EUG",
@@ -7640,7 +8488,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.1246,
     "lng": -123.212,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "EVV",
@@ -7649,7 +8498,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.037,
     "lng": -87.5324,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "EXT",
@@ -7658,7 +8508,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 50.7344,
     "lng": -3.4139,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VDB",
@@ -7667,7 +8518,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 61.0156,
     "lng": 9.2881,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FAI",
@@ -7676,7 +8528,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 64.8151,
     "lng": -147.856,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LYP",
@@ -7685,7 +8538,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 31.365,
     "lng": 72.9948,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FKQ",
@@ -7694,7 +8548,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -2.9202,
     "lng": 132.267,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FAV",
@@ -7703,7 +8558,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -16.0541,
     "lng": -145.657,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "APW",
@@ -7712,7 +8568,8 @@ const AIRPORTS = [
     "country": "Samoa",
     "lat": -13.83,
     "lng": -172.008,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KFP",
@@ -7721,7 +8578,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 54.8474,
     "lng": -163.41,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FAR",
@@ -7730,7 +8588,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 46.9207,
     "lng": -96.8158,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FMN",
@@ -7739,7 +8598,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 36.7412,
     "lng": -108.23,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FAO",
@@ -7748,7 +8608,8 @@ const AIRPORTS = [
     "country": "Portugal",
     "lat": 37.0144,
     "lng": -7.9659,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "FAY",
@@ -7757,7 +8618,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 34.9912,
     "lng": -78.8803,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TTT",
@@ -7766,7 +8628,8 @@ const AIRPORTS = [
     "country": "Taiwan",
     "lat": 22.755,
     "lng": 121.102,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FRE",
@@ -7775,7 +8638,8 @@ const AIRPORTS = [
     "country": "Solomon Islands",
     "lat": -8.1075,
     "lng": 159.577,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FEG",
@@ -7784,7 +8648,8 @@ const AIRPORTS = [
     "country": "Uzbekistan",
     "lat": 40.3588,
     "lng": 71.745,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FEN",
@@ -7793,7 +8658,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -3.8549,
     "lng": -32.4233,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FEZ",
@@ -7802,7 +8668,8 @@ const AIRPORTS = [
     "country": "Morocco",
     "lat": 33.9273,
     "lng": -4.978,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FSC",
@@ -7811,7 +8678,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 41.5006,
     "lng": 9.0978,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FLG",
@@ -7820,7 +8688,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.1385,
     "lng": -111.671,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YFO",
@@ -7829,7 +8698,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 54.6781,
     "lng": -101.682,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FLS",
@@ -7838,7 +8708,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -40.0917,
     "lng": 147.993,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FNT",
@@ -7847,7 +8718,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.9654,
     "lng": -83.7436,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FLO",
@@ -7856,7 +8728,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 34.1854,
     "lng": -79.7239,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FLR",
@@ -7865,7 +8738,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 43.81,
     "lng": 11.2051,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "FLA",
@@ -7874,7 +8748,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 1.5892,
     "lng": -75.5644,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FLW",
@@ -7883,7 +8758,8 @@ const AIRPORTS = [
     "country": "Portugal",
     "lat": 39.4553,
     "lng": -31.1314,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FRS",
@@ -7892,7 +8768,8 @@ const AIRPORTS = [
     "country": "Guatemala",
     "lat": 16.9138,
     "lng": -89.8664,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FLN",
@@ -7901,7 +8778,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -27.6703,
     "lng": -48.5525,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FRO",
@@ -7910,7 +8788,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 61.5836,
     "lng": 5.0247,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FMA",
@@ -7919,7 +8798,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -26.2127,
     "lng": -58.2281,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YFA",
@@ -7928,7 +8808,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 52.2014,
     "lng": -81.6969,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YPY",
@@ -7937,7 +8818,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 58.7672,
     "lng": -111.117,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YAG",
@@ -7946,7 +8828,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 48.6542,
     "lng": -93.4397,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YGH",
@@ -7955,7 +8838,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 66.2408,
     "lng": -128.651,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YFH",
@@ -7964,7 +8848,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 51.5619,
     "lng": -87.9078,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FLL",
@@ -7973,7 +8858,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 26.0726,
     "lng": -80.1527,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TBN",
@@ -7982,7 +8868,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.7416,
     "lng": -92.1407,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YMM",
@@ -7991,7 +8878,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 56.6533,
     "lng": -111.222,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ZFM",
@@ -8000,7 +8888,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 67.4075,
     "lng": -134.861,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RSW",
@@ -8009,7 +8898,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 26.5362,
     "lng": -81.7552,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YYE",
@@ -8018,7 +8908,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 58.8364,
     "lng": -122.597,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YXJ",
@@ -8027,7 +8918,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 56.2381,
     "lng": -120.74,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YER",
@@ -8036,7 +8928,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 56.0189,
     "lng": -87.6761,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YFS",
@@ -8045,7 +8938,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 61.7602,
     "lng": -121.237,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FSM",
@@ -8054,7 +8948,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.3366,
     "lng": -94.3674,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YSM",
@@ -8063,7 +8958,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 60.0203,
     "lng": -111.962,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FWA",
@@ -8072,7 +8968,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.9785,
     "lng": -85.1951,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FYU",
@@ -8081,7 +8978,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 66.5715,
     "lng": -145.25,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FDF",
@@ -8090,7 +8988,8 @@ const AIRPORTS = [
     "country": "Martinique",
     "lat": 14.591,
     "lng": -61.0032,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FOR",
@@ -8099,7 +8998,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -3.7763,
     "lng": -38.5326,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "FUO",
@@ -8108,7 +9008,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 23.0833,
     "lng": 113.07,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IGU",
@@ -8117,7 +9018,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -25.6003,
     "lng": -54.485,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FRW",
@@ -8126,7 +9028,8 @@ const AIRPORTS = [
     "country": "Botswana",
     "lat": -21.1596,
     "lng": 27.4745,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FRA",
@@ -8135,7 +9038,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 50.0333,
     "lng": 8.5706,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "FKL",
@@ -8144,7 +9048,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.3779,
     "lng": -79.8604,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YFC",
@@ -8153,7 +9058,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 45.8689,
     "lng": -66.5372,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FPO",
@@ -8162,7 +9068,8 @@ const AIRPORTS = [
     "country": "Bahamas",
     "lat": 26.5587,
     "lng": -78.6956,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FNA",
@@ -8171,7 +9078,8 @@ const AIRPORTS = [
     "country": "Sierra Leone",
     "lat": 8.6164,
     "lng": -13.1955,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FAT",
@@ -8180,7 +9088,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 36.7762,
     "lng": -119.718,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FRD",
@@ -8189,7 +9098,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 48.522,
     "lng": -123.024,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FDH",
@@ -8198,7 +9108,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 47.6713,
     "lng": 9.5115,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FUE",
@@ -8207,7 +9118,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 28.4527,
     "lng": -13.8638,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "FJR",
@@ -8216,7 +9128,8 @@ const AIRPORTS = [
     "country": "United Arab Emirates",
     "lat": 25.1122,
     "lng": 56.324,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FUJ",
@@ -8225,7 +9138,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 32.6663,
     "lng": 128.833,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FUK",
@@ -8234,7 +9148,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 33.5859,
     "lng": 130.451,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "FKS",
@@ -8243,7 +9158,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 37.2274,
     "lng": 140.431,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FUN",
@@ -8252,7 +9168,8 @@ const AIRPORTS = [
     "country": "Tuvalu",
     "lat": -8.525,
     "lng": 179.196,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FNC",
@@ -8261,7 +9178,8 @@ const AIRPORTS = [
     "country": "Portugal",
     "lat": 32.6979,
     "lng": -16.7745,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "FTA",
@@ -8270,7 +9188,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -19.5164,
     "lng": 170.232,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FUT",
@@ -8279,7 +9198,8 @@ const AIRPORTS = [
     "country": "Wallis and Futuna",
     "lat": -14.3114,
     "lng": -178.066,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FUG",
@@ -8288,7 +9208,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 32.8822,
     "lng": 115.7344,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FOC",
@@ -8297,7 +9218,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 25.9351,
     "lng": 119.663,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GBE",
@@ -8306,7 +9228,8 @@ const AIRPORTS = [
     "country": "Botswana",
     "lat": -24.5552,
     "lng": 25.9182,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GAE",
@@ -8315,7 +9238,8 @@ const AIRPORTS = [
     "country": "Tunisia",
     "lat": 33.8769,
     "lng": 10.1033,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GCH",
@@ -8324,7 +9248,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 30.3376,
     "lng": 50.828,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GAF",
@@ -8333,7 +9258,8 @@ const AIRPORTS = [
     "country": "Tunisia",
     "lat": 34.422,
     "lng": 8.8225,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GNV",
@@ -8342,7 +9268,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 29.6901,
     "lng": -82.2718,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GPS",
@@ -8351,7 +9278,8 @@ const AIRPORTS = [
     "country": "Ecuador",
     "lat": -0.4538,
     "lng": -90.2659,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GLK",
@@ -8360,7 +9288,8 @@ const AIRPORTS = [
     "country": "Somalia",
     "lat": 6.7808,
     "lng": 47.4547,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GAL",
@@ -8369,7 +9298,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 64.7362,
     "lng": -156.937,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GEV",
@@ -8378,7 +9308,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 67.1324,
     "lng": 20.8146,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GAM",
@@ -8387,7 +9318,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 63.7668,
     "lng": -171.733,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GMB",
@@ -8396,7 +9328,8 @@ const AIRPORTS = [
     "country": "Ethiopia",
     "lat": 8.1288,
     "lng": 34.5631,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YRA",
@@ -8405,7 +9338,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 64.1161,
     "lng": -117.31,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GAN",
@@ -8414,7 +9348,8 @@ const AIRPORTS = [
     "country": "Maldives",
     "lat": -0.6933,
     "lng": 73.1556,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YQX",
@@ -8423,7 +9358,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 48.9369,
     "lng": -54.5681,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KVD",
@@ -8432,7 +9368,8 @@ const AIRPORTS = [
     "country": "Azerbaijan",
     "lat": 40.7377,
     "lng": 46.3176,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KOW",
@@ -8441,7 +9378,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 25.8533,
     "lng": 114.7789,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GCK",
@@ -8450,7 +9388,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.9275,
     "lng": -100.724,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GOU",
@@ -8459,7 +9398,8 @@ const AIRPORTS = [
     "country": "Cameroon",
     "lat": 9.3359,
     "lng": 13.3701,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YGP",
@@ -8468,7 +9408,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 48.7753,
     "lng": -64.4786,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ELQ",
@@ -8477,7 +9418,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 26.3028,
     "lng": 43.7744,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ZGU",
@@ -8486,7 +9428,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -14.2181,
     "lng": 167.587,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GZT",
@@ -8495,7 +9438,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 36.9472,
     "lng": 37.4787,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GDN",
@@ -8504,7 +9448,8 @@ const AIRPORTS = [
     "country": "Poland",
     "lat": 54.3776,
     "lng": 18.4662,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GDZ",
@@ -8513,7 +9458,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 44.5821,
     "lng": 38.0125,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GMA",
@@ -8522,7 +9468,8 @@ const AIRPORTS = [
     "country": "Congo (Kinshasa)",
     "lat": 3.2354,
     "lng": 19.7713,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EGN",
@@ -8531,7 +9478,8 @@ const AIRPORTS = [
     "country": "Sudan",
     "lat": 13.4817,
     "lng": 22.4672,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GVA",
@@ -8540,7 +9488,8 @@ const AIRPORTS = [
     "country": "Switzerland",
     "lat": 46.2381,
     "lng": 6.109,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GOA",
@@ -8549,7 +9498,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 44.4133,
     "lng": 8.8375,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GRJ",
@@ -8558,7 +9508,8 @@ const AIRPORTS = [
     "country": "South Africa",
     "lat": -34.0056,
     "lng": 22.3789,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GCM",
@@ -8567,7 +9518,8 @@ const AIRPORTS = [
     "country": "Cayman Islands",
     "lat": 19.2928,
     "lng": -81.3577,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GEO",
@@ -8576,7 +9528,8 @@ const AIRPORTS = [
     "country": "Guyana",
     "lat": 6.4985,
     "lng": -58.2541,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "OGL",
@@ -8585,7 +9538,8 @@ const AIRPORTS = [
     "country": "Guyana",
     "lat": 6.8063,
     "lng": -58.1059,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GET",
@@ -8594,7 +9548,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -28.7961,
     "lng": 114.707,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GRO",
@@ -8603,7 +9558,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 41.901,
     "lng": 2.7606,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "LTD",
@@ -8612,7 +9568,8 @@ const AIRPORTS = [
     "country": "Libya",
     "lat": 30.1517,
     "lng": 9.7153,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GHA",
@@ -8621,7 +9578,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 32.3841,
     "lng": 3.7941,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GHT",
@@ -8630,7 +9588,8 @@ const AIRPORTS = [
     "country": "Libya",
     "lat": 25.1456,
     "lng": 10.1426,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MUW",
@@ -8639,7 +9598,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 35.2077,
     "lng": 0.1471,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GIB",
@@ -8648,7 +9608,8 @@ const AIRPORTS = [
     "country": "Gibraltar",
     "lat": 36.1512,
     "lng": -5.3497,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GIL",
@@ -8657,7 +9618,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 35.9188,
     "lng": 74.3336,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YGX",
@@ -8666,7 +9628,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 56.3575,
     "lng": -94.7106,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GCC",
@@ -8675,7 +9638,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.3489,
     "lng": -105.539,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PNP",
@@ -8684,7 +9648,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -8.8045,
     "lng": 148.309,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GIS",
@@ -8693,7 +9658,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -38.6633,
     "lng": 177.978,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GIZ",
@@ -8702,7 +9668,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 16.9011,
     "lng": 42.5858,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GZO",
@@ -8711,7 +9678,8 @@ const AIRPORTS = [
     "country": "Solomon Islands",
     "lat": -8.0978,
     "lng": 156.864,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YHK",
@@ -8720,7 +9688,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 68.6356,
     "lng": -95.8497,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GLT",
@@ -8729,7 +9698,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -23.8697,
     "lng": 151.223,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GGW",
@@ -8738,7 +9708,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 48.2125,
     "lng": -106.615,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GLA",
@@ -8747,7 +9718,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 55.8719,
     "lng": -4.4331,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GDV",
@@ -8756,7 +9728,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 47.1387,
     "lng": -104.807,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GOI",
@@ -8765,7 +9738,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 15.3808,
     "lng": 73.8314,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GDE",
@@ -8774,7 +9748,8 @@ const AIRPORTS = [
     "country": "Ethiopia",
     "lat": 5.9351,
     "lng": 43.5786,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GOH",
@@ -8783,7 +9758,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 64.1909,
     "lng": -51.6781,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GYN",
@@ -8792,7 +9768,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -16.632,
     "lng": -49.2207,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GLF",
@@ -8801,7 +9778,8 @@ const AIRPORTS = [
     "country": "Costa Rica",
     "lat": 8.654,
     "lng": -83.1822,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GOQ",
@@ -8810,7 +9788,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 36.4006,
     "lng": 94.7861,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GLO",
@@ -8819,7 +9798,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 51.8942,
     "lng": -2.1672,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GLV",
@@ -8828,7 +9808,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 64.5505,
     "lng": -163.007,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GOM",
@@ -8837,7 +9818,8 @@ const AIRPORTS = [
     "country": "Congo (Kinshasa)",
     "lat": -1.6708,
     "lng": 29.2385,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GMO",
@@ -8846,7 +9828,8 @@ const AIRPORTS = [
     "country": "Nigeria",
     "lat": 10.2983,
     "lng": 10.8964,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GDQ",
@@ -8855,7 +9838,8 @@ const AIRPORTS = [
     "country": "Ethiopia",
     "lat": 12.5199,
     "lng": 37.434,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YYR",
@@ -8864,7 +9848,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 53.3192,
     "lng": -60.4258,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GOP",
@@ -8873,7 +9858,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 26.7397,
     "lng": 83.4497,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GBT",
@@ -8882,7 +9868,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 36.9094,
     "lng": 54.4013,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RGK",
@@ -8891,7 +9878,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 51.9667,
     "lng": 85.8333,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GKA",
@@ -8900,7 +9888,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -6.0817,
     "lng": 145.392,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GTO",
@@ -8909,7 +9898,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": 0.6371,
     "lng": 122.85,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GOT",
@@ -8918,7 +9908,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 57.6628,
     "lng": 12.2798,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GSE",
@@ -8927,7 +9918,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 57.7747,
     "lng": 11.8704,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GOV",
@@ -8936,7 +9928,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -12.2694,
     "lng": 136.818,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GVR",
@@ -8945,7 +9938,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -18.8952,
     "lng": -41.9822,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GHB",
@@ -8954,7 +9948,8 @@ const AIRPORTS = [
     "country": "Bahamas",
     "lat": 25.2847,
     "lng": -76.331,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GRW",
@@ -8963,7 +9958,8 @@ const AIRPORTS = [
     "country": "Portugal",
     "lat": 39.0922,
     "lng": -28.0298,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GFN",
@@ -8972,7 +9968,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -29.7594,
     "lng": 153.03,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LPA",
@@ -8981,7 +9978,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 27.9319,
     "lng": -15.3866,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GRX",
@@ -8990,7 +9988,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 37.1887,
     "lng": -3.7774,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GCN",
@@ -8999,7 +9998,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.9524,
     "lng": -112.147,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GFK",
@@ -9008,7 +10008,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 47.9493,
     "lng": -97.1761,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GRI",
@@ -9017,7 +10018,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.9675,
     "lng": -98.3096,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GJT",
@@ -9026,7 +10028,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.1224,
     "lng": -108.527,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GRR",
@@ -9035,7 +10038,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.8808,
     "lng": -85.5228,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YQU",
@@ -9044,7 +10048,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 55.1797,
     "lng": -118.885,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GRZ",
@@ -9053,7 +10058,8 @@ const AIRPORTS = [
     "country": "Austria",
     "lat": 46.9911,
     "lng": 15.4396,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GGT",
@@ -9062,7 +10068,8 @@ const AIRPORTS = [
     "country": "Bahamas",
     "lat": 23.5626,
     "lng": -75.878,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GTF",
@@ -9071,7 +10078,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 47.482,
     "lng": -111.371,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GRB",
@@ -9080,7 +10088,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.4851,
     "lng": -88.1296,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GSO",
@@ -9089,7 +10098,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 36.0978,
     "lng": -79.9373,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GLH",
@@ -9098,7 +10108,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.4829,
     "lng": -90.9856,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GSP",
@@ -9107,7 +10118,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 34.8957,
     "lng": -82.2189,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PGV",
@@ -9116,7 +10128,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.6352,
     "lng": -77.3853,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GFF",
@@ -9125,7 +10138,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -34.2508,
     "lng": 146.067,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YGZ",
@@ -9134,7 +10148,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 76.4261,
     "lng": -82.9092,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GRQ",
@@ -9143,7 +10158,8 @@ const AIRPORTS = [
     "country": "Netherlands",
     "lat": 53.1197,
     "lng": 6.5794,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GTE",
@@ -9152,7 +10168,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -13.975,
     "lng": 136.46,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GDL",
@@ -9161,7 +10178,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 20.5218,
     "lng": -103.311,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GJA",
@@ -9170,7 +10188,8 @@ const AIRPORTS = [
     "country": "Honduras",
     "lat": 16.4454,
     "lng": -85.9066,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GNM",
@@ -9179,7 +10198,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -14.2082,
     "lng": -42.7461,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GYS",
@@ -9188,7 +10208,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 32.3911,
     "lng": 105.702,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CAN",
@@ -9197,7 +10218,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 23.3924,
     "lng": 113.299,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "GAO",
@@ -9206,7 +10228,8 @@ const AIRPORTS = [
     "country": "Cuba",
     "lat": 20.0853,
     "lng": -75.1583,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GPI",
@@ -9215,7 +10238,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 2.5701,
     "lng": -77.8986,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GPB",
@@ -9224,7 +10248,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -25.3875,
     "lng": -51.5202,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GUA",
@@ -9233,7 +10258,8 @@ const AIRPORTS = [
     "country": "Guatemala",
     "lat": 14.5833,
     "lng": -90.5275,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PZO",
@@ -9242,7 +10268,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 8.2885,
     "lng": -62.7604,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GYE",
@@ -9251,7 +10278,8 @@ const AIRPORTS = [
     "country": "Ecuador",
     "lat": -2.1574,
     "lng": -79.8836,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GYA",
@@ -9260,7 +10288,8 @@ const AIRPORTS = [
     "country": "Bolivia",
     "lat": -10.8206,
     "lng": -65.3456,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ELU",
@@ -9269,7 +10298,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 33.5114,
     "lng": 6.7768,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GCI",
@@ -9278,7 +10308,8 @@ const AIRPORTS = [
     "country": "Guernsey",
     "lat": 49.435,
     "lng": -2.602,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KWL",
@@ -9287,7 +10318,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 25.2181,
     "lng": 110.039,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KWE",
@@ -9296,7 +10328,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 26.5385,
     "lng": 106.801,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GPT",
@@ -9305,7 +10338,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 30.4073,
     "lng": -89.0701,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GUC",
@@ -9314,7 +10348,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.5339,
     "lng": -106.933,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "URY",
@@ -9323,7 +10358,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 31.4124,
     "lng": 37.2789,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GUR",
@@ -9332,7 +10368,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -10.3115,
     "lng": 150.334,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GRP",
@@ -9341,7 +10378,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -11.7396,
     "lng": -49.1322,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SBH",
@@ -9350,7 +10388,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 17.9044,
     "lng": -62.8436,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GST",
@@ -9359,7 +10398,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 58.4253,
     "lng": -135.707,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GAU",
@@ -9368,7 +10408,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 26.1061,
     "lng": 91.5859,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GWD",
@@ -9377,7 +10418,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 25.2333,
     "lng": 62.3295,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GWL",
@@ -9386,7 +10428,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 26.2933,
     "lng": 78.2278,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MQT",
@@ -9395,7 +10438,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 46.3536,
     "lng": -87.3954,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LWN",
@@ -9404,7 +10448,8 @@ const AIRPORTS = [
     "country": "Armenia",
     "lat": 40.7504,
     "lng": 43.8593,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HAQ",
@@ -9413,7 +10458,8 @@ const AIRPORTS = [
     "country": "Maldives",
     "lat": 6.7442,
     "lng": 73.1705,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HAC",
@@ -9422,7 +10468,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 33.115,
     "lng": 139.786,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AQI",
@@ -9431,7 +10478,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 28.3352,
     "lng": 46.1251,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HGR",
@@ -9440,7 +10488,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.7079,
     "lng": -77.7295,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HFS",
@@ -9449,7 +10498,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 60.0201,
     "lng": 13.5789,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HHN",
@@ -9458,7 +10508,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 49.9487,
     "lng": 7.2639,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "HFA",
@@ -9467,7 +10518,8 @@ const AIRPORTS = [
     "country": "Israel",
     "lat": 32.8094,
     "lng": 35.0431,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HAK",
@@ -9476,7 +10528,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 19.9349,
     "lng": 110.459,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "HAS",
@@ -9485,7 +10538,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 27.4379,
     "lng": 41.6863,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HLD",
@@ -9494,7 +10548,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 49.205,
     "lng": 119.825,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HNS",
@@ -9503,7 +10558,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 59.2438,
     "lng": -135.524,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HPH",
@@ -9512,7 +10568,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 20.8194,
     "lng": 106.725,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HKD",
@@ -9521,7 +10578,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 41.77,
     "lng": 140.822,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YHZ",
@@ -9530,7 +10588,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 44.8808,
     "lng": -63.5086,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YUX",
@@ -9539,7 +10598,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 68.7761,
     "lng": -81.2425,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HAD",
@@ -9548,7 +10608,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 56.6911,
     "lng": 12.8202,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HDM",
@@ -9557,7 +10618,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 34.8692,
     "lng": 48.5525,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HAM",
@@ -9566,7 +10628,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 53.6304,
     "lng": 9.9882,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "XFW",
@@ -9575,7 +10638,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 53.5353,
     "lng": 9.8356,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HMI",
@@ -9584,7 +10648,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 42.8414,
     "lng": 93.6692,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HLZ",
@@ -9593,7 +10658,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -37.8667,
     "lng": 175.332,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YHM",
@@ -9602,7 +10668,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 43.1736,
     "lng": -79.935,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HTI",
@@ -9611,7 +10678,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -20.3581,
     "lng": 148.952,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HFT",
@@ -9620,7 +10688,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 70.6797,
     "lng": 23.6686,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HNM",
@@ -9629,7 +10698,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 20.7956,
     "lng": -156.014,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HNA",
@@ -9638,7 +10708,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 39.4286,
     "lng": 141.135,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CMX",
@@ -9647,7 +10718,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 47.1684,
     "lng": -88.4891,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HDG",
@@ -9656,7 +10728,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 36.5258,
     "lng": 114.4256,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HGH",
@@ -9665,7 +10738,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 30.2295,
     "lng": 120.434,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "HAJ",
@@ -9674,7 +10748,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 52.4611,
     "lng": 9.6851,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "HAN",
@@ -9683,7 +10758,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 21.2212,
     "lng": 105.807,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "HOI",
@@ -9692,7 +10768,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -18.0748,
     "lng": -140.946,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HRE",
@@ -9701,7 +10778,8 @@ const AIRPORTS = [
     "country": "Zimbabwe",
     "lat": -17.9318,
     "lng": 31.0928,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "HRB",
@@ -9710,7 +10788,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 45.6234,
     "lng": 126.25,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "HGA",
@@ -9719,7 +10798,8 @@ const AIRPORTS = [
     "country": "Somalia",
     "lat": 9.5182,
     "lng": 44.0888,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HRL",
@@ -9728,7 +10808,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 26.2285,
     "lng": -97.6544,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MDT",
@@ -9737,7 +10818,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.1935,
     "lng": -76.7634,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HRO",
@@ -9746,7 +10828,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 36.2615,
     "lng": -93.1547,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EVE",
@@ -9755,7 +10838,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 68.4913,
     "lng": 16.6781,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HME",
@@ -9764,7 +10848,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 31.673,
     "lng": 6.1404,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HAA",
@@ -9773,7 +10858,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 70.4867,
     "lng": 22.1397,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HDY",
@@ -9782,7 +10868,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 6.9332,
     "lng": 100.393,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HTY",
@@ -9791,7 +10878,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 36.3628,
     "lng": 36.2822,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PIB",
@@ -9800,7 +10888,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 31.4671,
     "lng": -89.3371,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HAU",
@@ -9809,7 +10898,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 59.3453,
     "lng": 5.2084,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HAV",
@@ -9818,7 +10908,8 @@ const AIRPORTS = [
     "country": "Cuba",
     "lat": 22.9892,
     "lng": -82.4091,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "HVR",
@@ -9827,7 +10918,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 48.543,
     "lng": -109.762,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YGV",
@@ -9836,7 +10928,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 50.2819,
     "lng": -63.6114,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CEG",
@@ -9845,7 +10938,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 53.1781,
     "lng": -2.9778,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YHY",
@@ -9854,7 +10948,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 60.8397,
     "lng": -115.783,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HDN",
@@ -9863,7 +10958,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.4812,
     "lng": -107.218,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HFE",
@@ -9872,7 +10968,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 31.78,
     "lng": 117.298,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "HEH",
@@ -9881,7 +10978,8 @@ const AIRPORTS = [
     "country": "Burma",
     "lat": 20.747,
     "lng": 96.792,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HEK",
@@ -9890,7 +10988,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 50.1716,
     "lng": 127.3089,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HLN",
@@ -9899,7 +10998,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 46.6068,
     "lng": -111.983,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HEL",
@@ -9908,7 +11008,8 @@ const AIRPORTS = [
     "country": "Finland",
     "lat": 60.3172,
     "lng": 24.9633,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "HMV",
@@ -9917,7 +11018,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 65.8061,
     "lng": 15.0828,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HER",
@@ -9926,7 +11028,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 35.3397,
     "lng": 25.1803,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "HEA",
@@ -9935,7 +11038,8 @@ const AIRPORTS = [
     "country": "Afghanistan",
     "lat": 34.21,
     "lng": 62.2283,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HDF",
@@ -9944,7 +11048,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 53.8787,
     "lng": 14.1523,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HMO",
@@ -9953,7 +11058,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 29.0959,
     "lng": -111.048,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HVB",
@@ -9962,7 +11068,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -25.3189,
     "lng": 152.88,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UVF",
@@ -9971,7 +11078,8 @@ const AIRPORTS = [
     "country": "Saint Lucia",
     "lat": 13.7332,
     "lng": -60.9526,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HIB",
@@ -9980,7 +11088,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 47.3866,
     "lng": -92.839,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VDE",
@@ -9989,7 +11098,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 27.8148,
     "lng": -17.8871,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YOJ",
@@ -9998,7 +11108,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 58.6214,
     "lng": -117.165,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ITO",
@@ -10007,7 +11118,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 19.7214,
     "lng": -155.048,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HHH",
@@ -10016,7 +11128,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.2244,
     "lng": -80.6975,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HIJ",
@@ -10025,7 +11138,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 34.4361,
     "lng": 132.919,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AUQ",
@@ -10034,7 +11148,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -9.7688,
     "lng": -139.011,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SGN",
@@ -10043,7 +11158,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 10.8188,
     "lng": 106.652,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "HBA",
@@ -10052,7 +11168,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -42.8361,
     "lng": 147.51,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HOB",
@@ -10061,7 +11178,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.6875,
     "lng": -103.217,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HOD",
@@ -10070,7 +11188,8 @@ const AIRPORTS = [
     "country": "Yemen",
     "lat": 14.753,
     "lng": 42.9763,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HDS",
@@ -10079,7 +11198,8 @@ const AIRPORTS = [
     "country": "South Africa",
     "lat": -24.3686,
     "lng": 31.0487,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HET",
@@ -10088,7 +11208,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 40.8514,
     "lng": 111.824,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "HKK",
@@ -10097,7 +11218,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -42.7136,
     "lng": 170.985,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HOG",
@@ -10106,7 +11228,8 @@ const AIRPORTS = [
     "country": "Cuba",
     "lat": 20.7856,
     "lng": -76.3151,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YHI",
@@ -10115,7 +11238,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 70.7628,
     "lng": -117.806,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HCR",
@@ -10124,7 +11248,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 62.1883,
     "lng": -159.775,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HOM",
@@ -10133,7 +11258,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 59.6456,
     "lng": -151.477,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HKG",
@@ -10142,7 +11268,8 @@ const AIRPORTS = [
     "country": "Hong Kong",
     "lat": 22.3089,
     "lng": 113.915,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "HIR",
@@ -10151,7 +11278,8 @@ const AIRPORTS = [
     "country": "Solomon Islands",
     "lat": -9.428,
     "lng": 160.055,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HVG",
@@ -10160,7 +11288,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 71.0097,
     "lng": 25.9836,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HNL",
@@ -10169,7 +11298,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 21.3206,
     "lng": -157.9242,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MQJ",
@@ -10178,7 +11308,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 66.4509,
     "lng": 143.2616,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HNH",
@@ -10187,7 +11318,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 58.0961,
     "lng": -135.4101,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HPB",
@@ -10196,7 +11328,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 61.5239,
     "lng": -166.147,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YHO",
@@ -10205,7 +11338,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 55.4483,
     "lng": -60.2286,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HID",
@@ -10214,7 +11348,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -10.5864,
     "lng": 142.29,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HOR",
@@ -10223,7 +11358,8 @@ const AIRPORTS = [
     "country": "Portugal",
     "lat": 38.5199,
     "lng": -28.7159,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HKN",
@@ -10232,7 +11368,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -5.4622,
     "lng": 150.405,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HOT",
@@ -10241,7 +11378,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 34.478,
     "lng": -93.0962,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HTN",
@@ -10250,7 +11388,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 37.0385,
     "lng": 79.8649,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HOU",
@@ -10259,7 +11398,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 29.6454,
     "lng": -95.2789,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "IAH",
@@ -10268,7 +11408,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 29.9844,
     "lng": -95.3414,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "HUH",
@@ -10277,7 +11418,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -16.6872,
     "lng": -151.022,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HIA",
@@ -10286,7 +11428,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 33.7908,
     "lng": 119.125,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HUN",
@@ -10295,7 +11438,8 @@ const AIRPORTS = [
     "country": "Taiwan",
     "lat": 24.0231,
     "lng": 121.618,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NOV",
@@ -10304,7 +11448,8 @@ const AIRPORTS = [
     "country": "Angola",
     "lat": -12.8089,
     "lng": 15.7605,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TXN",
@@ -10313,7 +11458,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 29.7333,
     "lng": 118.256,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "HYN",
@@ -10322,7 +11468,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 28.5622,
     "lng": 121.429,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HUX",
@@ -10331,7 +11478,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 15.7753,
     "lng": -96.2626,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HOE",
@@ -10340,7 +11488,8 @@ const AIRPORTS = [
     "country": "Laos",
     "lat": 20.2573,
     "lng": 100.437,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HBX",
@@ -10349,7 +11498,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 15.3617,
     "lng": 75.0849,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HUI",
@@ -10358,7 +11508,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 16.4015,
     "lng": 107.703,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HUS",
@@ -10367,7 +11518,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 66.0411,
     "lng": -154.263,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HUY",
@@ -10376,7 +11528,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 53.5744,
     "lng": -0.3508,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HTS",
@@ -10385,7 +11538,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.3667,
     "lng": -82.558,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HSV",
@@ -10394,7 +11548,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 34.6372,
     "lng": -86.7751,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HRG",
@@ -10403,7 +11558,8 @@ const AIRPORTS = [
     "country": "Egypt",
     "lat": 27.1783,
     "lng": 33.7994,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "HON",
@@ -10412,7 +11568,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.3852,
     "lng": -98.2285,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HSL",
@@ -10421,7 +11578,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 65.6979,
     "lng": -156.351,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HUU",
@@ -10430,7 +11588,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -9.8788,
     "lng": -76.2048,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HYG",
@@ -10439,7 +11598,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 55.2063,
     "lng": -132.828,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HYD",
@@ -10448,7 +11608,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 17.2313,
     "lng": 78.4299,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TLN",
@@ -10457,7 +11618,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 43.0973,
     "lng": 6.146,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IAS",
@@ -10466,7 +11628,8 @@ const AIRPORTS = [
     "country": "Romania",
     "lat": 47.1785,
     "lng": 27.6206,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "IBA",
@@ -10475,7 +11638,8 @@ const AIRPORTS = [
     "country": "Nigeria",
     "lat": 7.3625,
     "lng": 3.9783,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IBE",
@@ -10484,7 +11648,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 4.4216,
     "lng": -75.1333,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IBR",
@@ -10493,7 +11658,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 36.1811,
     "lng": 140.415,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IBZ",
@@ -10502,7 +11668,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 38.8729,
     "lng": 1.3731,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "IDA",
@@ -10511,7 +11678,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.5146,
     "lng": -112.071,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IAA",
@@ -10520,7 +11688,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 67.4372,
     "lng": 86.6219,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IGD",
@@ -10529,7 +11698,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 39.9766,
     "lng": 43.8766,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IGG",
@@ -10538,7 +11708,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 59.324,
     "lng": -155.902,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YGT",
@@ -10547,7 +11718,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 69.3647,
     "lng": -81.8161,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IGR",
@@ -10556,7 +11728,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -25.7373,
     "lng": -54.4734,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JIK",
@@ -10565,7 +11738,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 37.6827,
     "lng": 26.3471,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IKI",
@@ -10574,7 +11748,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 33.749,
     "lng": 129.785,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IIL",
@@ -10583,7 +11758,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 33.5866,
     "lng": 46.4048,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YGR",
@@ -10592,7 +11768,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 47.4247,
     "lng": -61.7781,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IOS",
@@ -10601,7 +11778,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -14.816,
     "lng": -39.0332,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ILI",
@@ -10610,7 +11788,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 59.7544,
     "lng": -154.911,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ILO",
@@ -10619,7 +11798,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 10.833,
     "lng": 122.4934,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ILR",
@@ -10628,7 +11808,8 @@ const AIRPORTS = [
     "country": "Nigeria",
     "lat": 8.4402,
     "lng": 4.4939,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JAV",
@@ -10637,7 +11818,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 69.2432,
     "lng": -51.0571,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "QOW",
@@ -10646,7 +11828,8 @@ const AIRPORTS = [
     "country": "Nigeria",
     "lat": 5.4271,
     "lng": 7.206,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IMP",
@@ -10655,7 +11838,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -5.5313,
     "lng": -47.46,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "IPL",
@@ -10664,7 +11848,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.8342,
     "lng": -115.579,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IMF",
@@ -10673,7 +11858,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 24.76,
     "lng": 93.8967,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "INZ",
@@ -10682,7 +11868,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 27.251,
     "lng": 2.512,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IND",
@@ -10691,7 +11878,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.7173,
     "lng": -86.2944,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "IDR",
@@ -10700,7 +11888,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 22.7218,
     "lng": 75.8011,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "INH",
@@ -10709,7 +11898,8 @@ const AIRPORTS = [
     "country": "Mozambique",
     "lat": -23.8764,
     "lng": 35.4085,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "INN",
@@ -10718,7 +11908,8 @@ const AIRPORTS = [
     "country": "Austria",
     "lat": 47.2602,
     "lng": 11.344,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "INL",
@@ -10727,7 +11918,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 48.5662,
     "lng": -93.4031,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YPH",
@@ -10736,7 +11928,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 58.4719,
     "lng": -78.0769,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YEV",
@@ -10745,7 +11938,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 68.3042,
     "lng": -133.483,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "IVC",
@@ -10754,7 +11948,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -46.4124,
     "lng": 168.313,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "INV",
@@ -10763,7 +11958,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 57.5425,
     "lng": -4.0475,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "IOA",
@@ -10772,7 +11968,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 39.6964,
     "lng": 20.8225,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IPN",
@@ -10781,7 +11978,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -19.4707,
     "lng": -42.4876,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IPI",
@@ -10790,7 +11988,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 0.8619,
     "lng": -77.6718,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IPH",
@@ -10799,7 +11998,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 4.568,
     "lng": 101.092,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IPA",
@@ -10808,7 +12008,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -18.8564,
     "lng": 169.2833,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YFB",
@@ -10817,7 +12018,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 63.7564,
     "lng": -68.5558,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "IQQ",
@@ -10826,7 +12028,8 @@ const AIRPORTS = [
     "country": "Chile",
     "lat": -20.5352,
     "lng": -70.1813,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "IQT",
@@ -10835,7 +12038,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -3.7847,
     "lng": -73.3088,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "IKT",
@@ -10844,7 +12048,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 52.268,
     "lng": 104.389,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "IMT",
@@ -10853,7 +12058,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 45.8184,
     "lng": -88.1145,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IFJ",
@@ -10862,7 +12068,8 @@ const AIRPORTS = [
     "country": "Iceland",
     "lat": 66.0581,
     "lng": -23.1353,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ISG",
@@ -10871,7 +12078,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 24.3964,
     "lng": 124.245,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "IRP",
@@ -10880,7 +12088,8 @@ const AIRPORTS = [
     "country": "Congo (Kinshasa)",
     "lat": 2.8276,
     "lng": 27.5883,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ISB",
@@ -10889,7 +12098,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 33.5607,
     "lng": 72.8516,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ILY",
@@ -10898,7 +12108,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 55.6819,
     "lng": -6.2567,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IOM",
@@ -10907,7 +12118,8 @@ const AIRPORTS = [
     "country": "Isle of Man",
     "lat": 54.0833,
     "lng": -4.6239,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ISP",
@@ -10916,7 +12128,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.7952,
     "lng": -73.1002,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ISE",
@@ -10925,7 +12138,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 37.8554,
     "lng": 30.3684,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IST",
@@ -10934,7 +12148,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 41.2753,
     "lng": 28.7519,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "SAW",
@@ -10943,7 +12158,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 40.8986,
     "lng": 29.3092,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ITB",
@@ -10952,7 +12168,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -4.2423,
     "lng": -56.0007,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ITH",
@@ -10961,7 +12178,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.491,
     "lng": -76.4584,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OBY",
@@ -10970,7 +12188,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 70.4882,
     "lng": -21.9717,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IVL",
@@ -10979,7 +12198,8 @@ const AIRPORTS = [
     "country": "Finland",
     "lat": 68.6073,
     "lng": 27.4053,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IFO",
@@ -10988,7 +12208,8 @@ const AIRPORTS = [
     "country": "Ukraine",
     "lat": 48.8842,
     "lng": 24.6861,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YIK",
@@ -10997,7 +12218,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 62.4173,
     "lng": -77.9253,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IWK",
@@ -11006,7 +12228,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 34.1439,
     "lng": 132.236,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IWJ",
@@ -11015,7 +12238,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 34.6764,
     "lng": 131.79,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IJK",
@@ -11024,7 +12248,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 56.8281,
     "lng": 53.4575,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ADB",
@@ -11033,7 +12258,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 38.2924,
     "lng": 27.157,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "IZO",
@@ -11042,7 +12268,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 35.4136,
     "lng": 132.89,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JLR",
@@ -11051,7 +12278,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 23.1778,
     "lng": 80.052,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JAC",
@@ -11060,7 +12288,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.6073,
     "lng": -110.738,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JAN",
@@ -11069,7 +12298,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.3112,
     "lng": -90.0759,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MKL",
@@ -11078,7 +12308,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.5999,
     "lng": -88.9156,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JAX",
@@ -11087,7 +12318,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 30.4941,
     "lng": -81.6879,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "OAJ",
@@ -11096,7 +12328,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 34.8292,
     "lng": -77.6121,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JAI",
@@ -11105,7 +12338,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 26.8242,
     "lng": 75.8122,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CGK",
@@ -11114,7 +12348,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -6.1256,
     "lng": 106.656,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "JAL",
@@ -11123,7 +12358,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 19.4751,
     "lng": -96.7975,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DJB",
@@ -11132,7 +12368,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -1.638,
     "lng": 103.644,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JHW",
@@ -11141,7 +12378,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.1534,
     "lng": -79.258,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IXJ",
@@ -11150,7 +12388,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 32.6891,
     "lng": 74.8374,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JGA",
@@ -11159,7 +12398,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 22.4655,
     "lng": 70.0126,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JKR",
@@ -11168,7 +12408,8 @@ const AIRPORTS = [
     "country": "Nepal",
     "lat": 26.7088,
     "lng": 85.9224,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JQE",
@@ -11177,7 +12418,8 @@ const AIRPORTS = [
     "country": "Panama",
     "lat": 7.5178,
     "lng": -78.1572,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JAU",
@@ -11186,7 +12428,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -11.7831,
     "lng": -75.4734,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DJJ",
@@ -11195,7 +12438,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -2.577,
     "lng": 140.516,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JED",
@@ -11204,7 +12448,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 21.6796,
     "lng": 39.1565,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "XRY",
@@ -11213,7 +12458,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 36.7446,
     "lng": -6.0601,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JER",
@@ -11222,7 +12468,8 @@ const AIRPORTS = [
     "country": "Jersey",
     "lat": 49.2079,
     "lng": -2.1955,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "JSR",
@@ -11231,7 +12478,8 @@ const AIRPORTS = [
     "country": "Bangladesh",
     "lat": 23.1838,
     "lng": 89.1608,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JPR",
@@ -11240,7 +12488,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -10.8708,
     "lng": -61.8465,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JGD",
@@ -11249,7 +12498,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 50.3714,
     "lng": 124.1175,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JMU",
@@ -11258,7 +12508,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 46.8434,
     "lng": 130.465,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JGS",
@@ -11267,7 +12518,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 26.8569,
     "lng": 114.737,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JGN",
@@ -11276,7 +12528,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 39.8569,
     "lng": 98.3414,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JIJ",
@@ -11285,7 +12538,8 @@ const AIRPORTS = [
     "country": "Ethiopia",
     "lat": 9.3325,
     "lng": 42.9121,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JIM",
@@ -11294,7 +12548,8 @@ const AIRPORTS = [
     "country": "Ethiopia",
     "lat": 7.6661,
     "lng": 36.8166,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TNA",
@@ -11303,7 +12558,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 36.8572,
     "lng": 117.216,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "JIC",
@@ -11312,7 +12568,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 38.5422,
     "lng": 102.3483,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JDZ",
@@ -11321,7 +12578,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 29.3386,
     "lng": 117.176,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JHG",
@@ -11330,7 +12588,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 21.9739,
     "lng": 100.76,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JNG",
@@ -11339,7 +12598,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 35.2928,
     "lng": 116.3467,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JNZ",
@@ -11348,7 +12608,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 41.1014,
     "lng": 121.062,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JIU",
@@ -11357,7 +12618,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 29.4769,
     "lng": 115.8011,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JZH",
@@ -11366,7 +12628,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 32.8533,
     "lng": 103.6822,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JXA",
@@ -11375,7 +12638,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 45.293,
     "lng": 131.193,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JCB",
@@ -11384,7 +12648,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -27.1714,
     "lng": -51.5533,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JPA",
@@ -11393,7 +12658,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -7.1458,
     "lng": -34.9486,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JDH",
@@ -11402,7 +12668,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 26.2511,
     "lng": 73.0489,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JKG",
@@ -11411,7 +12678,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 57.7576,
     "lng": 14.0687,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JOE",
@@ -11420,7 +12688,8 @@ const AIRPORTS = [
     "country": "Finland",
     "lat": 62.6629,
     "lng": 29.6075,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HLA",
@@ -11429,7 +12698,8 @@ const AIRPORTS = [
     "country": "South Africa",
     "lat": -25.9385,
     "lng": 27.9261,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JNB",
@@ -11438,7 +12708,8 @@ const AIRPORTS = [
     "country": "South Africa",
     "lat": -26.1392,
     "lng": 28.246,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "JST",
@@ -11447,7 +12718,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.3161,
     "lng": -78.8339,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JHB",
@@ -11456,7 +12728,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 1.6413,
     "lng": 103.67,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JOI",
@@ -11465,7 +12738,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -26.2245,
     "lng": -48.7974,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JOL",
@@ -11474,7 +12748,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 6.0537,
     "lng": 121.011,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JBR",
@@ -11483,7 +12758,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.8317,
     "lng": -90.6464,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JLN",
@@ -11492,7 +12768,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.1518,
     "lng": -94.4983,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JOS",
@@ -11501,7 +12778,8 @@ const AIRPORTS = [
     "country": "Nigeria",
     "lat": 9.6398,
     "lng": 8.8691,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JDO",
@@ -11510,7 +12788,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -7.219,
     "lng": -39.2701,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JUB",
@@ -11519,7 +12798,8 @@ const AIRPORTS = [
     "country": "South Sudan",
     "lat": 4.872,
     "lng": 31.6011,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "IZA",
@@ -11528,7 +12808,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -21.5131,
     "lng": -43.1731,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JUJ",
@@ -11537,7 +12818,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -24.3928,
     "lng": -65.0978,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JCK",
@@ -11546,7 +12828,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -20.6683,
     "lng": 141.723,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JUL",
@@ -11555,7 +12838,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -15.4671,
     "lng": -70.1582,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JNU",
@@ -11564,7 +12848,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 58.355,
     "lng": -134.576,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JYV",
@@ -11573,7 +12858,8 @@ const AIRPORTS = [
     "country": "Finland",
     "lat": 62.3995,
     "lng": 25.6783,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KDM",
@@ -11582,7 +12868,8 @@ const AIRPORTS = [
     "country": "Maldives",
     "lat": 0.4881,
     "lng": 72.9969,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KBL",
@@ -11591,7 +12878,8 @@ const AIRPORTS = [
     "country": "Afghanistan",
     "lat": 34.5659,
     "lng": 69.2123,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KAD",
@@ -11600,7 +12888,8 @@ const AIRPORTS = [
     "country": "Nigeria",
     "lat": 10.696,
     "lng": 7.3201,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KGE",
@@ -11609,7 +12898,8 @@ const AIRPORTS = [
     "country": "Solomon Islands",
     "lat": -7.3305,
     "lng": 157.585,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KOJ",
@@ -11618,7 +12908,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 31.8034,
     "lng": 130.719,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KCM",
@@ -11627,7 +12918,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 37.5388,
     "lng": 36.9535,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OGG",
@@ -11636,7 +12928,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 20.8986,
     "lng": -156.43,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KNG",
@@ -11645,7 +12938,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -3.6445,
     "lng": 133.696,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KAT",
@@ -11654,7 +12948,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -35.07,
     "lng": 173.285,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KAJ",
@@ -11663,7 +12958,8 @@ const AIRPORTS = [
     "country": "Finland",
     "lat": 64.2855,
     "lng": 27.6924,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KLX",
@@ -11672,7 +12968,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 37.0683,
     "lng": 22.0255,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AZO",
@@ -11681,7 +12978,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.2349,
     "lng": -85.5521,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FMI",
@@ -11690,7 +12988,8 @@ const AIRPORTS = [
     "country": "Congo (Kinshasa)",
     "lat": -5.8756,
     "lng": 29.25,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KGI",
@@ -11699,7 +12998,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -30.7894,
     "lng": 121.462,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KLO",
@@ -11708,7 +13008,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 11.6794,
     "lng": 122.376,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KGD",
@@ -11717,7 +13018,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 54.89,
     "lng": 20.5926,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FCA",
@@ -11726,7 +13028,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 48.3105,
     "lng": -114.256,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KLR",
@@ -11735,7 +13038,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 56.6855,
     "lng": 16.2876,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KLG",
@@ -11744,7 +13048,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 61.5363,
     "lng": -160.341,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KAL",
@@ -11753,7 +13058,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 64.3191,
     "lng": -158.741,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JKL",
@@ -11762,7 +13068,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 36.9633,
     "lng": 26.9406,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KME",
@@ -11771,7 +13078,8 @@ const AIRPORTS = [
     "country": "Rwanda",
     "lat": -2.4622,
     "lng": 28.9079,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YKA",
@@ -11780,7 +13088,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 50.7022,
     "lng": -120.444,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MUE",
@@ -11789,7 +13098,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 20.0013,
     "lng": -155.668,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KGA",
@@ -11798,7 +13108,8 @@ const AIRPORTS = [
     "country": "Congo (Kinshasa)",
     "lat": -5.9001,
     "lng": 22.4692,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KMQ",
@@ -11807,7 +13118,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 36.3946,
     "lng": 136.407,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KDH",
@@ -11816,7 +13128,8 @@ const AIRPORTS = [
     "country": "Afghanistan",
     "lat": 31.5058,
     "lng": 65.8478,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KGT",
@@ -11825,7 +13138,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 30.1575,
     "lng": 101.7347,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "XGR",
@@ -11834,7 +13148,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 58.7114,
     "lng": -65.9928,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YWB",
@@ -11843,7 +13158,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 61.5886,
     "lng": -71.9294,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YKG",
@@ -11852,7 +13168,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 60.0272,
     "lng": -69.9992,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DHM",
@@ -11861,7 +13178,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 32.1651,
     "lng": 76.2634,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KAN",
@@ -11870,7 +13188,8 @@ const AIRPORTS = [
     "country": "Nigeria",
     "lat": 12.0476,
     "lng": 8.5246,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KNU",
@@ -11879,7 +13198,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 26.4043,
     "lng": 80.4101,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MCI",
@@ -11888,7 +13208,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.2976,
     "lng": -94.7139,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KAZ",
@@ -11897,7 +13218,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": 1.1853,
     "lng": 127.896,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KHH",
@@ -11906,7 +13228,8 @@ const AIRPORTS = [
     "country": "Taiwan",
     "lat": 22.5771,
     "lng": 120.35,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YYU",
@@ -11915,7 +13238,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.4139,
     "lng": -82.4675,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KHI",
@@ -11924,7 +13248,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 24.9065,
     "lng": 67.1608,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KGF",
@@ -11933,7 +13258,8 @@ const AIRPORTS = [
     "country": "Kazakhstan",
     "lat": 49.6708,
     "lng": 73.3344,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KRY",
@@ -11942,7 +13268,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 45.4665,
     "lng": 84.9527,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KLV",
@@ -11951,7 +13278,8 @@ const AIRPORTS = [
     "country": "Czech Republic",
     "lat": 50.203,
     "lng": 12.915,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FKB",
@@ -11960,7 +13288,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 48.7794,
     "lng": 8.0805,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KSD",
@@ -11969,7 +13298,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 59.4447,
     "lng": 13.3374,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KYK",
@@ -11978,7 +13308,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 57.5671,
     "lng": -154.45,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AOK",
@@ -11987,7 +13318,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 35.4214,
     "lng": 27.146,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KTA",
@@ -11996,7 +13328,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -20.7122,
     "lng": 116.773,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KSY",
@@ -12005,7 +13338,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 40.5622,
     "lng": 43.115,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KRP",
@@ -12014,7 +13348,8 @@ const AIRPORTS = [
     "country": "Denmark",
     "lat": 56.2975,
     "lng": 9.1246,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "XKS",
@@ -12023,7 +13358,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 53.5247,
     "lng": -88.6428,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KAA",
@@ -12032,7 +13368,8 @@ const AIRPORTS = [
     "country": "Zambia",
     "lat": -10.2167,
     "lng": 31.1333,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BBK",
@@ -12041,7 +13378,8 @@ const AIRPORTS = [
     "country": "Botswana",
     "lat": -17.8329,
     "lng": 25.1624,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KSE",
@@ -12050,7 +13388,8 @@ const AIRPORTS = [
     "country": "Uganda",
     "lat": 0.183,
     "lng": 30.1,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZKE",
@@ -12059,7 +13398,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 52.2825,
     "lng": -81.6778,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KHG",
@@ -12068,7 +13408,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 39.5429,
     "lng": 76.02,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KUK",
@@ -12077,7 +13418,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 60.8744,
     "lng": -162.524,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KSJ",
@@ -12086,7 +13428,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 35.4214,
     "lng": 26.91,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KSF",
@@ -12095,7 +13438,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 51.4173,
     "lng": 9.385,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KFS",
@@ -12104,7 +13448,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 41.3142,
     "lng": 33.7958,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KZS",
@@ -12113,7 +13458,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 36.1417,
     "lng": 29.5764,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KSO",
@@ -12122,7 +13468,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 40.4463,
     "lng": 21.2822,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KTM",
@@ -12131,7 +13478,8 @@ const AIRPORTS = [
     "country": "Nepal",
     "lat": 27.6966,
     "lng": 85.3591,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KTW",
@@ -12140,7 +13488,8 @@ const AIRPORTS = [
     "country": "Poland",
     "lat": 50.4743,
     "lng": 19.08,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KKR",
@@ -12149,7 +13498,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -15.6633,
     "lng": -146.885,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KUN",
@@ -12158,7 +13508,8 @@ const AIRPORTS = [
     "country": "Lithuania",
     "lat": 54.9639,
     "lng": 24.0848,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KVA",
@@ -12167,7 +13518,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 40.9133,
     "lng": 24.6192,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KVG",
@@ -12176,7 +13528,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -2.5794,
     "lng": 150.808,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KAW",
@@ -12185,7 +13538,8 @@ const AIRPORTS = [
     "country": "Burma",
     "lat": 10.0493,
     "lng": 98.538,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ASR",
@@ -12194,7 +13548,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 38.7704,
     "lng": 35.4954,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KZN",
@@ -12203,7 +13558,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 55.6062,
     "lng": 49.2787,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KEW",
@@ -12212,7 +13568,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 52.9911,
     "lng": -92.8364,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EFL",
@@ -12221,7 +13578,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 38.1201,
     "lng": 20.5005,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KEF",
@@ -12230,7 +13588,8 @@ const AIRPORTS = [
     "country": "Iceland",
     "lat": 63.985,
     "lng": -22.6056,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ZKG",
@@ -12239,7 +13598,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 50.1958,
     "lng": -61.2658,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YLW",
@@ -12248,7 +13608,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.9561,
     "lng": -119.378,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KEM",
@@ -12257,7 +13618,8 @@ const AIRPORTS = [
     "country": "Finland",
     "lat": 65.7787,
     "lng": 24.5821,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KEJ",
@@ -12266,7 +13628,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 55.2701,
     "lng": 86.1072,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ENA",
@@ -12275,7 +13638,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 60.5731,
     "lng": -151.245,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KDI",
@@ -12284,7 +13648,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -4.0816,
     "lng": 122.418,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KET",
@@ -12293,7 +13658,8 @@ const AIRPORTS = [
     "country": "Burma",
     "lat": 21.3016,
     "lng": 99.636,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YQK",
@@ -12302,7 +13668,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.7883,
     "lng": -94.3631,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KKE",
@@ -12311,7 +13678,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -35.2628,
     "lng": 173.912,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CFU",
@@ -12320,7 +13688,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 39.6019,
     "lng": 19.9117,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KER",
@@ -12329,7 +13698,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 30.2744,
     "lng": 56.9511,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KIR",
@@ -12338,7 +13708,8 @@ const AIRPORTS = [
     "country": "Ireland",
     "lat": 52.1809,
     "lng": -9.5238,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KTE",
@@ -12347,7 +13718,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 4.5372,
     "lng": 103.427,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KTG",
@@ -12356,7 +13728,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -1.8166,
     "lng": 109.963,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KTN",
@@ -12365,7 +13738,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 55.3556,
     "lng": -131.714,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "EYW",
@@ -12374,7 +13748,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 24.5561,
     "lng": -81.7596,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KHV",
@@ -12383,7 +13758,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 48.528,
     "lng": 135.188,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "HJR",
@@ -12392,7 +13768,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 24.8172,
     "lng": 79.9186,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PGU",
@@ -12401,7 +13778,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 27.3796,
     "lng": 52.7377,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KSQ",
@@ -12410,7 +13788,8 @@ const AIRPORTS = [
     "country": "Uzbekistan",
     "lat": 38.8336,
     "lng": 65.9215,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HMA",
@@ -12419,7 +13798,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 61.0285,
     "lng": 69.0861,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HRK",
@@ -12428,7 +13808,8 @@ const AIRPORTS = [
     "country": "Ukraine",
     "lat": 49.9248,
     "lng": 36.29,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KRT",
@@ -12437,7 +13818,8 @@ const AIRPORTS = [
     "country": "Sudan",
     "lat": 15.5895,
     "lng": 32.5532,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KHS",
@@ -12446,7 +13828,8 @@ const AIRPORTS = [
     "country": "Oman",
     "lat": 26.171,
     "lng": 56.2406,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KKC",
@@ -12455,7 +13838,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 16.4666,
     "lng": 102.784,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KHD",
@@ -12464,7 +13848,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 33.4354,
     "lng": 48.2829,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HVD",
@@ -12473,7 +13858,8 @@ const AIRPORTS = [
     "country": "Mongolia",
     "lat": 47.9541,
     "lng": 91.6282,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KHY",
@@ -12482,7 +13868,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 38.4275,
     "lng": 44.9736,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LBD",
@@ -12491,7 +13878,8 @@ const AIRPORTS = [
     "country": "Tajikistan",
     "lat": 40.2154,
     "lng": 69.6947,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "IAN",
@@ -12500,7 +13888,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 66.976,
     "lng": -160.437,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IEV",
@@ -12509,7 +13898,8 @@ const AIRPORTS = [
     "country": "Ukraine",
     "lat": 50.4019,
     "lng": 30.4519,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KBP",
@@ -12518,7 +13908,8 @@ const AIRPORTS = [
     "country": "Ukraine",
     "lat": 50.345,
     "lng": 30.8947,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KGL",
@@ -12527,7 +13918,8 @@ const AIRPORTS = [
     "country": "Rwanda",
     "lat": -1.9686,
     "lng": 30.1395,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "JRO",
@@ -12536,7 +13928,8 @@ const AIRPORTS = [
     "country": "Tanzania",
     "lat": -3.4294,
     "lng": 37.0745,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GRK",
@@ -12545,7 +13938,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 31.0672,
     "lng": -97.8289,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KIM",
@@ -12554,7 +13948,8 @@ const AIRPORTS = [
     "country": "South Africa",
     "lat": -28.8028,
     "lng": 24.7652,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YLC",
@@ -12563,7 +13958,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 62.85,
     "lng": -69.8833,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KND",
@@ -12572,7 +13968,8 @@ const AIRPORTS = [
     "country": "Congo (Kinshasa)",
     "lat": -2.9192,
     "lng": 25.9154,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KVC",
@@ -12581,7 +13978,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 55.1163,
     "lng": -162.266,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KNS",
@@ -12590,7 +13988,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -39.8775,
     "lng": 143.878,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AKN",
@@ -12599,7 +13998,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 58.6768,
     "lng": -156.649,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KIF",
@@ -12608,7 +14008,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 53.0125,
     "lng": -89.8553,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KGC",
@@ -12617,7 +14018,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -35.7139,
     "lng": 137.521,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KIN",
@@ -12626,7 +14028,8 @@ const AIRPORTS = [
     "country": "Jamaica",
     "lat": 17.9357,
     "lng": -76.7875,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YGK",
@@ -12635,7 +14038,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 44.2253,
     "lng": -76.5969,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SVD",
@@ -12644,7 +14048,8 @@ const AIRPORTS = [
     "country": "Saint Vincent and the Grenadines",
     "lat": 13.1567,
     "lng": -61.1499,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KNH",
@@ -12653,7 +14058,8 @@ const AIRPORTS = [
     "country": "Taiwan",
     "lat": 24.4279,
     "lng": 118.359,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FIH",
@@ -12662,7 +14068,8 @@ const AIRPORTS = [
     "country": "Congo (Kinshasa)",
     "lat": -4.3857,
     "lng": 15.4446,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KPN",
@@ -12671,7 +14078,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 59.933,
     "lng": -164.031,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IRA",
@@ -12680,7 +14088,8 @@ const AIRPORTS = [
     "country": "Solomon Islands",
     "lat": -10.4497,
     "lng": 161.898,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KCK",
@@ -12689,7 +14098,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 57.773,
     "lng": 108.064,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CXI",
@@ -12698,7 +14108,8 @@ const AIRPORTS = [
     "country": "Kiribati",
     "lat": 1.9862,
     "lng": -157.35,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KKN",
@@ -12707,7 +14118,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 69.7258,
     "lng": 29.8913,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "IRK",
@@ -12716,7 +14128,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.0935,
     "lng": -92.5449,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KOI",
@@ -12725,7 +14138,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 58.9578,
     "lng": -2.905,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KVX",
@@ -12734,7 +14148,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 58.5033,
     "lng": 49.3483,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KRN",
@@ -12743,7 +14158,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 67.822,
     "lng": 20.3368,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FKI",
@@ -12752,7 +14168,8 @@ const AIRPORTS = [
     "country": "Congo (Kinshasa)",
     "lat": 0.4816,
     "lng": 25.338,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KIH",
@@ -12761,7 +14178,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 26.5262,
     "lng": 53.9802,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KIS",
@@ -12770,7 +14188,8 @@ const AIRPORTS = [
     "country": "Kenya",
     "lat": -0.0861,
     "lng": 34.7289,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KKJ",
@@ -12779,7 +14198,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 33.8459,
     "lng": 131.035,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KTL",
@@ -12788,7 +14208,8 @@ const AIRPORTS = [
     "country": "Kenya",
     "lat": 0.972,
     "lng": 34.9586,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KIT",
@@ -12797,7 +14218,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 36.2743,
     "lng": 23.017,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KTT",
@@ -12806,7 +14228,8 @@ const AIRPORTS = [
     "country": "Finland",
     "lat": 67.701,
     "lng": 24.8468,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UNG",
@@ -12815,7 +14238,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -6.1257,
     "lng": 141.282,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KVL",
@@ -12824,7 +14248,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 67.7362,
     "lng": -164.563,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KLU",
@@ -12833,7 +14258,8 @@ const AIRPORTS = [
     "country": "Austria",
     "lat": 46.6425,
     "lng": 14.3377,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LMT",
@@ -12842,7 +14268,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.1561,
     "lng": -121.733,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KLW",
@@ -12851,7 +14278,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 55.5792,
     "lng": -133.076,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TYS",
@@ -12860,7 +14288,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.811,
     "lng": -83.994,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "USM",
@@ -12869,7 +14298,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 9.5478,
     "lng": 100.062,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "UKB",
@@ -12878,7 +14308,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 34.6328,
     "lng": 135.224,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "OBU",
@@ -12887,7 +14318,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 66.9123,
     "lng": -156.897,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "COK",
@@ -12896,7 +14328,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 10.152,
     "lng": 76.4019,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KCZ",
@@ -12905,7 +14338,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 33.5461,
     "lng": 133.669,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ADQ",
@@ -12914,7 +14348,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 57.75,
     "lng": -152.494,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KGP",
@@ -12923,7 +14358,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 62.1904,
     "lng": 74.5338,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KCT",
@@ -12932,7 +14368,8 @@ const AIRPORTS = [
     "country": "Sri Lanka",
     "lat": 5.9937,
     "lng": 80.3203,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KOV",
@@ -12941,7 +14378,8 @@ const AIRPORTS = [
     "country": "Kazakhstan",
     "lat": 53.3291,
     "lng": 69.5946,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CCU",
@@ -12950,7 +14388,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 22.6547,
     "lng": 88.4467,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KOA",
@@ -12959,7 +14398,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 19.7388,
     "lng": -156.0456,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KNQ",
@@ -12968,7 +14408,8 @@ const AIRPORTS = [
     "country": "New Caledonia",
     "lat": -21.0543,
     "lng": 164.837,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KKH",
@@ -12977,7 +14418,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 59.9608,
     "lng": -162.881,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KOO",
@@ -12986,7 +14428,8 @@ const AIRPORTS = [
     "country": "Congo (Kinshasa)",
     "lat": -5.3944,
     "lng": 26.99,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KYA",
@@ -12995,7 +14438,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 37.979,
     "lng": 32.5619,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GKK",
@@ -13004,7 +14448,8 @@ const AIRPORTS = [
     "country": "Maldives",
     "lat": 0.7324,
     "lng": 73.4336,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KRL",
@@ -13013,7 +14458,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 41.6978,
     "lng": 86.1289,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KGS",
@@ -13022,7 +14468,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 36.7933,
     "lng": 27.0917,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KSC",
@@ -13031,7 +14478,8 @@ const AIRPORTS = [
     "country": "Slovakia",
     "lat": 48.6631,
     "lng": 21.2411,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KSA",
@@ -13040,7 +14488,8 @@ const AIRPORTS = [
     "country": "Micronesia",
     "lat": 5.357,
     "lng": 162.958,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KSN",
@@ -13049,7 +14498,8 @@ const AIRPORTS = [
     "country": "Kazakhstan",
     "lat": 53.2069,
     "lng": 63.5503,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KBR",
@@ -13058,7 +14508,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 6.1669,
     "lng": 102.293,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BKI",
@@ -13067,7 +14518,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 5.9372,
     "lng": 116.051,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KOT",
@@ -13076,7 +14528,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 63.0306,
     "lng": -163.533,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OTZ",
@@ -13085,7 +14538,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 66.8847,
     "lng": -162.599,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KOC",
@@ -13094,7 +14548,8 @@ const AIRPORTS = [
     "country": "New Caledonia",
     "lat": -20.5463,
     "lng": 164.256,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KWM",
@@ -13103,7 +14558,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -15.4856,
     "lng": 141.751,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KKA",
@@ -13112,7 +14568,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 64.9395,
     "lng": -161.154,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KYU",
@@ -13121,7 +14578,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 64.8761,
     "lng": -157.727,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KZI",
@@ -13130,7 +14588,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 40.2861,
     "lng": 21.8408,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KBV",
@@ -13139,7 +14598,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 8.0991,
     "lng": 98.9862,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KRK",
@@ -13148,7 +14608,8 @@ const AIRPORTS = [
     "country": "Poland",
     "lat": 50.0777,
     "lng": 19.7848,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BON",
@@ -13157,7 +14618,8 @@ const AIRPORTS = [
     "country": "Netherlands Antilles",
     "lat": 12.131,
     "lng": -68.2685,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KRF",
@@ -13166,7 +14628,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 63.0486,
     "lng": 17.7689,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KRR",
@@ -13175,7 +14638,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 45.0347,
     "lng": 39.1705,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KJA",
@@ -13184,7 +14648,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 56.1729,
     "lng": 92.4933,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KRS",
@@ -13193,7 +14658,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 58.2042,
     "lng": 8.0854,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KID",
@@ -13202,7 +14668,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 55.9217,
     "lng": 14.0855,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KSU",
@@ -13211,7 +14678,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 63.1118,
     "lng": 7.8245,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KOK",
@@ -13220,7 +14688,8 @@ const AIRPORTS = [
     "country": "Finland",
     "lat": 63.7212,
     "lng": 23.1431,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KUL",
@@ -13229,7 +14698,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 2.7456,
     "lng": 101.71,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "SZB",
@@ -13238,7 +14708,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 3.1306,
     "lng": 101.549,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TGG",
@@ -13247,7 +14718,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 5.3826,
     "lng": 103.103,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KUA",
@@ -13256,7 +14728,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 3.7754,
     "lng": 103.209,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KCH",
@@ -13265,7 +14738,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 1.4847,
     "lng": 110.347,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KUD",
@@ -13274,7 +14748,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 6.9225,
     "lng": 116.836,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AKF",
@@ -13283,7 +14758,8 @@ const AIRPORTS = [
     "country": "Libya",
     "lat": 24.1787,
     "lng": 23.314,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SVP",
@@ -13292,7 +14768,8 @@ const AIRPORTS = [
     "country": "Angola",
     "lat": -12.4046,
     "lng": 16.9474,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KUU",
@@ -13301,7 +14778,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 31.8767,
     "lng": 77.1544,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TJU",
@@ -13310,7 +14788,8 @@ const AIRPORTS = [
     "country": "Tajikistan",
     "lat": 37.9881,
     "lng": 69.805,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KMJ",
@@ -13319,7 +14798,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 32.8373,
     "lng": 130.855,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KMS",
@@ -13328,7 +14808,8 @@ const AIRPORTS = [
     "country": "Ghana",
     "lat": 6.7146,
     "lng": -1.5908,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UEO",
@@ -13337,7 +14818,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 26.3635,
     "lng": 126.714,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CMU",
@@ -13346,7 +14828,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -6.0243,
     "lng": 144.971,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KMG",
@@ -13355,7 +14838,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 25.1019,
     "lng": 102.9292,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KUV",
@@ -13364,7 +14848,8 @@ const AIRPORTS = [
     "country": "South Korea",
     "lat": 35.9038,
     "lng": 126.616,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KNX",
@@ -13373,7 +14858,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -15.7781,
     "lng": 128.708,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KUO",
@@ -13382,7 +14868,8 @@ const AIRPORTS = [
     "country": "Finland",
     "lat": 63.0071,
     "lng": 27.7978,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KOE",
@@ -13391,7 +14878,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -10.1716,
     "lng": 123.671,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KCA",
@@ -13400,7 +14888,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 41.6779,
     "lng": 82.8729,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "URE",
@@ -13409,7 +14898,8 @@ const AIRPORTS = [
     "country": "Estonia",
     "lat": 58.2299,
     "lng": 22.5095,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KRO",
@@ -13418,7 +14908,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 55.4753,
     "lng": 65.4156,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KQT",
@@ -13427,7 +14918,8 @@ const AIRPORTS = [
     "country": "Tajikistan",
     "lat": 37.8664,
     "lng": 68.8647,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "URS",
@@ -13436,7 +14928,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 51.7506,
     "lng": 36.2956,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KUH",
@@ -13445,7 +14938,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 43.041,
     "lng": 144.193,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KZR",
@@ -13454,7 +14948,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 39.1131,
     "lng": 30.1281,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KUT",
@@ -13463,7 +14958,8 @@ const AIRPORTS = [
     "country": "Georgia",
     "lat": 42.1767,
     "lng": 42.4826,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YGW",
@@ -13472,7 +14968,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 55.2819,
     "lng": -77.7653,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KAO",
@@ -13481,7 +14978,8 @@ const AIRPORTS = [
     "country": "Finland",
     "lat": 65.9876,
     "lng": 29.2394,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KWI",
@@ -13490,7 +14988,8 @@ const AIRPORTS = [
     "country": "Kuwait",
     "lat": 29.2266,
     "lng": 47.9689,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KWA",
@@ -13499,7 +14998,8 @@ const AIRPORTS = [
     "country": "Marshall Islands",
     "lat": 8.7201,
     "lng": 167.732,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KWJ",
@@ -13508,7 +15008,8 @@ const AIRPORTS = [
     "country": "South Korea",
     "lat": 35.1232,
     "lng": 126.8054,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KWT",
@@ -13517,7 +15018,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 60.7903,
     "lng": -161.444,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KWK",
@@ -13526,7 +15028,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 59.8765,
     "lng": -163.169,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KYP",
@@ -13535,7 +15038,8 @@ const AIRPORTS = [
     "country": "Burma",
     "lat": 19.4264,
     "lng": 93.5348,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KYZ",
@@ -13544,7 +15048,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 51.6694,
     "lng": 94.4006,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KZO",
@@ -13553,7 +15058,8 @@ const AIRPORTS = [
     "country": "Kazakhstan",
     "lat": 44.7069,
     "lng": 65.5925,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LCE",
@@ -13562,7 +15068,8 @@ const AIRPORTS = [
     "country": "Honduras",
     "lat": 15.7425,
     "lng": -86.853,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LCG",
@@ -13571,7 +15078,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 43.3021,
     "lng": -8.3773,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LSE",
@@ -13580,7 +15088,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.879,
     "lng": -91.2567,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FON",
@@ -13589,7 +15098,8 @@ const AIRPORTS = [
     "country": "Costa Rica",
     "lat": 10.478,
     "lng": -84.6345,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LFR",
@@ -13598,7 +15108,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 8.2392,
     "lng": -72.271,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GMZ",
@@ -13607,7 +15118,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 28.0296,
     "lng": -17.2146,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YGL",
@@ -13616,7 +15128,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 53.6253,
     "lng": -77.7042,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JBQ",
@@ -13625,7 +15138,8 @@ const AIRPORTS = [
     "country": "Dominican Republic",
     "lat": 18.5725,
     "lng": -69.9856,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LAP",
@@ -13634,7 +15148,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 24.0727,
     "lng": -110.362,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LPB",
@@ -13643,7 +15158,8 @@ const AIRPORTS = [
     "country": "Bolivia",
     "lat": -16.5133,
     "lng": -68.1923,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "LPD",
@@ -13652,7 +15168,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": -1.3286,
     "lng": -69.5797,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IRJ",
@@ -13661,7 +15178,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -29.3816,
     "lng": -66.7958,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LRH",
@@ -13670,7 +15188,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 46.1792,
     "lng": -1.1953,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ZGS",
@@ -13679,7 +15198,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 50.2597,
     "lng": -60.6794,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LRM",
@@ -13688,7 +15208,8 @@ const AIRPORTS = [
     "country": "Dominican Republic",
     "lat": 18.4507,
     "lng": -68.9118,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LSC",
@@ -13697,7 +15218,8 @@ const AIRPORTS = [
     "country": "Chile",
     "lat": -29.9162,
     "lng": -71.1995,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ZLT",
@@ -13706,7 +15228,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 50.8308,
     "lng": -58.9756,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LOH",
@@ -13715,7 +15238,8 @@ const AIRPORTS = [
     "country": "Ecuador",
     "lat": -3.9959,
     "lng": -79.3719,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RLG",
@@ -13724,7 +15248,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 53.9182,
     "lng": 12.2783,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KDO",
@@ -13733,7 +15258,8 @@ const AIRPORTS = [
     "country": "Maldives",
     "lat": 1.8592,
     "lng": 73.5219,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LBU",
@@ -13742,7 +15268,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 5.3007,
     "lng": 115.25,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LBJ",
@@ -13751,7 +15278,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -8.4867,
     "lng": 119.889,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LFT",
@@ -13760,7 +15288,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 30.2053,
     "lng": -91.9876,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LOS",
@@ -13769,7 +15298,8 @@ const AIRPORTS = [
     "country": "Nigeria",
     "lat": 6.5774,
     "lng": 3.3212,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "LDU",
@@ -13778,7 +15308,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 5.0322,
     "lng": 118.324,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JHM",
@@ -13787,7 +15318,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 20.9629,
     "lng": -156.673,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LHE",
@@ -13796,7 +15328,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 31.5216,
     "lng": 74.4036,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TER",
@@ -13805,7 +15338,8 @@ const AIRPORTS = [
     "country": "Portugal",
     "lat": 38.7618,
     "lng": -27.0908,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LCH",
@@ -13814,7 +15348,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 30.1261,
     "lng": -93.2233,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LMA",
@@ -13823,7 +15358,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 63.886,
     "lng": -152.302,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LKB",
@@ -13832,7 +15368,8 @@ const AIRPORTS = [
     "country": "Fiji",
     "lat": -18.1992,
     "lng": -178.817,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LKL",
@@ -13841,7 +15378,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 70.0688,
     "lng": 24.9735,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LLI",
@@ -13850,7 +15388,8 @@ const AIRPORTS = [
     "country": "Ethiopia",
     "lat": 11.975,
     "lng": 38.98,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LPM",
@@ -13859,7 +15398,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -16.4611,
     "lng": 167.8293,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LBS",
@@ -13868,7 +15408,8 @@ const AIRPORTS = [
     "country": "Fiji",
     "lat": -16.4667,
     "lng": 179.34,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LNB",
@@ -13877,7 +15418,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -16.5842,
     "lng": 168.159,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LFM",
@@ -13886,7 +15428,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 27.3727,
     "lng": 53.1888,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SUF",
@@ -13895,7 +15438,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 38.9054,
     "lng": 16.2423,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "LPT",
@@ -13904,7 +15448,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 18.2709,
     "lng": 99.5042,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LMP",
@@ -13913,7 +15458,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 35.4979,
     "lng": 12.6181,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LAU",
@@ -13922,7 +15468,8 @@ const AIRPORTS = [
     "country": "Kenya",
     "lat": -2.2524,
     "lng": 40.9131,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LNY",
@@ -13931,7 +15478,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 20.7856,
     "lng": -156.951,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LNS",
@@ -13940,7 +15488,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.1217,
     "lng": -76.2961,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LEQ",
@@ -13949,7 +15498,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 50.1028,
     "lng": -5.6706,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LUV",
@@ -13958,7 +15508,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -5.6616,
     "lng": 132.731,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LGK",
@@ -13967,7 +15518,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 6.3297,
     "lng": 99.7287,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LLK",
@@ -13976,7 +15528,8 @@ const AIRPORTS = [
     "country": "Azerbaijan",
     "lat": 38.7464,
     "lng": 48.818,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LAI",
@@ -13985,7 +15538,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 48.7544,
     "lng": -3.4717,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YLH",
@@ -13994,7 +15548,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 52.1956,
     "lng": -87.9342,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LAN",
@@ -14003,7 +15558,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.7787,
     "lng": -84.5874,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LHW",
@@ -14012,7 +15568,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 36.5152,
     "lng": 103.62,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "LAO",
@@ -14021,7 +15578,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 18.1781,
     "lng": 120.532,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LPP",
@@ -14030,7 +15588,8 @@ const AIRPORTS = [
     "country": "Finland",
     "lat": 61.0446,
     "lng": 28.1447,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LRR",
@@ -14039,7 +15598,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 27.6747,
     "lng": 54.3833,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LAR",
@@ -14048,7 +15608,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.3121,
     "lng": -105.675,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LRD",
@@ -14057,7 +15618,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 27.5438,
     "lng": -99.4616,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LCA",
@@ -14066,7 +15628,8 @@ const AIRPORTS = [
     "country": "Cyprus",
     "lat": 34.8751,
     "lng": 33.6249,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KLN",
@@ -14075,7 +15638,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 57.5351,
     "lng": -153.978,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LAS",
@@ -14084,7 +15648,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 36.0801,
     "lng": -115.152,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "LTX",
@@ -14093,7 +15658,8 @@ const AIRPORTS = [
     "country": "Ecuador",
     "lat": -0.9068,
     "lng": -78.6158,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LBE",
@@ -14102,7 +15668,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.2759,
     "lng": -79.4048,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LST",
@@ -14111,7 +15678,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -41.5453,
     "lng": 147.214,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LWY",
@@ -14120,7 +15688,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 4.8492,
     "lng": 115.408,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LAW",
@@ -14129,7 +15698,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 34.5677,
     "lng": -98.4166,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LZC",
@@ -14138,7 +15708,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 18.0017,
     "lng": -102.221,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LEH",
@@ -14147,7 +15718,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 49.5339,
     "lng": 0.0881,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LPY",
@@ -14156,7 +15728,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 45.0807,
     "lng": 3.7629,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LEA",
@@ -14165,7 +15738,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -22.2356,
     "lng": 114.089,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LEB",
@@ -14174,7 +15748,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.6261,
     "lng": -72.3042,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LBA",
@@ -14183,7 +15758,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 53.8659,
     "lng": -1.6606,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "LGP",
@@ -14192,7 +15768,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 13.1575,
     "lng": 123.735,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IXL",
@@ -14201,7 +15778,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 34.1359,
     "lng": 77.5465,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LEJ",
@@ -14210,7 +15788,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 51.4239,
     "lng": 12.2364,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "LKN",
@@ -14219,7 +15798,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 68.1525,
     "lng": 13.6094,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ULK",
@@ -14228,7 +15808,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 60.7206,
     "lng": 114.826,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LEC",
@@ -14237,7 +15818,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -12.4823,
     "lng": -41.277,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LEN",
@@ -14246,7 +15828,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 42.589,
     "lng": -5.6556,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LRS",
@@ -14255,7 +15838,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 37.1849,
     "lng": 26.8003,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YQL",
@@ -14264,7 +15848,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.6303,
     "lng": -112.8,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LET",
@@ -14273,7 +15858,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": -4.1936,
     "lng": -69.9432,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LWB",
@@ -14282,7 +15868,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.8583,
     "lng": -80.3995,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LWS",
@@ -14291,7 +15878,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 46.3745,
     "lng": -117.015,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LEX",
@@ -14300,7 +15888,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.0365,
     "lng": -84.6059,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LXA",
@@ -14309,7 +15898,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 29.2978,
     "lng": 90.9119,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "LYG",
@@ -14318,7 +15908,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 34.5717,
     "lng": 118.8736,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LBL",
@@ -14327,7 +15918,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.0442,
     "lng": -100.96,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LIR",
@@ -14336,7 +15928,8 @@ const AIRPORTS = [
     "country": "Costa Rica",
     "lat": 10.5933,
     "lng": -85.5444,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LLB",
@@ -14345,7 +15938,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 25.4525,
     "lng": 107.9617,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LBV",
@@ -14354,7 +15948,8 @@ const AIRPORTS = [
     "country": "Gabon",
     "lat": 0.4586,
     "lng": 9.4123,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VXC",
@@ -14363,7 +15958,8 @@ const AIRPORTS = [
     "country": "Mozambique",
     "lat": -13.274,
     "lng": 35.2663,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LGG",
@@ -14372,7 +15968,8 @@ const AIRPORTS = [
     "country": "Belgium",
     "lat": 50.6374,
     "lng": 5.4432,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LIF",
@@ -14381,7 +15978,8 @@ const AIRPORTS = [
     "country": "New Caledonia",
     "lat": -20.7748,
     "lng": 167.24,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LIH",
@@ -14390,7 +15988,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 21.976,
     "lng": -159.339,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LJG",
@@ -14399,7 +15998,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 26.68,
     "lng": 100.246,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "LIL",
@@ -14408,7 +16008,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 50.5633,
     "lng": 3.0869,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "LLW",
@@ -14417,7 +16018,8 @@ const AIRPORTS = [
     "country": "Malawi",
     "lat": -13.7894,
     "lng": 33.781,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LIM",
@@ -14426,7 +16028,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -12.0219,
     "lng": -77.1143,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "LMN",
@@ -14435,7 +16038,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 4.8083,
     "lng": 115.01,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LXS",
@@ -14444,7 +16048,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 39.9171,
     "lng": 25.2363,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LIG",
@@ -14453,7 +16058,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 45.8628,
     "lng": 1.1794,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LNJ",
@@ -14462,7 +16068,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 23.7381,
     "lng": 100.025,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LNK",
@@ -14471,7 +16078,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.851,
     "lng": -96.7592,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LPI",
@@ -14480,7 +16088,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 58.4062,
     "lng": 15.6805,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LYI",
@@ -14489,7 +16098,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 35.0461,
     "lng": 118.412,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LNZ",
@@ -14498,7 +16108,8 @@ const AIRPORTS = [
     "country": "Austria",
     "lat": 48.2332,
     "lng": 14.1875,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HZH",
@@ -14507,7 +16118,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 26.3222,
     "lng": 109.1499,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LIS",
@@ -14516,7 +16128,8 @@ const AIRPORTS = [
     "country": "Portugal",
     "lat": 38.7813,
     "lng": -9.1359,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "LSY",
@@ -14525,7 +16138,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -28.8303,
     "lng": 153.26,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LYB",
@@ -14534,7 +16148,8 @@ const AIRPORTS = [
     "country": "Cayman Islands",
     "lat": 19.6602,
     "lng": -80.0888,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LIT",
@@ -14543,7 +16158,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 34.7294,
     "lng": -92.2243,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "LZH",
@@ -14552,7 +16168,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 24.2075,
     "lng": 109.391,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LPL",
@@ -14561,7 +16178,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 53.3336,
     "lng": -2.8497,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "LVI",
@@ -14570,7 +16188,8 @@ const AIRPORTS = [
     "country": "Zambia",
     "lat": -17.8218,
     "lng": 25.8227,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LJU",
@@ -14579,7 +16198,8 @@ const AIRPORTS = [
     "country": "Slovenia",
     "lat": 46.2237,
     "lng": 14.4576,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ILD",
@@ -14588,7 +16208,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 41.7282,
     "lng": 0.535,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YLL",
@@ -14597,7 +16218,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 53.3092,
     "lng": -110.073,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IRG",
@@ -14606,7 +16228,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -12.7869,
     "lng": 143.305,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LJA",
@@ -14615,7 +16238,8 @@ const AIRPORTS = [
     "country": "Congo (Kinshasa)",
     "lat": -3.417,
     "lng": 23.45,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LOK",
@@ -14624,7 +16248,8 @@ const AIRPORTS = [
     "country": "Kenya",
     "lat": 3.122,
     "lng": 35.6087,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LOE",
@@ -14633,7 +16258,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 17.4391,
     "lng": 101.722,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RJL",
@@ -14642,7 +16268,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 42.461,
     "lng": -2.3222,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TOH",
@@ -14651,7 +16278,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -13.328,
     "lng": 166.638,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LKG",
@@ -14660,7 +16288,8 @@ const AIRPORTS = [
     "country": "Kenya",
     "lat": 4.2041,
     "lng": 34.3482,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LFW",
@@ -14669,7 +16298,8 @@ const AIRPORTS = [
     "country": "Togo",
     "lat": 6.1656,
     "lng": 1.2545,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LCY",
@@ -14678,7 +16308,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 51.5053,
     "lng": 0.0553,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "LGW",
@@ -14687,7 +16318,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 51.1481,
     "lng": -0.1903,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "LHR",
@@ -14696,7 +16328,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 51.4706,
     "lng": -0.4619,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "LTN",
@@ -14705,7 +16338,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 51.8747,
     "lng": -0.3683,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "STN",
@@ -14714,7 +16348,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 51.885,
     "lng": 0.235,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YXU",
@@ -14723,7 +16358,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 43.0356,
     "lng": -81.1539,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LDY",
@@ -14732,7 +16368,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 55.0428,
     "lng": -7.1611,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LDB",
@@ -14741,7 +16378,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -23.3336,
     "lng": -51.1301,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LKH",
@@ -14750,7 +16388,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 3.3,
     "lng": 114.783,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LGB",
@@ -14759,7 +16398,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.8177,
     "lng": -118.152,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LGL",
@@ -14768,7 +16408,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 3.421,
     "lng": 115.154,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ODN",
@@ -14777,7 +16418,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 3.967,
     "lng": 115.05,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LOD",
@@ -14786,7 +16428,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -15.3067,
     "lng": 167.967,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LRE",
@@ -14795,7 +16438,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -23.4342,
     "lng": 144.28,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GGG",
@@ -14804,7 +16448,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.384,
     "lng": -94.7115,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LCX",
@@ -14813,7 +16458,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 25.6747,
     "lng": 116.747,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LNE",
@@ -14822,7 +16468,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -15.8656,
     "lng": 168.172,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LDH",
@@ -14831,7 +16478,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -31.5383,
     "lng": 159.077,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LTO",
@@ -14840,7 +16488,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 25.9892,
     "lng": -111.348,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LRT",
@@ -14849,7 +16498,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 47.7606,
     "lng": -3.44,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LAM",
@@ -14858,7 +16508,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.8798,
     "lng": -106.269,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LAX",
@@ -14867,7 +16518,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.9425,
     "lng": -118.408,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "LMM",
@@ -14876,7 +16528,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 25.6852,
     "lng": -109.081,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SDF",
@@ -14885,7 +16538,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.1744,
     "lng": -85.736,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YBX",
@@ -14894,7 +16548,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 51.4436,
     "lng": -57.1853,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LAD",
@@ -14903,7 +16558,8 @@ const AIRPORTS = [
     "country": "Angola",
     "lat": -8.8584,
     "lng": 13.2312,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "LXG",
@@ -14912,7 +16568,8 @@ const AIRPORTS = [
     "country": "Laos",
     "lat": 20.967,
     "lng": 101.4,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LPQ",
@@ -14921,7 +16578,8 @@ const AIRPORTS = [
     "country": "Laos",
     "lat": 19.8973,
     "lng": 102.161,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SDD",
@@ -14930,7 +16588,8 @@ const AIRPORTS = [
     "country": "Angola",
     "lat": -14.9247,
     "lng": 13.575,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LBB",
@@ -14939,7 +16598,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.6636,
     "lng": -101.823,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LUZ",
@@ -14948,7 +16608,8 @@ const AIRPORTS = [
     "country": "Poland",
     "lat": 51.2403,
     "lng": 22.7136,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FBM",
@@ -14957,7 +16618,8 @@ const AIRPORTS = [
     "country": "Congo (Kinshasa)",
     "lat": -11.5913,
     "lng": 27.5309,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LKO",
@@ -14966,7 +16628,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 26.7606,
     "lng": 80.8893,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LUD",
@@ -14975,7 +16638,8 @@ const AIRPORTS = [
     "country": "Namibia",
     "lat": -26.6874,
     "lng": 15.2429,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LUH",
@@ -14984,7 +16648,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 30.8547,
     "lng": 75.9526,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LBC",
@@ -14993,7 +16658,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 53.8054,
     "lng": 10.7192,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LUO",
@@ -15002,7 +16668,8 @@ const AIRPORTS = [
     "country": "Angola",
     "lat": -11.7681,
     "lng": 19.8977,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LUG",
@@ -15011,7 +16678,8 @@ const AIRPORTS = [
     "country": "Switzerland",
     "lat": 46.0043,
     "lng": 8.9106,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LLA",
@@ -15020,7 +16688,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 65.5438,
     "lng": 22.122,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LYA",
@@ -15029,7 +16698,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 34.7411,
     "lng": 112.388,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LUN",
@@ -15038,7 +16708,8 @@ const AIRPORTS = [
     "country": "Zambia",
     "lat": -15.3308,
     "lng": 28.4526,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YSG",
@@ -15047,7 +16718,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 62.4183,
     "lng": -110.682,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LUW",
@@ -15056,7 +16728,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -1.0389,
     "lng": 122.772,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LUX",
@@ -15065,7 +16738,8 @@ const AIRPORTS = [
     "country": "Luxembourg",
     "lat": 49.6233,
     "lng": 6.2044,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "LUM",
@@ -15074,7 +16748,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 24.4011,
     "lng": 98.5317,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LXR",
@@ -15083,7 +16758,8 @@ const AIRPORTS = [
     "country": "Egypt",
     "lat": 25.671,
     "lng": 32.7066,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LZO",
@@ -15092,7 +16768,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 28.8522,
     "lng": 105.393,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LWO",
@@ -15101,7 +16778,8 @@ const AIRPORTS = [
     "country": "Ukraine",
     "lat": 49.8125,
     "lng": 23.9561,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LYC",
@@ -15110,7 +16788,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 64.5483,
     "lng": 18.7162,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LYH",
@@ -15119,7 +16798,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.3267,
     "lng": -79.2004,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LYS",
@@ -15128,7 +16808,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 45.7256,
     "lng": 5.0811,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SSY",
@@ -15137,7 +16818,8 @@ const AIRPORTS = [
     "country": "Angola",
     "lat": -6.2699,
     "lng": 14.247,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MGM",
@@ -15146,7 +16828,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.3006,
     "lng": -86.394,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MST",
@@ -15155,7 +16838,8 @@ const AIRPORTS = [
     "country": "Netherlands",
     "lat": 50.9117,
     "lng": 5.7701,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MCP",
@@ -15164,7 +16848,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": 0.0507,
     "lng": -51.0722,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "XMS",
@@ -15173,7 +16858,8 @@ const AIRPORTS = [
     "country": "Ecuador",
     "lat": -2.2992,
     "lng": -78.1208,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MFM",
@@ -15182,7 +16868,8 @@ const AIRPORTS = [
     "country": "Macau",
     "lat": 22.1496,
     "lng": 113.592,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MEA",
@@ -15191,7 +16878,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -22.343,
     "lng": -41.766,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MCZ",
@@ -15200,7 +16888,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -9.5108,
     "lng": -35.7917,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MKY",
@@ -15209,7 +16898,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -21.1717,
     "lng": 149.18,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MCN",
@@ -15218,7 +16908,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.6928,
     "lng": -83.6492,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MAG",
@@ -15227,7 +16918,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -5.2071,
     "lng": 145.789,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MED",
@@ -15236,7 +16928,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 24.5534,
     "lng": 39.7051,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MSN",
@@ -15245,7 +16938,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.1399,
     "lng": -89.3375,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MAA",
@@ -15254,7 +16948,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 12.99,
     "lng": 80.1693,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MAD",
@@ -15263,7 +16958,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 40.4719,
     "lng": -3.5626,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "IXM",
@@ -15272,7 +16968,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 9.8345,
     "lng": 78.0934,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HGN",
@@ -15281,7 +16978,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 19.3013,
     "lng": 97.9758,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MWF",
@@ -15290,7 +16988,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -15.0,
     "lng": 168.083,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GDX",
@@ -15299,7 +16998,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 59.911,
     "lng": 150.72,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MQF",
@@ -15308,7 +17008,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 53.3931,
     "lng": 58.7557,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MJN",
@@ -15317,7 +17018,8 @@ const AIRPORTS = [
     "country": "Madagascar",
     "lat": -15.6668,
     "lng": 46.3512,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SEZ",
@@ -15326,7 +17028,8 @@ const AIRPORTS = [
     "country": "Seychelles",
     "lat": -4.6743,
     "lng": 55.5218,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MMO",
@@ -15335,7 +17038,8 @@ const AIRPORTS = [
     "country": "Cape Verde",
     "lat": 15.1559,
     "lng": -23.2137,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MAJ",
@@ -15344,7 +17048,8 @@ const AIRPORTS = [
     "country": "Marshall Islands",
     "lat": 7.0648,
     "lng": 171.272,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MQX",
@@ -15353,7 +17058,8 @@ const AIRPORTS = [
     "country": "Ethiopia",
     "lat": 13.4674,
     "lng": 39.5335,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MKP",
@@ -15362,7 +17068,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -16.5839,
     "lng": -143.658,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MCX",
@@ -15371,7 +17078,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 42.8168,
     "lng": 47.6523,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YMN",
@@ -15380,7 +17088,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 55.0769,
     "lng": -59.1864,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MZG",
@@ -15389,7 +17098,8 @@ const AIRPORTS = [
     "country": "Taiwan",
     "lat": 23.5687,
     "lng": 119.628,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SSG",
@@ -15398,7 +17108,8 @@ const AIRPORTS = [
     "country": "Equatorial Guinea",
     "lat": 3.7553,
     "lng": 8.7087,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AGP",
@@ -15407,7 +17118,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 36.6749,
     "lng": -4.4991,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MLG",
@@ -15416,7 +17128,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -7.9266,
     "lng": 112.715,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MEG",
@@ -15425,7 +17138,8 @@ const AIRPORTS = [
     "country": "Angola",
     "lat": -9.5251,
     "lng": 16.3124,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MLX",
@@ -15434,7 +17148,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 38.4353,
     "lng": 38.091,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MLE",
@@ -15443,7 +17158,8 @@ const AIRPORTS = [
     "country": "Maldives",
     "lat": 4.1918,
     "lng": 73.5291,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SWJ",
@@ -15452,7 +17168,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -16.4864,
     "lng": 167.4472,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MYD",
@@ -15461,7 +17178,8 @@ const AIRPORTS = [
     "country": "Kenya",
     "lat": -3.2293,
     "lng": 40.1017,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MMX",
@@ -15470,7 +17188,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 55.5363,
     "lng": 13.3762,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MLA",
@@ -15479,7 +17198,8 @@ const AIRPORTS = [
     "country": "Malta",
     "lat": 35.8575,
     "lng": 14.4775,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MMH",
@@ -15488,7 +17208,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.6241,
     "lng": -118.838,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MDC",
@@ -15497,7 +17218,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": 1.5493,
     "lng": 124.926,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MGA",
@@ -15506,7 +17228,8 @@ const AIRPORTS = [
     "country": "Nicaragua",
     "lat": 12.1415,
     "lng": -86.1682,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "WMR",
@@ -15515,7 +17238,8 @@ const AIRPORTS = [
     "country": "Madagascar",
     "lat": -16.1639,
     "lng": 49.7738,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MAO",
@@ -15524,7 +17248,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -3.0386,
     "lng": -60.0497,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MAN",
@@ -15533,7 +17258,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 53.3537,
     "lng": -2.275,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MHT",
@@ -15542,7 +17268,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.9326,
     "lng": -71.4357,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MDL",
@@ -15551,7 +17278,8 @@ const AIRPORTS = [
     "country": "Burma",
     "lat": 21.7022,
     "lng": 95.9779,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MGS",
@@ -15560,7 +17288,8 @@ const AIRPORTS = [
     "country": "Cook Islands",
     "lat": -21.896,
     "lng": -157.9067,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IXE",
@@ -15569,7 +17298,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 12.9613,
     "lng": 74.8901,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MHK",
@@ -15578,7 +17308,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.141,
     "lng": -96.6708,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "XMH",
@@ -15587,7 +17318,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -14.4368,
     "lng": -146.07,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JSU",
@@ -15596,7 +17328,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 65.4125,
     "lng": -52.9394,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MNL",
@@ -15605,7 +17338,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 14.5086,
     "lng": 121.02,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MNG",
@@ -15614,7 +17348,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -12.0561,
     "lng": 134.234,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MBL",
@@ -15623,7 +17358,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.2724,
     "lng": -86.2469,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MZL",
@@ -15632,7 +17368,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 5.0296,
     "lng": -75.4647,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MLY",
@@ -15641,7 +17378,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 64.9976,
     "lng": -150.644,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MHG",
@@ -15650,7 +17388,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 49.4731,
     "lng": 8.5142,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MKW",
@@ -15659,7 +17398,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -0.8918,
     "lng": 134.049,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MNS",
@@ -15668,7 +17408,8 @@ const AIRPORTS = [
     "country": "Zambia",
     "lat": -11.137,
     "lng": 28.8726,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MEC",
@@ -15677,7 +17418,8 @@ const AIRPORTS = [
     "country": "Ecuador",
     "lat": -0.9461,
     "lng": -80.6788,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZLO",
@@ -15686,7 +17428,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 19.1448,
     "lng": -104.559,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NZH",
@@ -15695,7 +17438,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 49.5667,
     "lng": 117.33,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MTS",
@@ -15704,7 +17448,8 @@ const AIRPORTS = [
     "country": "Swaziland",
     "lat": -26.529,
     "lng": 31.3075,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MPM",
@@ -15713,7 +17458,8 @@ const AIRPORTS = [
     "country": "Mozambique",
     "lat": -25.9208,
     "lng": 32.5726,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MDQ",
@@ -15722,7 +17468,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -37.9342,
     "lng": -57.5733,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MAB",
@@ -15731,7 +17478,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -5.3686,
     "lng": -49.138,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MAR",
@@ -15740,7 +17488,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 10.5582,
     "lng": -71.7279,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RUS",
@@ -15749,7 +17498,8 @@ const AIRPORTS = [
     "country": "Solomon Islands",
     "lat": -9.8617,
     "lng": 160.825,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MQM",
@@ -15758,7 +17508,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 37.2233,
     "lng": 40.6317,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MEE",
@@ -15767,7 +17518,8 @@ const AIRPORTS = [
     "country": "New Caledonia",
     "lat": -21.4817,
     "lng": 168.038,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MGH",
@@ -15776,7 +17528,8 @@ const AIRPORTS = [
     "country": "South Africa",
     "lat": -30.8574,
     "lng": 30.343,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MHQ",
@@ -15785,7 +17538,8 @@ const AIRPORTS = [
     "country": "Finland",
     "lat": 60.1222,
     "lng": 19.8982,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EBA",
@@ -15794,7 +17548,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 42.7603,
     "lng": 10.2394,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MGF",
@@ -15803,7 +17558,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -23.4794,
     "lng": -52.0122,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MWA",
@@ -15812,7 +17568,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.755,
     "lng": -89.0111,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WMN",
@@ -15821,7 +17578,8 @@ const AIRPORTS = [
     "country": "Madagascar",
     "lat": -15.4367,
     "lng": 49.6883,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MCY",
@@ -15830,7 +17588,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -26.6033,
     "lng": 153.091,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MVR",
@@ -15839,7 +17598,8 @@ const AIRPORTS = [
     "country": "Cameroon",
     "lat": 10.4514,
     "lng": 14.2574,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RAK",
@@ -15848,7 +17608,8 @@ const AIRPORTS = [
     "country": "Morocco",
     "lat": 31.6069,
     "lng": -8.0363,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "RMF",
@@ -15857,7 +17618,8 @@ const AIRPORTS = [
     "country": "Egypt",
     "lat": 25.5571,
     "lng": 34.5837,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MRS",
@@ -15866,7 +17628,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 43.4393,
     "lng": 5.2214,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MHH",
@@ -15875,7 +17638,8 @@ const AIRPORTS = [
     "country": "Bahamas",
     "lat": 26.5114,
     "lng": -77.0835,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MLL",
@@ -15884,7 +17648,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 61.8643,
     "lng": -162.026,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MUR",
@@ -15893,7 +17658,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 4.179,
     "lng": 114.329,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MII",
@@ -15902,7 +17668,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -22.1969,
     "lng": -49.9264,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MRE",
@@ -15911,7 +17678,8 @@ const AIRPORTS = [
     "country": "Kenya",
     "lat": -1.4061,
     "lng": 35.0081,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MBT",
@@ -15920,7 +17688,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 12.3697,
     "lng": 123.6301,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MSU",
@@ -15929,7 +17698,8 @@ const AIRPORTS = [
     "country": "Lesotho",
     "lat": -29.4623,
     "lng": 27.5525,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MHD",
@@ -15938,7 +17708,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 36.2352,
     "lng": 59.641,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MSW",
@@ -15947,7 +17718,8 @@ const AIRPORTS = [
     "country": "Eritrea",
     "lat": 15.67,
     "lng": 39.3701,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MSS",
@@ -15956,7 +17728,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.9358,
     "lng": -74.8456,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZMT",
@@ -15965,7 +17738,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 54.0275,
     "lng": -132.125,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MVT",
@@ -15974,7 +17748,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -14.8681,
     "lng": -148.717,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MAM",
@@ -15983,7 +17758,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 25.7699,
     "lng": -97.5253,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TVU",
@@ -15992,7 +17768,8 @@ const AIRPORTS = [
     "country": "Fiji",
     "lat": -16.6906,
     "lng": -179.877,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MMJ",
@@ -16001,7 +17778,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 36.1668,
     "lng": 137.923,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MYJ",
@@ -16010,7 +17788,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 33.8272,
     "lng": 132.7,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HRI",
@@ -16019,7 +17798,8 @@ const AIRPORTS = [
     "country": "Sri Lanka",
     "lat": 6.2845,
     "lng": 81.1241,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "IGA",
@@ -16028,7 +17808,8 @@ const AIRPORTS = [
     "country": "Bahamas",
     "lat": 20.975,
     "lng": -73.6669,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MUN",
@@ -16037,7 +17818,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 9.7545,
     "lng": -63.1474,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MUK",
@@ -16046,7 +17828,8 @@ const AIRPORTS = [
     "country": "Cook Islands",
     "lat": -20.1361,
     "lng": -157.345,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MOF",
@@ -16055,7 +17838,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -8.6406,
     "lng": 122.237,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MUB",
@@ -16064,7 +17848,8 @@ const AIRPORTS = [
     "country": "Botswana",
     "lat": -19.9726,
     "lng": 23.4311,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MAU",
@@ -16073,7 +17858,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -16.4265,
     "lng": -152.244,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MYG",
@@ -16082,7 +17868,8 @@ const AIRPORTS = [
     "country": "Bahamas",
     "lat": 22.3795,
     "lng": -73.0135,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MAZ",
@@ -16091,7 +17878,8 @@ const AIRPORTS = [
     "country": "Puerto Rico",
     "lat": 18.2557,
     "lng": -67.1485,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MZR",
@@ -16100,7 +17888,8 @@ const AIRPORTS = [
     "country": "Afghanistan",
     "lat": 36.7069,
     "lng": 67.2097,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MZT",
@@ -16109,7 +17898,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 23.1614,
     "lng": -106.266,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MDK",
@@ -16118,7 +17908,8 @@ const AIRPORTS = [
     "country": "Congo (Kinshasa)",
     "lat": 0.0226,
     "lng": 18.2887,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MBI",
@@ -16127,7 +17918,8 @@ const AIRPORTS = [
     "country": "Tanzania",
     "lat": -8.9199,
     "lng": 33.274,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MJM",
@@ -16136,7 +17928,8 @@ const AIRPORTS = [
     "country": "Congo (Kinshasa)",
     "lat": -6.1212,
     "lng": 23.569,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MCV",
@@ -16145,7 +17938,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -16.4425,
     "lng": 136.084,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MCK",
@@ -16154,7 +17948,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.2063,
     "lng": -100.592,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MFE",
@@ -16163,7 +17958,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 26.1758,
     "lng": -98.2386,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MCG",
@@ -16172,7 +17968,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 62.9529,
     "lng": -155.606,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MZW",
@@ -16181,7 +17978,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 33.5359,
     "lng": -0.2424,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EOH",
@@ -16190,7 +17988,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 6.2205,
     "lng": -75.5906,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MFR",
@@ -16199,7 +17998,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.3742,
     "lng": -122.873,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YXH",
@@ -16208,7 +18008,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 50.0189,
     "lng": -110.721,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MEH",
@@ -16217,7 +18018,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 71.0297,
     "lng": 27.8267,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MXZ",
@@ -16226,7 +18028,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 24.35,
     "lng": 116.133,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MYU",
@@ -16235,7 +18038,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 60.3714,
     "lng": -166.271,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MEB",
@@ -16244,7 +18048,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -37.7281,
     "lng": 144.902,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MEL",
@@ -16253,7 +18058,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -37.6733,
     "lng": 144.843,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MLB",
@@ -16262,7 +18068,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 28.1028,
     "lng": -80.6453,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MLN",
@@ -16271,7 +18078,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 35.2798,
     "lng": -2.9563,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MNA",
@@ -16280,7 +18088,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": 4.0069,
     "lng": 126.673,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MMB",
@@ -16289,7 +18098,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 43.8806,
     "lng": 144.164,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FMM",
@@ -16298,7 +18108,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 47.9888,
     "lng": 10.2395,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MEM",
@@ -16307,7 +18118,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.0424,
     "lng": -89.9767,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MDU",
@@ -16316,7 +18128,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -6.1477,
     "lng": 143.657,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MDZ",
@@ -16325,7 +18138,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -32.8317,
     "lng": -68.7929,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SPP",
@@ -16334,7 +18148,8 @@ const AIRPORTS = [
     "country": "Angola",
     "lat": -14.6576,
     "lng": 17.7198,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MAH",
@@ -16343,7 +18158,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 39.8626,
     "lng": 4.2186,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MKQ",
@@ -16352,7 +18168,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -8.5203,
     "lng": 140.418,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MCE",
@@ -16361,7 +18178,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.2847,
     "lng": -120.514,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MID",
@@ -16370,7 +18188,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 20.937,
     "lng": -89.6577,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MRD",
@@ -16379,7 +18198,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 8.5821,
     "lng": -71.161,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MEI",
@@ -16388,7 +18208,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.3326,
     "lng": -88.7519,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MIM",
@@ -16397,7 +18218,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -36.9086,
     "lng": 149.901,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MZH",
@@ -16406,7 +18228,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 40.8294,
     "lng": 35.522,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AZA",
@@ -16415,7 +18238,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.3078,
     "lng": -111.655,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MTM",
@@ -16424,7 +18248,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 55.131,
     "lng": -131.578,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ETZ",
@@ -16433,7 +18258,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 48.9821,
     "lng": 6.2513,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MXL",
@@ -16442,7 +18268,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 32.6306,
     "lng": -115.242,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MEX",
@@ -16451,7 +18278,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 19.4363,
     "lng": -99.0721,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "MFU",
@@ -16460,7 +18288,8 @@ const AIRPORTS = [
     "country": "Zambia",
     "lat": -13.2589,
     "lng": 31.9366,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MIA",
@@ -16469,7 +18298,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 25.7932,
     "lng": -80.2906,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "MIG",
@@ -16478,7 +18308,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 31.4281,
     "lng": 104.741,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MAF",
@@ -16487,7 +18318,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 31.9425,
     "lng": -102.202,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YGJ",
@@ -16496,7 +18328,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 35.4922,
     "lng": 133.236,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LIN",
@@ -16505,7 +18338,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 45.4451,
     "lng": 9.2767,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MXP",
@@ -16514,7 +18348,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 45.6306,
     "lng": 8.7281,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MQL",
@@ -16523,7 +18358,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -34.2292,
     "lng": 142.086,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MGT",
@@ -16532,7 +18368,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -12.0944,
     "lng": 134.894,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MLO",
@@ -16541,7 +18378,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 36.6969,
     "lng": 24.4769,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MKE",
@@ -16550,7 +18388,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.9472,
     "lng": -87.8966,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MQH",
@@ -16559,7 +18398,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -13.5491,
     "lng": -48.1953,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MTT",
@@ -16568,7 +18408,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 18.1034,
     "lng": -94.5807,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MRV",
@@ -16577,7 +18418,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 44.2251,
     "lng": 43.0819,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MSP",
@@ -16586,7 +18428,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.882,
     "lng": -93.2218,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MOT",
@@ -16595,7 +18438,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 48.2594,
     "lng": -101.28,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MSQ",
@@ -16604,7 +18448,8 @@ const AIRPORTS = [
     "country": "Belarus",
     "lat": 53.8825,
     "lng": 28.0307,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MYY",
@@ -16613,7 +18458,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 4.322,
     "lng": 113.987,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MJZ",
@@ -16622,7 +18468,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 62.5347,
     "lng": 114.039,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MSJ",
@@ -16631,7 +18478,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 40.7032,
     "lng": 141.368,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MIS",
@@ -16640,7 +18488,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -10.6892,
     "lng": 152.838,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MSO",
@@ -16649,7 +18498,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 46.9163,
     "lng": -114.091,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MOI",
@@ -16658,7 +18508,8 @@ const AIRPORTS = [
     "country": "Cook Islands",
     "lat": -19.8425,
     "lng": -157.703,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MVP",
@@ -16667,7 +18518,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 1.2537,
     "lng": -70.2339,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MMY",
@@ -16676,7 +18528,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 24.7828,
     "lng": 125.295,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KMI",
@@ -16685,7 +18538,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 31.8772,
     "lng": 131.449,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MQN",
@@ -16694,7 +18548,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 66.3639,
     "lng": 14.3014,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CNY",
@@ -16703,7 +18558,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.755,
     "lng": -109.755,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MOB",
@@ -16712,7 +18568,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 30.6912,
     "lng": -88.2428,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MSZ",
@@ -16721,7 +18578,8 @@ const AIRPORTS = [
     "country": "Angola",
     "lat": -15.2612,
     "lng": 12.1468,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MOD",
@@ -16730,7 +18588,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.6258,
     "lng": -120.954,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MJD",
@@ -16739,7 +18598,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 27.3352,
     "lng": 68.1431,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MGQ",
@@ -16748,7 +18608,8 @@ const AIRPORTS = [
     "country": "Somalia",
     "lat": 2.0144,
     "lng": 45.3047,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "DIB",
@@ -16757,7 +18618,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 27.4839,
     "lng": 95.0169,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "OHE",
@@ -16766,7 +18628,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 52.9128,
     "lng": 122.43,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MOL",
@@ -16775,7 +18638,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 62.7447,
     "lng": 7.2625,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MLI",
@@ -16784,7 +18648,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.4485,
     "lng": -90.5075,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MKK",
@@ -16793,7 +18658,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 21.1529,
     "lng": -157.096,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MBA",
@@ -16802,7 +18668,8 @@ const AIRPORTS = [
     "country": "Kenya",
     "lat": -4.0348,
     "lng": 39.5942,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MAS",
@@ -16811,7 +18678,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -2.0619,
     "lng": 147.424,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MIR",
@@ -16820,7 +18688,8 @@ const AIRPORTS = [
     "country": "Tunisia",
     "lat": 35.7581,
     "lng": 10.7547,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MBE",
@@ -16829,7 +18698,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 44.3039,
     "lng": 143.404,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YQM",
@@ -16838,7 +18708,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 46.1122,
     "lng": -64.6786,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MLU",
@@ -16847,7 +18718,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.5109,
     "lng": -92.0377,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MLW",
@@ -16856,7 +18728,8 @@ const AIRPORTS = [
     "country": "Liberia",
     "lat": 6.2891,
     "lng": -10.7587,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ROB",
@@ -16865,7 +18738,8 @@ const AIRPORTS = [
     "country": "Liberia",
     "lat": 6.2338,
     "lng": -10.3623,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YYY",
@@ -16874,7 +18748,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 48.6086,
     "lng": -68.2081,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MBJ",
@@ -16883,7 +18758,8 @@ const AIRPORTS = [
     "country": "Jamaica",
     "lat": 18.5037,
     "lng": -77.9134,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MRY",
@@ -16892,7 +18768,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 36.587,
     "lng": -121.843,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MTR",
@@ -16901,7 +18778,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 8.8237,
     "lng": -75.8258,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MTY",
@@ -16910,7 +18788,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 25.7785,
     "lng": -100.107,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MOC",
@@ -16919,7 +18798,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -16.7069,
     "lng": -43.8189,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MVD",
@@ -16928,7 +18808,8 @@ const AIRPORTS = [
     "country": "Uruguay",
     "lat": -34.8384,
     "lng": -56.0308,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MPL",
@@ -16937,7 +18818,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 43.5762,
     "lng": 3.963,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YHU",
@@ -16946,7 +18828,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 45.5175,
     "lng": -73.4169,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YUL",
@@ -16955,7 +18838,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 45.4706,
     "lng": -73.7408,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MTJ",
@@ -16964,7 +18848,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.5098,
     "lng": -107.894,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MOZ",
@@ -16973,7 +18858,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -17.49,
     "lng": -149.762,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YMO",
@@ -16982,7 +18868,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 51.2911,
     "lng": -80.6078,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MXX",
@@ -16991,7 +18878,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 60.9579,
     "lng": 14.5114,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MOV",
@@ -17000,7 +18888,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -22.0578,
     "lng": 148.077,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MRZ",
@@ -17009,7 +18898,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -29.4989,
     "lng": 149.845,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MLM",
@@ -17018,7 +18908,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 19.8499,
     "lng": -101.025,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MGW",
@@ -17027,7 +18918,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.6429,
     "lng": -79.9163,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ONG",
@@ -17036,7 +18928,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -16.6625,
     "lng": 139.178,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MXH",
@@ -17045,7 +18938,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -6.3633,
     "lng": 143.238,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MOQ",
@@ -17054,7 +18948,8 @@ const AIRPORTS = [
     "country": "Madagascar",
     "lat": -20.2847,
     "lng": 44.3176,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HAH",
@@ -17063,7 +18958,8 @@ const AIRPORTS = [
     "country": "Comoros",
     "lat": -11.5337,
     "lng": 43.2719,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MMU",
@@ -17072,7 +18968,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.7994,
     "lng": -74.4149,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MYA",
@@ -17081,7 +18978,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -35.8978,
     "lng": 150.144,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DME",
@@ -17090,7 +18988,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 55.4088,
     "lng": 37.9063,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SVO",
@@ -17099,7 +18998,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 55.9726,
     "lng": 37.4146,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "VKO",
@@ -17108,7 +19008,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 55.5915,
     "lng": 37.2615,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MJF",
@@ -17117,7 +19018,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 65.784,
     "lng": 13.2149,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OMO",
@@ -17126,7 +19028,8 @@ const AIRPORTS = [
     "country": "Bosnia and Herzegovina",
     "lat": 43.2829,
     "lng": 17.8459,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OSM",
@@ -17135,7 +19038,8 @@ const AIRPORTS = [
     "country": "Iraq",
     "lat": 36.3058,
     "lng": 43.1474,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MGB",
@@ -17144,7 +19048,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -37.7456,
     "lng": 140.785,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HGU",
@@ -17153,7 +19058,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -5.8268,
     "lng": 144.296,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ISA",
@@ -17162,7 +19068,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -20.6639,
     "lng": 139.489,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MPN",
@@ -17171,7 +19078,8 @@ const AIRPORTS = [
     "country": "Falkland Islands",
     "lat": -51.8228,
     "lng": -58.4472,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MOU",
@@ -17180,7 +19088,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 62.0954,
     "lng": -163.682,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MPA",
@@ -17189,7 +19098,8 @@ const AIRPORTS = [
     "country": "Namibia",
     "lat": -17.6344,
     "lng": 24.1767,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MQP",
@@ -17198,7 +19108,8 @@ const AIRPORTS = [
     "country": "South Africa",
     "lat": -25.3832,
     "lng": 31.1056,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MYW",
@@ -17207,7 +19118,8 @@ const AIRPORTS = [
     "country": "Tanzania",
     "lat": -10.3391,
     "lng": 40.1818,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MWX",
@@ -17216,7 +19128,8 @@ const AIRPORTS = [
     "country": "South Korea",
     "lat": 34.9914,
     "lng": 126.3828,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ODY",
@@ -17225,7 +19138,8 @@ const AIRPORTS = [
     "country": "Laos",
     "lat": 20.6827,
     "lng": 101.994,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MDG",
@@ -17234,7 +19148,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 44.5241,
     "lng": 129.569,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MKM",
@@ -17243,7 +19158,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 2.9064,
     "lng": 112.08,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RIY",
@@ -17252,7 +19168,8 @@ const AIRPORTS = [
     "country": "Yemen",
     "lat": 14.6626,
     "lng": 49.375,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BSL",
@@ -17261,7 +19178,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 47.59,
     "lng": 7.5292,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MUX",
@@ -17270,7 +19188,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 30.2032,
     "lng": 71.4191,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MZV",
@@ -17279,7 +19198,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 4.0483,
     "lng": 114.805,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BOM",
@@ -17288,7 +19208,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 19.0887,
     "lng": 72.8679,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "MUA",
@@ -17297,7 +19218,8 @@ const AIRPORTS = [
     "country": "Solomon Islands",
     "lat": -8.328,
     "lng": 157.263,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MUC",
@@ -17306,7 +19228,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 48.3538,
     "lng": 11.7861,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "FMO",
@@ -17315,7 +19238,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 52.1346,
     "lng": 7.6848,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MJV",
@@ -17324,7 +19248,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 37.775,
     "lng": -0.8124,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MXV",
@@ -17333,7 +19258,8 @@ const AIRPORTS = [
     "country": "Mongolia",
     "lat": 49.6633,
     "lng": 100.099,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MMK",
@@ -17342,7 +19268,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 68.7817,
     "lng": 32.7508,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MSR",
@@ -17351,7 +19278,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 38.7478,
     "lng": 41.6612,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MCT",
@@ -17360,7 +19288,8 @@ const AIRPORTS = [
     "country": "Oman",
     "lat": 23.5933,
     "lng": 58.2844,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MSL",
@@ -17369,7 +19298,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 34.7453,
     "lng": -87.6102,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MKG",
@@ -17378,7 +19308,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.1695,
     "lng": -86.2382,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MSA",
@@ -17387,7 +19318,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 53.4414,
     "lng": -91.7628,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MWZ",
@@ -17396,7 +19328,8 @@ const AIRPORTS = [
     "country": "Tanzania",
     "lat": -2.4445,
     "lng": 32.9327,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MGZ",
@@ -17405,7 +19338,8 @@ const AIRPORTS = [
     "country": "Burma",
     "lat": 12.4398,
     "lng": 98.6215,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MYT",
@@ -17414,7 +19348,8 @@ const AIRPORTS = [
     "country": "Burma",
     "lat": 25.3836,
     "lng": 97.3519,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JMK",
@@ -17423,7 +19358,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 37.4351,
     "lng": 25.3481,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MYR",
@@ -17432,7 +19368,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.6797,
     "lng": -78.9283,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MYQ",
@@ -17441,7 +19378,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 12.23,
     "lng": 76.6558,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MJT",
@@ -17450,7 +19388,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 39.0567,
     "lng": 26.5983,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NDJ",
@@ -17459,7 +19398,8 @@ const AIRPORTS = [
     "country": "Chad",
     "lat": 12.1337,
     "lng": 15.034,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NGE",
@@ -17468,7 +19408,8 @@ const AIRPORTS = [
     "country": "Cameroon",
     "lat": 7.357,
     "lng": 13.5592,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NPE",
@@ -17477,7 +19418,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -39.4658,
     "lng": 176.87,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NBX",
@@ -17486,7 +19428,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -3.3682,
     "lng": 135.496,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NYM",
@@ -17495,7 +19438,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 65.4809,
     "lng": 72.6989,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LAE",
@@ -17504,7 +19448,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -6.5698,
     "lng": 146.726,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "WNP",
@@ -17513,7 +19458,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 13.5849,
     "lng": 123.27,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NGS",
@@ -17522,7 +19468,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 32.9169,
     "lng": 129.914,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NGO",
@@ -17531,7 +19478,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 34.8584,
     "lng": 136.805,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "NKM",
@@ -17540,7 +19488,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 35.255,
     "lng": 136.924,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NAG",
@@ -17549,7 +19498,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 21.0922,
     "lng": 79.0472,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NAH",
@@ -17558,7 +19508,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": 3.6832,
     "lng": 125.528,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YDP",
@@ -17567,7 +19518,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 56.5492,
     "lng": -61.6803,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NBO",
@@ -17576,7 +19528,8 @@ const AIRPORTS = [
     "country": "Kenya",
     "lat": -1.3192,
     "lng": 36.9278,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "WIL",
@@ -17585,7 +19538,8 @@ const AIRPORTS = [
     "country": "Kenya",
     "lat": -1.3217,
     "lng": 36.8148,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NJF",
@@ -17594,7 +19548,8 @@ const AIRPORTS = [
     "country": "Iraq",
     "lat": 31.9899,
     "lng": 44.4043,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SHB",
@@ -17603,7 +19558,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 43.5775,
     "lng": 144.96,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NAJ",
@@ -17612,7 +19568,8 @@ const AIRPORTS = [
     "country": "Azerbaijan",
     "lat": 39.1888,
     "lng": 45.4584,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KOP",
@@ -17621,7 +19578,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 17.3838,
     "lng": 104.643,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NST",
@@ -17630,7 +19588,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 8.5396,
     "lng": 99.9447,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NMA",
@@ -17639,7 +19598,8 @@ const AIRPORTS = [
     "country": "Uzbekistan",
     "lat": 40.9846,
     "lng": 71.5567,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "APL",
@@ -17648,7 +19608,8 @@ const AIRPORTS = [
     "country": "Mozambique",
     "lat": -15.1056,
     "lng": 39.2818,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "OSY",
@@ -17657,7 +19618,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 64.4722,
     "lng": 11.5786,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NNT",
@@ -17666,7 +19628,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 18.8079,
     "lng": 100.783,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YCD",
@@ -17675,7 +19638,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.055,
     "lng": -123.8699,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KHN",
@@ -17684,7 +19648,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 28.865,
     "lng": 115.9,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "NAO",
@@ -17693,7 +19658,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 30.7954,
     "lng": 106.1626,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NAN",
@@ -17702,7 +19668,8 @@ const AIRPORTS = [
     "country": "Fiji",
     "lat": -17.7554,
     "lng": 177.443,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "NKG",
@@ -17711,7 +19678,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 31.742,
     "lng": 118.862,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SHM",
@@ -17720,7 +19688,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 33.6622,
     "lng": 135.364,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NNG",
@@ -17729,7 +19698,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 22.6083,
     "lng": 108.172,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "JNN",
@@ -17738,7 +19708,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 60.1419,
     "lng": -45.233,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NTE",
@@ -17747,7 +19718,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 47.1532,
     "lng": -1.6107,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ACK",
@@ -17756,7 +19728,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.2531,
     "lng": -70.0602,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NNY",
@@ -17765,7 +19738,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 32.9808,
     "lng": 112.615,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NYK",
@@ -17774,7 +19748,8 @@ const AIRPORTS = [
     "country": "Kenya",
     "lat": -0.0624,
     "lng": 37.041,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WNA",
@@ -17783,7 +19758,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 60.6903,
     "lng": -161.979,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PKA",
@@ -17792,7 +19768,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 60.7029,
     "lng": -161.778,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "APF",
@@ -17801,7 +19778,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 26.1526,
     "lng": -81.7753,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NAP",
@@ -17810,7 +19788,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 40.886,
     "lng": 14.2908,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "NAW",
@@ -17819,7 +19798,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 6.5199,
     "lng": 101.743,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NRA",
@@ -17828,7 +19808,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -34.7022,
     "lng": 146.512,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JNS",
@@ -17837,7 +19818,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 60.9173,
     "lng": -46.0599,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UAK",
@@ -17846,7 +19828,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 61.1605,
     "lng": -45.426,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NVK",
@@ -17855,7 +19838,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 68.4369,
     "lng": 17.3867,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NNM",
@@ -17864,7 +19848,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 67.64,
     "lng": 53.1219,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BNA",
@@ -17873,7 +19858,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 36.1245,
     "lng": -86.6782,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "NAS",
@@ -17882,7 +19868,8 @@ const AIRPORTS = [
     "country": "Bahamas",
     "lat": 25.039,
     "lng": -77.4662,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "NAT",
@@ -17891,7 +19878,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -5.7681,
     "lng": -35.3761,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YNA",
@@ -17900,7 +19888,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 50.19,
     "lng": -61.7892,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YNP",
@@ -17909,7 +19898,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 55.9139,
     "lng": -61.1844,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "INU",
@@ -17918,7 +19908,8 @@ const AIRPORTS = [
     "country": "Nauru",
     "lat": -0.5475,
     "lng": 166.919,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SUV",
@@ -17927,7 +19918,8 @@ const AIRPORTS = [
     "country": "Fiji",
     "lat": -18.0433,
     "lng": 178.559,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NVT",
@@ -17936,7 +19928,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -26.88,
     "lng": -48.6514,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NVI",
@@ -17945,7 +19938,8 @@ const AIRPORTS = [
     "country": "Uzbekistan",
     "lat": 40.1172,
     "lng": 65.1708,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NYT",
@@ -17954,7 +19948,8 @@ const AIRPORTS = [
     "country": "Burma",
     "lat": 19.6235,
     "lng": 96.201,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NLA",
@@ -17963,7 +19958,8 @@ const AIRPORTS = [
     "country": "Zambia",
     "lat": -12.9981,
     "lng": 28.6649,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VOL",
@@ -17972,7 +19968,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 39.2196,
     "lng": 22.7943,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CNP",
@@ -17981,7 +19978,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 70.7431,
     "lng": -22.6505,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NVA",
@@ -17990,7 +19988,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 2.9501,
     "lng": -75.294,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EAM",
@@ -17999,7 +19998,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 17.6114,
     "lng": 44.4192,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NSN",
@@ -18008,7 +20008,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -41.2983,
     "lng": 173.221,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NLG",
@@ -18017,7 +20018,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 56.0075,
     "lng": -161.16,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YNS",
@@ -18026,7 +20028,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 51.6911,
     "lng": -76.1356,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KEP",
@@ -18035,7 +20038,8 @@ const AIRPORTS = [
     "country": "Nepal",
     "lat": 28.1036,
     "lng": 81.667,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NER",
@@ -18044,7 +20048,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 56.9139,
     "lng": 124.914,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NQN",
@@ -18053,7 +20058,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -38.949,
     "lng": -68.1557,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NAV",
@@ -18062,7 +20068,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 38.7719,
     "lng": 34.5345,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EWB",
@@ -18071,7 +20078,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.6761,
     "lng": -70.9569,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EWN",
@@ -18080,7 +20088,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.073,
     "lng": -77.0429,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HVN",
@@ -18089,7 +20098,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.2637,
     "lng": -72.8868,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MSY",
@@ -18098,7 +20108,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 29.9934,
     "lng": -90.258,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "NPL",
@@ -18107,7 +20118,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -39.0086,
     "lng": 174.179,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JFK",
@@ -18116,7 +20128,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.6398,
     "lng": -73.7789,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "LGA",
@@ -18125,7 +20138,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.7772,
     "lng": -73.8726,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "EWR",
@@ -18134,7 +20148,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.6925,
     "lng": -74.1687,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "SWF",
@@ -18143,7 +20158,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.5041,
     "lng": -74.1048,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NCL",
@@ -18152,7 +20168,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 55.0375,
     "lng": -1.6917,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "NTL",
@@ -18161,7 +20178,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -32.795,
     "lng": 151.834,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ZNE",
@@ -18170,7 +20188,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -23.4178,
     "lng": 119.803,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PHF",
@@ -18179,7 +20198,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.1319,
     "lng": -76.493,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NQY",
@@ -18188,7 +20208,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 50.4406,
     "lng": -4.9954,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CXR",
@@ -18197,7 +20218,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 11.9982,
     "lng": 109.219,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "IAG",
@@ -18206,7 +20228,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.1073,
     "lng": -78.9462,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NIM",
@@ -18215,7 +20238,8 @@ const AIRPORTS = [
     "country": "Niger",
     "lat": 13.4815,
     "lng": 2.1836,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NCE",
@@ -18224,7 +20248,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 43.6584,
     "lng": 7.2159,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ECN",
@@ -18233,7 +20258,8 @@ const AIRPORTS = [
     "country": "Cyprus",
     "lat": 35.1547,
     "lng": 33.4961,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TMU",
@@ -18242,7 +20268,8 @@ const AIRPORTS = [
     "country": "Costa Rica",
     "lat": 9.7385,
     "lng": -85.0138,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NME",
@@ -18251,7 +20278,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 60.471,
     "lng": -164.701,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KIJ",
@@ -18260,7 +20288,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 37.9559,
     "lng": 139.121,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NIB",
@@ -18269,7 +20298,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 63.0186,
     "lng": -154.358,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IKO",
@@ -18278,7 +20308,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 52.9416,
     "lng": -168.849,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FNI",
@@ -18287,7 +20318,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 43.7574,
     "lng": 4.4163,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NGB",
@@ -18296,7 +20328,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 29.8267,
     "lng": 121.462,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "NBC",
@@ -18305,7 +20338,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 55.5647,
     "lng": 52.0925,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NJC",
@@ -18314,7 +20348,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 60.9493,
     "lng": 76.4836,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GOJ",
@@ -18323,7 +20358,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 56.2301,
     "lng": 43.784,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "WTK",
@@ -18332,7 +20368,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 67.5661,
     "lng": -162.975,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NGK",
@@ -18341,7 +20378,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 51.7801,
     "lng": 143.139,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OME",
@@ -18350,7 +20388,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 64.5122,
     "lng": -165.445,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ORV",
@@ -18359,7 +20398,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 66.8179,
     "lng": -161.019,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ORF",
@@ -18368,7 +20408,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 36.8946,
     "lng": -76.2012,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "NLK",
@@ -18377,7 +20418,8 @@ const AIRPORTS = [
     "country": "Norfolk Island",
     "lat": -29.0416,
     "lng": 167.939,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NSK",
@@ -18386,7 +20428,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 69.3111,
     "lng": 87.3322,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YVQ",
@@ -18395,7 +20438,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 65.2816,
     "lng": -126.798,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NTN",
@@ -18404,7 +20448,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -17.6841,
     "lng": 141.0697,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NRK",
@@ -18413,7 +20458,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 58.5863,
     "lng": 16.2506,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NUS",
@@ -18422,7 +20468,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -16.0797,
     "lng": 167.401,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YYB",
@@ -18431,7 +20478,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 46.3636,
     "lng": -79.4228,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OTH",
@@ -18440,7 +20488,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.4171,
     "lng": -124.246,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ELH",
@@ -18449,7 +20498,8 @@ const AIRPORTS = [
     "country": "Bahamas",
     "lat": 25.4749,
     "lng": -76.6835,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LBF",
@@ -18458,7 +20508,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.1262,
     "lng": -100.684,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NRL",
@@ -18467,7 +20518,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 59.3675,
     "lng": -2.4344,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YNO",
@@ -18476,7 +20528,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 52.49,
     "lng": -92.9711,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NWI",
@@ -18485,7 +20538,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 52.6758,
     "lng": 1.2828,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NOB",
@@ -18494,7 +20548,8 @@ const AIRPORTS = [
     "country": "Costa Rica",
     "lat": 9.9765,
     "lng": -85.653,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NSH",
@@ -18503,7 +20558,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 36.6633,
     "lng": 51.4647,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NOS",
@@ -18512,7 +20568,8 @@ const AIRPORTS = [
     "country": "Madagascar",
     "lat": -13.3121,
     "lng": 48.3148,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NDB",
@@ -18521,7 +20578,8 @@ const AIRPORTS = [
     "country": "Mauritania",
     "lat": 20.9331,
     "lng": -17.03,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NKC",
@@ -18530,7 +20588,8 @@ const AIRPORTS = [
     "country": "Mauritania",
     "lat": 18.31,
     "lng": -15.9697,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GEA",
@@ -18539,7 +20598,8 @@ const AIRPORTS = [
     "country": "New Caledonia",
     "lat": -22.2583,
     "lng": 166.473,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NOU",
@@ -18548,7 +20608,8 @@ const AIRPORTS = [
     "country": "New Caledonia",
     "lat": -22.0146,
     "lng": 166.213,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NOZ",
@@ -18557,7 +20618,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 53.8114,
     "lng": 86.8772,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OVB",
@@ -18566,7 +20628,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 55.0126,
     "lng": 82.6507,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "NUX",
@@ -18575,7 +20638,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 66.0694,
     "lng": 76.5203,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NOJ",
@@ -18584,7 +20648,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 63.1833,
     "lng": 75.27,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NUE",
@@ -18593,7 +20658,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 49.4987,
     "lng": 11.0781,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "NLD",
@@ -18602,7 +20668,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 27.4439,
     "lng": -99.5705,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NUI",
@@ -18611,7 +20678,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 70.21,
     "lng": -151.006,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NHV",
@@ -18620,7 +20688,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -8.7956,
     "lng": -140.229,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NCU",
@@ -18629,7 +20698,8 @@ const AIRPORTS = [
     "country": "Uzbekistan",
     "lat": 42.4884,
     "lng": 59.6233,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NUL",
@@ -18638,7 +20708,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 64.7293,
     "lng": -158.074,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TZL",
@@ -18647,7 +20718,8 @@ const AIRPORTS = [
     "country": "Bosnia and Herzegovina",
     "lat": 44.4587,
     "lng": 18.7248,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NQU",
@@ -18656,7 +20728,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 5.6964,
     "lng": -77.2806,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NYA",
@@ -18665,7 +20738,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 62.11,
     "lng": 65.615,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UYL",
@@ -18674,7 +20748,8 @@ const AIRPORTS = [
     "country": "Sudan",
     "lat": 12.0535,
     "lng": 24.9562,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LZY",
@@ -18683,7 +20758,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 29.3033,
     "lng": 94.3353,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OAK",
@@ -18692,7 +20768,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.7213,
     "lng": -122.221,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "OAX",
@@ -18701,7 +20778,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 16.9999,
     "lng": -96.7266,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "OBO",
@@ -18710,7 +20788,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 42.7333,
     "lng": 143.217,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ONJ",
@@ -18719,7 +20798,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 40.1919,
     "lng": 140.371,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ODS",
@@ -18728,7 +20808,8 @@ const AIRPORTS = [
     "country": "Ukraine",
     "lat": 46.4268,
     "lng": 30.6765,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "OGD",
@@ -18737,7 +20818,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.1959,
     "lng": -112.012,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OGS",
@@ -18746,7 +20828,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.6819,
     "lng": -75.4655,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YOG",
@@ -18755,7 +20838,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 51.6586,
     "lng": -85.9017,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OIT",
@@ -18764,7 +20848,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 33.4794,
     "lng": 131.737,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "OKJ",
@@ -18773,7 +20858,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 34.7569,
     "lng": 133.855,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "OKA",
@@ -18782,7 +20868,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 26.1958,
     "lng": 127.646,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "OKC",
@@ -18791,7 +20878,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.3931,
     "lng": -97.6007,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "OKL",
@@ -18800,7 +20888,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -4.9071,
     "lng": 140.6277,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OLB",
@@ -18809,7 +20898,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 40.8987,
     "lng": 9.5176,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ULG",
@@ -18818,7 +20908,8 @@ const AIRPORTS = [
     "country": "Mongolia",
     "lat": 48.9933,
     "lng": 89.9225,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OLP",
@@ -18827,7 +20918,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -30.485,
     "lng": 136.877,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OMA",
@@ -18836,7 +20928,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.3032,
     "lng": -95.8941,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "OMS",
@@ -18845,7 +20938,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 54.967,
     "lng": 73.3105,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "OND",
@@ -18854,7 +20948,8 @@ const AIRPORTS = [
     "country": "Namibia",
     "lat": -17.8782,
     "lng": 15.9526,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VPE",
@@ -18863,7 +20958,8 @@ const AIRPORTS = [
     "country": "Angola",
     "lat": -17.0435,
     "lng": 15.6838,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ONT",
@@ -18872,7 +20968,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 34.056,
     "lng": -117.601,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "OMR",
@@ -18881,7 +20978,8 @@ const AIRPORTS = [
     "country": "Romania",
     "lat": 47.0253,
     "lng": 21.9025,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ORN",
@@ -18890,7 +20988,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 35.6239,
     "lng": -0.6212,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "OAG",
@@ -18899,7 +20998,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -33.3817,
     "lng": 149.133,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OMD",
@@ -18908,7 +21008,8 @@ const AIRPORTS = [
     "country": "Namibia",
     "lat": -28.5847,
     "lng": 16.4467,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AUA",
@@ -18917,7 +21018,8 @@ const AIRPORTS = [
     "country": "Aruba",
     "lat": 12.5014,
     "lng": -70.0152,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "EUX",
@@ -18926,7 +21028,8 @@ const AIRPORTS = [
     "country": "Netherlands Antilles",
     "lat": 17.4965,
     "lng": -62.9794,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ORB",
@@ -18935,7 +21038,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 59.2237,
     "lng": 15.038,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "REN",
@@ -18944,7 +21048,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 51.7958,
     "lng": 55.4567,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ORX",
@@ -18953,7 +21058,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -1.7141,
     "lng": -55.8362,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TMT",
@@ -18962,7 +21068,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -1.4896,
     "lng": -56.3968,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OLA",
@@ -18971,7 +21078,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 63.6989,
     "lng": 9.604,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MCO",
@@ -18980,7 +21088,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 28.4294,
     "lng": -81.309,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "OER",
@@ -18989,7 +21098,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 63.4083,
     "lng": 18.99,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OSW",
@@ -18998,7 +21108,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 51.0725,
     "lng": 58.5956,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HOV",
@@ -19007,7 +21118,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 62.18,
     "lng": 6.0741,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ORU",
@@ -19016,7 +21128,8 @@ const AIRPORTS = [
     "country": "Bolivia",
     "lat": -17.9626,
     "lng": -67.0762,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ITM",
@@ -19025,7 +21138,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 34.7855,
     "lng": 135.438,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "KIX",
@@ -19034,7 +21148,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 34.4273,
     "lng": 135.244,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "OSS",
@@ -19043,7 +21158,8 @@ const AIRPORTS = [
     "country": "Kyrgyzstan",
     "lat": 40.609,
     "lng": 72.7933,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "OIM",
@@ -19052,7 +21168,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 34.782,
     "lng": 139.36,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OSI",
@@ -19061,7 +21178,8 @@ const AIRPORTS = [
     "country": "Croatia",
     "lat": 45.4627,
     "lng": 18.8102,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OSL",
@@ -19070,7 +21188,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 60.121,
     "lng": 11.0502,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ZOS",
@@ -19079,7 +21198,8 @@ const AIRPORTS = [
     "country": "Chile",
     "lat": -40.6112,
     "lng": -73.061,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OST",
@@ -19088,7 +21208,8 @@ const AIRPORTS = [
     "country": "Belgium",
     "lat": 51.1989,
     "lng": 2.8622,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OSR",
@@ -19097,7 +21218,8 @@ const AIRPORTS = [
     "country": "Czech Republic",
     "lat": 49.6963,
     "lng": 18.1111,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "QRW",
@@ -19106,7 +21228,8 @@ const AIRPORTS = [
     "country": "Nigeria",
     "lat": 5.5961,
     "lng": 5.8178,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YOW",
@@ -19115,7 +21238,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 45.3225,
     "lng": -75.6692,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "OUA",
@@ -19124,7 +21248,8 @@ const AIRPORTS = [
     "country": "Burkina Faso",
     "lat": 12.3532,
     "lng": -1.5124,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "OGX",
@@ -19133,7 +21258,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 31.9172,
     "lng": 5.4128,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OZZ",
@@ -19142,7 +21268,8 @@ const AIRPORTS = [
     "country": "Morocco",
     "lat": 30.9391,
     "lng": -6.9094,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OUD",
@@ -19151,7 +21278,8 @@ const AIRPORTS = [
     "country": "Morocco",
     "lat": 34.7872,
     "lng": -1.924,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "OUL",
@@ -19160,7 +21288,8 @@ const AIRPORTS = [
     "country": "Finland",
     "lat": 64.9301,
     "lng": 25.3546,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OIA",
@@ -19169,7 +21298,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -6.7631,
     "lng": -51.0499,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UVE",
@@ -19178,7 +21308,8 @@ const AIRPORTS = [
     "country": "New Caledonia",
     "lat": -20.6406,
     "lng": 166.573,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VDA",
@@ -19187,7 +21318,8 @@ const AIRPORTS = [
     "country": "Israel",
     "lat": 29.9403,
     "lng": 34.9358,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OWB",
@@ -19196,7 +21328,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.7401,
     "lng": -87.1668,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OLL",
@@ -19205,7 +21338,8 @@ const AIRPORTS = [
     "country": "Congo (Brazzaville)",
     "lat": -1.2267,
     "lng": 15.91,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OZC",
@@ -19214,7 +21348,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 8.1785,
     "lng": 123.842,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PAH",
@@ -19223,7 +21358,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.0608,
     "lng": -88.7738,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PKB",
@@ -19232,7 +21368,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.3451,
     "lng": -81.4392,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PBJ",
@@ -19241,7 +21378,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -16.439,
     "lng": 168.257,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JFR",
@@ -19250,7 +21388,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 61.9922,
     "lng": -49.6625,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PDG",
@@ -19259,7 +21398,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -0.7869,
     "lng": 100.281,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PAD",
@@ -19268,7 +21408,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 51.6141,
     "lng": 8.6163,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PAG",
@@ -19277,7 +21418,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 7.8307,
     "lng": 123.4612,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PGA",
@@ -19286,7 +21428,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 36.9261,
     "lng": -111.448,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PPG",
@@ -19295,7 +21438,8 @@ const AIRPORTS = [
     "country": "American Samoa",
     "lat": -14.331,
     "lng": -170.71,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PYY",
@@ -19304,7 +21448,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 19.372,
     "lng": 98.437,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PJA",
@@ -19313,7 +21458,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 67.2456,
     "lng": 23.0689,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PKZ",
@@ -19322,7 +21468,8 @@ const AIRPORTS = [
     "country": "Laos",
     "lat": 15.1321,
     "lng": 105.781,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PLQ",
@@ -19331,7 +21478,8 @@ const AIRPORTS = [
     "country": "Lithuania",
     "lat": 55.9732,
     "lng": 21.0939,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PKY",
@@ -19340,7 +21488,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -2.2251,
     "lng": 113.943,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PLM",
@@ -19349,7 +21498,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -2.8983,
     "lng": 104.7,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PQM",
@@ -19358,7 +21508,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 17.5332,
     "lng": -92.0155,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PMO",
@@ -19367,7 +21518,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 38.176,
     "lng": 13.091,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PSP",
@@ -19376,7 +21528,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.8297,
     "lng": -116.507,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PMI",
@@ -19385,7 +21538,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 39.5517,
     "lng": 2.7388,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PMZ",
@@ -19394,7 +21548,8 @@ const AIRPORTS = [
     "country": "Costa Rica",
     "lat": 8.951,
     "lng": -83.4686,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PMW",
@@ -19403,7 +21558,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -10.2915,
     "lng": -48.357,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PMR",
@@ -19412,7 +21568,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -40.3206,
     "lng": 175.617,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PLW",
@@ -19421,7 +21578,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -0.9185,
     "lng": 119.91,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PNA",
@@ -19430,7 +21588,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 42.77,
     "lng": -1.6463,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PAC",
@@ -19439,7 +21598,8 @@ const AIRPORTS = [
     "country": "Panama",
     "lat": 8.9733,
     "lng": -79.5556,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ECP",
@@ -19448,7 +21608,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 30.3571,
     "lng": -85.7954,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PTY",
@@ -19457,7 +21618,8 @@ const AIRPORTS = [
     "country": "Panama",
     "lat": 9.0714,
     "lng": -79.3835,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PGK",
@@ -19466,7 +21628,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -2.1622,
     "lng": 106.139,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PKN",
@@ -19475,7 +21638,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -2.7052,
     "lng": 111.673,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YXP",
@@ -19484,7 +21648,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 66.145,
     "lng": -65.7136,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PJG",
@@ -19493,7 +21658,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 26.9545,
     "lng": 64.1325,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PNL",
@@ -19502,7 +21668,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 36.8165,
     "lng": 11.9689,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PZI",
@@ -19511,7 +21678,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 26.54,
     "lng": 101.7985,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PPW",
@@ -19520,7 +21688,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 59.3517,
     "lng": -2.9003,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PPT",
@@ -19529,7 +21698,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -17.5537,
     "lng": -149.607,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PFO",
@@ -19538,7 +21708,8 @@ const AIRPORTS = [
     "country": "Cyprus",
     "lat": 34.718,
     "lng": 32.4857,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PBO",
@@ -19547,7 +21718,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -23.1711,
     "lng": 117.745,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LSP",
@@ -19556,7 +21728,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 11.7808,
     "lng": -70.1515,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PRA",
@@ -19565,7 +21738,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -31.7948,
     "lng": -60.4804,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PPQ",
@@ -19574,7 +21748,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -40.9047,
     "lng": 174.989,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CKS",
@@ -19583,7 +21758,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -6.1153,
     "lng": -50.0014,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PED",
@@ -19592,7 +21768,8 @@ const AIRPORTS = [
     "country": "Czech Republic",
     "lat": 50.0134,
     "lng": 15.7386,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PIN",
@@ -19601,7 +21778,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -2.673,
     "lng": -56.7772,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CDG",
@@ -19610,7 +21788,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 49.0128,
     "lng": 2.55,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "ORY",
@@ -19619,7 +21798,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 48.7233,
     "lng": 2.3794,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PKE",
@@ -19628,7 +21808,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -33.1314,
     "lng": 148.239,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PMF",
@@ -19637,7 +21818,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 44.8245,
     "lng": 10.2964,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PHB",
@@ -19646,7 +21828,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -2.8937,
     "lng": -41.732,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PAS",
@@ -19655,7 +21838,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 37.0205,
     "lng": 25.1132,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PFQ",
@@ -19664,7 +21848,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 39.6036,
     "lng": 47.8815,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PSC",
@@ -19673,7 +21858,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 46.2647,
     "lng": -119.119,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PFB",
@@ -19682,7 +21868,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -28.244,
     "lng": -52.3266,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PSO",
@@ -19691,7 +21878,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 1.3962,
     "lng": -77.2915,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PAT",
@@ -19700,7 +21888,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 25.5913,
     "lng": 85.088,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "POJ",
@@ -19709,7 +21898,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -18.6728,
     "lng": -46.4912,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GPA",
@@ -19718,7 +21908,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 38.1511,
     "lng": 21.4256,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UTP",
@@ -19727,7 +21918,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 12.6799,
     "lng": 101.005,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PUF",
@@ -19736,7 +21928,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 43.38,
     "lng": -0.4186,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YPC",
@@ -19745,7 +21938,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 69.3608,
     "lng": -124.0755,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PAV",
@@ -19754,7 +21948,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -9.4009,
     "lng": -38.2506,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PWQ",
@@ -19763,7 +21958,8 @@ const AIRPORTS = [
     "country": "Kazakhstan",
     "lat": 52.195,
     "lng": 77.0739,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YPO",
@@ -19772,7 +21968,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 54.9881,
     "lng": -85.4433,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PKU",
@@ -19781,7 +21978,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": 0.4608,
     "lng": 101.445,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PLN",
@@ -19790,7 +21988,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 45.5709,
     "lng": -84.7967,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PET",
@@ -19799,7 +21998,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -31.7184,
     "lng": -52.3277,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "POL",
@@ -19808,7 +22008,8 @@ const AIRPORTS = [
     "country": "Mozambique",
     "lat": -12.9918,
     "lng": 40.524,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PEN",
@@ -19817,7 +22018,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 5.2971,
     "lng": 100.277,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PDT",
@@ -19826,7 +22028,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 45.6951,
     "lng": -118.841,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PNS",
@@ -19835,7 +22038,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 30.4734,
     "lng": -87.1866,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SSR",
@@ -19844,7 +22048,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -15.4708,
     "lng": 168.152,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YYF",
@@ -19853,7 +22058,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.4631,
     "lng": -119.602,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PEZ",
@@ -19862,7 +22068,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 53.1106,
     "lng": 45.0211,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PIA",
@@ -19871,7 +22078,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.6642,
     "lng": -89.6933,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PEI",
@@ -19880,7 +22088,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 4.8127,
     "lng": -75.7395,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PGX",
@@ -19889,7 +22098,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 45.1981,
     "lng": 0.8156,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PEE",
@@ -19898,7 +22108,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 57.9145,
     "lng": 56.0212,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PGF",
@@ -19907,7 +22118,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 42.7404,
     "lng": 2.8707,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KPV",
@@ -19916,7 +22128,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 55.906,
     "lng": -159.163,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PER",
@@ -19925,7 +22138,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -31.9403,
     "lng": 115.967,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PEG",
@@ -19934,7 +22148,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 43.0959,
     "lng": 12.5132,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PSR",
@@ -19943,7 +22158,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 42.4317,
     "lng": 14.1811,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PEW",
@@ -19952,7 +22168,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 33.9939,
     "lng": 71.5146,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PSG",
@@ -19961,7 +22178,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 56.8017,
     "lng": -132.945,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PNZ",
@@ -19970,7 +22188,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -9.3624,
     "lng": -40.5691,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PPK",
@@ -19979,7 +22198,8 @@ const AIRPORTS = [
     "country": "Kazakhstan",
     "lat": 54.7747,
     "lng": 69.1839,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PKC",
@@ -19988,7 +22208,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 53.1679,
     "lng": 158.454,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PES",
@@ -19997,7 +22218,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 61.8852,
     "lng": 34.1547,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PWE",
@@ -20006,7 +22228,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 69.7833,
     "lng": 170.597,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PHW",
@@ -20015,7 +22238,8 @@ const AIRPORTS = [
     "country": "South Africa",
     "lat": -23.9372,
     "lng": 31.1554,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PHL",
@@ -20024,7 +22248,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.8719,
     "lng": -75.2411,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SXM",
@@ -20033,7 +22258,8 @@ const AIRPORTS = [
     "country": "Netherlands Antilles",
     "lat": 18.041,
     "lng": -63.1089,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PHS",
@@ -20042,7 +22268,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 16.7829,
     "lng": 100.279,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PNH",
@@ -20051,7 +22278,8 @@ const AIRPORTS = [
     "country": "Cambodia",
     "lat": 11.5466,
     "lng": 104.844,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PHX",
@@ -20060,7 +22288,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.4343,
     "lng": -112.012,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "XKH",
@@ -20069,7 +22298,8 @@ const AIRPORTS = [
     "country": "Laos",
     "lat": 19.45,
     "lng": 103.158,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PRH",
@@ -20078,7 +22308,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 18.1322,
     "lng": 100.165,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UIH",
@@ -20087,7 +22318,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 13.955,
     "lng": 109.042,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HKT",
@@ -20096,7 +22328,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 8.1132,
     "lng": 98.3169,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PQC",
@@ -20105,7 +22338,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 10.1698,
     "lng": 103.9931,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YPL",
@@ -20114,7 +22348,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 51.4464,
     "lng": -90.2142,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PIX",
@@ -20123,7 +22358,8 @@ const AIRPORTS = [
     "country": "Portugal",
     "lat": 38.5543,
     "lng": -28.4413,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PDS",
@@ -20132,7 +22368,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 28.6274,
     "lng": -100.535,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PIR",
@@ -20141,7 +22378,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.3827,
     "lng": -100.286,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PZB",
@@ -20150,7 +22388,8 @@ const AIRPORTS = [
     "country": "South Africa",
     "lat": -29.649,
     "lng": 30.3987,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YPM",
@@ -20159,7 +22398,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 51.8197,
     "lng": -93.9733,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PIP",
@@ -20168,7 +22408,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 57.5804,
     "lng": -157.572,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PSA",
@@ -20177,7 +22418,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 43.6839,
     "lng": 10.3927,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PIT",
@@ -20186,7 +22428,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.4915,
     "lng": -80.2329,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PIU",
@@ -20195,7 +22438,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -5.2057,
     "lng": -80.6164,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MRU",
@@ -20204,7 +22448,8 @@ const AIRPORTS = [
     "country": "Mauritius",
     "lat": -20.4302,
     "lng": 57.6836,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PBG",
@@ -20213,7 +22458,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.6509,
     "lng": -73.4681,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PXU",
@@ -20222,7 +22468,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 14.0045,
     "lng": 108.017,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PBZ",
@@ -20231,7 +22478,8 @@ const AIRPORTS = [
     "country": "South Africa",
     "lat": -34.0882,
     "lng": 23.3287,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PDV",
@@ -20240,7 +22488,8 @@ const AIRPORTS = [
     "country": "Bulgaria",
     "lat": 42.0678,
     "lng": 24.8508,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PIH",
@@ -20249,7 +22498,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.9098,
     "lng": -112.596,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TGD",
@@ -20258,7 +22508,8 @@ const AIRPORTS = [
     "country": "Montenegro",
     "lat": 42.3594,
     "lng": 19.2519,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KPO",
@@ -20267,7 +22518,8 @@ const AIRPORTS = [
     "country": "South Korea",
     "lat": 35.988,
     "lng": 129.4204,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PNI",
@@ -20276,7 +22528,8 @@ const AIRPORTS = [
     "country": "Micronesia",
     "lat": 6.9851,
     "lng": 158.209,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "STG",
@@ -20285,7 +22538,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 56.5783,
     "lng": -169.662,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PIZ",
@@ -20294,7 +22548,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 69.7329,
     "lng": -163.005,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GND",
@@ -20303,7 +22558,8 @@ const AIRPORTS = [
     "country": "Grenada",
     "lat": 12.0042,
     "lng": -61.7862,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PTP",
@@ -20312,7 +22568,8 @@ const AIRPORTS = [
     "country": "Guadeloupe",
     "lat": 16.2653,
     "lng": -61.5318,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PNR",
@@ -20321,7 +22578,8 @@ const AIRPORTS = [
     "country": "Congo (Brazzaville)",
     "lat": -4.816,
     "lng": 11.8866,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PIS",
@@ -20330,7 +22588,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 46.5877,
     "lng": 0.3067,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PKR",
@@ -20339,7 +22598,8 @@ const AIRPORTS = [
     "country": "Nepal",
     "lat": 28.2009,
     "lng": 83.9821,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PSE",
@@ -20348,7 +22608,8 @@ const AIRPORTS = [
     "country": "Puerto Rico",
     "lat": 18.0083,
     "lng": -66.563,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YIO",
@@ -20357,7 +22618,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 72.6833,
     "lng": -77.9667,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PDL",
@@ -20366,7 +22628,8 @@ const AIRPORTS = [
     "country": "Portugal",
     "lat": 37.7412,
     "lng": -25.6979,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PNK",
@@ -20375,7 +22638,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -0.1507,
     "lng": 109.404,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PPN",
@@ -20384,7 +22648,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 2.4544,
     "lng": -76.6093,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YHP",
@@ -20393,7 +22658,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 52.1133,
     "lng": -94.2556,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PBD",
@@ -20402,7 +22668,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 21.6487,
     "lng": 69.6572,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "POR",
@@ -20411,7 +22678,8 @@ const AIRPORTS = [
     "country": "Finland",
     "lat": 61.4617,
     "lng": 21.8,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PMV",
@@ -20420,7 +22688,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 10.9126,
     "lng": -63.9666,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "EDR",
@@ -20429,7 +22698,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -14.8965,
     "lng": 141.6091,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CLM",
@@ -20438,7 +22708,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 48.1202,
     "lng": -123.5,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IXZ",
@@ -20447,7 +22718,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 11.6412,
     "lng": 92.7297,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PLZ",
@@ -20456,7 +22728,8 @@ const AIRPORTS = [
     "country": "South Africa",
     "lat": -33.9849,
     "lng": 25.6173,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "POG",
@@ -20465,7 +22738,8 @@ const AIRPORTS = [
     "country": "Gabon",
     "lat": -0.7117,
     "lng": 8.7544,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YZT",
@@ -20474,7 +22748,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 50.6806,
     "lng": -127.367,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PHC",
@@ -20483,7 +22758,8 @@ const AIRPORTS = [
     "country": "Nigeria",
     "lat": 5.0155,
     "lng": 6.9496,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PHE",
@@ -20492,7 +22768,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -20.3778,
     "lng": 118.626,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PTH",
@@ -20501,7 +22778,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 56.9591,
     "lng": -158.633,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PLO",
@@ -20510,7 +22788,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -34.6053,
     "lng": 135.88,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PQQ",
@@ -20519,7 +22798,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -31.4358,
     "lng": 152.863,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YPN",
@@ -20528,7 +22808,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.8364,
     "lng": -64.2886,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PTU",
@@ -20537,7 +22818,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 59.0114,
     "lng": -161.82,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "POM",
@@ -20546,7 +22828,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -9.4434,
     "lng": 147.22,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "RCY",
@@ -20555,7 +22838,8 @@ const AIRPORTS = [
     "country": "Bahamas",
     "lat": 23.6844,
     "lng": -74.8362,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PZU",
@@ -20564,7 +22848,8 @@ const AIRPORTS = [
     "country": "Sudan",
     "lat": 19.4336,
     "lng": 37.2341,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PAP",
@@ -20573,7 +22858,8 @@ const AIRPORTS = [
     "country": "Haiti",
     "lat": 18.58,
     "lng": -72.2925,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "POS",
@@ -20582,7 +22868,8 @@ const AIRPORTS = [
     "country": "Trinidad and Tobago",
     "lat": 10.5954,
     "lng": -61.3372,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "VLI",
@@ -20591,7 +22878,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -17.6993,
     "lng": 168.32,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PDX",
@@ -20600,7 +22888,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 45.5887,
     "lng": -122.598,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PTJ",
@@ -20609,7 +22898,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -38.3181,
     "lng": 141.471,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PWM",
@@ -20618,7 +22908,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.6462,
     "lng": -70.3093,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "OPO",
@@ -20627,7 +22918,8 @@ const AIRPORTS = [
     "country": "Portugal",
     "lat": 41.2481,
     "lng": -8.6814,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "POA",
@@ -20636,7 +22928,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -29.9944,
     "lng": -51.1714,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PXO",
@@ -20645,7 +22938,8 @@ const AIRPORTS = [
     "country": "Portugal",
     "lat": 33.0734,
     "lng": -16.35,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BPS",
@@ -20654,7 +22948,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -16.4386,
     "lng": -39.0809,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PVH",
@@ -20663,7 +22958,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -8.7093,
     "lng": -63.9023,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PSM",
@@ -20672,7 +22968,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.0779,
     "lng": -70.8233,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PSS",
@@ -20681,7 +22978,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -27.3858,
     "lng": -55.9707,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PSJ",
@@ -20690,7 +22988,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -1.4167,
     "lng": 120.658,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YSO",
@@ -20699,7 +22998,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 54.9105,
     "lng": -59.7851,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PTG",
@@ -20708,7 +23008,8 @@ const AIRPORTS = [
     "country": "South Africa",
     "lat": -23.8453,
     "lng": 29.4586,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "POI",
@@ -20717,7 +23018,8 @@ const AIRPORTS = [
     "country": "Bolivia",
     "lat": -19.5431,
     "lng": -65.7237,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YPW",
@@ -20726,7 +23028,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.8342,
     "lng": -124.5,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PAZ",
@@ -20735,7 +23038,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 20.6027,
     "lng": -97.4608,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "POZ",
@@ -20744,7 +23048,8 @@ const AIRPORTS = [
     "country": "Poland",
     "lat": 52.421,
     "lng": 16.8263,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PRG",
@@ -20753,7 +23058,8 @@ const AIRPORTS = [
     "country": "Czech Republic",
     "lat": 50.1008,
     "lng": 14.26,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "RAI",
@@ -20762,7 +23068,8 @@ const AIRPORTS = [
     "country": "Cape Verde",
     "lat": 14.9245,
     "lng": -23.4935,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PRI",
@@ -20771,7 +23078,8 @@ const AIRPORTS = [
     "country": "Seychelles",
     "lat": -4.3193,
     "lng": 55.6914,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LOP",
@@ -20780,7 +23088,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -8.7573,
     "lng": 116.2767,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PRC",
@@ -20789,7 +23098,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 34.6545,
     "lng": -112.42,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PPB",
@@ -20798,7 +23108,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -22.1751,
     "lng": -51.4246,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PQI",
@@ -20807,7 +23118,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 46.689,
     "lng": -68.0448,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PIK",
@@ -20816,7 +23128,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 55.5094,
     "lng": -4.5867,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PVK",
@@ -20825,7 +23138,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 38.9255,
     "lng": 20.7653,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YXS",
@@ -20834,7 +23148,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 53.8894,
     "lng": -122.679,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YPR",
@@ -20843,7 +23158,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 54.2861,
     "lng": -130.445,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PRN",
@@ -20852,7 +23168,8 @@ const AIRPORTS = [
     "country": "Serbia",
     "lat": 42.5728,
     "lng": 21.0358,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PPP",
@@ -20861,7 +23178,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -20.495,
     "lng": 148.552,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PVD",
@@ -20870,7 +23188,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.7326,
     "lng": -71.4204,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PVA",
@@ -20879,7 +23198,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 13.3569,
     "lng": -81.3583,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PLS",
@@ -20888,7 +23208,8 @@ const AIRPORTS = [
     "country": "Turks and Caicos Islands",
     "lat": 21.7736,
     "lng": -72.2659,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PVC",
@@ -20897,7 +23218,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.0719,
     "lng": -70.2214,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PVU",
@@ -20906,7 +23228,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.2192,
     "lng": -111.723,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PCL",
@@ -20915,7 +23238,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -8.3779,
     "lng": -74.5743,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PBC",
@@ -20924,7 +23248,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 19.1581,
     "lng": -98.3714,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PUB",
@@ -20933,7 +23258,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.2891,
     "lng": -104.497,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PUU",
@@ -20942,7 +23268,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 0.5052,
     "lng": -76.5008,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PYH",
@@ -20951,7 +23278,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 5.62,
     "lng": -67.6061,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PBL",
@@ -20960,7 +23288,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 10.4805,
     "lng": -68.073,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PCR",
@@ -20969,7 +23298,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 6.1847,
     "lng": -67.4932,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PXM",
@@ -20978,7 +23308,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 15.8769,
     "lng": -97.0891,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PDA",
@@ -20987,7 +23318,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 3.8535,
     "lng": -67.9062,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PJM",
@@ -20996,7 +23328,8 @@ const AIRPORTS = [
     "country": "Costa Rica",
     "lat": 8.5333,
     "lng": -83.3,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LQM",
@@ -21005,7 +23338,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": -0.1823,
     "lng": -74.7708,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PEU",
@@ -21014,7 +23348,8 @@ const AIRPORTS = [
     "country": "Honduras",
     "lat": 15.2622,
     "lng": -83.7812,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PMY",
@@ -21023,7 +23358,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -42.7592,
     "lng": -65.1027,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PEM",
@@ -21032,7 +23368,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -12.6136,
     "lng": -69.2286,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PMC",
@@ -21041,7 +23378,8 @@ const AIRPORTS = [
     "country": "Chile",
     "lat": -41.4389,
     "lng": -73.094,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PUE",
@@ -21050,7 +23388,8 @@ const AIRPORTS = [
     "country": "Panama",
     "lat": 8.667,
     "lng": -77.418,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "POP",
@@ -21059,7 +23398,8 @@ const AIRPORTS = [
     "country": "Dominican Republic",
     "lat": 19.7579,
     "lng": -70.57,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PPS",
@@ -21068,7 +23408,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 9.7421,
     "lng": 118.759,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PVR",
@@ -21077,7 +23418,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 20.6801,
     "lng": -105.254,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PUY",
@@ -21086,7 +23428,8 @@ const AIRPORTS = [
     "country": "Croatia",
     "lat": 44.8935,
     "lng": 13.9222,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PUW",
@@ -21095,7 +23438,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 46.7439,
     "lng": -117.11,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PNQ",
@@ -21104,7 +23448,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 18.5821,
     "lng": 73.9197,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PUQ",
@@ -21113,7 +23458,8 @@ const AIRPORTS = [
     "country": "Chile",
     "lat": -53.0026,
     "lng": -70.8546,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PUJ",
@@ -21122,7 +23468,8 @@ const AIRPORTS = [
     "country": "Dominican Republic",
     "lat": 18.5674,
     "lng": -68.3634,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PGD",
@@ -21131,7 +23478,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 26.9202,
     "lng": -81.9905,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PDP",
@@ -21140,7 +23488,8 @@ const AIRPORTS = [
     "country": "Uruguay",
     "lat": -34.8551,
     "lng": -55.0943,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DRK",
@@ -21149,7 +23498,8 @@ const AIRPORTS = [
     "country": "Costa Rica",
     "lat": 8.7189,
     "lng": -83.6417,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PBU",
@@ -21158,7 +23508,8 @@ const AIRPORTS = [
     "country": "Burma",
     "lat": 27.3299,
     "lng": 97.4263,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YPX",
@@ -21167,7 +23518,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 60.0506,
     "lng": -77.2869,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FNJ",
@@ -21176,7 +23528,8 @@ const AIRPORTS = [
     "country": "North Korea",
     "lat": 39.2241,
     "lng": 125.67,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NAQ",
@@ -21185,7 +23538,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 77.4886,
     "lng": -69.3887,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GBB",
@@ -21194,7 +23548,8 @@ const AIRPORTS = [
     "country": "Azerbaijan",
     "lat": 40.8267,
     "lng": 47.7125,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JJU",
@@ -21203,7 +23558,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 60.7157,
     "lng": -46.0299,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JIQ",
@@ -21212,7 +23568,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 29.5133,
     "lng": 108.8311,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TAO",
@@ -21221,7 +23578,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 36.2661,
     "lng": 120.374,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "IQN",
@@ -21230,7 +23588,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 35.7997,
     "lng": 107.603,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SHP",
@@ -21239,7 +23598,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 39.9681,
     "lng": 119.731,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "NDG",
@@ -21248,7 +23608,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 47.2396,
     "lng": 123.918,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JJN",
@@ -21257,7 +23618,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 24.7964,
     "lng": 118.59,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YQC",
@@ -21266,7 +23628,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 61.0464,
     "lng": -69.6178,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YQB",
@@ -21275,7 +23638,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 46.7911,
     "lng": -71.3933,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ZQN",
@@ -21284,7 +23648,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -45.0211,
     "lng": 168.739,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "UEL",
@@ -21293,7 +23658,8 @@ const AIRPORTS = [
     "country": "Mozambique",
     "lat": -17.8555,
     "lng": 36.8691,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "XQP",
@@ -21302,7 +23668,8 @@ const AIRPORTS = [
     "country": "Costa Rica",
     "lat": 9.4432,
     "lng": -84.1298,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "QRO",
@@ -21311,7 +23678,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 20.6173,
     "lng": -100.186,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YQZ",
@@ -21320,7 +23688,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 53.0261,
     "lng": -122.51,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UET",
@@ -21329,7 +23698,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 30.2514,
     "lng": 66.9378,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "UIB",
@@ -21338,7 +23708,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 5.6908,
     "lng": -76.6412,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ULP",
@@ -21347,7 +23718,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -26.6122,
     "lng": 144.253,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UIP",
@@ -21356,7 +23728,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 47.975,
     "lng": -4.1678,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UIN",
@@ -21365,7 +23738,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.9427,
     "lng": -91.1946,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KWN",
@@ -21374,7 +23748,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 59.7551,
     "lng": -161.845,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UIO",
@@ -21383,7 +23758,8 @@ const AIRPORTS = [
     "country": "Ecuador",
     "lat": -0.1292,
     "lng": -78.3575,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YVP",
@@ -21392,7 +23768,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 58.0961,
     "lng": -68.4269,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JUZ",
@@ -21401,7 +23778,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 28.9658,
     "lng": 118.899,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RBA",
@@ -21410,7 +23788,8 @@ const AIRPORTS = [
     "country": "Morocco",
     "lat": 34.0515,
     "lng": -6.7515,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VKG",
@@ -21419,7 +23798,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 9.958,
     "lng": 105.1324,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RAH",
@@ -21428,7 +23808,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 29.6264,
     "lng": 43.4906,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RYK",
@@ -21437,7 +23818,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 28.3839,
     "lng": 70.2796,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RFP",
@@ -21446,7 +23828,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -16.7229,
     "lng": -151.466,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YOP",
@@ -21455,7 +23838,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 58.4914,
     "lng": -119.408,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RPR",
@@ -21464,7 +23848,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 21.1804,
     "lng": 81.7388,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RVV",
@@ -21473,7 +23858,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -23.8852,
     "lng": -147.662,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RJA",
@@ -21482,7 +23868,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 17.1104,
     "lng": 81.8182,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RAJ",
@@ -21491,7 +23878,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 22.3092,
     "lng": 70.7795,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RJH",
@@ -21500,7 +23888,8 @@ const AIRPORTS = [
     "country": "Bangladesh",
     "lat": 24.4372,
     "lng": 88.6165,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RDU",
@@ -21509,7 +23898,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.8776,
     "lng": -78.7875,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "RBV",
@@ -21518,7 +23908,8 @@ const AIRPORTS = [
     "country": "Solomon Islands",
     "lat": -8.1681,
     "lng": 157.643,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RZR",
@@ -21527,7 +23918,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 36.9099,
     "lng": 50.6796,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NTX",
@@ -21536,7 +23928,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": 3.9087,
     "lng": 108.388,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IXR",
@@ -21545,7 +23938,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 23.3143,
     "lng": 85.3217,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RGI",
@@ -21554,7 +23948,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -14.9543,
     "lng": -147.661,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YRT",
@@ -21563,7 +23958,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 62.8114,
     "lng": -92.1158,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "UNN",
@@ -21572,7 +23968,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 9.7776,
     "lng": 98.5855,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RAP",
@@ -21581,7 +23978,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.0453,
     "lng": -103.057,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RAS",
@@ -21590,7 +23988,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 37.3233,
     "lng": 49.6178,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RVT",
@@ -21599,7 +23998,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -33.7972,
     "lng": 120.208,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "REC",
@@ -21608,7 +24008,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -8.1265,
     "lng": -34.9236,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YQF",
@@ -21617,7 +24018,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 52.1822,
     "lng": -113.894,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YRL",
@@ -21626,7 +24028,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 51.0669,
     "lng": -93.7931,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RDN",
@@ -21635,7 +24038,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 5.7653,
     "lng": 103.007,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RDD",
@@ -21644,7 +24048,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.509,
     "lng": -122.293,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RDC",
@@ -21653,7 +24058,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -8.0333,
     "lng": -49.9799,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RDM",
@@ -21662,7 +24068,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.2541,
     "lng": -121.15,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "REG",
@@ -21671,7 +24078,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 38.0712,
     "lng": 15.6516,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YQR",
@@ -21680,7 +24088,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 50.4319,
     "lng": -104.666,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RNL",
@@ -21689,7 +24098,8 @@ const AIRPORTS = [
     "country": "Solomon Islands",
     "lat": -11.5339,
     "lng": 160.063,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RNS",
@@ -21698,7 +24108,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 48.0695,
     "lng": -1.7348,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RNO",
@@ -21707,7 +24118,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.4991,
     "lng": -119.768,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YUT",
@@ -21716,7 +24128,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 66.5214,
     "lng": -86.2247,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RBQ",
@@ -21725,7 +24138,8 @@ const AIRPORTS = [
     "country": "Bolivia",
     "lat": -14.4279,
     "lng": -67.4968,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RES",
@@ -21734,7 +24148,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -27.45,
     "lng": -59.0561,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YRB",
@@ -21743,7 +24158,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 74.7169,
     "lng": -94.9694,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "REU",
@@ -21752,7 +24168,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 41.1474,
     "lng": 1.1672,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RKV",
@@ -21761,7 +24178,8 @@ const AIRPORTS = [
     "country": "Iceland",
     "lat": 64.13,
     "lng": -21.9406,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "REX",
@@ -21770,7 +24188,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 26.0089,
     "lng": -98.2285,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RHI",
@@ -21779,7 +24198,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 45.6312,
     "lng": -89.4675,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RHO",
@@ -21788,7 +24208,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 36.4054,
     "lng": 28.0862,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "RAO",
@@ -21797,7 +24218,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -21.1364,
     "lng": -47.7767,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RIB",
@@ -21806,7 +24228,8 @@ const AIRPORTS = [
     "country": "Bolivia",
     "lat": -11.0,
     "lng": -66.0,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RCB",
@@ -21815,7 +24238,8 @@ const AIRPORTS = [
     "country": "South Africa",
     "lat": -28.741,
     "lng": 32.0921,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RCM",
@@ -21824,7 +24248,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -20.7019,
     "lng": 143.115,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RIC",
@@ -21833,7 +24258,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.5052,
     "lng": -77.3197,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "RIX",
@@ -21842,7 +24268,8 @@ const AIRPORTS = [
     "country": "Latvia",
     "lat": 56.9236,
     "lng": 23.9711,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YRG",
@@ -21851,7 +24278,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 54.1797,
     "lng": -58.4575,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RJK",
@@ -21860,7 +24288,8 @@ const AIRPORTS = [
     "country": "Croatia",
     "lat": 45.2169,
     "lng": 14.5703,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RMT",
@@ -21869,7 +24298,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -22.6373,
     "lng": -152.8059,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RMI",
@@ -21878,7 +24308,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 44.0203,
     "lng": 12.6117,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RBR",
@@ -21887,7 +24318,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -9.8689,
     "lng": -67.8981,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GIG",
@@ -21896,7 +24328,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -22.81,
     "lng": -43.2506,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SDU",
@@ -21905,7 +24338,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -22.9105,
     "lng": -43.1631,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "RGL",
@@ -21914,7 +24348,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -51.6089,
     "lng": -69.3126,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RGA",
@@ -21923,7 +24358,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -53.7777,
     "lng": -67.7494,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RCH",
@@ -21932,7 +24368,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 11.5262,
     "lng": -72.926,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RHD",
@@ -21941,7 +24378,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -27.4966,
     "lng": -64.936,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MDE",
@@ -21950,7 +24388,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 6.1645,
     "lng": -75.4231,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "RVD",
@@ -21959,7 +24398,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -17.8347,
     "lng": -50.9561,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RIW",
@@ -21968,7 +24408,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.0642,
     "lng": -108.46,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RUH",
@@ -21977,7 +24418,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 24.9576,
     "lng": 46.6988,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ROA",
@@ -21986,7 +24428,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.3255,
     "lng": -79.9754,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RTB",
@@ -21995,7 +24438,8 @@ const AIRPORTS = [
     "country": "Honduras",
     "lat": 16.3168,
     "lng": -86.523,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ROC",
@@ -22004,7 +24448,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.1189,
     "lng": -77.6724,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "RST",
@@ -22013,7 +24458,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.9083,
     "lng": -92.5,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RSD",
@@ -22022,7 +24468,8 @@ const AIRPORTS = [
     "country": "Bahamas",
     "lat": 24.8951,
     "lng": -76.1769,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RKS",
@@ -22031,7 +24478,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.5942,
     "lng": -109.065,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RFD",
@@ -22040,7 +24488,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.1954,
     "lng": -89.0972,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ROK",
@@ -22049,7 +24498,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -23.3819,
     "lng": 150.475,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RKD",
@@ -22058,7 +24508,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.0601,
     "lng": -69.0992,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RDZ",
@@ -22067,7 +24518,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 44.4079,
     "lng": 2.4827,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RRG",
@@ -22076,7 +24528,8 @@ const AIRPORTS = [
     "country": "Mauritius",
     "lat": -19.7577,
     "lng": 63.361,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ROI",
@@ -22085,7 +24538,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 16.1168,
     "lng": 103.774,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RMA",
@@ -22094,7 +24548,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -26.545,
     "lng": 148.775,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GES",
@@ -22103,7 +24558,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 6.058,
     "lng": 125.096,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CIA",
@@ -22112,7 +24568,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 41.7994,
     "lng": 12.5949,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "FCO",
@@ -22121,7 +24578,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 41.8003,
     "lng": 12.2389,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "TRS",
@@ -22130,7 +24588,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 45.8275,
     "lng": 13.4722,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ROO",
@@ -22139,7 +24598,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -16.586,
     "lng": -54.7248,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RNN",
@@ -22148,7 +24608,8 @@ const AIRPORTS = [
     "country": "Denmark",
     "lat": 55.0633,
     "lng": 14.7596,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RNB",
@@ -22157,7 +24618,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 56.2667,
     "lng": 15.265,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RRS",
@@ -22166,7 +24628,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 62.5784,
     "lng": 11.3423,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ROS",
@@ -22175,7 +24638,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -32.9036,
     "lng": -60.785,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ROV",
@@ -22184,7 +24648,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 47.4939,
     "lng": 39.9247,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ROW",
@@ -22193,7 +24658,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.3016,
     "lng": -104.531,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ROP",
@@ -22202,7 +24668,8 @@ const AIRPORTS = [
     "country": "Northern Mariana Islands",
     "lat": 14.1743,
     "lng": 145.243,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ROT",
@@ -22211,7 +24678,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -38.1092,
     "lng": 176.317,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RTM",
@@ -22220,7 +24688,8 @@ const AIRPORTS = [
     "country": "Netherlands",
     "lat": 51.9569,
     "lng": 4.4372,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "RTA",
@@ -22229,7 +24698,8 @@ const AIRPORTS = [
     "country": "Fiji",
     "lat": -12.4825,
     "lng": 177.071,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZRJ",
@@ -22238,7 +24708,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 52.9436,
     "lng": -91.3128,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YUY",
@@ -22247,7 +24718,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 48.2061,
     "lng": -78.8356,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RVN",
@@ -22256,7 +24728,8 @@ const AIRPORTS = [
     "country": "Finland",
     "lat": 66.5648,
     "lng": 25.8304,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TTQ",
@@ -22265,7 +24738,8 @@ const AIRPORTS = [
     "country": "Costa Rica",
     "lat": 10.42,
     "lng": -83.6095,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RXS",
@@ -22274,7 +24748,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 11.5977,
     "lng": 122.752,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RBY",
@@ -22283,7 +24758,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 64.7272,
     "lng": -155.47,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NDU",
@@ -22292,7 +24768,8 @@ const AIRPORTS = [
     "country": "Namibia",
     "lat": -17.9565,
     "lng": 19.7194,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RUR",
@@ -22301,7 +24778,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -22.4341,
     "lng": -151.361,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RSH",
@@ -22310,7 +24788,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 61.7789,
     "lng": -161.3195,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RUT",
@@ -22319,7 +24798,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.5294,
     "lng": -72.9496,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RYG",
@@ -22328,7 +24808,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 59.3788,
     "lng": 10.7854,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "RZE",
@@ -22337,7 +24818,8 @@ const AIRPORTS = [
     "country": "Poland",
     "lat": 50.11,
     "lng": 22.019,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RVK",
@@ -22346,7 +24828,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 64.8383,
     "lng": 11.1461,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RET",
@@ -22355,7 +24838,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 67.5278,
     "lng": 12.1033,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ISC",
@@ -22364,7 +24848,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 49.9133,
     "lng": -6.2917,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SCN",
@@ -22373,7 +24858,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 49.2146,
     "lng": 7.1095,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SAB",
@@ -22382,7 +24868,8 @@ const AIRPORTS = [
     "country": "Netherlands Antilles",
     "lat": 17.645,
     "lng": -63.22,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AFZ",
@@ -22391,7 +24878,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 36.1681,
     "lng": 57.5952,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HIN",
@@ -22400,7 +24888,8 @@ const AIRPORTS = [
     "country": "South Korea",
     "lat": 35.0886,
     "lng": 128.0717,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZPB",
@@ -22409,7 +24898,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 53.8911,
     "lng": -92.1964,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YSY",
@@ -22418,7 +24908,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 71.9939,
     "lng": -125.243,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SMF",
@@ -22427,7 +24918,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.6954,
     "lng": -121.591,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "HSG",
@@ -22436,7 +24928,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 33.1497,
     "lng": 130.302,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MBS",
@@ -22445,7 +24938,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.5329,
     "lng": -84.0796,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SPD",
@@ -22454,7 +24948,8 @@ const AIRPORTS = [
     "country": "Bangladesh",
     "lat": 25.7592,
     "lng": 88.9089,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "STC",
@@ -22463,7 +24958,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 45.5466,
     "lng": -94.0599,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SGU",
@@ -22472,7 +24968,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.0364,
     "lng": -113.5103,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SMS",
@@ -22481,7 +24978,8 @@ const AIRPORTS = [
     "country": "Madagascar",
     "lat": -17.0939,
     "lng": 49.8158,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SPN",
@@ -22490,7 +24988,8 @@ const AIRPORTS = [
     "country": "Northern Mariana Islands",
     "lat": 15.119,
     "lng": 145.729,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SNO",
@@ -22499,7 +24998,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 17.1951,
     "lng": 104.119,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SLL",
@@ -22508,7 +25008,8 @@ const AIRPORTS = [
     "country": "Oman",
     "lat": 17.0387,
     "lng": 54.0913,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SLM",
@@ -22517,7 +25018,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 40.9521,
     "lng": -5.502,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SLY",
@@ -22526,7 +25028,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 66.5908,
     "lng": 66.611,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SLN",
@@ -22535,7 +25038,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.791,
     "lng": -97.6522,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SBY",
@@ -22544,7 +25048,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.3405,
     "lng": -75.5103,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YZG",
@@ -22553,7 +25058,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 62.1794,
     "lng": -75.6672,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SLX",
@@ -22562,7 +25068,8 @@ const AIRPORTS = [
     "country": "Turks and Caicos Islands",
     "lat": 21.333,
     "lng": -71.2,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SLC",
@@ -22571,7 +25078,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.7884,
     "lng": -111.978,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SLA",
@@ -22580,7 +25088,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -24.856,
     "lng": -65.4862,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SLW",
@@ -22589,7 +25098,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 25.5495,
     "lng": -100.929,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SSA",
@@ -22598,7 +25108,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -12.9086,
     "lng": -38.3225,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SZG",
@@ -22607,7 +25118,8 @@ const AIRPORTS = [
     "country": "Austria",
     "lat": 47.7933,
     "lng": 13.0043,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "AZS",
@@ -22616,7 +25128,8 @@ const AIRPORTS = [
     "country": "Dominican Republic",
     "lat": 19.267,
     "lng": -69.742,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KUF",
@@ -22625,7 +25138,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 53.5049,
     "lng": 50.1643,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SKD",
@@ -22634,7 +25148,8 @@ const AIRPORTS = [
     "country": "Uzbekistan",
     "lat": 39.7005,
     "lng": 66.9838,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SVB",
@@ -22643,7 +25158,8 @@ const AIRPORTS = [
     "country": "Madagascar",
     "lat": -14.2786,
     "lng": 50.1747,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UAS",
@@ -22652,7 +25168,8 @@ const AIRPORTS = [
     "country": "Kenya",
     "lat": 0.5306,
     "lng": 37.5342,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SMI",
@@ -22661,7 +25178,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 37.69,
     "lng": 26.9117,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ADZ",
@@ -22670,7 +25188,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 12.5836,
     "lng": -81.7112,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SJT",
@@ -22679,7 +25198,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 31.3577,
     "lng": -100.496,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SAT",
@@ -22688,7 +25208,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 29.5337,
     "lng": -98.4698,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SVZ",
@@ -22697,7 +25218,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 7.8408,
     "lng": -72.4397,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BRC",
@@ -22706,7 +25228,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -41.1512,
     "lng": -71.1575,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SCY",
@@ -22715,7 +25238,8 @@ const AIRPORTS = [
     "country": "Ecuador",
     "lat": -0.9102,
     "lng": -89.6174,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SAN",
@@ -22724,7 +25248,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.7336,
     "lng": -117.19,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SFO",
@@ -22733,7 +25258,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.619,
     "lng": -122.375,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "SJC",
@@ -22742,7 +25268,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.3626,
     "lng": -121.929,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SJI",
@@ -22751,7 +25278,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 12.3615,
     "lng": 121.047,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SJO",
@@ -22760,7 +25288,8 @@ const AIRPORTS = [
     "country": "Costa Rica",
     "lat": 9.9939,
     "lng": -84.2088,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SYQ",
@@ -22769,7 +25298,8 @@ const AIRPORTS = [
     "country": "Costa Rica",
     "lat": 9.9571,
     "lng": -84.1398,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SJD",
@@ -22778,7 +25308,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 23.1518,
     "lng": -109.721,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SJE",
@@ -22787,7 +25318,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 2.5797,
     "lng": -72.6394,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SJU",
@@ -22796,7 +25328,8 @@ const AIRPORTS = [
     "country": "Puerto Rico",
     "lat": 18.4394,
     "lng": -66.0018,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "UAQ",
@@ -22805,7 +25338,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -31.5715,
     "lng": -68.4182,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LUQ",
@@ -22814,7 +25348,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -33.2732,
     "lng": -66.3564,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SBP",
@@ -22823,7 +25358,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.2368,
     "lng": -120.642,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SLP",
@@ -22832,7 +25368,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 22.2543,
     "lng": -100.931,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CPC",
@@ -22841,7 +25378,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -40.0754,
     "lng": -71.1373,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SPR",
@@ -22850,7 +25388,8 @@ const AIRPORTS = [
     "country": "Belize",
     "lat": 17.9139,
     "lng": -87.9711,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SAP",
@@ -22859,7 +25398,8 @@ const AIRPORTS = [
     "country": "Honduras",
     "lat": 15.4526,
     "lng": -87.9236,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AFA",
@@ -22868,7 +25408,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -34.5883,
     "lng": -68.4039,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SAL",
@@ -22877,7 +25418,8 @@ const AIRPORTS = [
     "country": "El Salvador",
     "lat": 13.4409,
     "lng": -89.0557,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "EAS",
@@ -22886,7 +25428,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 43.3565,
     "lng": -1.7906,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SOM",
@@ -22895,7 +25438,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 8.9451,
     "lng": -64.1511,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SVI",
@@ -22904,7 +25448,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 2.1522,
     "lng": -74.7663,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SAH",
@@ -22913,7 +25458,8 @@ const AIRPORTS = [
     "country": "Yemen",
     "lat": 15.4763,
     "lng": 44.2197,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SDG",
@@ -22922,7 +25468,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 35.2459,
     "lng": 47.0092,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SDP",
@@ -22931,7 +25478,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 55.315,
     "lng": -160.523,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SDK",
@@ -22940,7 +25488,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 5.9009,
     "lng": 118.059,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SDN",
@@ -22949,7 +25498,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 61.83,
     "lng": 6.1058,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NDY",
@@ -22958,7 +25508,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 59.2503,
     "lng": -2.5767,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TRF",
@@ -22967,7 +25518,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 59.1867,
     "lng": 10.2586,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SSJ",
@@ -22976,7 +25528,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 65.9568,
     "lng": 12.4689,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YZP",
@@ -22985,7 +25538,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 53.2543,
     "lng": -131.814,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZSJ",
@@ -22994,7 +25548,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 53.0642,
     "lng": -93.3444,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SFB",
@@ -23003,7 +25558,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 28.7776,
     "lng": -81.2375,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "EAE",
@@ -23012,7 +25568,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -17.0903,
     "lng": 168.343,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SUG",
@@ -23021,7 +25578,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 9.7558,
     "lng": 125.4809,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YSK",
@@ -23030,7 +25588,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 56.5378,
     "lng": -79.2467,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GNY",
@@ -23039,7 +25598,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 37.4457,
     "lng": 38.8956,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NNB",
@@ -23048,7 +25608,8 @@ const AIRPORTS = [
     "country": "Solomon Islands",
     "lat": -10.848,
     "lng": 162.4541,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SNA",
@@ -23057,7 +25618,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.6757,
     "lng": -117.868,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SNV",
@@ -23066,7 +25628,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 4.555,
     "lng": -61.15,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SBA",
@@ -23075,7 +25638,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 34.4262,
     "lng": -119.84,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SNU",
@@ -23084,7 +25648,8 @@ const AIRPORTS = [
     "country": "Cuba",
     "lat": 22.4922,
     "lng": -79.9436,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SRZ",
@@ -23093,7 +25658,8 @@ const AIRPORTS = [
     "country": "Bolivia",
     "lat": -17.8116,
     "lng": -63.1715,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VVI",
@@ -23102,7 +25668,8 @@ const AIRPORTS = [
     "country": "Bolivia",
     "lat": -17.6448,
     "lng": -63.1354,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SPC",
@@ -23111,7 +25678,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 28.6265,
     "lng": -17.7556,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SCZ",
@@ -23120,7 +25688,8 @@ const AIRPORTS = [
     "country": "Solomon Islands",
     "lat": -10.7203,
     "lng": 165.795,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SAF",
@@ -23129,7 +25698,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 35.6171,
     "lng": -106.089,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SFN",
@@ -23138,7 +25708,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -31.7117,
     "lng": -60.8117,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IRZ",
@@ -23147,7 +25718,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -0.3786,
     "lng": -64.9923,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RIA",
@@ -23156,7 +25728,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -29.7114,
     "lng": -53.6882,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SMX",
@@ -23165,7 +25738,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 34.8989,
     "lng": -120.457,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SMA",
@@ -23174,7 +25748,8 @@ const AIRPORTS = [
     "country": "Portugal",
     "lat": 36.9714,
     "lng": -25.1706,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SMR",
@@ -23183,7 +25758,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 11.1196,
     "lng": -74.2306,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ETR",
@@ -23192,7 +25768,8 @@ const AIRPORTS = [
     "country": "Ecuador",
     "lat": -3.442,
     "lng": -79.997,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RSA",
@@ -23201,7 +25778,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -36.5883,
     "lng": -64.2757,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SRA",
@@ -23210,7 +25788,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -27.9067,
     "lng": -54.5204,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "STS",
@@ -23219,7 +25798,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.509,
     "lng": -122.813,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "STZ",
@@ -23228,7 +25808,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -10.4647,
     "lng": -50.5186,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CMP",
@@ -23237,7 +25818,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -9.32,
     "lng": -50.3285,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SDR",
@@ -23246,7 +25828,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 43.4271,
     "lng": -3.82,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "STM",
@@ -23255,7 +25838,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -2.4247,
     "lng": -54.7858,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SCL",
@@ -23264,7 +25848,8 @@ const AIRPORTS = [
     "country": "Chile",
     "lat": -33.393,
     "lng": -70.7858,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SCQ",
@@ -23273,7 +25858,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 42.8963,
     "lng": -8.4151,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "STI",
@@ -23282,7 +25868,8 @@ const AIRPORTS = [
     "country": "Dominican Republic",
     "lat": 19.4061,
     "lng": -70.6047,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SCU",
@@ -23291,7 +25878,8 @@ const AIRPORTS = [
     "country": "Cuba",
     "lat": 19.9698,
     "lng": -75.8354,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SDE",
@@ -23300,7 +25888,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -27.7656,
     "lng": -64.31,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SON",
@@ -23309,7 +25898,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -15.505,
     "lng": 167.22,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GEL",
@@ -23318,7 +25908,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -28.2817,
     "lng": -54.1691,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SDQ",
@@ -23327,7 +25918,8 @@ const AIRPORTS = [
     "country": "Dominican Republic",
     "lat": 18.4297,
     "lng": -69.6689,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "STD",
@@ -23336,7 +25928,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 7.5654,
     "lng": -72.0351,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SYX",
@@ -23345,7 +25938,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 18.3029,
     "lng": 109.412,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SXO",
@@ -23354,7 +25948,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -11.6324,
     "lng": -50.6896,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SXX",
@@ -23363,7 +25958,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -6.6413,
     "lng": -51.9523,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SFL",
@@ -23372,7 +25968,8 @@ const AIRPORTS = [
     "country": "Cape Verde",
     "lat": 14.885,
     "lng": -24.48,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SJL",
@@ -23381,7 +25978,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -0.1484,
     "lng": -66.9855,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SJZ",
@@ -23390,7 +25988,8 @@ const AIRPORTS = [
     "country": "Portugal",
     "lat": 38.6655,
     "lng": -28.1758,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SJP",
@@ -23399,7 +25998,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -20.8166,
     "lng": -49.4065,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SJK",
@@ -23408,7 +26008,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -23.2292,
     "lng": -45.8615,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SLZ",
@@ -23417,7 +26018,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -2.5854,
     "lng": -44.2341,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SNE",
@@ -23426,7 +26028,8 @@ const AIRPORTS = [
     "country": "Cape Verde",
     "lat": 16.5884,
     "lng": -24.2847,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CGH",
@@ -23435,7 +26038,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -23.6261,
     "lng": -46.6564,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GRU",
@@ -23444,7 +26048,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -23.4356,
     "lng": -46.4731,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "OLC",
@@ -23453,7 +26058,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -3.4679,
     "lng": -68.9204,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TMS",
@@ -23462,7 +26068,8 @@ const AIRPORTS = [
     "country": "Sao Tome and Principe",
     "lat": 0.3782,
     "lng": 6.7122,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VXE",
@@ -23471,7 +26078,8 @@ const AIRPORTS = [
     "country": "Cape Verde",
     "lat": 16.8332,
     "lng": -25.0553,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CTS",
@@ -23480,7 +26088,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 42.7752,
     "lng": 141.692,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SJJ",
@@ -23489,7 +26098,8 @@ const AIRPORTS = [
     "country": "Bosnia and Herzegovina",
     "lat": 43.8246,
     "lng": 18.3315,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SLK",
@@ -23498,7 +26108,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.3853,
     "lng": -74.2062,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SKX",
@@ -23507,7 +26118,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 54.1251,
     "lng": 45.2123,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SRQ",
@@ -23516,7 +26128,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 27.3954,
     "lng": -82.5544,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RTW",
@@ -23525,7 +26138,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 51.565,
     "lng": 46.0467,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RVE",
@@ -23534,7 +26148,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 6.9519,
     "lng": -71.8572,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YZR",
@@ -23543,7 +26158,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 42.9994,
     "lng": -82.3089,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YXE",
@@ -23552,7 +26168,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 52.1708,
     "lng": -106.7,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SUJ",
@@ -23561,7 +26178,8 @@ const AIRPORTS = [
     "country": "Romania",
     "lat": 47.7033,
     "lng": 22.8857,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YAM",
@@ -23570,7 +26188,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 46.485,
     "lng": -84.5094,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CIU",
@@ -23579,7 +26198,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 46.2508,
     "lng": -84.4724,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SXK",
@@ -23588,7 +26208,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -7.9886,
     "lng": 131.306,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VHC",
@@ -23597,7 +26218,8 @@ const AIRPORTS = [
     "country": "Angola",
     "lat": -9.6891,
     "lng": 20.4319,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SAV",
@@ -23606,7 +26228,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.1276,
     "lng": -81.2021,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ZVK",
@@ -23615,7 +26238,8 @@ const AIRPORTS = [
     "country": "Laos",
     "lat": 16.5566,
     "lng": 104.76,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SVL",
@@ -23624,7 +26248,8 @@ const AIRPORTS = [
     "country": "Finland",
     "lat": 61.9431,
     "lng": 28.9451,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SVA",
@@ -23633,7 +26258,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 63.6864,
     "lng": -170.493,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SVU",
@@ -23642,7 +26268,8 @@ const AIRPORTS = [
     "country": "Fiji",
     "lat": -16.8028,
     "lng": 179.341,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "GXF",
@@ -23651,7 +26278,8 @@ const AIRPORTS = [
     "country": "Yemen",
     "lat": 15.9661,
     "lng": 48.7883,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SCM",
@@ -23660,7 +26288,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 61.8453,
     "lng": -165.571,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TAB",
@@ -23669,7 +26298,8 @@ const AIRPORTS = [
     "country": "Trinidad and Tobago",
     "lat": 11.1497,
     "lng": -60.8322,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YKL",
@@ -23678,7 +26308,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 54.8053,
     "lng": -66.8053,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BFF",
@@ -23687,7 +26318,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.874,
     "lng": -103.596,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AVP",
@@ -23696,7 +26328,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.3385,
     "lng": -75.7234,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BFI",
@@ -23705,7 +26338,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 47.53,
     "lng": -122.302,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SEA",
@@ -23714,7 +26348,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 47.449,
     "lng": -122.309,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "EGM",
@@ -23723,7 +26358,8 @@ const AIRPORTS = [
     "country": "Solomon Islands",
     "lat": -8.5789,
     "lng": 157.876,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WLK",
@@ -23732,7 +26368,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 66.6001,
     "lng": -159.986,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SRG",
@@ -23741,7 +26378,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -6.9727,
     "lng": 110.375,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PLX",
@@ -23750,7 +26388,8 @@ const AIRPORTS = [
     "country": "Kazakhstan",
     "lat": 50.3513,
     "lng": 80.2344,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SDJ",
@@ -23759,7 +26398,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 38.1397,
     "lng": 140.917,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GMP",
@@ -23768,7 +26408,8 @@ const AIRPORTS = [
     "country": "South Korea",
     "lat": 37.5583,
     "lng": 126.791,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ICN",
@@ -23777,7 +26418,8 @@ const AIRPORTS = [
     "country": "South Korea",
     "lat": 37.4691,
     "lng": 126.451,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "YZV",
@@ -23786,7 +26428,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 50.2233,
     "lng": -66.2656,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "QSF",
@@ -23795,7 +26438,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 36.1781,
     "lng": 5.3245,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "UKS",
@@ -23804,7 +26448,8 @@ const AIRPORTS = [
     "country": "Ukraine",
     "lat": 44.689,
     "lng": 33.571,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SVQ",
@@ -23813,7 +26458,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 37.418,
     "lng": -5.8931,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SFA",
@@ -23822,7 +26468,8 @@ const AIRPORTS = [
     "country": "Tunisia",
     "lat": 34.718,
     "lng": 10.691,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SHX",
@@ -23831,7 +26478,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 62.6923,
     "lng": -159.569,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EKS",
@@ -23840,7 +26488,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 49.1903,
     "lng": 142.083,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SKK",
@@ -23849,7 +26498,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 64.3711,
     "lng": -161.224,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PVG",
@@ -23858,7 +26508,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 31.1434,
     "lng": 121.805,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "SHA",
@@ -23867,7 +26518,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 31.1979,
     "lng": 121.336,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DIG",
@@ -23876,7 +26528,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 27.7936,
     "lng": 99.6772,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SNN",
@@ -23885,7 +26538,8 @@ const AIRPORTS = [
     "country": "Ireland",
     "lat": 52.702,
     "lng": -8.9248,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SWA",
@@ -23894,7 +26548,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 23.552,
     "lng": 116.5033,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SHJ",
@@ -23903,7 +26558,8 @@ const AIRPORTS = [
     "country": "United Arab Emirates",
     "lat": 25.3286,
     "lng": 55.5172,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SSH",
@@ -23912,7 +26568,8 @@ const AIRPORTS = [
     "country": "Egypt",
     "lat": 27.9773,
     "lng": 34.395,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SHW",
@@ -23921,7 +26578,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 17.4669,
     "lng": 47.1214,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SHE",
@@ -23930,7 +26588,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 41.6398,
     "lng": 123.483,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SZX",
@@ -23939,7 +26598,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 22.6393,
     "lng": 113.811,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "SHR",
@@ -23948,7 +26608,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.7692,
     "lng": -106.98,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SJW",
@@ -23957,7 +26618,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 38.2807,
     "lng": 114.697,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SHL",
@@ -23966,7 +26628,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 25.7036,
     "lng": 91.9787,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NGQ",
@@ -23975,7 +26638,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 32.1,
     "lng": 80.0531,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SYZ",
@@ -23984,7 +26648,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 29.5392,
     "lng": 52.5898,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SHH",
@@ -23993,7 +26658,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 66.2496,
     "lng": -166.0891,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SYO",
@@ -24002,7 +26668,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 38.8122,
     "lng": 139.787,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SOW",
@@ -24011,7 +26678,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 34.2655,
     "lng": -110.006,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SHV",
@@ -24020,7 +26688,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.4466,
     "lng": -93.8256,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SHG",
@@ -24029,7 +26698,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 66.8881,
     "lng": -157.162,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SKT",
@@ -24038,7 +26708,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 32.5356,
     "lng": 74.3639,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "IAO",
@@ -24047,7 +26718,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 9.8591,
     "lng": 126.014,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SBZ",
@@ -24056,7 +26728,8 @@ const AIRPORTS = [
     "country": "Romania",
     "lat": 45.7856,
     "lng": 24.0913,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SBW",
@@ -24065,7 +26738,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 2.2616,
     "lng": 111.985,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SDY",
@@ -24074,7 +26748,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 47.7069,
     "lng": -104.193,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "REP",
@@ -24083,7 +26758,8 @@ const AIRPORTS = [
     "country": "Cambodia",
     "lat": 13.4107,
     "lng": 103.813,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GIU",
@@ -24092,7 +26768,8 @@ const AIRPORTS = [
     "country": "Sri Lanka",
     "lat": 7.9567,
     "lng": 80.7285,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KOS",
@@ -24101,7 +26778,8 @@ const AIRPORTS = [
     "country": "Cambodia",
     "lat": 10.5797,
     "lng": 103.637,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IXS",
@@ -24110,7 +26788,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 24.9129,
     "lng": 92.9787,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SYM",
@@ -24119,7 +26798,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 22.7933,
     "lng": 100.959,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SIP",
@@ -24128,7 +26808,8 @@ const AIRPORTS = [
     "country": "Ukraine",
     "lat": 45.0522,
     "lng": 33.9751,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SIN",
@@ -24137,7 +26818,8 @@ const AIRPORTS = [
     "country": "Singapore",
     "lat": 1.3502,
     "lng": 103.994,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "NOP",
@@ -24146,7 +26828,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 42.0158,
     "lng": 35.0664,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OPS",
@@ -24155,7 +26838,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -11.885,
     "lng": -55.5861,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SUX",
@@ -24164,7 +26848,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.4026,
     "lng": -96.3844,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FSD",
@@ -24173,7 +26858,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.582,
     "lng": -96.7419,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YXL",
@@ -24182,7 +26868,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 50.1139,
     "lng": -91.9053,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "XSB",
@@ -24191,7 +26878,8 @@ const AIRPORTS = [
     "country": "United Arab Emirates",
     "lat": 24.2836,
     "lng": 52.5803,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SXI",
@@ -24200,7 +26888,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 25.9089,
     "lng": 54.5394,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SRX",
@@ -24209,7 +26898,8 @@ const AIRPORTS = [
     "country": "Libya",
     "lat": 31.0635,
     "lng": 16.595,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JHS",
@@ -24218,7 +26908,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 66.9513,
     "lng": -53.7293,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JSH",
@@ -24227,7 +26918,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 35.2161,
     "lng": 26.1013,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SIT",
@@ -24236,7 +26928,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 57.0471,
     "lng": -135.362,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AKY",
@@ -24245,7 +26938,8 @@ const AIRPORTS = [
     "country": "Burma",
     "lat": 20.1327,
     "lng": 92.8726,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VAS",
@@ -24254,7 +26948,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 39.8138,
     "lng": 36.9035,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SGY",
@@ -24263,7 +26958,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 59.4601,
     "lng": -135.316,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KDU",
@@ -24272,7 +26968,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 35.3355,
     "lng": 75.536,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SFT",
@@ -24281,7 +26978,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 64.6248,
     "lng": 21.0769,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JSI",
@@ -24290,7 +26988,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 39.1771,
     "lng": 23.5037,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SKE",
@@ -24299,7 +26998,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 59.185,
     "lng": 9.5669,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SKU",
@@ -24308,7 +27008,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 38.9676,
     "lng": 24.4872,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SKP",
@@ -24317,7 +27018,8 @@ const AIRPORTS = [
     "country": "Macedonia",
     "lat": 41.9616,
     "lng": 21.6214,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SLQ",
@@ -24326,7 +27028,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 61.7005,
     "lng": -157.166,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YYD",
@@ -24335,7 +27038,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 54.8247,
     "lng": -127.183,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AER",
@@ -24344,7 +27048,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 43.4499,
     "lng": 39.9566,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SCT",
@@ -24353,7 +27058,8 @@ const AIRPORTS = [
     "country": "Yemen",
     "lat": 12.6307,
     "lng": 53.9058,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SGD",
@@ -24362,7 +27068,8 @@ const AIRPORTS = [
     "country": "Denmark",
     "lat": 54.9644,
     "lng": 9.7917,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SOF",
@@ -24371,7 +27078,8 @@ const AIRPORTS = [
     "country": "Bulgaria",
     "lat": 42.6967,
     "lng": 23.4114,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SOG",
@@ -24380,7 +27088,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 61.1561,
     "lng": 7.1378,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HMB",
@@ -24389,7 +27098,8 @@ const AIRPORTS = [
     "country": "Egypt",
     "lat": 26.3428,
     "lng": 31.7428,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YNY",
@@ -24398,7 +27108,8 @@ const AIRPORTS = [
     "country": "South Korea",
     "lat": 38.0613,
     "lng": 128.669,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SKO",
@@ -24407,7 +27118,8 @@ const AIRPORTS = [
     "country": "Nigeria",
     "lat": 12.9163,
     "lng": 5.2072,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SLH",
@@ -24416,7 +27128,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -13.8517,
     "lng": 167.537,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SOC",
@@ -24425,7 +27138,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -7.5161,
     "lng": 110.757,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CSH",
@@ -24434,7 +27148,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 65.03,
     "lng": 35.7333,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SFJ",
@@ -24443,7 +27158,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 67.0122,
     "lng": -50.7116,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SOJ",
@@ -24452,7 +27168,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 69.7868,
     "lng": 20.9594,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SOQ",
@@ -24461,7 +27178,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -0.894,
     "lng": 131.287,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SBN",
@@ -24470,7 +27188,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.7087,
     "lng": -86.3173,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "XSC",
@@ -24479,7 +27198,8 @@ const AIRPORTS = [
     "country": "Turks and Caicos Islands",
     "lat": 21.5157,
     "lng": -71.5285,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WSN",
@@ -24488,7 +27208,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 58.7034,
     "lng": -157.008,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SOU",
@@ -24497,7 +27218,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 50.9503,
     "lng": -1.3568,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SEN",
@@ -24506,7 +27228,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 51.5714,
     "lng": 0.6956,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "OVS",
@@ -24515,7 +27238,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 61.3266,
     "lng": 63.6019,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SZA",
@@ -24524,7 +27248,8 @@ const AIRPORTS = [
     "country": "Angola",
     "lat": -6.1411,
     "lng": 12.3718,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VIJ",
@@ -24533,7 +27258,8 @@ const AIRPORTS = [
     "country": "British Virgin Islands",
     "lat": 18.4464,
     "lng": -64.4275,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YYH",
@@ -24542,7 +27268,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 69.5467,
     "lng": -93.5767,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SPU",
@@ -24551,7 +27278,8 @@ const AIRPORTS = [
     "country": "Croatia",
     "lat": 43.5389,
     "lng": 16.298,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GEG",
@@ -24560,7 +27288,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 47.6199,
     "lng": -117.534,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "AXP",
@@ -24569,7 +27298,8 @@ const AIRPORTS = [
     "country": "Bahamas",
     "lat": 22.4418,
     "lng": -73.9709,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SGF",
@@ -24578,7 +27308,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.2457,
     "lng": -93.3886,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SPI",
@@ -24587,7 +27318,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.8441,
     "lng": -89.6779,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SXR",
@@ -24596,7 +27328,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 33.9871,
     "lng": 74.7742,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SGO",
@@ -24605,7 +27338,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -28.0497,
     "lng": 148.595,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KSM",
@@ -24614,7 +27348,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 62.0605,
     "lng": -163.302,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YIF",
@@ -24623,7 +27358,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 51.2117,
     "lng": -58.6583,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EBU",
@@ -24632,7 +27368,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 45.5406,
     "lng": 4.2964,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YAY",
@@ -24641,7 +27378,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 51.3919,
     "lng": -56.0831,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UST",
@@ -24650,7 +27388,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 29.9592,
     "lng": -81.3398,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "STX",
@@ -24659,7 +27398,8 @@ const AIRPORTS = [
     "country": "Virgin Islands",
     "lat": 17.7019,
     "lng": -64.7986,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YSJ",
@@ -24668,7 +27408,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 45.3161,
     "lng": -65.8903,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YYT",
@@ -24677,7 +27418,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 47.6186,
     "lng": -52.7519,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "STL",
@@ -24686,7 +27428,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.7487,
     "lng": -90.37,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SFG",
@@ -24695,7 +27438,8 @@ const AIRPORTS = [
     "country": "Guadeloupe",
     "lat": 18.0999,
     "lng": -63.0472,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SMK",
@@ -24704,7 +27448,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 63.4901,
     "lng": -162.11,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SNP",
@@ -24713,7 +27458,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 57.1673,
     "lng": -170.22,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LED",
@@ -24722,7 +27468,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 59.8003,
     "lng": 30.2625,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PIE",
@@ -24731,7 +27478,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 27.9102,
     "lng": -82.6874,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "STT",
@@ -24740,7 +27488,8 @@ const AIRPORTS = [
     "country": "Virgin Islands",
     "lat": 18.3373,
     "lng": -64.9734,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "RUN",
@@ -24749,7 +27498,8 @@ const AIRPORTS = [
     "country": "Reunion",
     "lat": -20.8871,
     "lng": 55.5103,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FSP",
@@ -24758,7 +27508,8 @@ const AIRPORTS = [
     "country": "Saint Pierre and Miquelon",
     "lat": 46.7629,
     "lng": -56.1731,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZSE",
@@ -24767,7 +27518,8 @@ const AIRPORTS = [
     "country": "Reunion",
     "lat": -21.3209,
     "lng": 55.425,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SCE",
@@ -24776,7 +27528,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.8493,
     "lng": -77.8487,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SVG",
@@ -24785,7 +27538,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 58.8767,
     "lng": 5.6378,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "STW",
@@ -24794,7 +27548,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 45.1092,
     "lng": 42.1128,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SML",
@@ -24803,7 +27558,8 @@ const AIRPORTS = [
     "country": "Bahamas",
     "lat": 23.5823,
     "lng": -75.2686,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YJT",
@@ -24812,7 +27568,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 48.5442,
     "lng": -58.55,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ARN",
@@ -24821,7 +27578,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 59.6519,
     "lng": 17.9186,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "BMA",
@@ -24830,7 +27588,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 59.3544,
     "lng": 17.9417,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "NYO",
@@ -24839,7 +27598,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 58.7886,
     "lng": 16.9122,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SCK",
@@ -24848,7 +27608,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.8942,
     "lng": -121.238,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SKN",
@@ -24857,7 +27618,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 68.5788,
     "lng": 15.0334,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SRP",
@@ -24866,7 +27628,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 59.7919,
     "lng": 5.3408,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SYY",
@@ -24875,7 +27638,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 58.2156,
     "lng": -6.3311,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SXB",
@@ -24884,7 +27648,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 48.5383,
     "lng": 7.6282,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SOY",
@@ -24893,7 +27658,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 59.1553,
     "lng": -2.6414,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "STR",
@@ -24902,7 +27668,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 48.6899,
     "lng": 9.222,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "VAO",
@@ -24911,7 +27678,8 @@ const AIRPORTS = [
     "country": "Solomon Islands",
     "lat": -7.5856,
     "lng": 158.731,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SRE",
@@ -24920,7 +27688,8 @@ const AIRPORTS = [
     "country": "Bolivia",
     "lat": -19.0071,
     "lng": -65.2887,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YSB",
@@ -24929,7 +27698,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 46.625,
     "lng": -80.7989,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "THS",
@@ -24938,7 +27708,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 17.238,
     "lng": 99.8182,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SKZ",
@@ -24947,7 +27718,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 27.722,
     "lng": 68.7917,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ISU",
@@ -24956,7 +27728,8 @@ const AIRPORTS = [
     "country": "Iraq",
     "lat": 35.5617,
     "lng": 45.3167,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LSI",
@@ -24965,7 +27738,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 59.8789,
     "lng": -1.2956,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SUR",
@@ -24974,7 +27748,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 52.7086,
     "lng": -88.5419,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SDL",
@@ -24983,7 +27758,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 62.5281,
     "lng": 17.4439,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NYI",
@@ -24992,7 +27768,8 @@ const AIRPORTS = [
     "country": "Ghana",
     "lat": 7.3618,
     "lng": -2.3288,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SUB",
@@ -25001,7 +27778,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -7.3798,
     "lng": 112.787,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "STV",
@@ -25010,7 +27788,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 21.1141,
     "lng": 72.7418,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "URT",
@@ -25019,7 +27798,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 9.1326,
     "lng": 99.1356,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SGC",
@@ -25028,7 +27808,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 61.3437,
     "lng": 73.4018,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LYR",
@@ -25037,7 +27818,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 78.2461,
     "lng": 15.4656,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EVG",
@@ -25046,7 +27828,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 62.0478,
     "lng": 14.4229,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SVJ",
@@ -25055,7 +27838,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 68.2433,
     "lng": 14.6692,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SYD",
@@ -25064,7 +27848,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -33.9461,
     "lng": 151.177,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "YQY",
@@ -25073,7 +27858,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 46.1614,
     "lng": -60.0478,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SCW",
@@ -25082,7 +27868,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 61.647,
     "lng": 50.8451,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ZYL",
@@ -25091,7 +27878,8 @@ const AIRPORTS = [
     "country": "Bangladesh",
     "lat": 24.9632,
     "lng": 91.8668,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SYR",
@@ -25100,7 +27888,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.1112,
     "lng": -76.1063,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "JSY",
@@ -25109,7 +27898,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 37.4228,
     "lng": 24.9509,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SZZ",
@@ -25118,7 +27908,8 @@ const AIRPORTS = [
     "country": "Poland",
     "lat": 53.5847,
     "lng": 14.9022,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TBT",
@@ -25127,7 +27918,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -4.2557,
     "lng": -69.9358,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TBZ",
@@ -25136,7 +27928,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 38.1339,
     "lng": 46.235,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TBG",
@@ -25145,7 +27938,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -5.2786,
     "lng": 141.226,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TUU",
@@ -25154,7 +27948,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 28.3654,
     "lng": 36.6189,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TCG",
@@ -25163,7 +27958,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 46.6725,
     "lng": 83.3408,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "THL",
@@ -25172,7 +27968,8 @@ const AIRPORTS = [
     "country": "Burma",
     "lat": 20.4838,
     "lng": 99.9354,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TAC",
@@ -25181,7 +27978,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 11.228,
     "lng": 125.0278,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TCQ",
@@ -25190,7 +27988,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -18.0533,
     "lng": -70.2758,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TAE",
@@ -25199,7 +27998,8 @@ const AIRPORTS = [
     "country": "South Korea",
     "lat": 35.8969,
     "lng": 128.6553,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TGK",
@@ -25208,7 +28008,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 47.1983,
     "lng": 38.8492,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TAG",
@@ -25217,7 +28018,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 9.6654,
     "lng": 123.8535,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RMQ",
@@ -25226,7 +28028,8 @@ const AIRPORTS = [
     "country": "Taiwan",
     "lat": 24.2647,
     "lng": 120.621,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TIF",
@@ -25235,7 +28038,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 21.483,
     "lng": 40.5434,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TNN",
@@ -25244,7 +28048,8 @@ const AIRPORTS = [
     "country": "Taiwan",
     "lat": 22.9504,
     "lng": 120.206,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TPE",
@@ -25253,7 +28058,8 @@ const AIRPORTS = [
     "country": "Taiwan",
     "lat": 25.0777,
     "lng": 121.233,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "TSA",
@@ -25262,7 +28068,8 @@ const AIRPORTS = [
     "country": "Taiwan",
     "lat": 25.0694,
     "lng": 121.552,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TYN",
@@ -25271,7 +28078,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 37.7469,
     "lng": 112.628,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TAI",
@@ -25280,7 +28088,8 @@ const AIRPORTS = [
     "country": "Yemen",
     "lat": 13.686,
     "lng": 44.1391,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "MAQ",
@@ -25289,7 +28098,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 16.6999,
     "lng": 98.5451,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TAK",
@@ -25298,7 +28108,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 34.2142,
     "lng": 134.016,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TKP",
@@ -25307,7 +28118,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -14.7095,
     "lng": -145.246,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TKX",
@@ -25316,7 +28128,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -14.4558,
     "lng": -145.025,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TKD",
@@ -25325,7 +28138,8 @@ const AIRPORTS = [
     "country": "Ghana",
     "lat": 4.8961,
     "lng": -1.7748,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TLH",
@@ -25334,7 +28148,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 30.3965,
     "lng": -84.3503,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TLL",
@@ -25343,7 +28158,8 @@ const AIRPORTS = [
     "country": "Estonia",
     "lat": 59.4133,
     "lng": 24.8328,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TML",
@@ -25352,7 +28168,8 @@ const AIRPORTS = [
     "country": "Ghana",
     "lat": 9.5572,
     "lng": -0.8632,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TMR",
@@ -25361,7 +28178,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 22.8115,
     "lng": 5.4511,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TBW",
@@ -25370,7 +28188,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 52.8061,
     "lng": 41.4828,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TME",
@@ -25379,7 +28198,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 6.4511,
     "lng": -71.7603,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TPA",
@@ -25388,7 +28208,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 27.9755,
     "lng": -82.5332,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TMP",
@@ -25397,7 +28218,8 @@ const AIRPORTS = [
     "country": "Finland",
     "lat": 61.4141,
     "lng": 23.6044,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TAM",
@@ -25406,7 +28228,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 22.2964,
     "lng": -97.8659,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TMW",
@@ -25415,7 +28238,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -31.0839,
     "lng": 150.847,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TTA",
@@ -25424,7 +28248,8 @@ const AIRPORTS = [
     "country": "Morocco",
     "lat": 28.4482,
     "lng": -11.1613,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TNG",
@@ -25433,7 +28258,8 @@ const AIRPORTS = [
     "country": "Morocco",
     "lat": 35.7269,
     "lng": -5.9169,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TJQ",
@@ -25442,7 +28268,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -2.7457,
     "lng": 107.755,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TNJ",
@@ -25451,7 +28278,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": 0.9227,
     "lng": 104.532,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BEJ",
@@ -25460,7 +28288,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": 2.1555,
     "lng": 117.432,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TAH",
@@ -25469,7 +28298,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -19.4551,
     "lng": 169.224,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TAP",
@@ -25478,7 +28308,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 14.7943,
     "lng": -92.37,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TRK",
@@ -25487,7 +28318,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": 3.3267,
     "lng": 117.5694,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TPP",
@@ -25496,7 +28328,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -6.5087,
     "lng": -76.3732,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TRW",
@@ -25505,7 +28338,8 @@ const AIRPORTS = [
     "country": "Kiribati",
     "lat": 1.3816,
     "lng": 173.147,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LDE",
@@ -25514,7 +28348,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 43.1787,
     "lng": -0.0064,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TRO",
@@ -25523,7 +28358,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -31.8886,
     "lng": 152.514,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TIZ",
@@ -25532,7 +28368,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -5.845,
     "lng": 142.948,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TJA",
@@ -25541,7 +28378,8 @@ const AIRPORTS = [
     "country": "Bolivia",
     "lat": -21.5557,
     "lng": -64.7013,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TQL",
@@ -25550,7 +28388,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 64.9308,
     "lng": 77.8181,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TAY",
@@ -25559,7 +28398,8 @@ const AIRPORTS = [
     "country": "Estonia",
     "lat": 58.3075,
     "lng": 26.6904,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TAS",
@@ -25568,7 +28408,8 @@ const AIRPORTS = [
     "country": "Uzbekistan",
     "lat": 41.2579,
     "lng": 69.2812,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YTQ",
@@ -25577,7 +28418,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 58.6678,
     "lng": -69.9558,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TLJ",
@@ -25586,7 +28428,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 62.8944,
     "lng": -155.977,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TUO",
@@ -25595,7 +28438,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -38.7397,
     "lng": 176.084,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TRG",
@@ -25604,7 +28448,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -37.6719,
     "lng": 176.196,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TWU",
@@ -25613,7 +28458,8 @@ const AIRPORTS = [
     "country": "Malaysia",
     "lat": 4.3202,
     "lng": 118.128,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TBS",
@@ -25622,7 +28468,8 @@ const AIRPORTS = [
     "country": "Georgia",
     "lat": 41.6692,
     "lng": 44.9547,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TEE",
@@ -25631,7 +28478,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 35.4316,
     "lng": 8.1207,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "MME",
@@ -25640,7 +28488,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 54.5092,
     "lng": -1.4294,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TFF",
@@ -25649,7 +28498,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -3.3829,
     "lng": -64.7241,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TGU",
@@ -25658,7 +28508,8 @@ const AIRPORTS = [
     "country": "Honduras",
     "lat": 14.0609,
     "lng": -87.2172,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "THR",
@@ -25667,7 +28518,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 35.6892,
     "lng": 51.3134,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "IKA",
@@ -25676,7 +28528,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 35.4161,
     "lng": 51.1522,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "SDV",
@@ -25685,7 +28538,8 @@ const AIRPORTS = [
     "country": "Israel",
     "lat": 32.1147,
     "lng": 34.7822,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TLV",
@@ -25694,7 +28548,8 @@ const AIRPORTS = [
     "country": "Israel",
     "lat": 32.0114,
     "lng": 34.8867,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TLA",
@@ -25703,7 +28558,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 65.2404,
     "lng": -166.339,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZCO",
@@ -25712,7 +28568,8 @@ const AIRPORTS = [
     "country": "Chile",
     "lat": -38.9259,
     "lng": -72.6515,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TNW",
@@ -25721,7 +28578,8 @@ const AIRPORTS = [
     "country": "Ecuador",
     "lat": -1.0597,
     "lng": -77.5833,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TFN",
@@ -25730,7 +28588,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 28.4827,
     "lng": -16.3415,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TFS",
@@ -25739,7 +28598,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 28.0445,
     "lng": -16.5725,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TCZ",
@@ -25748,7 +28608,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 24.9381,
     "lng": 98.4858,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TPQ",
@@ -25757,7 +28618,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 21.4195,
     "lng": -104.843,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "THE",
@@ -25766,7 +28628,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -5.0599,
     "lng": -42.8235,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TMJ",
@@ -25775,7 +28638,8 @@ const AIRPORTS = [
     "country": "Uzbekistan",
     "lat": 37.2867,
     "lng": 67.31,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TTE",
@@ -25784,7 +28648,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": 0.8314,
     "lng": 127.381,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YXT",
@@ -25793,7 +28658,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 54.4685,
     "lng": -128.576,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TET",
@@ -25802,7 +28668,8 @@ const AIRPORTS = [
     "country": "Mozambique",
     "lat": -16.1048,
     "lng": 33.6402,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TEB",
@@ -25811,7 +28678,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.8501,
     "lng": -74.0608,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TTU",
@@ -25820,7 +28688,8 @@ const AIRPORTS = [
     "country": "Morocco",
     "lat": 35.5943,
     "lng": -5.32,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TXK",
@@ -25829,7 +28698,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.4537,
     "lng": -93.991,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "SNW",
@@ -25838,7 +28708,8 @@ const AIRPORTS = [
     "country": "Burma",
     "lat": 18.4607,
     "lng": 94.3001,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "XTG",
@@ -25847,7 +28718,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -27.9864,
     "lng": 143.811,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YQD",
@@ -25856,7 +28728,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 53.9714,
     "lng": -101.091,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AXA",
@@ -25865,7 +28738,8 @@ const AIRPORTS = [
     "country": "Anguilla",
     "lat": 18.2048,
     "lng": -63.0551,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SKG",
@@ -25874,7 +28748,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 40.5197,
     "lng": 22.9709,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TVF",
@@ -25883,7 +28758,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 48.0657,
     "lng": -96.185,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PBH",
@@ -25892,7 +28768,8 @@ const AIRPORTS = [
     "country": "Bhutan",
     "lat": 27.4032,
     "lng": 89.4246,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JTR",
@@ -25901,7 +28778,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 36.3992,
     "lng": 25.4793,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YTH",
@@ -25910,7 +28788,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 55.8011,
     "lng": -97.8642,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "THU",
@@ -25919,7 +28798,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 76.5312,
     "lng": -68.7032,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YQT",
@@ -25928,7 +28808,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 48.3719,
     "lng": -89.3239,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TSN",
@@ -25937,7 +28818,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 39.1244,
     "lng": 117.346,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TID",
@@ -25946,7 +28828,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 35.3411,
     "lng": 1.4632,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TGJ",
@@ -25955,7 +28838,8 @@ const AIRPORTS = [
     "country": "New Caledonia",
     "lat": -21.0961,
     "lng": 167.804,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TIJ",
@@ -25964,7 +28848,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 32.5411,
     "lng": -116.97,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TIH",
@@ -25973,7 +28858,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -15.1196,
     "lng": -148.231,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IKS",
@@ -25982,7 +28868,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 71.6977,
     "lng": 128.903,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HRM",
@@ -25991,7 +28878,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 32.9304,
     "lng": 3.3115,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TIU",
@@ -26000,7 +28888,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -44.3028,
     "lng": 171.225,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TIM",
@@ -26009,7 +28898,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -4.5283,
     "lng": 136.887,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TSR",
@@ -26018,7 +28908,8 @@ const AIRPORTS = [
     "country": "Romania",
     "lat": 45.8099,
     "lng": 21.3379,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YTS",
@@ -26027,7 +28918,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 48.5697,
     "lng": -81.3767,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TNC",
@@ -26036,7 +28928,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 65.5631,
     "lng": -167.922,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TGI",
@@ -26045,7 +28938,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -9.133,
     "lng": -75.95,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TIA",
@@ -26054,7 +28948,8 @@ const AIRPORTS = [
     "country": "Albania",
     "lat": 41.4147,
     "lng": 19.7206,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TRE",
@@ -26063,7 +28958,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 56.4992,
     "lng": -6.8692,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TGM",
@@ -26072,7 +28968,8 @@ const AIRPORTS = [
     "country": "Romania",
     "lat": 46.4677,
     "lng": 24.4125,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TRZ",
@@ -26081,7 +28978,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 10.7654,
     "lng": 78.7097,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TIR",
@@ -26090,7 +28988,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 13.6325,
     "lng": 79.5433,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TIV",
@@ -26099,7 +28998,8 @@ const AIRPORTS = [
     "country": "Montenegro",
     "lat": 42.4047,
     "lng": 18.7233,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TLM",
@@ -26108,7 +29008,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 35.0167,
     "lng": -1.45,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TMM",
@@ -26117,7 +29018,8 @@ const AIRPORTS = [
     "country": "Madagascar",
     "lat": -18.1095,
     "lng": 49.3925,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TOB",
@@ -26126,7 +29028,8 @@ const AIRPORTS = [
     "country": "Libya",
     "lat": 31.861,
     "lng": 23.907,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TOG",
@@ -26135,7 +29038,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 59.0528,
     "lng": -160.397,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OOK",
@@ -26144,7 +29048,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 60.5414,
     "lng": -165.087,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "RAB",
@@ -26153,7 +29058,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -4.3405,
     "lng": 152.38,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TKS",
@@ -26162,7 +29068,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 34.1328,
     "lng": 134.607,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HND",
@@ -26171,7 +29078,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 35.5523,
     "lng": 139.78,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "NRT",
@@ -26180,7 +29088,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 35.7647,
     "lng": 140.386,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "FTU",
@@ -26189,7 +29098,8 @@ const AIRPORTS = [
     "country": "Madagascar",
     "lat": -25.0381,
     "lng": 46.9561,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TOL",
@@ -26198,7 +29108,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.5868,
     "lng": -83.8078,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TLE",
@@ -26207,7 +29118,8 @@ const AIRPORTS = [
     "country": "Madagascar",
     "lat": -23.3834,
     "lng": 43.7285,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TLC",
@@ -26216,7 +29128,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 19.3371,
     "lng": -99.566,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TOF",
@@ -26225,7 +29138,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 56.3803,
     "lng": 85.2083,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TBU",
@@ -26234,7 +29148,8 @@ const AIRPORTS = [
     "country": "Tonga",
     "lat": -21.2412,
     "lng": -175.15,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TGO",
@@ -26243,7 +29158,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 43.5567,
     "lng": 122.2,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TGH",
@@ -26252,7 +29168,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -16.8911,
     "lng": 168.551,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TEN",
@@ -26261,7 +29178,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 27.8833,
     "lng": 109.3089,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TWB",
@@ -26270,7 +29188,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -27.5428,
     "lng": 151.916,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "FOE",
@@ -26279,7 +29198,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.9509,
     "lng": -95.6636,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "KCO",
@@ -26288,7 +29208,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 40.735,
     "lng": 30.0833,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TRN",
@@ -26297,7 +29218,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 45.2008,
     "lng": 7.6496,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YTZ",
@@ -26306,7 +29228,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 43.6275,
     "lng": -79.3962,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YYZ",
@@ -26315,7 +29238,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 43.6772,
     "lng": -79.6306,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "TRC",
@@ -26324,7 +29248,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 25.5683,
     "lng": -103.411,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TYF",
@@ -26333,7 +29258,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 60.1576,
     "lng": 12.9913,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EIS",
@@ -26342,7 +29268,8 @@ const AIRPORTS = [
     "country": "British Virgin Islands",
     "lat": 18.4448,
     "lng": -64.543,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "GMR",
@@ -26351,7 +29278,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -23.0799,
     "lng": -134.89,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TTJ",
@@ -26360,7 +29288,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 35.5301,
     "lng": 134.167,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TGR",
@@ -26369,7 +29298,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 33.0678,
     "lng": 6.0887,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TOU",
@@ -26378,7 +29308,8 @@ const AIRPORTS = [
     "country": "New Caledonia",
     "lat": -20.79,
     "lng": 165.259,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TLS",
@@ -26387,7 +29318,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 43.6291,
     "lng": 1.3638,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TUF",
@@ -26396,7 +29328,8 @@ const AIRPORTS = [
     "country": "France",
     "lat": 47.4322,
     "lng": 0.7276,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TSV",
@@ -26405,7 +29338,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -19.2525,
     "lng": 146.765,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TOY",
@@ -26414,7 +29348,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 36.6483,
     "lng": 137.188,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TOE",
@@ -26423,7 +29358,8 @@ const AIRPORTS = [
     "country": "Tunisia",
     "lat": 33.9397,
     "lng": 8.1106,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TZX",
@@ -26432,7 +29368,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 40.9951,
     "lng": 39.7897,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YZZ",
@@ -26441,7 +29378,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.0556,
     "lng": -117.609,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TST",
@@ -26450,7 +29388,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 7.5087,
     "lng": 99.6166,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TPS",
@@ -26459,7 +29398,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 37.9114,
     "lng": 12.488,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TDX",
@@ -26468,7 +29408,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 12.2746,
     "lng": 102.319,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TVC",
@@ -26477,7 +29418,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.7414,
     "lng": -85.5822,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TCB",
@@ -26486,7 +29428,8 @@ const AIRPORTS = [
     "country": "Bahamas",
     "lat": 26.7453,
     "lng": -77.3913,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "REL",
@@ -26495,7 +29438,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -43.2105,
     "lng": -65.2703,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TTN",
@@ -26504,7 +29448,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.2767,
     "lng": -74.8135,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TSF",
@@ -26513,7 +29458,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 45.6484,
     "lng": 12.1944,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TRR",
@@ -26522,7 +29468,8 @@ const AIRPORTS = [
     "country": "Sri Lanka",
     "lat": 8.5385,
     "lng": 81.1819,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TDD",
@@ -26531,7 +29478,8 @@ const AIRPORTS = [
     "country": "Bolivia",
     "lat": -14.8187,
     "lng": -64.918,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TIP",
@@ -26540,7 +29488,8 @@ const AIRPORTS = [
     "country": "Libya",
     "lat": 32.6635,
     "lng": 13.159,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TRV",
@@ -26549,7 +29498,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 8.4821,
     "lng": 76.9201,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "THN",
@@ -26558,7 +29508,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 58.3181,
     "lng": 12.345,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TOS",
@@ -26567,7 +29518,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 69.6833,
     "lng": 18.9189,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TRD",
@@ -26576,7 +29528,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 63.4578,
     "lng": 10.924,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TRU",
@@ -26585,7 +29538,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -8.0814,
     "lng": -79.1088,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TSE",
@@ -26594,7 +29548,8 @@ const AIRPORTS = [
     "country": "Kazakhstan",
     "lat": 51.0222,
     "lng": 71.4669,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TSH",
@@ -26603,7 +29558,8 @@ const AIRPORTS = [
     "country": "Congo (Kinshasa)",
     "lat": -6.4383,
     "lng": 20.7947,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TSJ",
@@ -26612,7 +29568,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 34.2849,
     "lng": 129.331,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TUB",
@@ -26621,7 +29578,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -23.3654,
     "lng": -149.524,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TUS",
@@ -26630,7 +29588,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.1161,
     "lng": -110.941,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TUC",
@@ -26639,7 +29598,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -26.8409,
     "lng": -65.1049,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TUR",
@@ -26648,7 +29608,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -3.786,
     "lng": -49.7203,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TUG",
@@ -26657,7 +29618,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 17.6434,
     "lng": 121.7332,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YUB",
@@ -26666,7 +29628,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 69.4333,
     "lng": -133.026,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TUA",
@@ -26675,7 +29638,8 @@ const AIRPORTS = [
     "country": "Ecuador",
     "lat": 0.8095,
     "lng": -77.7081,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZFN",
@@ -26684,7 +29648,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 64.9097,
     "lng": -125.573,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TUL",
@@ -26693,7 +29658,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 36.1984,
     "lng": -95.8881,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TCO",
@@ -26702,7 +29668,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 1.8144,
     "lng": -78.7492,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TBP",
@@ -26711,7 +29678,8 @@ const AIRPORTS = [
     "country": "Peru",
     "lat": -3.5525,
     "lng": -80.3814,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TMI",
@@ -26720,7 +29688,8 @@ const AIRPORTS = [
     "country": "Nepal",
     "lat": 27.315,
     "lng": 87.1933,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TUN",
@@ -26729,7 +29698,8 @@ const AIRPORTS = [
     "country": "Tunisia",
     "lat": 36.851,
     "lng": 10.2272,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "TUP",
@@ -26738,7 +29708,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 34.2681,
     "lng": -88.7699,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TUI",
@@ -26747,7 +29718,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 31.6922,
     "lng": 38.7315,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TUK",
@@ -26756,7 +29728,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 25.9864,
     "lng": 63.0302,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TKU",
@@ -26765,7 +29738,8 @@ const AIRPORTS = [
     "country": "Finland",
     "lat": 60.5141,
     "lng": 22.2628,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "THX",
@@ -26774,7 +29748,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 65.7972,
     "lng": 87.9353,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TGZ",
@@ -26783,7 +29758,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 16.5636,
     "lng": -93.0225,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "TBB",
@@ -26792,7 +29768,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 13.0496,
     "lng": 109.334,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TWF",
@@ -26801,7 +29778,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.4818,
     "lng": -114.488,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TYR",
@@ -26810,7 +29788,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.3541,
     "lng": -95.4024,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TJM",
@@ -26819,7 +29798,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 57.1896,
     "lng": 65.3243,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ZTB",
@@ -26828,7 +29808,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 50.6744,
     "lng": -59.3836,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UAH",
@@ -26837,7 +29818,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -8.9361,
     "lng": -139.552,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UAP",
@@ -26846,7 +29828,8 @@ const AIRPORTS = [
     "country": "French Polynesia",
     "lat": -9.3517,
     "lng": -140.078,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UBA",
@@ -26855,7 +29838,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -19.7647,
     "lng": -47.9661,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UDI",
@@ -26864,7 +29848,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -18.8836,
     "lng": -48.2253,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "UBP",
@@ -26873,7 +29858,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 15.2513,
     "lng": 104.87,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UDR",
@@ -26882,7 +29868,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 24.6177,
     "lng": 73.8961,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "UTH",
@@ -26891,7 +29878,8 @@ const AIRPORTS = [
     "country": "Thailand",
     "lat": 17.3864,
     "lng": 102.788,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "UFA",
@@ -26900,7 +29888,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 54.5575,
     "lng": 55.8744,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "UPG",
@@ -26909,7 +29898,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -5.0616,
     "lng": 119.554,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "UCT",
@@ -26918,7 +29908,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 63.5669,
     "lng": 53.8047,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UKA",
@@ -26927,7 +29918,8 @@ const AIRPORTS = [
     "country": "Kenya",
     "lat": -4.2933,
     "lng": 39.5711,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ULO",
@@ -26936,7 +29928,8 @@ const AIRPORTS = [
     "country": "Mongolia",
     "lat": 50.0666,
     "lng": 91.9383,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ULN",
@@ -26945,7 +29938,8 @@ const AIRPORTS = [
     "country": "Mongolia",
     "lat": 47.8431,
     "lng": 106.767,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "UUD",
@@ -26954,7 +29948,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 51.8078,
     "lng": 107.438,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "HLH",
@@ -26963,7 +29958,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 46.1953,
     "lng": 122.0083,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RNA",
@@ -26972,7 +29968,8 @@ const AIRPORTS = [
     "country": "Solomon Islands",
     "lat": -9.8605,
     "lng": 161.9795,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ULZ",
@@ -26981,7 +29978,8 @@ const AIRPORTS = [
     "country": "Mongolia",
     "lat": 47.7093,
     "lng": 96.5258,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "USN",
@@ -26990,7 +29988,8 @@ const AIRPORTS = [
     "country": "South Korea",
     "lat": 35.5935,
     "lng": 129.352,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AYQ",
@@ -26999,7 +29998,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -25.1861,
     "lng": 130.976,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ULV",
@@ -27008,7 +30008,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 54.2683,
     "lng": 48.2267,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UME",
@@ -27017,7 +30018,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 63.7918,
     "lng": 20.2828,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YUD",
@@ -27026,7 +30028,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 56.5361,
     "lng": -76.5183,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UTT",
@@ -27035,7 +30038,8 @@ const AIRPORTS = [
     "country": "South Africa",
     "lat": -31.5464,
     "lng": 28.6734,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UNK",
@@ -27044,7 +30048,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 63.8884,
     "lng": -160.799,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "DUT",
@@ -27053,7 +30058,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 53.9001,
     "lng": -166.544,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JUV",
@@ -27062,7 +30068,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 72.7902,
     "lng": -56.1306,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UTN",
@@ -27071,7 +30078,8 @@ const AIRPORTS = [
     "country": "South Africa",
     "lat": -28.3991,
     "lng": 21.2602,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "URJ",
@@ -27080,7 +30088,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 60.1033,
     "lng": 64.8267,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "URA",
@@ -27089,7 +30098,8 @@ const AIRPORTS = [
     "country": "Kazakhstan",
     "lat": 51.1508,
     "lng": 51.5431,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UGC",
@@ -27098,7 +30108,8 @@ const AIRPORTS = [
     "country": "Uzbekistan",
     "lat": 41.5843,
     "lng": 60.6417,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "OMH",
@@ -27107,7 +30118,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 37.6681,
     "lng": 45.0687,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UPN",
@@ -27116,7 +30128,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 19.3967,
     "lng": -102.039,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "URG",
@@ -27125,7 +30138,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -29.7822,
     "lng": -57.0382,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "URC",
@@ -27134,7 +30148,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 43.9071,
     "lng": 87.4742,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "USH",
@@ -27143,7 +30158,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -54.8433,
     "lng": -68.2958,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "USK",
@@ -27152,7 +30168,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 66.0047,
     "lng": 57.3672,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UKK",
@@ -27161,7 +30178,8 @@ const AIRPORTS = [
     "country": "Kazakhstan",
     "lat": 50.0366,
     "lng": 82.4942,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "UKX",
@@ -27170,7 +30188,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 56.8567,
     "lng": 105.73,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UTS",
@@ -27179,7 +30198,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 65.4373,
     "lng": 52.2003,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UII",
@@ -27188,7 +30208,8 @@ const AIRPORTS = [
     "country": "Honduras",
     "lat": 16.1131,
     "lng": -86.8803,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "JQA",
@@ -27197,7 +30218,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 70.7342,
     "lng": -52.6962,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UMD",
@@ -27206,7 +30228,8 @@ const AIRPORTS = [
     "country": "Greenland",
     "lat": 70.6804,
     "lng": -52.1116,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "QUO",
@@ -27215,7 +30238,8 @@ const AIRPORTS = [
     "country": "Nigeria",
     "lat": 4.8725,
     "lng": 8.093,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UYU",
@@ -27224,7 +30248,8 @@ const AIRPORTS = [
     "country": "Bolivia",
     "lat": -20.4463,
     "lng": -66.8484,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UDJ",
@@ -27233,7 +30258,8 @@ const AIRPORTS = [
     "country": "Ukraine",
     "lat": 48.6343,
     "lng": 22.2634,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VAA",
@@ -27242,7 +30268,8 @@ const AIRPORTS = [
     "country": "Finland",
     "lat": 63.0507,
     "lng": 21.7622,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VDS",
@@ -27251,7 +30278,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 70.0653,
     "lng": 29.8447,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "FAE",
@@ -27260,7 +30288,8 @@ const AIRPORTS = [
     "country": "Faroe Islands",
     "lat": 62.0636,
     "lng": -7.2772,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EGE",
@@ -27269,7 +30298,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.6426,
     "lng": -106.918,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YVO",
@@ -27278,7 +30308,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 48.0533,
     "lng": -77.7828,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VDZ",
@@ -27287,7 +30318,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 61.1339,
     "lng": -146.248,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZAL",
@@ -27296,7 +30328,8 @@ const AIRPORTS = [
     "country": "Chile",
     "lat": -39.65,
     "lng": -73.0861,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VLD",
@@ -27305,7 +30338,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 30.7825,
     "lng": -83.2767,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VLC",
@@ -27314,7 +30348,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 39.4893,
     "lng": -0.4816,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "VLN",
@@ -27323,7 +30358,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 10.1497,
     "lng": -67.9284,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VLV",
@@ -27332,7 +30368,8 @@ const AIRPORTS = [
     "country": "Venezuela",
     "lat": 9.3405,
     "lng": -70.5841,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VLS",
@@ -27341,7 +30378,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -16.7961,
     "lng": 168.177,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VLL",
@@ -27350,7 +30388,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 41.7061,
     "lng": -4.8519,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VUP",
@@ -27359,7 +30398,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 10.435,
     "lng": -73.2495,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VPS",
@@ -27368,7 +30408,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 30.4832,
     "lng": -86.5254,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VAN",
@@ -27377,7 +30418,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 38.4682,
     "lng": 43.3323,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CXH",
@@ -27386,7 +30428,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.2944,
     "lng": -123.111,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YVR",
@@ -27395,7 +30438,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.1939,
     "lng": -123.184,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "VAI",
@@ -27404,7 +30448,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -2.6926,
     "lng": 141.3028,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VBV",
@@ -27413,7 +30458,8 @@ const AIRPORTS = [
     "country": "Fiji",
     "lat": -17.269,
     "lng": -178.976,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VRA",
@@ -27422,7 +30468,8 @@ const AIRPORTS = [
     "country": "Cuba",
     "lat": 23.0344,
     "lng": -81.4353,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VNS",
@@ -27431,7 +30478,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 25.4524,
     "lng": 82.8593,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VAW",
@@ -27440,7 +30488,8 @@ const AIRPORTS = [
     "country": "Norway",
     "lat": 70.3554,
     "lng": 31.0449,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VAR",
@@ -27449,7 +30498,8 @@ const AIRPORTS = [
     "country": "Bulgaria",
     "lat": 43.2321,
     "lng": 27.8251,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VST",
@@ -27458,7 +30508,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 59.5894,
     "lng": 16.6336,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VXO",
@@ -27467,7 +30518,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 56.9291,
     "lng": 14.728,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VUS",
@@ -27476,7 +30528,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 60.7883,
     "lng": 46.26,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VEE",
@@ -27485,7 +30538,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 67.0087,
     "lng": -146.366,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VCE",
@@ -27494,7 +30548,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 45.5053,
     "lng": 12.3519,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "VER",
@@ -27503,7 +30558,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 19.1459,
     "lng": -96.1873,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VEL",
@@ -27512,7 +30568,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 40.4409,
     "lng": -109.51,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VCT",
@@ -27521,7 +30578,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 28.8526,
     "lng": -96.9185,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YWH",
@@ -27530,7 +30588,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 48.425,
     "lng": -123.3889,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YYJ",
@@ -27539,7 +30598,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 48.6469,
     "lng": -123.426,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VFA",
@@ -27548,7 +30608,8 @@ const AIRPORTS = [
     "country": "Zimbabwe",
     "lat": -18.0959,
     "lng": 25.839,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VDM",
@@ -27557,7 +30618,8 @@ const AIRPORTS = [
     "country": "Argentina",
     "lat": -40.8692,
     "lng": -63.0004,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VIE",
@@ -27566,7 +30628,8 @@ const AIRPORTS = [
     "country": "Austria",
     "lat": 48.1103,
     "lng": 16.5697,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "VTE",
@@ -27575,7 +30638,8 @@ const AIRPORTS = [
     "country": "Laos",
     "lat": 17.9883,
     "lng": 102.563,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "VQS",
@@ -27584,7 +30648,8 @@ const AIRPORTS = [
     "country": "Puerto Rico",
     "lat": 18.1158,
     "lng": -65.4227,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VGO",
@@ -27593,7 +30658,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 42.2318,
     "lng": -8.6268,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VGA",
@@ -27602,7 +30668,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 16.5304,
     "lng": 80.7968,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VNX",
@@ -27611,7 +30678,8 @@ const AIRPORTS = [
     "country": "Mozambique",
     "lat": -22.0184,
     "lng": 35.3133,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VHM",
@@ -27620,7 +30688,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 64.5791,
     "lng": 16.8336,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BVH",
@@ -27629,7 +30698,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -12.6944,
     "lng": -60.0983,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VGZ",
@@ -27638,7 +30708,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 0.9788,
     "lng": -76.6056,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VRN",
@@ -27647,7 +30718,8 @@ const AIRPORTS = [
     "country": "Italy",
     "lat": 45.3957,
     "lng": 10.8885,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "VSA",
@@ -27656,7 +30728,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 17.997,
     "lng": -92.8174,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VVC",
@@ -27665,7 +30738,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 4.1679,
     "lng": -73.6138,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VNO",
@@ -27674,7 +30748,8 @@ const AIRPORTS = [
     "country": "Lithuania",
     "lat": 54.6341,
     "lng": 25.2858,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "MVY",
@@ -27683,7 +30758,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.3931,
     "lng": -70.6143,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VII",
@@ -27692,7 +30768,8 @@ const AIRPORTS = [
     "country": "Vietnam",
     "lat": 18.7376,
     "lng": 105.671,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VIN",
@@ -27701,7 +30778,8 @@ const AIRPORTS = [
     "country": "Ukraine",
     "lat": 49.2425,
     "lng": 28.6138,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VRC",
@@ -27710,7 +30788,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 13.5764,
     "lng": 124.206,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VIS",
@@ -27719,7 +30798,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 36.3187,
     "lng": -119.393,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VBY",
@@ -27728,7 +30808,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 57.6628,
     "lng": 18.3462,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VTZ",
@@ -27737,7 +30818,8 @@ const AIRPORTS = [
     "country": "India",
     "lat": 17.7212,
     "lng": 83.2245,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VIX",
@@ -27746,7 +30828,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -20.2581,
     "lng": -40.2864,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VDC",
@@ -27755,7 +30838,8 @@ const AIRPORTS = [
     "country": "Brazil",
     "lat": -14.8628,
     "lng": -40.8631,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VVO",
@@ -27764,7 +30848,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 43.399,
     "lng": 132.148,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "VOG",
@@ -27773,7 +30858,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 48.7825,
     "lng": 44.3455,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "VKT",
@@ -27782,7 +30868,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 67.4886,
     "lng": 63.9931,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "VOZ",
@@ -27791,7 +30878,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 51.8142,
     "lng": 39.2296,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "KDV",
@@ -27800,7 +30888,8 @@ const AIRPORTS = [
     "country": "Fiji",
     "lat": -19.0581,
     "lng": 178.157,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BMY",
@@ -27809,7 +30898,8 @@ const AIRPORTS = [
     "country": "New Caledonia",
     "lat": -19.7206,
     "lng": 163.661,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YWK",
@@ -27818,7 +30908,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 52.9219,
     "lng": -66.8644,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ACT",
@@ -27827,7 +30918,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 31.6113,
     "lng": -97.2305,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WAE",
@@ -27836,7 +30928,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 20.5043,
     "lng": 45.1996,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WGA",
@@ -27845,7 +30938,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -35.1653,
     "lng": 147.466,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TMC",
@@ -27854,7 +30948,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -9.4097,
     "lng": 119.244,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WGP",
@@ -27863,7 +30958,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -9.6692,
     "lng": 120.302,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AIN",
@@ -27872,7 +30968,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 70.638,
     "lng": -159.995,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NTQ",
@@ -27881,7 +30978,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 37.2931,
     "lng": 136.962,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WJR",
@@ -27890,7 +30988,8 @@ const AIRPORTS = [
     "country": "Kenya",
     "lat": 1.7332,
     "lng": 40.0916,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "WKJ",
@@ -27899,7 +30998,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 45.4042,
     "lng": 141.801,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WLH",
@@ -27908,7 +31008,8 @@ const AIRPORTS = [
     "country": "Vanuatu",
     "lat": -15.412,
     "lng": 167.691,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WAA",
@@ -27917,7 +31018,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 65.6226,
     "lng": -168.095,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ALW",
@@ -27926,7 +31028,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 46.0949,
     "lng": -118.288,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WLS",
@@ -27935,7 +31038,8 @@ const AIRPORTS = [
     "country": "Wallis and Futuna",
     "lat": -13.2383,
     "lng": -176.199,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WVB",
@@ -27944,7 +31048,8 @@ const AIRPORTS = [
     "country": "Namibia",
     "lat": -22.9799,
     "lng": 14.6453,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WMX",
@@ -27953,7 +31058,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -4.1025,
     "lng": 138.957,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WAG",
@@ -27962,7 +31068,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -39.9622,
     "lng": 175.025,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WXN",
@@ -27971,7 +31078,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 30.8017,
     "lng": 108.433,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "WBM",
@@ -27980,7 +31088,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -5.6433,
     "lng": 143.895,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WAW",
@@ -27989,7 +31098,8 @@ const AIRPORTS = [
     "country": "Poland",
     "lat": 52.1657,
     "lng": 20.9671,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "WMI",
@@ -27998,7 +31108,8 @@ const AIRPORTS = [
     "country": "Poland",
     "lat": 52.4511,
     "lng": 20.6518,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DCA",
@@ -28007,7 +31118,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.8521,
     "lng": -77.0377,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "IAD",
@@ -28016,7 +31128,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.9445,
     "lng": -77.4558,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YKQ",
@@ -28025,7 +31138,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 51.4733,
     "lng": -78.7583,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "CWA",
@@ -28034,7 +31148,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.7776,
     "lng": -89.6668,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WAT",
@@ -28043,7 +31158,8 @@ const AIRPORTS = [
     "country": "Ireland",
     "lat": 52.1872,
     "lng": -7.087,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ALO",
@@ -28052,7 +31168,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.5571,
     "lng": -92.4003,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YKF",
@@ -28061,7 +31178,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 43.4608,
     "lng": -80.3786,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ART",
@@ -28070,7 +31188,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.9919,
     "lng": -76.0217,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ATY",
@@ -28079,7 +31198,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 44.914,
     "lng": -97.1547,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YWP",
@@ -28088,7 +31208,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 52.9594,
     "lng": -87.3749,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "NRN",
@@ -28097,7 +31218,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 51.6024,
     "lng": 6.1422,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "WEF",
@@ -28106,7 +31228,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 36.6467,
     "lng": 119.119,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "WEI",
@@ -28115,7 +31238,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -12.6786,
     "lng": 141.925,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EJH",
@@ -28124,7 +31248,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 26.1986,
     "lng": 36.4764,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YFJ",
@@ -28133,7 +31258,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 64.1908,
     "lng": -114.077,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WLG",
@@ -28142,7 +31268,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -41.3272,
     "lng": 174.805,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YNC",
@@ -28151,7 +31278,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 53.0106,
     "lng": -78.8311,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EAT",
@@ -28160,7 +31288,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 47.3989,
     "lng": -120.207,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WNZ",
@@ -28169,7 +31298,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 27.9122,
     "lng": 120.852,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "PBI",
@@ -28178,7 +31308,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 26.6832,
     "lng": -80.0956,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GWT",
@@ -28187,7 +31318,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 54.9132,
     "lng": 8.3405,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "WSZ",
@@ -28196,7 +31328,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -41.7381,
     "lng": 171.581,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WRY",
@@ -28205,7 +31338,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 59.3503,
     "lng": -2.95,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WWK",
@@ -28214,7 +31348,8 @@ const AIRPORTS = [
     "country": "Papua New Guinea",
     "lat": -3.5838,
     "lng": 143.669,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SHD",
@@ -28223,7 +31358,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 38.2638,
     "lng": -78.8964,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WHK",
@@ -28232,7 +31368,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -37.9206,
     "lng": 176.914,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YXN",
@@ -28241,7 +31378,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 62.24,
     "lng": -92.5981,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WRE",
@@ -28250,7 +31388,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -35.7683,
     "lng": 174.365,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YLE",
@@ -28259,7 +31398,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 63.1317,
     "lng": -117.246,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WMO",
@@ -28268,7 +31408,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 64.6892,
     "lng": -163.413,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HPN",
@@ -28277,7 +31418,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.067,
     "lng": -73.7076,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YXY",
@@ -28286,7 +31428,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 60.7096,
     "lng": -135.067,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WYA",
@@ -28295,7 +31438,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -33.0589,
     "lng": 137.514,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ICT",
@@ -28304,7 +31448,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 37.6499,
     "lng": -97.4331,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SPS",
@@ -28313,7 +31458,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 33.9888,
     "lng": -98.4919,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WIC",
@@ -28322,7 +31468,8 @@ const AIRPORTS = [
     "country": "United Kingdom",
     "lat": 58.4589,
     "lng": -3.0931,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CUR",
@@ -28331,7 +31478,8 @@ const AIRPORTS = [
     "country": "Netherlands Antilles",
     "lat": 12.1889,
     "lng": -68.9598,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YWL",
@@ -28340,7 +31488,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 52.1831,
     "lng": -122.054,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IPT",
@@ -28349,7 +31498,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.2418,
     "lng": -76.9211,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ISN",
@@ -28358,7 +31508,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 48.1779,
     "lng": -103.642,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ILG",
@@ -28367,7 +31518,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 39.6787,
     "lng": -75.6065,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ILM",
@@ -28376,7 +31528,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 34.2706,
     "lng": -77.9026,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ERS",
@@ -28385,7 +31538,8 @@ const AIRPORTS = [
     "country": "Namibia",
     "lat": -22.6122,
     "lng": 17.0804,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WDH",
@@ -28394,7 +31548,8 @@ const AIRPORTS = [
     "country": "Namibia",
     "lat": -22.4799,
     "lng": 17.4709,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "WNR",
@@ -28403,7 +31558,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -25.4131,
     "lng": 142.667,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YQG",
@@ -28412,7 +31568,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 42.2756,
     "lng": -82.9556,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BDL",
@@ -28421,7 +31578,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.9389,
     "lng": -72.6832,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YWG",
@@ -28430,7 +31588,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 49.91,
     "lng": -97.2399,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "WIN",
@@ -28439,7 +31598,8 @@ const AIRPORTS = [
     "country": "Australia",
     "lat": -22.3636,
     "lng": 143.086,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OLF",
@@ -28448,7 +31608,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 48.0945,
     "lng": -105.575,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WJU",
@@ -28457,7 +31618,8 @@ const AIRPORTS = [
     "country": "South Korea",
     "lat": 37.4412,
     "lng": 127.9639,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "BHE",
@@ -28466,7 +31628,8 @@ const AIRPORTS = [
     "country": "New Zealand",
     "lat": -41.5183,
     "lng": 173.87,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ORH",
@@ -28475,7 +31638,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 42.2673,
     "lng": -71.8757,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WRL",
@@ -28484,7 +31648,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 43.9657,
     "lng": -107.951,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WRG",
@@ -28493,7 +31658,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 56.4843,
     "lng": -132.37,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WRO",
@@ -28502,7 +31668,8 @@ const AIRPORTS = [
     "country": "Poland",
     "lat": 51.1027,
     "lng": 16.8858,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "WUA",
@@ -28511,7 +31678,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 39.7934,
     "lng": 106.7993,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "WUH",
@@ -28520,7 +31688,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 30.7838,
     "lng": 114.208,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "WNN",
@@ -28529,7 +31698,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 52.8939,
     "lng": -89.2892,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "WUX",
@@ -28538,7 +31708,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 31.4944,
     "lng": 120.429,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "WUS",
@@ -28547,7 +31718,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 27.7019,
     "lng": 118.001,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "WUZ",
@@ -28556,7 +31728,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 23.4567,
     "lng": 111.248,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "XIY",
@@ -28565,7 +31738,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 34.4471,
     "lng": 108.752,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GXH",
@@ -28574,7 +31748,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 34.8105,
     "lng": 102.6447,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "XMN",
@@ -28583,7 +31758,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 24.544,
     "lng": 118.128,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "XFN",
@@ -28592,7 +31768,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 32.1506,
     "lng": 112.291,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "XIC",
@@ -28601,7 +31778,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 27.9891,
     "lng": 102.184,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "XIL",
@@ -28610,7 +31788,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 43.9156,
     "lng": 115.964,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ACX",
@@ -28619,7 +31798,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 25.0864,
     "lng": 104.9594,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "XNN",
@@ -28628,7 +31808,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 36.5275,
     "lng": 102.043,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "NLT",
@@ -28637,7 +31818,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 43.4318,
     "lng": 83.3786,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "XUZ",
@@ -28646,7 +31828,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 34.0591,
     "lng": 117.5553,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "BYC",
@@ -28655,7 +31838,8 @@ const AIRPORTS = [
     "country": "Bolivia",
     "lat": -21.9609,
     "lng": -63.6517,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YKM",
@@ -28664,7 +31848,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 46.5682,
     "lng": -120.544,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YAK",
@@ -28673,7 +31858,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 59.5033,
     "lng": -139.66,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PYJ",
@@ -28682,7 +31868,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 66.4004,
     "lng": 112.03,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YKS",
@@ -28691,7 +31878,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 62.0933,
     "lng": 129.771,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "GAJ",
@@ -28700,7 +31888,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 38.4119,
     "lng": 140.371,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UBJ",
@@ -28709,7 +31898,8 @@ const AIRPORTS = [
     "country": "Japan",
     "lat": 33.93,
     "lng": 131.279,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ENY",
@@ -28718,7 +31908,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 36.6369,
     "lng": 109.554,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YNZ",
@@ -28727,7 +31918,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 33.4258,
     "lng": 120.2031,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RGN",
@@ -28736,7 +31928,8 @@ const AIRPORTS = [
     "country": "Burma",
     "lat": 16.9073,
     "lng": 96.1332,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YTY",
@@ -28745,7 +31938,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 32.5634,
     "lng": 119.7198,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YNJ",
@@ -28754,7 +31948,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 42.8828,
     "lng": 129.451,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YNT",
@@ -28763,7 +31958,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 37.4017,
     "lng": 121.372,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "NSI",
@@ -28772,7 +31968,8 @@ const AIRPORTS = [
     "country": "Cameroon",
     "lat": 3.7226,
     "lng": 11.5533,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YAP",
@@ -28781,7 +31978,8 @@ const AIRPORTS = [
     "country": "Micronesia",
     "lat": 9.4989,
     "lng": 138.083,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "IAR",
@@ -28790,7 +31988,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 57.5607,
     "lng": 40.1574,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YES",
@@ -28799,7 +31998,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 30.7005,
     "lng": 51.5451,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AZD",
@@ -28808,7 +32008,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 31.9049,
     "lng": 54.2765,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "SVX",
@@ -28817,7 +32018,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 56.7431,
     "lng": 60.8027,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YZF",
@@ -28826,7 +32028,8 @@ const AIRPORTS = [
     "country": "Canada",
     "lat": 62.4628,
     "lng": -114.44,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YNB",
@@ -28835,7 +32038,8 @@ const AIRPORTS = [
     "country": "Saudi Arabia",
     "lat": 24.1442,
     "lng": 38.0634,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "RSU",
@@ -28844,7 +32048,8 @@ const AIRPORTS = [
     "country": "South Korea",
     "lat": 34.8423,
     "lng": 127.617,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EVN",
@@ -28853,7 +32058,8 @@ const AIRPORTS = [
     "country": "Armenia",
     "lat": 40.1473,
     "lng": 44.3959,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YBP",
@@ -28862,7 +32068,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 28.8006,
     "lng": 104.545,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YIH",
@@ -28871,7 +32078,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 30.5566,
     "lng": 111.48,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YIC",
@@ -28880,7 +32088,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 27.8025,
     "lng": 114.3062,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "LDS",
@@ -28889,7 +32098,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 47.7521,
     "lng": 129.0191,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YIN",
@@ -28898,7 +32108,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 43.9558,
     "lng": 81.3303,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YIW",
@@ -28907,7 +32118,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 29.3447,
     "lng": 120.032,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "JOG",
@@ -28916,7 +32128,8 @@ const AIRPORTS = [
     "country": "Indonesia",
     "lat": -7.7882,
     "lng": 110.432,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YOL",
@@ -28925,7 +32138,8 @@ const AIRPORTS = [
     "country": "Nigeria",
     "lat": 9.2576,
     "lng": 12.4304,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "LLF",
@@ -28934,7 +32148,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 26.3387,
     "lng": 111.61,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "EYP",
@@ -28943,7 +32158,8 @@ const AIRPORTS = [
     "country": "Colombia",
     "lat": 5.3191,
     "lng": -72.384,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YNG",
@@ -28952,7 +32168,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 41.2607,
     "lng": -80.6791,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UYN",
@@ -28961,7 +32178,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 38.3597,
     "lng": 109.5909,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "YUM",
@@ -28970,7 +32188,8 @@ const AIRPORTS = [
     "country": "United States",
     "lat": 32.6566,
     "lng": -114.606,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YCU",
@@ -28979,7 +32198,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 35.1164,
     "lng": 111.0314,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "YUS",
@@ -28988,7 +32208,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 32.8364,
     "lng": 97.0364,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "DEE",
@@ -28997,7 +32218,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 43.9584,
     "lng": 145.683,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "UUS",
@@ -29006,7 +32228,8 @@ const AIRPORTS = [
     "country": "Russia",
     "lat": 46.8887,
     "lng": 142.718,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ACZ",
@@ -29015,7 +32238,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 31.0983,
     "lng": 61.5439,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZCL",
@@ -29024,7 +32248,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 22.8971,
     "lng": -102.687,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ZAD",
@@ -29033,7 +32258,8 @@ const AIRPORTS = [
     "country": "Croatia",
     "lat": 44.1083,
     "lng": 15.3467,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ZAG",
@@ -29042,7 +32268,8 @@ const AIRPORTS = [
     "country": "Croatia",
     "lat": 45.7429,
     "lng": 16.0688,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ZAH",
@@ -29051,7 +32278,8 @@ const AIRPORTS = [
     "country": "Iran",
     "lat": 29.4757,
     "lng": 60.9062,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ZTH",
@@ -29060,7 +32288,8 @@ const AIRPORTS = [
     "country": "Greece",
     "lat": 37.7509,
     "lng": 20.8843,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ZAM",
@@ -29069,7 +32298,8 @@ const AIRPORTS = [
     "country": "Philippines",
     "lat": 6.9224,
     "lng": 122.06,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "PBM",
@@ -29078,7 +32308,8 @@ const AIRPORTS = [
     "country": "Suriname",
     "lat": 5.4528,
     "lng": -55.1878,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ZNZ",
@@ -29087,7 +32318,8 @@ const AIRPORTS = [
     "country": "Tanzania",
     "lat": -6.222,
     "lng": 39.2249,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "OZH",
@@ -29096,7 +32328,8 @@ const AIRPORTS = [
     "country": "Ukraine",
     "lat": 47.867,
     "lng": 35.3157,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZAZ",
@@ -29105,7 +32338,8 @@ const AIRPORTS = [
     "country": "Spain",
     "lat": 41.6662,
     "lng": -1.0416,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "IAM",
@@ -29114,7 +32348,8 @@ const AIRPORTS = [
     "country": "Algeria",
     "lat": 28.0515,
     "lng": 9.6429,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZQZ",
@@ -29123,7 +32358,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 40.7386,
     "lng": 114.93,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "YZY",
@@ -29132,7 +32368,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 38.8019,
     "lng": 100.675,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZHA",
@@ -29141,7 +32378,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 21.2144,
     "lng": 110.358,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ZAT",
@@ -29150,7 +32388,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 27.3256,
     "lng": 103.755,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "CGO",
@@ -29159,7 +32398,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 34.5197,
     "lng": 113.841,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "DZN",
@@ -29168,7 +32408,8 @@ const AIRPORTS = [
     "country": "Kazakhstan",
     "lat": 47.7083,
     "lng": 67.7333,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HJJ",
@@ -29177,7 +32418,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 27.4411,
     "lng": 109.7,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "PZH",
@@ -29186,7 +32428,8 @@ const AIRPORTS = [
     "country": "Pakistan",
     "lat": 31.3584,
     "lng": 69.4636,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZHY",
@@ -29195,7 +32438,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 37.5731,
     "lng": 105.1545,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "HSN",
@@ -29204,7 +32448,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 29.9342,
     "lng": 122.362,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ZUH",
@@ -29213,7 +32458,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 22.0064,
     "lng": 113.376,
-    "tier": 1
+    "tier": 1,
+    "isTop50": false
   },
   {
     "iata": "ZIG",
@@ -29222,7 +32468,8 @@ const AIRPORTS = [
     "country": "Senegal",
     "lat": 12.5556,
     "lng": -16.2818,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZIH",
@@ -29231,7 +32478,8 @@ const AIRPORTS = [
     "country": "Mexico",
     "lat": 17.6016,
     "lng": -101.461,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ONQ",
@@ -29240,7 +32488,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 41.5064,
     "lng": 32.0886,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OUZ",
@@ -29249,7 +32498,8 @@ const AIRPORTS = [
     "country": "Mauritania",
     "lat": 22.7564,
     "lng": -12.4836,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ZYI",
@@ -29258,7 +32508,8 @@ const AIRPORTS = [
     "country": "China",
     "lat": 27.5895,
     "lng": 107.0007,
-    "tier": 2
+    "tier": 2,
+    "isTop50": false
   },
   {
     "iata": "ZRH",
@@ -29267,7 +32518,8 @@ const AIRPORTS = [
     "country": "Switzerland",
     "lat": 47.4647,
     "lng": 8.5492,
-    "tier": 1
+    "tier": 1,
+    "isTop50": true
   },
   {
     "iata": "ZQW",
@@ -29276,7 +32528,8 @@ const AIRPORTS = [
     "country": "Germany",
     "lat": 49.2094,
     "lng": 7.4006,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "AGH",
@@ -29285,7 +32538,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 56.2961,
     "lng": 12.8471,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "TEQ",
@@ -29294,7 +32548,8 @@ const AIRPORTS = [
     "country": "Turkey",
     "lat": 41.1382,
     "lng": 27.9191,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "ILP",
@@ -29303,7 +32558,8 @@ const AIRPORTS = [
     "country": "New Caledonia",
     "lat": -22.5889,
     "lng": 167.456,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   },
   {
     "iata": "OSD",
@@ -29312,7 +32568,8 @@ const AIRPORTS = [
     "country": "Sweden",
     "lat": 63.1944,
     "lng": 14.5003,
-    "tier": 3
+    "tier": 3,
+    "isTop50": false
   }
 ];
 
