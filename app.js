@@ -45,15 +45,15 @@ let selectedAirportIata = null;
 // Estilos de marcadores
 const markerStyles = {
   default: {
-    radius: 6,
+    radius: 5,
     fillColor: '#22d3ee', // Cyan 400
     color: '#0891b2',     // Cyan 600
     weight: 1.5,
-    opacity: 0.8,
-    fillOpacity: 0.8
+    opacity: 0.85,
+    fillOpacity: 0.85
   },
   dimmed: {
-    radius: 5,
+    radius: 4,
     fillColor: '#475569', // Slate 600
     color: '#334155',     // Slate 700
     weight: 1,
@@ -61,7 +61,7 @@ const markerStyles = {
     fillOpacity: 0.25
   },
   destination: {
-    radius: 7,
+    radius: 6.5,
     fillColor: '#38bdf8', // Sky 400
     color: '#ffffff',     // White
     weight: 2,
@@ -69,16 +69,20 @@ const markerStyles = {
     fillOpacity: 0.95
   },
   selected: {
-    radius: 9,
+    radius: 8.5,
     fillColor: '#facc15', // Yellow 400
     color: '#ffffff',     // White
     weight: 2.5,
     opacity: 1,
     fillOpacity: 1
+  },
+  hidden: {
+    opacity: 0,
+    fillOpacity: 0
   }
 };
 
-// 3. Renderizado de Aeropuertos en el Mapa (Con soporte de copias continuas para el Océano Pacífico)
+// 3. Renderizado y Jerarquía por Nivel de Detalle (LOD) de Aeropuertos
 AIRPORTS.forEach(airport => {
   markers[airport.iata] = [];
   [-360, 0, 360].forEach(offset => {
@@ -103,8 +107,56 @@ AIRPORTS.forEach(airport => {
   });
 });
 
-// Ajustar el zoom inicial para englobar todos los aeropuertos
-resetMapView();
+// Función de control de visibilidad y estilos según el nivel de zoom (LOD)
+function updateMarkerStylesAndVisibility() {
+  const currentZoom = map.getZoom();
+  let maxTierAllowed = 1;
+  if (currentZoom >= 6) {
+    maxTierAllowed = 3; // Mostrar todos los 3.250+ aeropuertos
+  } else if (currentZoom >= 4) {
+    maxTierAllowed = 2; // Mostrar hubs y aeropuertos medianos
+  } else {
+    maxTierAllowed = 1; // Vista global: solo hubs principales
+  }
+
+  const activeDestinations = selectedAirportIata ? (adjacencyList[selectedAirportIata] || new Set()) : null;
+
+  AIRPORTS.forEach(ap => {
+    const markerList = markers[ap.iata] || [];
+    const isSelected = ap.iata === selectedAirportIata;
+    const isDestination = activeDestinations && activeDestinations.has(ap.iata);
+    const isTierVisible = ap.tier <= maxTierAllowed;
+
+    markerList.forEach(marker => {
+      if (selectedAirportIata) {
+        if (isSelected) {
+          marker.setStyle(markerStyles.selected);
+          marker.bringToFront();
+        } else if (isDestination) {
+          // Los destinos del aeropuerto seleccionado SIEMPRE son visibles
+          marker.setStyle(markerStyles.destination);
+          marker.bringToFront();
+        } else if (isTierVisible) {
+          marker.setStyle(markerStyles.dimmed);
+        } else {
+          marker.setStyle(markerStyles.hidden);
+        }
+      } else {
+        if (isTierVisible) {
+          marker.setStyle(markerStyles.default);
+        } else {
+          marker.setStyle(markerStyles.hidden);
+        }
+      }
+    });
+  });
+}
+
+// Escuchar cambios de zoom para actualizar el nivel de detalle
+map.on('zoomend', updateMarkerStylesAndVisibility);
+
+// Inicializar visibilidad con el zoom actual
+updateMarkerStylesAndVisibility();
 
 // 4. Algoritmo de Trazado de Rutas Ortodrómicas Reales (Great Circle 3D como Flightradar24)
 /**
@@ -182,21 +234,8 @@ function selectAirport(iata, flyToSelected = true) {
   // B. Obtener destinos
   const destinationsIata = Array.from(adjacencyList[iata] || []);
   
-  // C. Actualizar estilos de los marcadores del mapa
-  AIRPORTS.forEach(ap => {
-    const markerList = markers[ap.iata] || [];
-    markerList.forEach(marker => {
-      if (ap.iata === iata) {
-        marker.setStyle(markerStyles.selected);
-        marker.bringToFront();
-      } else if (destinationsIata.includes(ap.iata)) {
-        marker.setStyle(markerStyles.destination);
-        marker.bringToFront();
-      } else {
-        marker.setStyle(markerStyles.dimmed);
-      }
-    });
-  });
+  // C. Actualizar estilos y visibilidad de marcadores
+  updateMarkerStylesAndVisibility();
 
   // D. Dibujar rutas curvas hacia destinos
   destinationsIata.forEach(destIata => {
@@ -321,13 +360,8 @@ function clearSelection() {
   selectedAirportIata = null;
   activeRouteLayer.clearLayers();
   
-  // Restaurar estilos de todos los marcadores (incluyendo copias multi-mundo)
-  AIRPORTS.forEach(ap => {
-    const markerList = markers[ap.iata] || [];
-    markerList.forEach(marker => {
-      marker.setStyle(markerStyles.default);
-    });
-  });
+  // Restaurar visibilidad y estilos según nivel de zoom
+  updateMarkerStylesAndVisibility();
 
   // Cambiar vistas del panel lateral
   document.getElementById('empty-state').classList.remove('hidden');
@@ -341,9 +375,7 @@ function clearSelection() {
 
 // Restablecer la cámara a la visión global
 function resetMapView() {
-  const bounds = L.latLngBounds(AIRPORTS.map(a => [a.lat, a.lng]));
-  map.fitBounds(bounds, {
-    padding: [50, 50],
+  map.setView([20, 0], 2, {
     animate: true,
     duration: 1.2
   });
@@ -427,7 +459,9 @@ function renderSearchResults(matches) {
     return;
   }
 
-  matches.forEach(ap => {
+  const topMatches = matches.slice(0, 25);
+
+  topMatches.forEach(ap => {
     const item = document.createElement('div');
     item.className = 'px-4 py-2.5 hover:bg-slate-700 cursor-pointer text-sm transition flex justify-between items-center border-b border-slate-700/30 last:border-b-0';
     item.innerHTML = `
