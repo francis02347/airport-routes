@@ -21,6 +21,7 @@ const AIRPORTS = [
   { iata: "MSP", name: "Minneapolis-Saint Paul International Airport", city: "Minneapolis", country: "United States", lat: 44.8848, lng: -93.2223 },
   { iata: "HNL", name: "Daniel K. Inouye International Airport", city: "Honolulu", country: "United States", lat: 21.3187, lng: -157.9225 },
   { iata: "EWR", name: "Newark Liberty International Airport", city: "New York / Newark", country: "United States", lat: 40.6895, lng: -74.1745 },
+  { iata: "IAD", name: "Washington Dulles International Airport", city: "Washington, D.C.", country: "United States", lat: 38.9531, lng: -77.4565 },
 
   // --- Canada ---
   { iata: "YYZ", name: "Toronto Pearson International Airport", city: "Toronto", country: "Canada", lat: 43.6777, lng: -79.6248 },
@@ -140,8 +141,9 @@ const ROUTES = [
   // --- Conexiones de Norteamérica (EE.UU. y Canadá) ---
   ["JFK", "LHR"], ["JFK", "LAX"], ["JFK", "MIA"], ["JFK", "GRU"], ["JFK", "FRA"], ["JFK", "CDG"], ["JFK", "DXB"], ["JFK", "SFO"], ["JFK", "ORD"], ["JFK", "ATL"], ["JFK", "YYZ"],
   ["JFK", "DFW"], ["JFK", "DEN"], ["JFK", "DOH"], ["JFK", "FCO"], ["JFK", "LIS"], ["JFK", "BOS"], ["JFK", "MAD"], ["JFK", "BCN"], ["JFK", "DUB"], ["JFK", "MUC"], ["JFK", "ZRH"],
-  ["JFK", "AMS"], ["JFK", "HND"], ["JFK", "ICN"], ["JFK", "TLV"], ["JFK", "SJU"], ["JFK", "SDQ"], ["JFK", "PUJ"], ["JFK", "AUH"], ["JFK", "SIN"], ["JFK", "AKL"], ["JFK", "MNL"],
+  ["JFK", "AMS"], ["JFK", "HND"], ["JFK", "ICN"], ["JFK", "TLV"], ["JFK", "SJU"], ["JFK", "SDQ"], ["JFK", "PUJ"], ["JFK", "AUH"], ["JFK", "SIN"], ["JFK", "AKL"], ["JFK", "MNL"], ["JFK", "DEL"], ["JFK", "BOM"],
   ["EWR", "SIN"], ["EWR", "LHR"], ["EWR", "FRA"], ["EWR", "CDG"], ["EWR", "TLV"], ["EWR", "HND"], ["EWR", "DEL"], ["EWR", "BOM"], ["EWR", "SFO"], ["EWR", "LAX"],
+  ["IAD", "DEL"], ["IAD", "LHR"], ["IAD", "CDG"], ["IAD", "FRA"], ["IAD", "DXB"], ["IAD", "DOH"], ["IAD", "LAX"], ["IAD", "SFO"], ["IAD", "MIA"], ["IAD", "ORD"], ["IAD", "ATL"],
   ["LAX", "HND"], ["LAX", "NRT"], ["LAX", "SYD"], ["LAX", "MEL"], ["LAX", "HNL"], ["LAX", "SFO"], ["LAX", "ORD"], ["LAX", "MEX"], ["LAX", "GDL"], ["LAX", "YVR"], ["LAX", "LHR"], ["LAX", "SCL"],
   ["LAX", "ICN"], ["LAX", "HKG"], ["LAX", "DFW"], ["LAX", "DEN"], ["LAX", "SEA"], ["LAX", "PTY"], ["LAX", "ZRH"], ["LAX", "CDG"], ["LAX", "FRA"], ["LAX", "TPE"], ["LAX", "PVG"], ["LAX", "AKL"],
   ["LAX", "BOS"], ["LAX", "LAS"], ["LAX", "PHX"], ["LAX", "MCO"], ["LAX", "IAH"], ["LAX", "MNL"], ["LAX", "SIN"],
@@ -152,7 +154,7 @@ const ROUTES = [
   ["SFO", "HNL"], ["SFO", "HND"], ["SFO", "NRT"], ["SFO", "YVR"], ["SFO", "ICN"], ["SFO", "HKG"], ["SFO", "TPE"], ["SFO", "PVG"], ["SFO", "SEA"], ["SFO", "DEN"], ["SFO", "LHR"], ["SFO", "FRA"],
   ["SFO", "CDG"], ["SFO", "SIN"], ["SFO", "SYD"], ["SFO", "AKL"], ["SFO", "LAS"], ["SFO", "PHX"], ["SFO", "BOS"], ["SFO", "BLR"], ["SFO", "DEL"], ["SFO", "BOM"],
   ["ORD", "YYZ"], ["ORD", "YUL"], ["ORD", "ATL"], ["ORD", "DFW"], ["ORD", "DEN"], ["ORD", "SEA"], ["ORD", "CUN"], ["ORD", "LHR"], ["ORD", "FRA"], ["ORD", "CDG"], ["ORD", "HND"], ["ORD", "DUB"],
-  ["ORD", "BOS"], ["ORD", "LAS"], ["ORD", "PHX"], ["ORD", "MCO"], ["ORD", "DTW"], ["ORD", "MSP"], ["ORD", "MEX"],
+  ["ORD", "BOS"], ["ORD", "LAS"], ["ORD", "PHX"], ["ORD", "MCO"], ["ORD", "DTW"], ["ORD", "MSP"], ["ORD", "MEX"], ["ORD", "DEL"],
   ["ATL", "YYZ"], ["ATL", "YUL"], ["ATL", "AMS"], ["ATL", "DFW"], ["ATL", "DEN"], ["ATL", "CDG"], ["ATL", "LHR"], ["ATL", "FRA"], ["ATL", "MEX"], ["ATL", "CUN"], ["ATL", "PTY"], ["ATL", "BOG"],
   ["ATL", "GRU"], ["ATL", "EZE"], ["ATL", "SJU"], ["ATL", "MCO"], ["ATL", "BOS"], ["ATL", "DTW"], ["ATL", "MSP"],
   ["DFW", "MEX"], ["DFW", "CUN"], ["DFW", "GDL"], ["DFW", "HND"], ["DFW", "NRT"], ["DFW", "ICN"], ["DFW", "LHR"], ["DFW", "FRA"], ["DFW", "CDG"], ["DFW", "MAD"], ["DFW", "DEN"], ["DFW", "IAH"],
