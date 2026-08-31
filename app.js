@@ -239,7 +239,7 @@ function selectAirport(iata, flyToSelected = true) {
             <span class="text-slate-400 font-normal">➔</span>
             <span>${destAirport.city}</span>
           </div>
-          <div class="space-y-1 text-xs text-slate-300 border-t border-slate-700/60 pt-2">
+          <div class="space-y-1 text-xs text-slate-300 border-t border-slate-700/60 pt-2 mb-3">
             <div class="flex justify-between gap-4">
               <span class="text-slate-400">Distancia:</span>
               <span class="font-semibold text-white">${distance.toLocaleString()} km</span>
@@ -249,6 +249,12 @@ function selectAirport(iata, flyToSelected = true) {
               <span class="font-semibold text-white">~ ${timeStr}</span>
             </div>
           </div>
+          <a href="https://www.google.com/travel/flights?q=Vuelos%20desde%20${airport.iata}%20a%20${destAirport.iata}" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="block w-full text-center text-xs bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-1.5 px-3 rounded-lg transition duration-150">
+             Buscar vuelos
+          </a>
         </div>
       `;
 
