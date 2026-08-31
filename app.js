@@ -1,6 +1,8 @@
 // Lógica principal de la aplicación FlightConnections Clone
 
 // 1. Configuración e Inicialización del Mapa
+const isMobile = window.innerWidth < 768;
+
 const map = L.map('map', {
   center: [20, 0],
   zoom: 2,
@@ -8,7 +10,8 @@ const map = L.map('map', {
   maxZoom: 10,
   zoomControl: false, // Ocultamos el control por defecto para una interfaz más limpia
   worldCopyJump: true,
-  preferCanvas: true // Renderizado por GPU ultra-fluido (Canvas) para 0 lag con cientos de aeropuertos
+  preferCanvas: true, // Renderizado por GPU ultra-fluido (Canvas) para 0 lag con cientos de aeropuertos
+  renderer: L.canvas({ tolerance: isMobile ? 18 : 8 }) // ¡Zona de detección táctil ampliada a 18px para responder al primer toque en celular!
 });
 
 // Añadimos el control de zoom en la esquina superior derecha
@@ -45,10 +48,10 @@ const markers = {};          // IATA -> Array of L.circleMarker (para soporte mu
 let activeRouteLayer = L.featureGroup().addTo(map);
 let selectedAirportIata = null;
 
-// Estilos de marcadores
+// Estilos de marcadores adaptables (tamaño óptimo y más sensible en celulares)
 const markerStyles = {
   default: {
-    radius: 4.5,
+    radius: isMobile ? 6 : 4.5,
     fillColor: '#22d3ee', // Cyan 400
     color: '#0891b2',     // Cyan 600
     weight: 1.5,
@@ -56,7 +59,7 @@ const markerStyles = {
     fillOpacity: 0.85
   },
   top50: {
-    radius: 6.5,
+    radius: isMobile ? 8 : 6.5,
     fillColor: '#ef4444', // Red 500 (Rojo vibrante para los Top 50 Hubs)
     color: '#fecaca',     // Red 200 (Borde luminoso)
     weight: 2,
@@ -64,7 +67,7 @@ const markerStyles = {
     fillOpacity: 0.95
   },
   top50Destination: {
-    radius: 7.5,
+    radius: isMobile ? 9 : 7.5,
     fillColor: '#ef4444', // Red 500 (Rojo vibrante cuando es un destino conectado)
     color: '#ffffff',     // Blanco brillante en el borde
     weight: 2.5,
@@ -72,7 +75,7 @@ const markerStyles = {
     fillOpacity: 1
   },
   dimmed: {
-    radius: 3.5,
+    radius: isMobile ? 4.5 : 3.5,
     fillColor: '#475569', // Slate 600
     color: '#334155',     // Slate 700
     weight: 1,
@@ -80,7 +83,7 @@ const markerStyles = {
     fillOpacity: 0.25
   },
   destination: {
-    radius: 6.5,
+    radius: isMobile ? 8 : 6.5,
     fillColor: '#38bdf8', // Sky 400
     color: '#ffffff',     // White
     weight: 2,
@@ -88,7 +91,7 @@ const markerStyles = {
     fillOpacity: 0.95
   },
   selected: {
-    radius: 9,
+    radius: isMobile ? 10.5 : 9,
     fillColor: '#facc15', // Yellow 400
     color: '#ffffff',     // White
     weight: 3,
