@@ -11,7 +11,7 @@ const map = L.map('map', {
   zoomControl: false, // Ocultamos el control por defecto para una interfaz más limpia
   worldCopyJump: true,
   preferCanvas: true, // Renderizado por GPU ultra-fluido (Canvas) para 0 lag con cientos de aeropuertos
-  renderer: L.canvas({ tolerance: isMobile ? 18 : 8 }) // ¡Zona de detección táctil ampliada a 18px para responder al primer toque en celular!
+  renderer: L.canvas({ tolerance: isMobile ? 22 : 10 }) // ¡Zona de detección táctil ampliada a 22px para máxima sensibilidad en celular!
 });
 
 // Añadimos el control de zoom en la esquina superior derecha
@@ -737,7 +737,59 @@ function openSidebar() {
 // 10. Manejadores de Eventos Generales
 document.getElementById('reset-view').addEventListener('click', resetMapView);
 document.getElementById('close-details').addEventListener('click', clearSelection);
-map.on('click', clearSelection);
+
+/**
+ * Manejador inteligente de toques en el mapa:
+ * - Si el usuario toca cerca de un aeropuerto visible (con radio generoso de proximidad), se activa de inmediato.
+ * - Si toca en el océano o espacio vacío lejos de cualquier punto, deselecciona.
+ */
+function handleMapClick(e) {
+  const currentZoom = map.getZoom();
+  const isMobileView = window.innerWidth < 768;
+
+  // Umbral de proximidad en píxeles de pantalla:
+  // En zoom alejado (zoom <= 3), damos un radio generoso de 38px en móvil y 22px en desktop.
+  // En zoom medio/cercano, 24px en móvil y 14px en desktop.
+  const proximityThresholdPx = currentZoom <= 3 
+    ? (isMobileView ? 38 : 22)
+    : (isMobileView ? 24 : 14);
+
+  const clickPoint = map.latLngToContainerPoint(e.latlng);
+
+  let nearestAirport = null;
+  let minDistancePx = Infinity;
+  let nearestLatLng = null;
+
+  AIRPORTS.forEach(ap => {
+    if (!isAirportCurrentlyVisible(ap)) return;
+
+    [-360, 0, 360].forEach(offset => {
+      const apLatLng = L.latLng(ap.lat, ap.lng + offset);
+      const apPoint = map.latLngToContainerPoint(apLatLng);
+      const dx = clickPoint.x - apPoint.x;
+      const dy = clickPoint.y - apPoint.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      if (dist < minDistancePx) {
+        minDistancePx = dist;
+        nearestAirport = ap;
+        nearestLatLng = apLatLng;
+      }
+    });
+  });
+
+  if (nearestAirport && minDistancePx <= proximityThresholdPx) {
+    if (isMobileView) {
+      showAirportMobilePreview(nearestAirport, nearestLatLng);
+    } else {
+      selectAirport(nearestAirport.iata);
+    }
+  } else {
+    clearSelection();
+  }
+}
+
+map.on('click', handleMapClick);
 
 // Eventos de colapso de panel
 document.getElementById('close-sidebar-btn').addEventListener('click', closeSidebar);
