@@ -224,6 +224,7 @@ function selectAirport(iata, flyToSelected = true) {
 
   // E. Actualizar el Panel Lateral
   updateSidebar(airport, destinationsIata);
+  openSidebar(); // Asegurar que el panel se abra para ver la información
 
   // F. Hacer zoom y centrar si se solicita
   if (flyToSelected) {
@@ -247,6 +248,11 @@ function clearSelection() {
   // Cambiar vistas del panel lateral
   document.getElementById('empty-state').classList.remove('hidden');
   document.getElementById('detail-state').classList.add('hidden');
+
+  // Auto-cerrar el panel en móvil al limpiar selección
+  if (window.innerWidth < 768) {
+    closeSidebar();
+  }
 }
 
 // Restablecer la cámara a la visión global
@@ -378,7 +384,33 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// 9. Manejadores de Eventos Generales
+// 9. Funciones para Colapsar/Mostrar Panel Lateral
+function closeSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  const toggleBtn = document.getElementById('toggle-sidebar-btn');
+  sidebar.classList.remove('translate-x-0');
+  sidebar.classList.add('translate-x-[-110%]');
+  toggleBtn.classList.remove('hidden');
+}
+
+function openSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  const toggleBtn = document.getElementById('toggle-sidebar-btn');
+  sidebar.classList.remove('translate-x-[-110%]');
+  sidebar.classList.add('translate-x-0');
+  toggleBtn.classList.add('hidden');
+}
+
+// 10. Manejadores de Eventos Generales
 document.getElementById('reset-view').addEventListener('click', resetMapView);
 document.getElementById('close-details').addEventListener('click', clearSelection);
 map.on('click', clearSelection);
+
+// Eventos de colapso de panel
+document.getElementById('close-sidebar-btn').addEventListener('click', closeSidebar);
+document.getElementById('toggle-sidebar-btn').addEventListener('click', openSidebar);
+
+// Auto-colapsar en móviles al iniciar la aplicación
+if (window.innerWidth < 768) {
+  closeSidebar();
+}
