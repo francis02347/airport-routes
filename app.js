@@ -311,6 +311,7 @@ function selectAirport(iata, flyToSelected = true) {
       const hours = Math.floor(distance / 800);
       const minutes = Math.round(((distance % 800) / 800) * 60);
       const timeStr = hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
+      const searchQuery = encodeURIComponent(`${airport.city} (${airport.iata}) to ${destAirport.city} (${destAirport.iata})`);
 
       const popupContent = `
         <div class="p-1 font-sans text-slate-100">
@@ -330,10 +331,10 @@ function selectAirport(iata, flyToSelected = true) {
               <span class="font-semibold text-white">~ ${timeStr}</span>
             </div>
           </div>
-          <a href="https://www.google.com/travel/flights?q=Vuelos%20desde%20${airport.iata}%20a%20${destAirport.iata}" 
+          <a href="https://www.google.com/search?q=${searchQuery}" 
              target="_blank" 
              rel="noopener noreferrer" 
-             class="block w-full text-center text-xs bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-1.5 px-3 rounded-lg transition duration-150">
+             class="block w-full text-center text-xs bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-1.5 px-3 rounded-lg transition duration-150 shadow-md">
              Buscar vuelos
           </a>
         </div>
