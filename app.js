@@ -179,25 +179,42 @@ AIRPORTS.forEach(airport => {
   });
 });
 
-// Función de control de visibilidad y estilos según el nivel de zoom (LOD)
-function updateMarkerStylesAndVisibility() {
-  const currentZoom = map.getZoom();
-  let maxTierAllowed = 1;
-  if (currentZoom >= 6) {
-    maxTierAllowed = 3; // Mostrar todos los 3.250+ aeropuertos
-  } else if (currentZoom >= 4) {
-    maxTierAllowed = 2; // Mostrar hubs y aeropuertos medianos
-  } else {
-    maxTierAllowed = 1; // Vista global: solo hubs principales
-  }
+// 4. Control de Densidad de Aeropuertos (Barra Superior Deslizante)
+// 1 = Solo Top 50 (50 aeropuertos)
+// 2 = Hubs Principales (~500 aeropuertos)
+// 3 = Medio / Regionales (~1.200 aeropuertos)
+// 4 = Todos los aeropuertos (3.257 aeropuertos)
+let densityLevel = 2; // Nivel por defecto: Hubs principales
 
+const densityLabels = {
+  1: 'Top 50 (50)',
+  2: 'Hubs (~500)',
+  3: 'Medio (~1.200)',
+  4: 'Todos (3.257)'
+};
+
+function isAirportVisibleInDensity(ap) {
+  if (densityLevel === 1) {
+    return !!ap.isTop50;
+  }
+  if (densityLevel === 2) {
+    return ap.isTop50 || ap.tier === 1;
+  }
+  if (densityLevel === 3) {
+    return ap.isTop50 || ap.tier <= 2;
+  }
+  return true; // Nivel 4: todos los 3.257
+}
+
+// Función de control de visibilidad y estilos según la densidad elegida
+function updateMarkerStylesAndVisibility() {
   const activeDestinations = selectedAirportIata ? (adjacencyList[selectedAirportIata] || new Set()) : null;
 
   AIRPORTS.forEach(ap => {
     const markerList = markers[ap.iata] || [];
     const isSelected = ap.iata === selectedAirportIata;
     const isDestination = activeDestinations && activeDestinations.has(ap.iata);
-    const isTierVisible = ap.tier <= maxTierAllowed || ap.isTop50;
+    const isDensityVisible = isAirportVisibleInDensity(ap);
 
     markerList.forEach(marker => {
       if (selectedAirportIata) {
@@ -212,17 +229,19 @@ function updateMarkerStylesAndVisibility() {
             marker.setStyle(markerStyles.destination);
           }
           marker.bringToFront();
-        } else if (isTierVisible) {
+        } else if (isDensityVisible) {
           marker.setStyle(markerStyles.dimmed);
         } else {
           marker.setStyle(markerStyles.hidden);
         }
       } else {
-        if (ap.isTop50) {
-          marker.setStyle(markerStyles.top50);
-          marker.bringToFront();
-        } else if (isTierVisible) {
-          marker.setStyle(markerStyles.default);
+        if (isDensityVisible) {
+          if (ap.isTop50) {
+            marker.setStyle(markerStyles.top50);
+            marker.bringToFront();
+          } else {
+            marker.setStyle(markerStyles.default);
+          }
         } else {
           marker.setStyle(markerStyles.hidden);
         }
@@ -231,10 +250,19 @@ function updateMarkerStylesAndVisibility() {
   });
 }
 
-// Escuchar cambios de zoom para actualizar el nivel de detalle
-map.on('zoomend', updateMarkerStylesAndVisibility);
+// Enlazar el control deslizante de densidad
+const densitySlider = document.getElementById('density-slider');
+const densityBadge = document.getElementById('density-value-badge');
 
-// Inicializar visibilidad con el zoom actual
+if (densitySlider && densityBadge) {
+  densitySlider.addEventListener('input', (e) => {
+    densityLevel = parseInt(e.target.value, 10);
+    densityBadge.textContent = densityLabels[densityLevel] || '';
+    updateMarkerStylesAndVisibility();
+  });
+}
+
+// Inicializar visibilidad inicial
 updateMarkerStylesAndVisibility();
 
 // 4. Algoritmo de Trazado de Rutas Ortodrómicas Reales (Great Circle 3D como Flightradar24)
