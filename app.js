@@ -319,9 +319,12 @@ function clearSelection() {
   selectedAirportIata = null;
   activeRouteLayer.clearLayers();
   
-  // Restaurar estilos de marcadores
+  // Restaurar estilos de todos los marcadores (incluyendo copias multi-mundo)
   AIRPORTS.forEach(ap => {
-    markers[ap.iata].setStyle(markerStyles.default);
+    const markerList = markers[ap.iata] || [];
+    markerList.forEach(marker => {
+      marker.setStyle(markerStyles.default);
+    });
   });
 
   // Cambiar vistas del panel lateral
