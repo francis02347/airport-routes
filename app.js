@@ -60,6 +60,14 @@ const markerStyles = {
     opacity: 1,
     fillOpacity: 0.95
   },
+  top50Destination: {
+    radius: 7.5,
+    fillColor: '#ef4444', // Red 500 (Rojo vibrante cuando es un destino conectado)
+    color: '#ffffff',     // Blanco brillante en el borde
+    weight: 2.5,
+    opacity: 1,
+    fillOpacity: 1
+  },
   dimmed: {
     radius: 3.5,
     fillColor: '#475569', // Slate 600
@@ -77,10 +85,10 @@ const markerStyles = {
     fillOpacity: 0.95
   },
   selected: {
-    radius: 8.5,
+    radius: 9,
     fillColor: '#facc15', // Yellow 400
     color: '#ffffff',     // White
-    weight: 2.5,
+    weight: 3,
     opacity: 1,
     fillOpacity: 1
   },
@@ -145,8 +153,12 @@ function updateMarkerStylesAndVisibility() {
           marker.setStyle(markerStyles.selected);
           marker.bringToFront();
         } else if (isDestination) {
-          // Los destinos del aeropuerto seleccionado SIEMPRE son visibles
-          marker.setStyle(markerStyles.destination);
+          // Si el destino conectado es Top 50, se mantiene de color rojo brillante con borde blanco
+          if (ap.isTop50) {
+            marker.setStyle(markerStyles.top50Destination);
+          } else {
+            marker.setStyle(markerStyles.destination);
+          }
           marker.bringToFront();
         } else if (isTierVisible) {
           marker.setStyle(markerStyles.dimmed);
