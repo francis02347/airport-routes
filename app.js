@@ -450,7 +450,27 @@ function selectAirport(iata, flyToSelected = true) {
     openSidebar(); // Solo abrir automáticamente en pantallas de escritorio
   }
 
-  // F. Hacer zoom y centrar si se solicita
+  // F. Calcular rutas circulares ordenadas por ángulo azimutal (0 a 360 grados)
+  sortedCircularRoutes = destinationsIata
+    .map(iata => {
+      const destAp = AIRPORTS.find(a => a.iata === iata);
+      if (!destAp) return null;
+      const bearing = calculateInitialBearing(airport.lat, airport.lng, destAp.lat, destAp.lng);
+      return { iata, destAp, bearing };
+    })
+    .filter(Boolean)
+    .sort((a, b) => a.bearing - b.bearing);
+
+  if (sortedCircularRoutes.length > 0) {
+    currentRouteIndex = 0;
+    updateRouteNavigatorUI(0);
+    // Resaltar la primera ruta en el mapa
+    showRouteDetails(airport, sortedCircularRoutes[0].destAp, null, false);
+  } else {
+    hideRouteNavigator();
+  }
+
+  // G. Hacer zoom y centrar si se solicita
   if (flyToSelected) {
     map.flyTo([airport.lat, airport.lng], 4, {
       animate: true,
@@ -459,14 +479,92 @@ function selectAirport(iata, flyToSelected = true) {
   }
 }
 
-// Variables de estado de ruta seleccionada
+// Variables de estado de ruta seleccionada y selector circular
 let selectedDestIata = null;
 let currentRouteMap = {}; // destIata -> { visiblePolylines, destAirport, midpoint, bounds }
+let sortedCircularRoutes = []; // Array de { iata, destAp, bearing } ordenados angularmente
+let currentRouteIndex = 0;
 
 /**
- * Selecciona una ruta específica, la resalta en el mapa y abre la tarjeta con su información.
+ * Calcula el rumbo geodésico inicial (azimut en grados de 0 a 360) entre dos coordenadas.
+ * 0° = Norte, 90° = Este, 180° = Sur, 270° = Oeste.
  */
-function showRouteDetails(originAp, destAp, atLatLng = null) {
+function calculateInitialBearing(lat1, lon1, lat2, lon2) {
+  const toRad = d => (d * Math.PI) / 180;
+  const toDeg = r => (r * 180) / Math.PI;
+
+  const phi1 = toRad(lat1);
+  const phi2 = toRad(lat2);
+  const deltaLambda = toRad(lon2 - lon1);
+
+  const y = Math.sin(deltaLambda) * Math.cos(phi2);
+  const x = Math.cos(phi1) * Math.sin(phi2) - Math.sin(phi1) * Math.cos(phi2) * Math.cos(deltaLambda);
+  let bearing = toDeg(Math.atan2(y, x));
+  return (bearing + 360) % 360;
+}
+
+// Actualiza el contenido visual de la barra flotante inferior
+function updateRouteNavigatorUI(index) {
+  if (!sortedCircularRoutes || sortedCircularRoutes.length === 0) return;
+  const routeNav = document.getElementById('route-navigator');
+  if (!routeNav) return;
+
+  const routeItem = sortedCircularRoutes[index];
+  const destAp = routeItem.destAp;
+  const originAp = AIRPORTS.find(a => a.iata === selectedAirportIata);
+  if (!originAp || !destAp) return;
+
+  document.getElementById('nav-dest-city').textContent = destAp.city;
+  document.getElementById('nav-dest-iata').textContent = destAp.iata;
+  const top50Badge = document.getElementById('nav-dest-top50');
+  if (destAp.isTop50) {
+    top50Badge.classList.remove('hidden');
+  } else {
+    top50Badge.classList.add('hidden');
+  }
+  document.getElementById('nav-route-counter').textContent = `${index + 1}/${sortedCircularRoutes.length}`;
+
+  const distance = Math.round(getDistance(originAp.lat, originAp.lng, destAp.lat, destAp.lng));
+  const hours = Math.floor(distance / 800);
+  const minutes = Math.round(((distance % 800) / 800) * 60);
+  const timeStr = hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
+  document.getElementById('nav-route-distance').textContent = `${distance.toLocaleString()} km • ~${timeStr}`;
+
+  const searchQuery = encodeURIComponent(`${originAp.city} (${originAp.iata}) to ${destAp.city} (${destAp.iata})`);
+  document.getElementById('nav-search-flights-btn').href = `https://www.google.com/search?q=${searchQuery}`;
+
+  // Mostrar la barra flotante con animación suave
+  routeNav.classList.remove('translate-y-36', 'opacity-0', 'pointer-events-none');
+  routeNav.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+}
+
+function hideRouteNavigator() {
+  const routeNav = document.getElementById('route-navigator');
+  if (routeNav) {
+    routeNav.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+    routeNav.classList.add('translate-y-36', 'opacity-0', 'pointer-events-none');
+  }
+}
+
+/**
+ * Selecciona una ruta por su índice en el carrusel circular angular
+ */
+function selectRouteByIndex(index, showPopup = false) {
+  if (!sortedCircularRoutes || sortedCircularRoutes.length === 0) return;
+
+  // Envoltura modular circular continua
+  currentRouteIndex = ((index % sortedCircularRoutes.length) + sortedCircularRoutes.length) % sortedCircularRoutes.length;
+  const routeItem = sortedCircularRoutes[currentRouteIndex];
+  const originAp = AIRPORTS.find(a => a.iata === selectedAirportIata);
+  
+  updateRouteNavigatorUI(currentRouteIndex);
+  showRouteDetails(originAp, routeItem.destAp, null, showPopup);
+}
+
+/**
+ * Selecciona una ruta específica, la resalta en el mapa y actualiza los paneles informativos.
+ */
+function showRouteDetails(originAp, destAp, atLatLng = null, showPopup = true) {
   selectedDestIata = destAp.iata;
 
   // 1. Resaltar la polilínea de la ruta seleccionada y atenuar todas las demás
@@ -483,7 +581,14 @@ function showRouteDetails(originAp, destAp, atLatLng = null) {
     });
   });
 
-  // 2. Resaltar el elemento correspondiente en la lista del panel lateral
+  // 2. Sincronizar el selector circular inferior
+  const foundIdx = sortedCircularRoutes.findIndex(r => r.iata === destAp.iata);
+  if (foundIdx !== -1) {
+    currentRouteIndex = foundIdx;
+    updateRouteNavigatorUI(currentRouteIndex);
+  }
+
+  // 3. Resaltar el elemento correspondiente en la lista del panel lateral
   document.querySelectorAll('.dest-item').forEach(el => {
     if (el.dataset.iata === destAp.iata) {
       el.classList.add('bg-cyan-950/60', 'border-cyan-400');
@@ -495,63 +600,52 @@ function showRouteDetails(originAp, destAp, atLatLng = null) {
     }
   });
 
-  // 3. Calcular datos de la ruta
-  const distance = Math.round(getDistance(originAp.lat, originAp.lng, destAp.lat, destAp.lng));
-  const hours = Math.floor(distance / 800);
-  const minutes = Math.round(((distance % 800) / 800) * 60);
-  const timeStr = hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
-  const searchQuery = encodeURIComponent(`${originAp.city} (${originAp.iata}) to ${destAp.city} (${destAp.iata})`);
+  // 4. Mostrar popup si fue solicitado (ej. al hacer clic sobre la ruta en el mapa)
+  if (showPopup) {
+    const distance = Math.round(getDistance(originAp.lat, originAp.lng, destAp.lat, destAp.lng));
+    const hours = Math.floor(distance / 800);
+    const minutes = Math.round(((distance % 800) / 800) * 60);
+    const timeStr = hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
+    const searchQuery = encodeURIComponent(`${originAp.city} (${originAp.iata}) to ${destAp.city} (${destAp.iata})`);
 
-  const popupContent = `
-    <div class="p-1 pr-8 font-sans text-slate-100 min-w-[210px]">
-      <div class="text-xs uppercase tracking-wider text-cyan-400 font-bold mb-1">Información de Ruta</div>
-      <div class="flex items-center gap-2 font-bold text-sm mb-2 text-white">
-        <span>${originAp.city}</span>
-        <span class="text-slate-400 font-normal">➔</span>
-        <span>${destAp.city}</span>
-      </div>
-      <div class="space-y-1 text-xs text-slate-300 border-t border-slate-700/60 pt-2 mb-3">
-        <div class="flex justify-between gap-4">
-          <span class="text-slate-400">Distancia:</span>
-          <span class="font-semibold text-white">${distance.toLocaleString()} km</span>
+    const popupContent = `
+      <div class="p-1 pr-8 font-sans text-slate-100 min-w-[210px]">
+        <div class="text-xs uppercase tracking-wider text-cyan-400 font-bold mb-1">Información de Ruta</div>
+        <div class="flex items-center gap-2 font-bold text-sm mb-2 text-white">
+          <span>${originAp.city}</span>
+          <span class="text-slate-400 font-normal">➔</span>
+          <span>${destAp.city}</span>
         </div>
-        <div class="flex justify-between gap-4">
-          <span class="text-slate-400">Tiempo de Vuelo:</span>
-          <span class="font-semibold text-white">~ ${timeStr}</span>
+        <div class="space-y-1 text-xs text-slate-300 border-t border-slate-700/60 pt-2 mb-3">
+          <div class="flex justify-between gap-4">
+            <span class="text-slate-400">Distancia:</span>
+            <span class="font-semibold text-white">${distance.toLocaleString()} km</span>
+          </div>
+          <div class="flex justify-between gap-4">
+            <span class="text-slate-400">Tiempo de Vuelo:</span>
+            <span class="font-semibold text-white">~ ${timeStr}</span>
+          </div>
         </div>
+        <a href="https://www.google.com/search?q=${searchQuery}" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="block w-full text-center text-xs bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-1.5 px-3 rounded-lg transition duration-150 shadow-md">
+           Buscar vuelos
+        </a>
       </div>
-      <a href="https://www.google.com/search?q=${searchQuery}" 
-         target="_blank" 
-         rel="noopener noreferrer" 
-         class="block w-full text-center text-xs bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-1.5 px-3 rounded-lg transition duration-150 shadow-md">
-         Buscar vuelos
-      </a>
-    </div>
-  `;
+    `;
 
-  // Ubicación donde mostrar el popup (clic exacto o punto medio geodésico de la ruta)
-  const routeInfo = currentRouteMap[destAp.iata];
-  const targetLatLng = atLatLng || (routeInfo ? routeInfo.midpoint : [destAp.lat, destAp.lng]);
+    const routeInfo = currentRouteMap[destAp.iata];
+    const targetLatLng = atLatLng || (routeInfo ? routeInfo.midpoint : [destAp.lat, destAp.lng]);
 
-  L.popup({
-    maxWidth: 260,
-    closeButton: true,
-    autoPan: true
-  })
-  .setLatLng(targetLatLng)
-  .setContent(popupContent)
-  .openOn(map);
-
-  // 4. Ajustar el mapa para englobar ambos aeropuertos suavemente
-  if (routeInfo && !atLatLng) {
-    const leftPad = (window.innerWidth >= 768) ? 380 : 50;
-    map.fitBounds(routeInfo.bounds, {
-      paddingTopLeft: [leftPad, 50],
-      paddingBottomRight: [50, 50],
-      maxZoom: 6,
-      animate: true,
-      duration: 1.2
-    });
+    L.popup({
+      maxWidth: 260,
+      closeButton: true,
+      autoPan: true
+    })
+    .setLatLng(targetLatLng)
+    .setContent(popupContent)
+    .openOn(map);
   }
 }
 
@@ -560,8 +654,13 @@ function clearSelection() {
   selectedAirportIata = null;
   selectedDestIata = null;
   currentRouteMap = {};
+  sortedCircularRoutes = [];
+  currentRouteIndex = 0;
   activeRouteLayer.clearLayers();
   
+  // Ocultar barra flotante de rutas
+  hideRouteNavigator();
+
   // Restaurar visibilidad y estilos según nivel de zoom
   updateMarkerStylesAndVisibility();
 
@@ -791,6 +890,57 @@ function handleMapClick(e) {
 
 map.on('click', handleMapClick);
 
+// 11. Eventos del Selector Circular Inferior de Rutas
+const navPrevBtn = document.getElementById('nav-prev-route-btn');
+const navNextBtn = document.getElementById('nav-next-route-btn');
+const navCloseBtn = document.getElementById('nav-close-btn');
+const navRouteCard = document.getElementById('nav-route-card');
+
+if (navPrevBtn) {
+  navPrevBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    selectRouteByIndex(currentRouteIndex - 1, false);
+  });
+}
+
+if (navNextBtn) {
+  navNextBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    selectRouteByIndex(currentRouteIndex + 1, false);
+  });
+}
+
+if (navCloseBtn) {
+  navCloseBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    hideRouteNavigator();
+  });
+}
+
+// Soporte de gestos táctiles (Swipe izquierda / derecha sobre la tarjeta)
+if (navRouteCard) {
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  navRouteCard.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  navRouteCard.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diffX = touchEndX - touchStartX;
+    if (Math.abs(diffX) > 40) {
+      if (diffX < 0) {
+        // Deslizar a la izquierda -> Siguiente ruta (Sentido horario)
+        selectRouteByIndex(currentRouteIndex + 1, false);
+      } else {
+        // Deslizar a la derecha -> Ruta anterior (Sentido antihorario)
+        selectRouteByIndex(currentRouteIndex - 1, false);
+      }
+    }
+  }, { passive: true });
+}
+
 // Eventos de colapso de panel
 document.getElementById('close-sidebar-btn').addEventListener('click', closeSidebar);
 document.getElementById('toggle-sidebar-btn').addEventListener('click', openSidebar);
@@ -800,7 +950,7 @@ if (window.innerWidth < 768) {
   closeSidebar();
 }
 
-// 11. Funciones Matemáticas de Utilidad (Haversine para Distancias)
+// 12. Funciones Matemáticas de Utilidad (Haversine para Distancias)
 function getDistance(lat1, lon1, lat2, lon2) {
   const R = 6371; // Radio de la Tierra en km
   const dLat = deg2rad(lat2 - lat1);
