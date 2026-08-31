@@ -224,7 +224,9 @@ function selectAirport(iata, flyToSelected = true) {
 
   // E. Actualizar el Panel Lateral
   updateSidebar(airport, destinationsIata);
-  openSidebar(); // Asegurar que el panel se abra para ver la información
+  if (window.innerWidth >= 768) {
+    openSidebar(); // Solo abrir automáticamente en pantallas de escritorio
+  }
 
   // F. Hacer zoom y centrar si se solicita
   if (flyToSelected) {
@@ -298,6 +300,9 @@ function updateSidebar(airport, destinationsIata) {
     // Clic en un destino de la lista del panel lateral
     item.addEventListener('click', () => {
       selectAirport(dest.iata);
+      if (window.innerWidth < 768) {
+        closeSidebar();
+      }
     });
 
     destListEl.appendChild(item);
@@ -356,6 +361,9 @@ function renderSearchResults(matches) {
       searchInput.value = '';
       hideSearchResults();
       clearSearchBtn.classList.add('hidden');
+      if (window.innerWidth < 768) {
+        closeSidebar();
+      }
     });
 
     searchResults.appendChild(item);
