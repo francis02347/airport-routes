@@ -142,26 +142,31 @@ window.selectAirportFromPopup = function(iata) {
 };
 
 // 3. Renderizado y Jerarquía por Nivel de Detalle (LOD) de Aeropuertos
+const isHoverDevice = window.matchMedia('(hover: hover)').matches;
+
 AIRPORTS.forEach(airport => {
   markers[airport.iata] = [];
   [-360, 0, 360].forEach(offset => {
     const marker = L.circleMarker([airport.lat, airport.lng + offset], airport.isTop50 ? markerStyles.top50 : markerStyles.default);
     
-    // Tooltip con distintivo especial para los Top 50 Hubs
-    const tooltipHtml = airport.isTop50
-      ? `<b>${airport.city} (${airport.iata})</b> <span class="bg-red-500/20 text-red-400 border border-red-500/40 text-[10px] font-bold px-1.5 py-0.5 rounded ml-1">⭐ TOP 50</span><br><span class="text-xs text-slate-300">${airport.name}</span>`
-      : `<b>${airport.city} (${airport.iata})</b><br><span class="text-xs text-slate-300">${airport.name}</span>`;
+    // Solo activamos tooltip hover en computadoras (para evitar solapamiento en móviles)
+    if (isHoverDevice) {
+      const tooltipHtml = airport.isTop50
+        ? `<b>${airport.city} (${airport.iata})</b> <span class="bg-red-500/20 text-red-400 border border-red-500/40 text-[10px] font-bold px-1.5 py-0.5 rounded ml-1">⭐ TOP 50</span><br><span class="text-xs text-slate-300">${airport.name}</span>`
+        : `<b>${airport.city} (${airport.iata})</b><br><span class="text-xs text-slate-300">${airport.name}</span>`;
 
-    marker.bindTooltip(tooltipHtml, {
-      direction: 'top',
-      offset: [0, -5],
-      opacity: 0.95,
-      className: 'bg-slate-900 text-white border-slate-700 rounded-lg shadow-md p-2 text-xs font-sans font-medium'
-    });
+      marker.bindTooltip(tooltipHtml, {
+        direction: 'top',
+        offset: [0, -5],
+        opacity: 0.95,
+        className: 'bg-slate-900 text-white border-slate-700 rounded-lg shadow-md p-2 text-xs font-sans font-medium'
+      });
+    }
 
     // Evento click del marcador
     marker.on('click', (e) => {
       L.DomEvent.stopPropagation(e); // Evita que el click se propague al mapa de fondo
+      if (marker.closeTooltip) marker.closeTooltip();
       if (window.innerWidth < 768) {
         showAirportMobilePreview(airport, e.latlng);
       } else {
@@ -364,15 +369,17 @@ function selectAirport(iata, flyToSelected = true) {
         interactive: true
       });
 
-      // Efecto hover sobre la ruta
+      // Efecto hover sobre la ruta (solo en dispositivos con ratón)
       touchTargetPolyline.on('mouseover', () => {
         if (selectedDestIata !== destAirport.iata) {
           visiblePolyline.setStyle({ color: '#38bdf8', weight: 3.5, opacity: 0.95 });
         }
-        touchTargetPolyline.bindTooltip(`<b>${airport.city} (${airport.iata}) → ${destAirport.city} (${destAirport.iata})</b>`, {
-          sticky: true,
-          className: 'bg-slate-900 text-white border-slate-700 rounded-lg p-2 text-xs font-semibold'
-        }).openTooltip();
+        if (isHoverDevice) {
+          touchTargetPolyline.bindTooltip(`<b>${airport.city} (${airport.iata}) → ${destAirport.city} (${destAirport.iata})</b>`, {
+            sticky: true,
+            className: 'bg-slate-900 text-white border-slate-700 rounded-lg p-2 text-xs font-semibold'
+          }).openTooltip();
+        }
       });
 
       touchTargetPolyline.on('mouseout', () => {
@@ -385,6 +392,7 @@ function selectAirport(iata, flyToSelected = true) {
       // Al hacer clic en la línea del mapa -> selecciona y abre la información de la ruta
       touchTargetPolyline.on('click', (e) => {
         L.DomEvent.stopPropagation(e);
+        if (touchTargetPolyline.closeTooltip) touchTargetPolyline.closeTooltip();
         showRouteDetails(airport, destAirport, e.latlng);
       });
 
