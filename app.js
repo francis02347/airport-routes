@@ -1,0 +1,384 @@
+// Lógica principal de la aplicación FlightConnections Clone
+
+// 1. Configuración e Inicialización del Mapa
+const map = L.map('map', {
+  center: [20, 0],
+  zoom: 2,
+  minZoom: 2,
+  maxZoom: 10,
+  zoomControl: false // Ocultamos el control por defecto para una interfaz más limpia
+});
+
+// Añadimos el control de zoom en la esquina superior derecha
+L.control.zoom({ position: 'topright' }).addTo(map);
+
+// Capa de mapa oscuro (CartoDB Positron Dark)
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  subdomains: 'abcd',
+  maxZoom: 20
+}).addTo(map);
+
+// Ajustar los límites del mapa para que no se repita infinitamente en horizontal
+map.setMaxBounds([[-85, -180], [85, 180]]);
+
+// 2. Procesamiento de Datos de Conexiones
+// Crearemos un mapa de adyacencia (lista de conexiones) bidireccional
+const adjacencyList = {};
+
+// Inicializar la lista de adyacencia para cada aeropuerto
+AIRPORTS.forEach(airport => {
+  adjacencyList[airport.iata] = new Set();
+});
+
+// Registrar las rutas como bidireccionales
+ROUTES.forEach(([from, to]) => {
+  if (adjacencyList[from] && adjacencyList[to]) {
+    adjacencyList[from].add(to);
+    adjacencyList[to].add(from);
+  }
+});
+
+// Guardar referencias globales de marcadores y líneas de rutas activas
+const markers = {};          // IATA -> L.circleMarker
+let activeRouteLayer = L.featureGroup().addTo(map);
+let selectedAirportIata = null;
+
+// Estilos de marcadores
+const markerStyles = {
+  default: {
+    radius: 6,
+    fillColor: '#22d3ee', // Cyan 400
+    color: '#0891b2',     // Cyan 600
+    weight: 1.5,
+    opacity: 0.8,
+    fillOpacity: 0.8
+  },
+  dimmed: {
+    radius: 5,
+    fillColor: '#475569', // Slate 600
+    color: '#334155',     // Slate 700
+    weight: 1,
+    opacity: 0.25,
+    fillOpacity: 0.25
+  },
+  destination: {
+    radius: 7,
+    fillColor: '#38bdf8', // Sky 400
+    color: '#ffffff',     // White
+    weight: 2,
+    opacity: 1,
+    fillOpacity: 0.95
+  },
+  selected: {
+    radius: 9,
+    fillColor: '#facc15', // Yellow 400
+    color: '#ffffff',     // White
+    weight: 2.5,
+    opacity: 1,
+    fillOpacity: 1
+  }
+};
+
+// 3. Renderizado de Aeropuertos en el Mapa
+AIRPORTS.forEach(airport => {
+  const marker = L.circleMarker([airport.lat, airport.lng], markerStyles.default);
+  
+  // Tooltip emergente rápido al pasar el ratón (hover)
+  marker.bindTooltip(`<b>${airport.city} (${airport.iata})</b><br><span class="text-xs text-slate-300">${airport.name}</span>`, {
+    direction: 'top',
+    offset: [0, -5],
+    opacity: 0.9,
+    className: 'bg-slate-900 text-white border-slate-700 rounded-lg shadow-md p-2 text-xs font-sans font-medium'
+  });
+
+  // Evento click del marcador
+  marker.on('click', (e) => {
+    L.DomEvent.stopPropagation(e); // Evita que el click se propague al mapa de fondo
+    selectAirport(airport.iata);
+  });
+
+  markers[airport.iata] = marker;
+  marker.addTo(map);
+});
+
+// Ajustar el zoom inicial para englobar todos los aeropuertos
+resetMapView();
+
+// 4. Algoritmo de Trazado de Rutas Curvas (Curvas de Bezier)
+/**
+ * Calcula puntos intermedios entre dos coordenadas para formar una curva suave (curvatura geodésica simulada).
+ * Controla también el cruce del antimeridiano (línea de cambio de fecha) de forma limpia.
+ */
+function getCurvePoints(latlngStart, latlngEnd) {
+  const points = [];
+  const p0 = { lat: latlngStart.lat, lng: latlngStart.lng };
+  
+  // Tratamiento del cruce del antimeridiano (Pacific Crossing)
+  let lngEnd = latlngEnd.lng;
+  if (Math.abs(lngEnd - p0.lng) > 180) {
+    if (lngEnd > p0.lng) {
+      lngEnd -= 360;
+    } else {
+      lngEnd += 360;
+    }
+  }
+  const p1 = { lat: latlngEnd.lat, lng: lngEnd };
+
+  const dx = p1.lng - p0.lng;
+  const dy = p1.lat - p0.lat;
+  
+  // Factor de curvatura (0.15 da una curva suave y elegante)
+  const f = 0.15;
+  
+  // Punto medio
+  const m = {
+    lat: (p0.lat + p1.lat) / 2,
+    lng: (p0.lng + p1.lng) / 2
+  };
+
+  // Punto de control de la curva Bézier cuadrática (desviación perpendicular)
+  const c = {
+    lat: m.lat + dx * f,
+    lng: m.lng - dy * f
+  };
+
+  // Generamos los segmentos de la curva
+  const steps = 32;
+  for (let i = 0; i <= steps; i++) {
+    const t = i / steps;
+    // Ecuación de Bezier Cuadrática: B(t) = (1-t)²*P0 + 2*(1-t)*t*C + t²*P1
+    const lat = (1 - t) * (1 - t) * p0.lat + 2 * (1 - t) * t * c.lat + t * t * p1.lat;
+    const lng = (1 - t) * (1 - t) * p0.lng + 2 * (1 - t) * t * c.lng + t * t * p1.lng;
+    points.push([lat, lng]);
+  }
+  
+  return points;
+}
+
+// 5. Lógica de Selección y Filtrado de Rutas
+function selectAirport(iata, flyToSelected = true) {
+  const airport = AIRPORTS.find(a => a.iata === iata);
+  if (!airport) return;
+
+  selectedAirportIata = iata;
+
+  // A. Limpiar capas de líneas anteriores
+  activeRouteLayer.clearLayers();
+
+  // B. Obtener destinos
+  const destinationsIata = Array.from(adjacencyList[iata] || []);
+  
+  // C. Actualizar estilos de los marcadores del mapa
+  AIRPORTS.forEach(ap => {
+    const marker = markers[ap.iata];
+    if (ap.iata === iata) {
+      marker.setStyle(markerStyles.selected);
+      marker.bringToFront();
+    } else if (destinationsIata.includes(ap.iata)) {
+      marker.setStyle(markerStyles.destination);
+      marker.bringToFront();
+    } else {
+      marker.setStyle(markerStyles.dimmed);
+    }
+  });
+
+  // D. Dibujar rutas curvas hacia destinos
+  destinationsIata.forEach(destIata => {
+    const destAirport = AIRPORTS.find(a => a.iata === destIata);
+    if (!destAirport) return;
+
+    // Calcular puntos de la curva
+    const curvePoints = getCurvePoints(airport, destAirport);
+
+    // Crear la línea y añadirla al mapa
+    const polyline = L.polyline(curvePoints, {
+      color: '#facc15', // Amarillo 400
+      weight: 2,
+      opacity: 0.65,
+      lineCap: 'round',
+      lineJoin: 'round'
+    });
+
+    // Efecto de brillo/grosor al pasar el cursor sobre la línea de ruta
+    polyline.on('mouseover', () => {
+      polyline.setStyle({ color: '#38bdf8', weight: 4, opacity: 1 });
+      polyline.bindTooltip(`<b>${airport.city} (${airport.iata}) → ${destAirport.city} (${destAirport.iata})</b>`, {
+        sticky: true,
+        className: 'bg-slate-900 text-white border-slate-700 rounded-lg p-2 text-xs font-semibold'
+      }).openTooltip();
+    });
+
+    polyline.on('mouseout', () => {
+      polyline.setStyle({ color: '#facc15', weight: 2, opacity: 0.65 });
+    });
+
+    // Si el usuario hace clic en la línea, vuela al aeropuerto de destino
+    polyline.on('click', (e) => {
+      L.DomEvent.stopPropagation(e);
+      selectAirport(destIata);
+    });
+
+    activeRouteLayer.addLayer(polyline);
+  });
+
+  // E. Actualizar el Panel Lateral
+  updateSidebar(airport, destinationsIata);
+
+  // F. Hacer zoom y centrar si se solicita
+  if (flyToSelected) {
+    map.flyTo([airport.lat, airport.lng], 4, {
+      animate: true,
+      duration: 1.5
+    });
+  }
+}
+
+// 6. Limpieza de Selección
+function clearSelection() {
+  selectedAirportIata = null;
+  activeRouteLayer.clearLayers();
+  
+  // Restaurar estilos de marcadores
+  AIRPORTS.forEach(ap => {
+    markers[ap.iata].setStyle(markerStyles.default);
+  });
+
+  // Cambiar vistas del panel lateral
+  document.getElementById('empty-state').classList.remove('hidden');
+  document.getElementById('detail-state').classList.add('hidden');
+}
+
+// Restablecer la cámara a la visión global
+function resetMapView() {
+  const bounds = L.latLngBounds(AIRPORTS.map(a => [a.lat, a.lng]));
+  map.fitBounds(bounds, {
+    padding: [50, 50],
+    animate: true,
+    duration: 1.2
+  });
+}
+
+// 7. Actualización dinámica del Panel de Detalles (Sidebar)
+function updateSidebar(airport, destinationsIata) {
+  document.getElementById('empty-state').classList.add('hidden');
+  document.getElementById('detail-state').classList.remove('hidden');
+
+  document.getElementById('airport-iata').textContent = airport.iata;
+  document.getElementById('airport-name').textContent = airport.name;
+  document.getElementById('airport-location').textContent = `${airport.city}, ${airport.country}`;
+  document.getElementById('route-count').textContent = `${destinationsIata.length} ${destinationsIata.length === 1 ? 'destino' : 'destinos'}`;
+
+  const destListEl = document.getElementById('destinations-list');
+  destListEl.innerHTML = '';
+
+  // Ordenar destinos alfabéticamente por ciudad
+  const sortedDestinations = destinationsIata
+    .map(iata => AIRPORTS.find(a => a.iata === iata))
+    .filter(Boolean)
+    .sort((a, b) => a.city.localeCompare(b.city));
+
+  sortedDestinations.forEach(dest => {
+    const item = document.createElement('div');
+    item.className = 'p-4 hover:bg-slate-800/60 cursor-pointer transition flex items-center justify-between group';
+    item.innerHTML = `
+      <div>
+        <h4 class="font-semibold text-sm group-hover:text-cyan-400 transition">${dest.city}</h4>
+        <p class="text-xs text-slate-400 mt-0.5">${dest.name} (${dest.country})</p>
+      </div>
+      <span class="text-xs font-mono font-bold bg-slate-800 text-slate-400 group-hover:bg-cyan-500/20 group-hover:text-cyan-400 border border-slate-700/60 group-hover:border-cyan-500/30 px-2 py-1 rounded transition">${dest.iata}</span>
+    `;
+
+    // Clic en un destino de la lista del panel lateral
+    item.addEventListener('click', () => {
+      selectAirport(dest.iata);
+    });
+
+    destListEl.appendChild(item);
+  });
+}
+
+// 8. Sistema de Búsqueda y Autocompletado
+const searchInput = document.getElementById('search-input');
+const searchResults = document.getElementById('search-results');
+const clearSearchBtn = document.getElementById('clear-search');
+
+searchInput.addEventListener('input', (e) => {
+  const query = e.target.value.toLowerCase().trim();
+  
+  if (query === '') {
+    hideSearchResults();
+    clearSearchBtn.classList.add('hidden');
+    return;
+  }
+
+  clearSearchBtn.classList.remove('hidden');
+
+  // Filtrado de aeropuertos
+  const matches = AIRPORTS.filter(ap => 
+    ap.iata.toLowerCase().includes(query) ||
+    ap.city.toLowerCase().includes(query) ||
+    ap.country.toLowerCase().includes(query) ||
+    ap.name.toLowerCase().includes(query)
+  );
+
+  renderSearchResults(matches);
+});
+
+function renderSearchResults(matches) {
+  searchResults.innerHTML = '';
+  
+  if (matches.length === 0) {
+    searchResults.innerHTML = '<div class="p-3 text-sm text-slate-400 text-center">No se encontraron aeropuertos</div>';
+    searchResults.classList.remove('hidden');
+    return;
+  }
+
+  matches.forEach(ap => {
+    const item = document.createElement('div');
+    item.className = 'px-4 py-2.5 hover:bg-slate-700 cursor-pointer text-sm transition flex justify-between items-center border-b border-slate-700/30 last:border-b-0';
+    item.innerHTML = `
+      <div class="truncate mr-2">
+        <span class="font-bold text-white">${ap.city}</span>
+        <span class="text-xs text-slate-400 block truncate">${ap.name} (${ap.country})</span>
+      </div>
+      <span class="text-xs font-mono font-bold bg-slate-900/40 text-cyan-400 border border-cyan-500/20 px-1.5 py-0.5 rounded shrink-0">${ap.iata}</span>
+    `;
+
+    item.addEventListener('click', () => {
+      selectAirport(ap.iata);
+      searchInput.value = '';
+      hideSearchResults();
+      clearSearchBtn.classList.add('hidden');
+    });
+
+    searchResults.appendChild(item);
+  });
+
+  searchResults.classList.remove('hidden');
+}
+
+function hideSearchResults() {
+  searchResults.classList.add('hidden');
+  searchResults.innerHTML = '';
+}
+
+// Limpiar el buscador
+clearSearchBtn.addEventListener('click', () => {
+  searchInput.value = '';
+  hideSearchResults();
+  clearSearchBtn.classList.add('hidden');
+  searchInput.focus();
+});
+
+// Cerrar resultados al hacer clic fuera del panel de búsqueda
+document.addEventListener('click', (e) => {
+  if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+    hideSearchResults();
+  }
+});
+
+// 9. Manejadores de Eventos Generales
+document.getElementById('reset-view').addEventListener('click', resetMapView);
+document.getElementById('close-details').addEventListener('click', clearSelection);
+map.on('click', clearSelection);
