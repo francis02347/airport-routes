@@ -12,11 +12,10 @@ const map = L.map('map', {
 // Añadimos el control de zoom en la esquina superior derecha
 L.control.zoom({ position: 'topright' }).addTo(map);
 
-// Capa de mapa oscuro (CartoDB Positron Dark sin marcas de agua)
-L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-  subdomains: 'abcd',
-  maxZoom: 20
+// Capa de mapa oscuro (ESRI World Dark Gray Base - 100% gratuita y sin marcas de agua)
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+  maxZoom: 16
 }).addTo(map);
 
 // Ajustar los límites del mapa para que no se repita infinitamente en horizontal
@@ -105,93 +104,82 @@ AIRPORTS.forEach(airport => {
 // Ajustar el zoom inicial para englobar todos los aeropuertos
 resetMapView();
 
-// 4. Algoritmo de Trazado de Rutas Ortodrómicas (Great Circle con División de Antimeridiano)
+// 4. Algoritmo de Trazado de Rutas Estilo FlightConnections (Curvas Suaves con Cruce de Antimeridiano)
 /**
- * Calcula la trayectoria geodésica real (círculo máximo / Great Circle) en una esfera 3D.
- * Si la ruta cruza el antimeridiano (meridiano 180° en el Pacífico), divide la línea de forma limpia
- * en dos segmentos para que llegue exactamente a los marcadores sin salirse del mapa.
+ * Genera trayectorias de vuelo visualmente impecables.
+ * Si la ruta cruza el Océano Pacífico (longitud > 180°), divide la curva suavemente en dos tramos:
+ * - Tramo 1: Sale del origen y llega al borde este/oeste (+180° / -180°).
+ * - Tramo 2: Entra por el borde opuesto en la misma latitud y conecta suavemente con el destino.
  */
-function getGreatCircleSegments(latlngStart, latlngEnd) {
-  const toRad = deg => (deg * Math.PI) / 180;
-  const toDeg = rad => (rad * 180) / Math.PI;
+function getFlightPathSegments(p0, p1) {
+  const diffLng = p1.lng - p0.lng;
 
-  const lat1 = toRad(latlngStart.lat);
-  const lon1 = toRad(latlngStart.lng);
-  const lat2 = toRad(latlngEnd.lat);
-  const lon2 = toRad(latlngEnd.lng);
-
-  // Vectores unitarios 3D
-  const v1 = [Math.cos(lat1) * Math.cos(lon1), Math.cos(lat1) * Math.sin(lon1), Math.sin(lat1)];
-  const v2 = [Math.cos(lat2) * Math.cos(lon2), Math.cos(lat2) * Math.sin(lon2), Math.sin(lat2)];
-
-  // Distancia angular ortodrómica
-  const dot = v1[0] * v2[0] + v1[1] * v2[1] + v1[2] * v2[2];
-  const d = Math.acos(Math.min(Math.max(dot, -1), 1));
-
-  if (d < 1e-6) {
-    return [[[latlngStart.lat, latlngStart.lng], [latlngEnd.lat, latlngEnd.lng]]];
+  // 1. Caso estándar: No cruza el antimeridiano (|diffLng| <= 180)
+  if (Math.abs(diffLng) <= 180) {
+    return [generateBezierPoints(p0, p1)];
   }
 
-  const sinD = Math.sin(d);
-  const numSteps = Math.max(25, Math.round(d * 24));
-  const rawPoints = [];
+  // 2. Caso transpacífico: Cruza el antimeridiano (|diffLng| > 180)
+  if (p0.lng > p1.lng) {
+    // Vuelo hacia el ESTE (ej: Auckland 174° -> Houston -95°)
+    const span1 = 180 - p0.lng;
+    const span2 = p1.lng - (-180);
+    const totalSpan = span1 + span2;
+    const f = span1 / totalSpan;
 
-  for (let i = 0; i <= numSteps; i++) {
-    const f = i / numSteps;
-    const A = Math.sin((1 - f) * d) / sinD;
-    const B = Math.sin(f * d) / sinD;
+    const midLat = p0.lat + f * (p1.lat - p0.lat);
+    const ptExit = { lat: midLat, lng: 180 };
+    const ptEntry = { lat: midLat, lng: -180 };
 
-    const x = A * v1[0] + B * v2[0];
-    const y = A * v1[1] + B * v2[1];
-    const z = A * v1[2] + B * v2[2];
+    const seg1 = generateBezierPoints(p0, ptExit, 0.05);
+    const seg2 = generateBezierPoints(ptEntry, p1, 0.05);
 
-    const lat = toDeg(Math.atan2(z, Math.sqrt(x * x + y * y)));
-    const lon = toDeg(Math.atan2(y, x));
+    return [seg1, seg2];
+  } else {
+    // Vuelo hacia el OESTE (ej: Santiago -70° -> Melbourne 144° / Auckland 174°)
+    const span1 = p0.lng - (-180);
+    const span2 = 180 - p1.lng;
+    const totalSpan = span1 + span2;
+    const f = span1 / totalSpan;
 
-    rawPoints.push({ lat, lng: lon });
+    const midLat = p0.lat + f * (p1.lat - p0.lat);
+    const ptExit = { lat: midLat, lng: -180 };
+    const ptEntry = { lat: midLat, lng: 180 };
+
+    const seg1 = generateBezierPoints(p0, ptExit, 0.05);
+    const seg2 = generateBezierPoints(ptEntry, p1, 0.05);
+
+    return [seg1, seg2];
+  }
+}
+
+/**
+ * Genera puntos a lo largo de una curva Bézier cuadrática natural
+ */
+function generateBezierPoints(pStart, pEnd, curvature = 0.12) {
+  const dx = pEnd.lng - pStart.lng;
+  const dy = pEnd.lat - pStart.lat;
+
+  // Punto medio
+  const midLat = (pStart.lat + pEnd.lat) / 2;
+  const midLng = (pStart.lng + pEnd.lng) / 2;
+
+  // Orientación de la curvatura
+  const factor = (midLat < -20) ? -curvature * 0.5 : curvature;
+
+  const ctrlLat = midLat + dx * factor;
+  const ctrlLng = midLng - dy * factor;
+
+  const points = [];
+  const steps = 30;
+  for (let i = 0; i <= steps; i++) {
+    const t = i / steps;
+    const lat = (1 - t) * (1 - t) * pStart.lat + 2 * (1 - t) * t * ctrlLat + t * t * pEnd.lat;
+    const lng = (1 - t) * (1 - t) * pStart.lng + 2 * (1 - t) * t * ctrlLng + t * t * pEnd.lng;
+    points.push([lat, lng]);
   }
 
-  // Dividir en segmentos cuando la longitud salta el meridiano 180° (|delta| > 180)
-  const segments = [];
-  let currentSegment = [];
-
-  for (let i = 0; i < rawPoints.length; i++) {
-    const pt = rawPoints[i];
-
-    if (currentSegment.length > 0) {
-      const prev = currentSegment[currentSegment.length - 1];
-      const diff = pt.lng - prev.lng;
-
-      if (Math.abs(diff) > 180) {
-        // Cruce del meridiano 180: interpolar la latitud exacta de cruce en el borde
-        let prevBoundLng, nextBoundLng;
-        if (diff < 0) {
-          prevBoundLng = 180;
-          nextBoundLng = -180;
-        } else {
-          prevBoundLng = -180;
-          nextBoundLng = 180;
-        }
-
-        const totalDiff = diff < 0 ? (pt.lng + 360 - prev.lng) : (pt.lng - (prev.lng + 360));
-        const frac = totalDiff !== 0 ? Math.abs((prevBoundLng - prev.lng) / totalDiff) : 0.5;
-        const crossLat = prev.lat + (pt.lat - prev.lat) * frac;
-
-        currentSegment.push({ lat: crossLat, lng: prevBoundLng });
-        segments.push(currentSegment.map(p => [p.lat, p.lng]));
-
-        currentSegment = [{ lat: crossLat, lng: nextBoundLng }];
-      }
-    }
-
-    currentSegment.push(pt);
-  }
-
-  if (currentSegment.length > 0) {
-    segments.push(currentSegment.map(p => [p.lat, p.lng]));
-  }
-
-  return segments;
+  return points;
 }
 
 // 5. Lógica de Selección y Filtrado de Rutas
@@ -226,8 +214,8 @@ function selectAirport(iata, flyToSelected = true) {
     const destAirport = AIRPORTS.find(a => a.iata === destIata);
     if (!destAirport) return;
 
-    // Calcular segmentos geodésicos reales
-    const routeSegments = getGreatCircleSegments(airport, destAirport);
+    // Calcular segmentos de ruta con curvatura armónica
+    const routeSegments = getFlightPathSegments(airport, destAirport);
 
     // 1. Crear la línea visible (delgada y estética)
     const visiblePolyline = L.polyline(routeSegments, {
